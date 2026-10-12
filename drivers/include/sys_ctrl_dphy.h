@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     sys_ctrl_dphy.h
  * @author   Prasanna Ravi
- * @email    prasanna.ravi@alifsemi.com
+ * Email:    prasanna.ravi@alifsemi.com
  * @version  V1.0.0
  * @date     19-April-2023
  * @brief    DPHY system control Specific Header file.
@@ -259,7 +259,7 @@ static inline void set_dphy_pll_configuration(pll_config_t *info)
 }
 
 /**
- * \fn          static inline void set_dphy_pll_clksel (void)
+ * \fn static inline void set_dphy_pll_clksel(DPHY_PLL_CLKSEL clksel)
  * \brief       Set dphy CLKEXT divider selection.
  * \param[in]   clksel dphy CLKEXT divider selection to set.
  * \return      none.

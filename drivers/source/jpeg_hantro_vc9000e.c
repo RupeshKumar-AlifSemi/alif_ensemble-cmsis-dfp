@@ -9,24 +9,21 @@
  */
 
 /*******************************************************************************
- * @@file     jpeg_hantro_vc9000e.c
- * @@author   Chandra Bhushan Singh
- * @@email    chandrabhushan.singh@alifsemi.com
- * @@version  V1.0.0
- * @@date     14-April-2026
- * @@brief    Low level driver Specific source file.
+ * @file     jpeg_hantro_vc9000e.c
+ * @author   Chandra Bhushan Singh
+ * Email:    chandrabhushan.singh@alifsemi.com
+ * @version  V1.0.0
+ * @date     14-April-2026
+ * @brief    Low level driver Specific source file.
  ******************************************************************************/
 
 #include "jpeg_hantro_vc9000e_sw.h"
 #include "jpeg_hantro_vc9000e.h"
 
 /**
- * \fn           bool jpeg_init(JPEG_Type *jpeg)
  * \brief        Validates the JPEG hardware ID and hardware version
  *               registers to ensure that the expected JPEG IP is
  *               present.
- * \param[in]    jpeg  Pointer to the JPEG register map.
- * \return       true  JPEG hardware ID and version match the expected values.
  *               false JPEG hardware ID or version does not match.
  */
 bool jpeg_init(JPEG_Type *jpeg)
@@ -42,11 +39,7 @@ bool jpeg_init(JPEG_Type *jpeg)
 }
 
 /**
- * \fn           jpeg_set_format(JPEG_Type *jpeg, jpeg_image_info_t img_info)
  * \brief        Configure JPEG format registers.
- * \param[in]    jpeg       Pointer to the JPEG register map.
- * \param[in]    img_info   Pointer to JPEG image configuration.
- * \return       none.
  */
 void jpeg_set_format(JPEG_Type *jpeg, jpeg_image_info_t img_info)
 {
@@ -136,11 +129,7 @@ void jpeg_set_format(JPEG_Type *jpeg, jpeg_image_info_t img_info)
 }
 
 /**
- * \fn           void jpeg_config_quality(JPEG_Type *jpeg, uint8_t quality)
  * \brief        Configure JPEG quantization tables for given quality factor.
- * \param[in]    jpeg      Pointer to the JPEG register map.
- * \param[in]    quality   JPEG quality factor (1-100).
- * \return       none.
  */
 void jpeg_config_quality(JPEG_Type *jpeg, uint8_t quality)
 {
@@ -152,11 +141,7 @@ void jpeg_config_quality(JPEG_Type *jpeg, uint8_t quality)
 }
 
 /**
-  \fn          void jpeg_irq_handler(JPEG_Type *jpeg, jpeg_encode_info_t *transfer)
   \brief       Handle interrupts for the JPEG.
-  \param[in]   jpeg        Pointer to the JPEG register map.
-  \param[in]   enc_info    The encode structure for the JPEG.
-  \return      none
 */
 void jpeg_irq_handler(JPEG_Type *jpeg, jpeg_encode_info_t *enc_info)
 {

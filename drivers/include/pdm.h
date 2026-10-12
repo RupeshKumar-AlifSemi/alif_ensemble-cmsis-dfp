@@ -380,8 +380,7 @@ static inline void pdm_set_peak_detect_th(PDM_Type *pdm, uint8_t ch_num, uint32_
 }
 
 /**
- @fn          void pdm_set_peak_detect_th(PDM_Type *pdm, uint8_t ch_num,
-                                          uint32_t ch_peak_detect_itv)
+ @fn static inline void pdm_set_peak_detect_itv(PDM_Type *pdm, uint8_t ch_num, uint32_t ch_peak_detect_itv)
  @brief       Set the pdm channel Peak detector interval value
  @param[in]   pdm      : Pointer to the PDM register map
  @param[in]   ch_num   : Select the pdm channel
@@ -482,7 +481,7 @@ static inline void pdm_disable_error_irq(PDM_Type *pdm)
     pdm->PDM_IRQ_ENABLE &= ~PDM_FIFO_OVERFLOW_IRQ;
 }
 /**
-  @fn          void pdm_error_detect_irq_handler(PDM_Type *pdm);
+  @fn void pdm_error_detect_irq_handler(PDM_Type *pdm)
   @brief       IRQ handler for the error interrupt
   @param[in]   pdm      : Pointer to the PDM register map
   @return      none
@@ -490,7 +489,7 @@ static inline void pdm_disable_error_irq(PDM_Type *pdm)
 void pdm_error_detect_irq_handler(PDM_Type *pdm);
 
 /**
-  @fn          void pdm_audio_detect_irq_handler(PDM_Type *pdm, pdm_transfer_t *transfer );
+  @fn void pdm_audio_detect_irq_handler(PDM_Type *pdm, pdm_transfer_t *transfer)
   @brief       IRQ handler for the audio detect interrupt
   @param[in]   pdm      : Pointer to the PDM register map
   @param[in]   transfer     : The transfer structure of the PDM instance
@@ -499,7 +498,7 @@ void pdm_error_detect_irq_handler(PDM_Type *pdm);
 void pdm_audio_detect_irq_handler(PDM_Type *pdm, pdm_transfer_t *transfer);
 
 /**
-  @fn          void pdm_warning_irq_handler(PDM_Type *pdm, pdm_transfer_t *transfer);
+  @fn void pdm_warning_irq_handler(PDM_Type *pdm, pdm_transfer_t *transfer)
   @brief       IRQ handler for the PDM warning interrupt.
   @param[in]   pdm      : Pointer to the PDM register map
   @param[in]   transfer : The transfer structure of the PDM instance

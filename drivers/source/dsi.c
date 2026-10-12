@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     dsi.c
  * @author   Prasanna Ravi
- * @email    prasanna.ravi@alifsemi.com
+ * Email:    prasanna.ravi@alifsemi.com
  * @version  V1.0.0
  * @date     17-April-2023
  * @brief    Low level driver Specific Source file.
@@ -20,12 +20,7 @@
 #include "dsi.h"
 
 /**
-  \fn          void dsi_dcs_short_write(DSI_Type *dsi, uint8_t cmd, uint8_t data, uint8_t vc_id)
   \brief       Perform dsi dcs Short write.
-  \param[in]   cmd is DCS command info.
-  \param[in]   data to send.
-  \param[in]   vc_id virtual channel ID.
-  \return      none.
 */
 void dsi_dcs_short_write(DSI_Type *dsi, uint8_t cmd, uint8_t data, uint8_t vc_id)
 {
@@ -34,11 +29,7 @@ void dsi_dcs_short_write(DSI_Type *dsi, uint8_t cmd, uint8_t data, uint8_t vc_id
 }
 
 /**
-  \fn          void dsi_dcs_cmd_short_write(DSI_Type *dsi, uint8_t cmd, uint8_t vc_id)
   \brief       Perform dsi DCS Short write only command.
-  \param[in]   cmd is DCS command info.
-  \param[in]   vc_id virtual channel ID.
-  \return      none.
 */
 void dsi_dcs_cmd_short_write(DSI_Type *dsi, uint8_t cmd, uint8_t vc_id)
 {
@@ -47,12 +38,7 @@ void dsi_dcs_cmd_short_write(DSI_Type *dsi, uint8_t cmd, uint8_t vc_id)
 }
 
 /**
-  \fn          void dsi_dcs_long_write(DSI_Type *dsi, uint8_t cmd, uint32_t data, uint8_t vc_id)
   \brief       Perform dsi DCS Short write.
-  \param[in]   data pointer to data buffer.
-  \param[in]   len data buffer length.
-  \param[in]   vc_id virtual channel ID.
-  \return      none.
 */
 void dsi_dcs_long_write(DSI_Type *dsi, uint8_t *data, uint32_t len, uint8_t vc_id)
 {
@@ -83,11 +69,7 @@ void dsi_dcs_long_write(DSI_Type *dsi, uint8_t *data, uint32_t len, uint8_t vc_i
 }
 
 /**
-  \fn          DSI_LANE_STOPSTATE dsi_get_lane_stopstate_status(DSI_Type *dsi, DSI_LANE lane)
   \brief       Get dsi lane stopstate status.
-  \param[in]   dsi     Pointer to the dsi register map.
-  \param[in]   lane    dsi lane.
-  \return      dsi lane stopstate status.
 */
 DSI_LANE_STOPSTATE dsi_get_lane_stopstate_status(DSI_Type *dsi, DSI_LANE lane)
 {

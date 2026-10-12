@@ -9,26 +9,19 @@
  */
 
 /*******************************************************************************
- * @file     utimer.h
+ * @file     utimer.c
  * @author   Girish BN, Manoj A Murudi
- * @email    girish.bn@alifsemi.com, manoj.murudi@alifsemi.com
+ * Email:    girish.bn@alifsemi.com, manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     02-April-2023
  * @brief    Low Level driver file for UTIMER.
- * @bug      None.
- * @Note     None
+ * @note     None
  *******************************************************************************/
 
 #include "utimer.h"
 
 /**
-  \fn          void utimer_config_direction (UTIMER_Type *utimer, uint8_t channel, UTIMER_TYPE type,
-  utimer_channel_config *ch_config) \brief       configure counter type for the UTIMER instance.
-  \param[in]   utimer      Pointer to the UTIMER register map
-  \param[in]   channel     channel number
-  \param[in]   dir         counter direction
-  \param[in]   ch_config   Pointer to the UTIMER channel specific config structure
-  \return      none
+  \brief       configure counter type for the UTIMER instance.
 */
 void utimer_config_direction(UTIMER_Type *utimer, uint8_t channel, UTIMER_COUNTER_DIR dir,
                              utimer_channel_config *ch_config)
@@ -73,13 +66,7 @@ void utimer_config_direction(UTIMER_Type *utimer, uint8_t channel, UTIMER_COUNTE
 }
 
 /**
-  \fn          void utimer_config_mode (UTIMER_Type *utimer, uint8_t channel, UTIMER_MODE mode,
-  utimer_channel_config *ch_config) \brief       configure counter mode for the UTIMER instance.
-  \param[in]   utimer      Pointer to the UTIMER register map
-  \param[in]   channel     channel number
-  \param[in]   mode        counter mode
-  \param[in]   ch_config   Pointer to the UTIMER channel specific config structure
-  \return      none
+  \brief       configure counter mode for the UTIMER instance.
 */
 void utimer_config_mode(UTIMER_Type *utimer, uint8_t channel, UTIMER_MODE mode,
                         utimer_channel_config *ch_config)
@@ -243,12 +230,8 @@ void utimer_config_mode(UTIMER_Type *utimer, uint8_t channel, UTIMER_MODE mode,
 }
 
 /**
-  \fn          void utimer_set_count (UTIMER_Type *utimer, uint8_t channel, UTIMER_COUNTER
-  counter_type, uint32_t value) \brief       set counter value for the UTIMER instance. \param[in]
+  \brief       set counter value for the UTIMER instance. \param[in]
   utimer       Pointer to the UTIMER register map \param[in]   channel      channel number
-  \param[in]   counter_type counter type
-  \param[in]   value        counter value
-  \return      none
 */
 void utimer_set_count(UTIMER_Type *utimer, uint8_t channel, UTIMER_COUNTER counter_type,
                       uint32_t value)
@@ -350,8 +333,7 @@ void utimer_set_count(UTIMER_Type *utimer, uint8_t channel, UTIMER_COUNTER count
 }
 
 /**
-  \fn          uint32_t utimer_get_count (UTIMER_Type *utimer, uint8_t channel, UTIMER_COUNTER
-  counter, utimer_channel_config *ch_config) \brief       get counter direction for the UTIMER
+  \brief       get counter direction for the UTIMER
   instance. \param[in]   utimer         Pointer to the UTIMER register map \param[in]   channel
   channel number \param[in]   counter_type   counter type \return      current counter value
 */
@@ -465,13 +447,8 @@ uint32_t utimer_get_count(UTIMER_Type *utimer, uint8_t channel, UTIMER_COUNTER c
 }
 
 /**
-  \fn          void utimer_config_trigger (UTIMER_Type *utimer, uint8_t channel,
-  UTIMER_TRIGGER_CONFIG *config_control, utimer_channel_config *ch_config) \brief       configure
+  \brief       configure
   trigger for the UTIMER instance. \param[in]   utimer          Pointer to the UTIMER register map
-  \param[in]   channel         channel number
-  \param[in]   config_control  Pointer to a trigger configure type argument
-  \param[in]   ch_config       Pointer to the UTIMER channel specific config structure
-  \return      none
 */
 void utimer_config_trigger(UTIMER_Type *utimer, uint8_t channel,
                            UTIMER_TRIGGER_CONFIG *config_control, utimer_channel_config *ch_config)

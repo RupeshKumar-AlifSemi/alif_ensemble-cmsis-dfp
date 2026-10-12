@@ -11,22 +11,18 @@
 /*******************************************************************************
  * @file     dma_ctrl.c
  * @author   Sudhir Sreedharan
- * @email    sudhir@alifsemi.com
+ * Email:    sudhir@alifsemi.com
  * @version  V1.0.0
  * @date     28-Sep-2023
  * @brief    DMA control driver
- * @bug      None
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 /* Includes ------------------------------------------------------------------*/
 #include <dma_ctrl.h>
 
 /**
-  \fn          int8_t dma_allocate_channel(dma_config_info_t *dma_cfg)
   \brief       Allocate a channel if available
-  \param[in]   dma_cfg  Pointer to DMA Configuration resources
-  \return      int8_t channel number or -1 if not available
 */
 int8_t dma_allocate_channel(dma_config_info_t *dma_cfg)
 {
@@ -50,12 +46,8 @@ int8_t dma_allocate_channel(dma_config_info_t *dma_cfg)
 }
 
 /**
-  \fn          int8_t dma_allocate_event(dma_config_info_t *dma_cfg,
                                          uint8_t            channel_num)
   \brief       Allocate a event if available
-  \param[in]   dma_cfg  Pointer to DMA Configuration resources
-  \param[in]   channel_num  Channel Number
-  \return      int8_t Event index number or -1 if not available
 */
 int8_t dma_allocate_event(dma_config_info_t *dma_cfg, uint8_t channel_num)
 {
@@ -75,14 +67,9 @@ int8_t dma_allocate_event(dma_config_info_t *dma_cfg, uint8_t channel_num)
 }
 
 /**
-  \fn          void dma_copy_desc_info(dma_config_info_t *dma_cfg,
                                        uint8_t            channel_num,
                                        dma_desc_info_t   *desc_info)
   \brief       Update the channel descriptor Structure
-  \param[in]   dma_cfg  Pointer to DMA Configuration resources
-  \param[in]   channel_num  Channel Number
-  \param[in]   desc_info  Descriptor Information
-  \return      None
 */
 void dma_copy_desc_info(dma_config_info_t *dma_cfg, uint8_t channel_num, dma_desc_info_t *desc_info)
 {
@@ -108,12 +95,8 @@ void dma_copy_desc_info(dma_config_info_t *dma_cfg, uint8_t channel_num, dma_des
 }
 
 /**
-  \fn          dma_ccr_t dma_get_channel_ctrl_info(dma_config_info_t *dma_cfg,
                                                    uint8_t            channel_num)
   \brief       Return the Channel Control Info from Descriptor info
-  \param[in]   dma_cfg  Pointer to DMA Configuration resources
-  \param[in]   channel_num  Channel Number
-  \return      dma_ccr_t channel Control Info (CCR)
 */
 dma_ccr_t dma_get_channel_ctrl_info(dma_config_info_t *dma_cfg, uint8_t channel_num)
 {

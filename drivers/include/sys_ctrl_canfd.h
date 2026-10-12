@@ -11,12 +11,11 @@
 /******************************************************************************
  * @file     sys_ctrl_canfd.h
  * @author   Shreehari H K
- * @email    shreehari.hk@alifsemi.com
+ * Email:    shreehari.hk@alifsemi.com
  * @version  V1.0.0
  * @date     05-July-2023
  * @brief    System control header file for canfd
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 
 #ifndef SYS_CTRL_CANFD_H_

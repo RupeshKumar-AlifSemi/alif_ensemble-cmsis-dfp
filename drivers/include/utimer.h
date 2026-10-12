@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     utimer.h
  * @author   Girish BN, Manoj A Murudi
- * @email    girish.bn@alifsemi.com, manoj.murudi@alifsemi.com
+ * Email:    girish.bn@alifsemi.com, manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     02-April-2023
  * @brief    Low Level header file for UTIMER.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #ifndef UTIMER_H_
@@ -404,8 +403,8 @@ static inline void utimer_control_disable(UTIMER_Type *utimer, uint8_t channel)
 }
 
 /**
-  \fn           static inline void utimer_glb_driver_output_enable (UTIMER_Type *utimer, uint8_t
-  channel, utimer_channel_config *ch_config) \brief        Enable utimer channel driver output
+  \fn static inline void utimer_glb_driver_output_enable(UTIMER_Type *utimer, uint8_t channel, utimer_channel_config *ch_config)
+  \brief        Enable utimer channel driver output
   \param[in]    utimer    : Pointer to utimer register block
   \param[in]    channel   : utimer channel number
   \param[in]    ch_config : pointer for utimer channel configuration structure
@@ -423,8 +422,8 @@ static inline void utimer_glb_driver_output_enable(UTIMER_Type *utimer, uint8_t 
 }
 
 /**
-  \fn           static inline void utimer_glb_driver_output_disable (UTIMER_Type *utimer, uint8_t
-  channel) \brief        Disable utimer channel driver output \param[in]    utimer    : Pointer to
+  \fn static inline void utimer_glb_driver_output_disable(UTIMER_Type *utimer, uint8_t channel)
+  \brief        Disable utimer channel driver output \param[in]    utimer    : Pointer to
   utimer register block \param[in]    channel   : utimer channel number \return       none
 */
 static inline void utimer_glb_driver_output_disable(UTIMER_Type *utimer, uint8_t channel)
@@ -458,8 +457,8 @@ static inline bool utimer_counter_running(UTIMER_Type *utimer, uint8_t channel)
 }
 
 /**
-  \fn           static inline void utimer_counter_stop (UTIMER_Type *utimer, uint8_t channel, bool
-  clear_count) \brief        Stop utimer channel counter with counter clear option \param[in] utimer
+  \fn static inline void utimer_counter_stop(UTIMER_Type *utimer, uint8_t channel, bool clear_count)
+  \brief        Stop utimer channel counter with counter clear option \param[in] utimer
   : Pointer to utimer register block \param[in]    channel     : utimer channel number \param[in]
   clear_count : counter clear option \return       none
 */
@@ -487,8 +486,8 @@ static inline void utimer_reset(UTIMER_Type *utimer, uint8_t channel)
 }
 
 /**
-  \fn           static inline void utimer_clear_interrupt (UTIMER_Type *utimer, uint8_t channel,
-  uint8_t interrupt) \brief        clear utimer channel interrupt \param[in]    utimer      :
+  \fn static inline void utimer_clear_interrupt(UTIMER_Type *utimer, uint8_t channel, uint8_t interrupt)
+  \brief        clear utimer channel interrupt \param[in]    utimer      :
   Pointer to utimer register block \param[in]    channel     : utimer channel number \param[in]
   interrupt   : interrupt needs to be cleared \return       none
 */
@@ -498,8 +497,8 @@ static inline void utimer_clear_interrupt(UTIMER_Type *utimer, uint8_t channel, 
 }
 
 /**
-  \fn           static inline void utimer_unmask_interrupt (UTIMER_Type *utimer, uint8_t channel,
-  uint8_t interrupt) \brief        unmask utimer channel interrupt \param[in]    utimer      :
+  \fn static inline void utimer_unmask_interrupt(UTIMER_Type *utimer, uint8_t channel, uint8_t interrupt)
+  \brief        unmask utimer channel interrupt \param[in]    utimer      :
   Pointer to utimer register block \param[in]    channel     : utimer channel number \param[in]
   interrupt   : interrupt needs to be unmasked \return       none
 */
@@ -509,8 +508,8 @@ static inline void utimer_unmask_interrupt(UTIMER_Type *utimer, uint8_t channel,
 }
 
 /**
-  \fn           static inline void utimer_mask_interrupt (UTIMER_Type *utimer, uint8_t channel,
-  uint8_t interrupt) \brief        mask utimer channel interrupt \param[in]    utimer      : Pointer
+  \fn static inline void utimer_mask_interrupt(UTIMER_Type *utimer, uint8_t channel, uint8_t interrupt)
+  \brief        mask utimer channel interrupt \param[in]    utimer      : Pointer
   to utimer register block \param[in]    channel     : utimer channel number \param[in]    interrupt
   : interrupt needs to be masked \return       none
 */
@@ -520,8 +519,8 @@ static inline void utimer_mask_interrupt(UTIMER_Type *utimer, uint8_t channel, u
 }
 
 /**
-  \fn           static inline void utimer_enable_duty_cycle (UTIMER_Type *utimer, uint8_t channel,
-  utimer_channel_config *ch_config) \brief        enable utimer channel duty cycle \param[in] utimer
+  \fn static inline void utimer_enable_duty_cycle(UTIMER_Type *utimer, uint8_t channel, utimer_channel_config *ch_config)
+  \brief        enable utimer channel duty cycle \param[in] utimer
   : Pointer to utimer register block \param[in]    channel     : utimer channel number \param[in]
   ch_config   : pointer for utimer channel configuration structure \return       none
 */
@@ -581,8 +580,8 @@ static inline void utimer_driver_output_enable(UTIMER_Type *utimer, uint8_t chan
 }
 
 /**
-  \fn          void utimer_config_direction (UTIMER_Type *utimer, uint8_t channel, UTIMER_TYPE type,
-  utimer_channel_config *ch_config) \brief       configure counter type for the UTIMER instance.
+  \fn void utimer_config_direction(UTIMER_Type *utimer, uint8_t channel, UTIMER_COUNTER_DIR dir, utimer_channel_config *ch_config)
+  \brief       configure counter type for the UTIMER instance.
   \param[in]   utimer      Pointer to the UTIMER register map
   \param[in]   channel     channel number
   \param[in]   dir         counter direction
@@ -593,8 +592,8 @@ void utimer_config_direction(UTIMER_Type *utimer, uint8_t channel, UTIMER_COUNTE
                              utimer_channel_config *ch_config);
 
 /**
-  \fn          void utimer_config_mode (UTIMER_Type *utimer, uint8_t channel, UTIMER_MODE mode,
-  utimer_channel_config *ch_config) \brief       configure counter mode for the UTIMER instance.
+  \fn void utimer_config_mode(UTIMER_Type *utimer, uint8_t channel, UTIMER_MODE mode, utimer_channel_config *ch_config)
+  \brief       configure counter mode for the UTIMER instance.
   \param[in]   utimer      Pointer to the UTIMER register map
   \param[in]   channel     channel number
   \param[in]   mode        counter mode
@@ -605,8 +604,8 @@ void utimer_config_mode(UTIMER_Type *utimer, uint8_t channel, UTIMER_MODE mode,
                         utimer_channel_config *ch_config);
 
 /**
-  \fn          void utimer_set_count (UTIMER_Type *utimer, uint8_t channel, UTIMER_SET_COUNTER_TYPE
-  counter_type, utimer_channel_config *ch_config) \brief       set counter value for the UTIMER
+  \fn void utimer_set_count(UTIMER_Type *utimer, uint8_t channel, UTIMER_COUNTER counter_type, uint32_t value)
+  \brief       set counter value for the UTIMER
   instance. \param[in]   utimer          Pointer to the UTIMER register map \param[in]   channel
   channel number \param[in]   counter_type    counter type \param[in]   value           counter
   value \return      none
@@ -615,8 +614,8 @@ void utimer_set_count(UTIMER_Type *utimer, uint8_t channel, UTIMER_COUNTER count
                       uint32_t value);
 
 /**
-  \fn          uint32_t utimer_get_count (UTIMER_Type *utimer, uint8_t channel,
-  UTIMER_GET_COUNTER_TYPE counter, utimer_channel_config *ch_config) \brief       get counter
+  \fn uint32_t utimer_get_count(UTIMER_Type *utimer, uint8_t channel, UTIMER_COUNTER counter_type)
+  \brief       get counter
   direction for the UTIMER instance. \param[in]   utimer         Pointer to the UTIMER register map
   \param[in]   channel        channel number
   \param[in]   counter_type   counter type
@@ -625,11 +624,14 @@ void utimer_set_count(UTIMER_Type *utimer, uint8_t channel, UTIMER_COUNTER count
 uint32_t utimer_get_count(UTIMER_Type *utimer, uint8_t channel, UTIMER_COUNTER counter_type);
 
 /**
-  \fn          void utimer_config_trigger (UTIMER_Type *utimer, uint8_t channel, UT_TRIGGER_CONFIG
-  *config_control, utimer_channel_config *ch_config) \brief       configure trigger for the UTIMER
-  instance. \param[in]   utimer          Pointer to the UTIMER register map \param[in]   channel
-  channel number \param[in]   config_control  Pointer to a trigger configure type argument
-  \param[in]   ch_config       Pointer to the UTIMER channel specific config structure
+  \fn          void utimer_config_trigger(UTIMER_Type *utimer, uint8_t channel,
+                                          UTIMER_TRIGGER_CONFIG *config_control,
+                                          utimer_channel_config *ch_config)
+  \brief       Configure the trigger for a UTIMER channel.
+  \param[in]   utimer          Pointer to the UTIMER register map
+  \param[in]   channel         Channel number
+  \param[in]   config_control  Pointer to the trigger configuration
+  \param[in]   ch_config       Pointer to the UTIMER channel configuration
   \return      none
 */
 void utimer_config_trigger(UTIMER_Type *utimer, uint8_t channel,

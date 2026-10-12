@@ -576,7 +576,7 @@ static inline uint8_t i3c_get_dynamic_addr(I3C_Type *i3c)
 }
 
 /**
-  \fn          static inline void i3c_set_dcr(I3C_Type *i3c)
+  \fn static inline void i3c_set_dcr(I3C_Type *i3c, const uint8_t val)
   \brief       Sets Device characteristics of the device
   \param[in]   i3c   Pointer to i3c register map
   \return      none
@@ -894,7 +894,7 @@ static inline uint8_t i3c_get_rx_buf_thld(I3C_Type *i3c)
   \fn          uint8_t i3c_get_buflen_to_threshold(uint16_t buflen)
   \brief       Get buffer threshold for buffer length (in bytes)
   \            Each entry is of 4 bytes.
-  \param[in]   bytes  Length of data in bytes
+  \param[in] buflen Length of data in bytes
   \return      Buffer thresold value
 */
 static inline uint8_t i3c_get_buflen_to_threshold(uint16_t buflen)
@@ -1364,7 +1364,7 @@ void i3c_master_get_dct(I3C_Type *i3c, i3c_dev_prime_info_t *data, const uint8_t
   \param[in]    i3c              : Pointer to i3c register set structure
   \param[in]    core_clk         : core clock
   \param[in]    scl_timeout_cnt  : SCL Timeout count in microsec
-  \param[in]    bus_type         : bus reset type
+  \param[in] bus_rst_type bus reset type
   \return       none
 */
 void i3c_master_bus_reset(I3C_Type *i3c, const uint32_t core_clk, const uint32_t scl_timeout_cnt,
@@ -1378,7 +1378,7 @@ void i3c_master_bus_reset(I3C_Type *i3c, const uint32_t core_clk, const uint32_t
   \param[in]    i3c              : Pointer to i3c register set structure
   \param[in]    core_clk         : core clock
   \param[in]    scl_timeout_cnt  : SCL Timeout count in microsec
-  \param[in]    bus_type         : bus reset type
+  \param[in] bus_rst_type bus reset type
   \return       none
 */
 void i3c_master_bus_reset_blocking(I3C_Type *i3c, const uint32_t core_clk,
@@ -1521,8 +1521,7 @@ int32_t i3c_slave_tx_slv_intr_req(I3C_Type *i3c);
 void i3c_master_setup_cmd(I3C_Type *i3c, const i3c_xfer_t xfer);
 
 /**
-  \fn           void i3c_setup_tx(I3C_Type *i3c,
-  \                               const uint16_t len)
+  \fn void i3c_setup_tx(I3C_Type *i3c, i3c_xfer_t *xfer, const uint16_t len)
   \brief        Setup Data Tx
   \param[in]    i3c    : Pointer to i3c register set structure
   \param[in]    xfer   : transfer info

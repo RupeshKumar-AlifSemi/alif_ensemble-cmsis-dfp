@@ -21,7 +21,6 @@ extern "C" {
 /**
   \fn     static inline void enable_eth_periph_clk(void)
   \brief  Enable Ethernet peripheral clock in CLKCTL_PER_MST PERIPH_CLK_ENA register.
-  \param  none.
   \return none.
  */
 static inline void enable_eth_periph_clk(void)
@@ -30,9 +29,8 @@ static inline void enable_eth_periph_clk(void)
 }
 
 /**
-  \fn     static inline void disble_eth_periph_clk(void)
+  \fn static inline void disable_eth_periph_clk(void)
   \brief  Disable Ethernet peripheral clock in CLKCTL_PER_MST PERIPH_CLK_ENA register.
-  \param  none.
   \return none.
  */
 static inline void disable_eth_periph_clk(void)

@@ -78,7 +78,7 @@ static void i3c_read_rx_fifo(I3C_Type *i3c, uint8_t *bytes, uint32_t nbytes)
   \fn           static void i3c_set_tx_buf_thld(I3C_Type *i3c,
   \                                             const uint16_t len)
   \brief        Set Tx buffer threshold
-  \param[in]    xfer : Transfer data structure
+  \param[in] i3c Transfer data structure
   \param[in]    len  : Data length
   \return       none
 */
@@ -106,7 +106,7 @@ static void i3c_set_tx_buf_thld(I3C_Type *i3c, const uint16_t len)
   \fn           static void i3c_set_rx_buf_thld(I3C_Type *i3c,
   \                                             const uint16_t len)
   \brief        Set Rx buffer threshold
-  \param[in]    xfer : Transfer data structure
+  \param[in] i3c Transfer data structure
   \param[in]    len  : Data length
   \return       none
 */
@@ -138,7 +138,7 @@ static void i3c_set_rx_buf_thld(I3C_Type *i3c, const uint16_t len)
   \param[in]    i3c              : Pointer to i3c register set structure
   \param[in]    core_clk         : core clock
   \param[in]    scl_timeout_cnt  : SCL Timeout count in microsec
-  \param[in]    bus_type         : bus reset type
+  \param[in] bus_rst_type bus reset type
   \return
 */
 static void i3c_bus_reset(I3C_Type *i3c, const uint32_t core_clk, const uint32_t scl_timeout_cnt,
@@ -648,10 +648,7 @@ static void i3c_ibi_handler(I3C_Type *i3c, i3c_xfer_t *xfer)
 }
 
 /**
-  \fn           int32_t i3c_slave_req_bus_mastership(I3C_Type *i3c)
   \brief        Sends mastership request to master
-  \param[in]    i3c     : Pointer to i3c register set structure
-  \return       exec status
 */
 int32_t i3c_slave_req_bus_mastership(I3C_Type *i3c)
 {
@@ -691,10 +688,7 @@ int32_t i3c_slave_req_bus_mastership(I3C_Type *i3c)
 }
 
 /**
-  \fn           int32_t i3c_slave_tx_slv_intr_req(I3C_Type *i3c)
   \brief        Sends Slave Interrupt request to master
-  \param[in]    i3c     : Pointer to i3c register set structure
-  \return       exec status
 */
 int32_t i3c_slave_tx_slv_intr_req(I3C_Type *i3c)
 {
@@ -724,13 +718,9 @@ int32_t i3c_slave_tx_slv_intr_req(I3C_Type *i3c)
 }
 
 /**
-  \fn           uint8_t i3c_get_slv_dyn_addr(I3C_Type *i3c,
                                              const uint8_t static_addr)
   \brief        Gets slave's dynamic from DAT for the
                 given static address
-  \param[in]    i3c         : Pointer to i3c register set structure
-  \param[in]    static_addr : Slave's static address
-  \return       none
 */
 uint8_t i3c_get_slv_dyn_addr(I3C_Type *i3c, const uint8_t static_addr)
 {
@@ -752,14 +742,9 @@ uint8_t i3c_get_slv_dyn_addr(I3C_Type *i3c, const uint8_t static_addr)
 }
 
 /**
-  \fn           void i3c_sec_master_get_dct(I3C_Type *i3c,
   \                                         i3c_dev_char_t *data,
   \                                         const uint8_t slv_cnt)
   \brief        Get Device Characteritics Table of slaves.
-  \param[in]    i3c     : Pointer to i3c register set structure
-  \param[in]    data    : Device characteristics data
-  \param[in]    slv_cnt : Slaves count
-  \return       None
 */
 void i3c_sec_master_get_dct(I3C_Type *i3c, i3c_dev_char_t *data, const uint8_t slv_cnt)
 {
@@ -785,14 +770,9 @@ void i3c_sec_master_get_dct(I3C_Type *i3c, i3c_dev_char_t *data, const uint8_t s
 }
 
 /**
-  \fn           void i3c_master_get_dct(I3C_Type *i3c,
   \                                     i3c_dev_prime_info_t *data,
   \                                     const uint8_t addr)
   \brief        Get Device Characteritics Table of requested slave.
-  \param[in]    i3c     : Pointer to i3c register set structure
-  \param[in]    data    : Device characteristics data
-  \param[in]    addr    : Slave's dynamic address
-  \return       None
 */
 void i3c_master_get_dct(I3C_Type *i3c, i3c_dev_prime_info_t *data, const uint8_t addr)
 {
@@ -829,15 +809,9 @@ void i3c_master_get_dct(I3C_Type *i3c, i3c_dev_prime_info_t *data, const uint8_t
 }
 
 /**
-  \fn           void i3c_master_bus_reset(I3C_Type *i3c, const uint32_t core_clk,
   \                                       const uint32_t scl_timeout_cnt,
   \                                       const uint8_t bus_rst_type)
   \brief        Resets the bus as a master
-  \param[in]    i3c              : Pointer to i3c register set structure
-  \param[in]    core_clk         : core clock
-  \param[in]    scl_timeout_cnt  : SCL Timeout count in microsec
-  \param[in]    bus_type         : bus reset type
-  \return       none
 */
 void i3c_master_bus_reset(I3C_Type *i3c, const uint32_t core_clk, const uint32_t scl_timeout_cnt,
                           const uint8_t bus_rst_type)
@@ -850,15 +824,9 @@ void i3c_master_bus_reset(I3C_Type *i3c, const uint32_t core_clk, const uint32_t
 }
 
 /**
-  \fn           void i3c_master_bus_reset_blocking(I3C_Type *i3c, const uint32_t core_clk,
   \                                                const uint32_t scl_timeout_cnt,
   \                                                const uint8_t bus_rst_type)
   \brief        Resets the bus as a master in blocking mode
-  \param[in]    i3c              : Pointer to i3c register set structure
-  \param[in]    core_clk         : core clock
-  \param[in]    scl_timeout_cnt  : SCL Timeout count in microsec
-  \param[in]    bus_type         : bus reset type
-  \return       none
 */
 void i3c_master_bus_reset_blocking(I3C_Type *i3c, const uint32_t core_clk,
                                    const uint32_t scl_timeout_cnt, const uint8_t bus_rst_type)
@@ -875,11 +843,7 @@ void i3c_master_bus_reset_blocking(I3C_Type *i3c, const uint32_t core_clk,
 }
 
 /**
-  \fn           void i3c_master_tx_blocking(I3C_Type *i3c, i3c_xfer_t *xfer)
   \brief        Perform master data transmission in blocking mode.
-  \param[in]    i3c      : Pointer to i3c register set structure
-  \param[in]    xfer     : Pointer to i3c transfer structure
-  \return       none
 */
 void i3c_master_tx_blocking(I3C_Type *i3c, i3c_xfer_t *xfer)
 {
@@ -907,11 +871,7 @@ void i3c_master_tx_blocking(I3C_Type *i3c, i3c_xfer_t *xfer)
 }
 
 /**
-  \fn           void i3c_master_rx_blocking(I3C_Type *i3c, i3c_xfer_t *xfer)
   \brief        Perform master data reception in blocking mode.
-  \param[in]    i3c      : Pointer to i3c register set structure
-  \param[in]    xfer     : Pointer to i3c transfer structure
-  \return       none
 */
 void i3c_master_rx_blocking(I3C_Type *i3c, i3c_xfer_t *xfer)
 {
@@ -941,12 +901,8 @@ void i3c_master_rx_blocking(I3C_Type *i3c, i3c_xfer_t *xfer)
 }
 
 /**
-  \fn           void i3c_slave_tx_blocking(I3C_Type *i3c,
                                            i3c_xfer_t *xfer)
   \brief        Performs slave data transmission in blocking mode.
-  \param[in]    i3c      : Pointer to i3c register set structure
-  \param[in]    xfer     : Pointer to i3c transfer structure
-  \return       none
 */
 void i3c_slave_tx_blocking(I3C_Type *i3c, i3c_xfer_t *xfer)
 {
@@ -976,11 +932,7 @@ void i3c_slave_tx_blocking(I3C_Type *i3c, i3c_xfer_t *xfer)
 }
 
 /**
-  \fn           void i3c_slave_rx_blocking(I3C_Type *i3c, i3c_xfer_t *xfer)
   \brief        Performs slave data reception in blocking mode.
-  \param[in]    i3c      : Pointer to i3c register set structure
-  \param[in]    xfer     : Pointer to i3c transfer structure
-  \return       none
 */
 void i3c_slave_rx_blocking(I3C_Type *i3c, i3c_xfer_t *xfer)
 {
@@ -1004,11 +956,7 @@ void i3c_slave_rx_blocking(I3C_Type *i3c, i3c_xfer_t *xfer)
 }
 
 /**
-  \fn           void i3c_send_xfer_cmd_blocking(I3C_Type *i3c, i3c_xfer_t *xfer)
   \brief        performs command transfer in blocking mode
-  \param[in]    i3c      : Pointer to i3c register set structure
-  \param[in]    xfer     : Pointer to i3c transfer structure
-  \return       none
 */
 void i3c_send_xfer_cmd_blocking(I3C_Type *i3c, i3c_xfer_t *xfer)
 {
@@ -1059,14 +1007,10 @@ void i3c_send_xfer_cmd_blocking(I3C_Type *i3c, i3c_xfer_t *xfer)
 }
 
 /**
-  \fn           void i3c_slow_bus_clk_cfg(I3C_Type *i3c,
   \                                       const uint32_t  core_clk)
   \brief        i3c slow bus clock configuration for i3c slave device
   \note         This function sets the clock timings as follows:
                 OD - 2MHz, PP - 2MHz, SDR1-SDR4 - null
-  \param[in]    i3c       : Pointer to i3c register set structure
-  \param[in]    core_clk  : core clock
-  \return       none
 */
 void i3c_slow_bus_clk_cfg(I3C_Type *i3c, const uint32_t core_clk)
 {
@@ -1112,13 +1056,9 @@ void i3c_slow_bus_clk_cfg(I3C_Type *i3c, const uint32_t core_clk)
 }
 
 /**
-  \fn           void i3c_normal_bus_clk_cfg(I3C_Type *i3c,
   \                                         const uint32_t  core_clk)
   \brief        i3c normal bus clock configuration for i3c slave device
   \note         This function sets the clock timings as per MIPI I3C std
-  \param[in]    i3c       : Pointer to i3c register set structure
-  \param[in]    core_clk  : core clock
-  \return       none
 */
 void i3c_normal_bus_clk_cfg(I3C_Type *i3c, const uint32_t core_clk)
 {
@@ -1181,17 +1121,12 @@ void i3c_normal_bus_clk_cfg(I3C_Type *i3c, const uint32_t core_clk)
 }
 
 /**
-  \fn           void i2c_clk_cfg(I3C_Type           *i3c,
                                  uint32_t            core_clk,
                                  I3C_I2C_SPEED_MODE  i2c_speed_mode)
   \brief        i3c clock configuration for legacy i2c slave device
-  \param[in]    i3c             : Pointer to i3c register set structure
-  \param[in]    core_clk        : core clock
-  \param[in]    i2c_speed_mode  : i2c Speed mode
                  I3C_I2C_SPEED_MODE_FMP_1_MBPS  : Fast Mode Plus 1   MBPS
                  I3C_I2C_SPEED_MODE_FM_400_KBPS : Fast Mode      400 KBPS
                  I3C_I2C_SPEED_MODE_SS_100_KBPS : Standard Mode  100 KBPS
-  \return        none
 */
 void i2c_clk_cfg(I3C_Type *i3c, uint32_t core_clk, I3C_I2C_SPEED_MODE i2c_speed_mode)
 {
@@ -1254,15 +1189,12 @@ void i2c_clk_cfg(I3C_Type *i3c, uint32_t core_clk, I3C_I2C_SPEED_MODE i2c_speed_
 }
 
 /**
-  \fn           void i3c_master_init(I3C_Type *i3c)
   \brief        Initialize i3c master.
                  This function will :
                   - Set mode as master
                   - Clear Command Queue and Data buffer Queue
                   - Enable i3c controller
-  \param[in]    i3c  : Pointer to i3c register
                         set structure
-  \return       none
 */
 void i3c_master_init(I3C_Type *i3c)
 {
@@ -1283,7 +1215,6 @@ void i3c_master_init(I3C_Type *i3c)
 }
 
 /**
-  \fn           void i3c_slave_init(I3C_Type *i3c,
                                     const uint8_t  slv_addr,
                                     const uint32_t core_clk)
   \brief        Initialize i3c slave.
@@ -1291,11 +1222,7 @@ void i3c_master_init(I3C_Type *i3c)
                   - set slave static address
                   - set secondary master as slave mode
                   - Enable i3c controller
-  \param[in]    i3c       : Pointer to i3c register
                              set structure
-  \param[in]    slv_addr  : Slave own Address
-  \param[in]    core_clk  : core clock
-  \return       none
 */
 void i3c_slave_init(I3C_Type *i3c, const uint8_t slv_addr, const uint32_t core_clk)
 {
@@ -1342,12 +1269,8 @@ void i3c_slave_init(I3C_Type *i3c, const uint8_t slv_addr, const uint32_t core_c
 }
 
 /**
-  \fn           void i3c_master_setup_cmd(I3C_Type *i3c,
   \                                      const i3c_xfer_t xfer)
   \brief        Set command queue intterupt
-  \param[in]    i3c     : Pointer to i3c register set structure
-  \param[in]    xfer    : Transfer command structure
-  \return       none
 */
 void i3c_master_setup_cmd(I3C_Type *i3c, const i3c_xfer_t xfer)
 {
@@ -1390,13 +1313,7 @@ void i3c_master_setup_cmd(I3C_Type *i3c, const i3c_xfer_t xfer)
 }
 
 /**
-  \fn           void i3c_setup_tx(I3C_Type *i3c,
-  \                               const uint16_t len)
   \brief        Setup Data Tx
-  \param[in]    i3c    : Pointer to i3c register set structure
-  \param[in]    xfer   : transfer info
-  \param[in]    len    : Data length in bytes
-  \return       none
 */
 void i3c_setup_tx(I3C_Type *i3c, i3c_xfer_t *xfer, const uint16_t len)
 {
@@ -1450,12 +1367,8 @@ void i3c_setup_tx(I3C_Type *i3c, i3c_xfer_t *xfer, const uint16_t len)
 }
 
 /**
-  \fn           void i3c_setup_rx(I3C_Type *i3c,
   \                               const uint16_t len)
   \brief        Setup Data Rx
-  \param[in]    i3c    : Pointer to i3c register set structure
-  \param[in]    len    : Data length in bytes
-  \return       none
 */
 void i3c_setup_rx(I3C_Type *i3c, const uint16_t len)
 {
@@ -1489,11 +1402,7 @@ void i3c_setup_rx(I3C_Type *i3c, const uint16_t len)
 }
 
 /**
-  \fn           void i3c_master_irq_handler(I3C_Type *i3c, i3c_xfer_t *xfer)
   \brief        i3c interrupt service routine for master
-  \param[in]    i3c  : Pointer to i3c register set structure
-  \param[in]    xfer : Pointer to i3c transfer structure
-  \return       none
 */
 void i3c_master_irq_handler(I3C_Type *i3c, i3c_xfer_t *xfer)
 {
@@ -1651,11 +1560,7 @@ void i3c_master_irq_handler(I3C_Type *i3c, i3c_xfer_t *xfer)
 }
 
 /**
-  \fn           void i3c_slave_irq_handler(I3C_Type *i3c, i3c_xfer_t *xfer)
   \brief        i3c interrupt service routine for slave
-  \param[in]    i3c  : Pointer to i3c register set structure
-  \param[in]    xfer : Pointer to i3c transfer structure
-  \return       none
 */
 void i3c_slave_irq_handler(I3C_Type *i3c, i3c_xfer_t *xfer)
 {

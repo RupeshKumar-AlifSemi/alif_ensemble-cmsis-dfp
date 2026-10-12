@@ -174,7 +174,7 @@ typedef struct conv_info {
 /**
  * @fn        : void adc_enable_single_shot_conv(ADC_Type *adc)
  * @brief     : Enable the single shot conversion
- * @param[in] : adc : Pointer to the ADC register map
+ * @param[in] adc Pointer to the ADC register map
  * @return    : none
  */
 static inline void adc_enable_single_shot_conv(ADC_Type *adc)
@@ -187,7 +187,7 @@ static inline void adc_enable_single_shot_conv(ADC_Type *adc)
 /**
  * @fn        : void adc_disable_single_shot_conv(ADC_Type *adc)
  * @brief     : disable the single shot conversion
- * @param[in] : adc : Pointer to the ADC register map
+ * @param[in] adc Pointer to the ADC register map
  * @return    : none
  */
 static inline void adc_disable_single_shot_conv(ADC_Type *adc)
@@ -200,7 +200,7 @@ static inline void adc_disable_single_shot_conv(ADC_Type *adc)
 /**
  * @fn        : void adc_enable_continuous_conv(ADC_Type *adc)
  * @brief     : Enable the continuous conversion
- * @param[in] : adc : Pointer to the ADC register map
+ * @param[in] adc Pointer to the ADC register map
  * @return    : none
  */
 static inline void adc_enable_continuous_conv(ADC_Type *adc)
@@ -211,7 +211,7 @@ static inline void adc_enable_continuous_conv(ADC_Type *adc)
 /**
  * @fn        : void adc_disable_continuous_conv(ADC_Type *adc)
  * @brief     : Disable the continuous conversion
- * @param[in] : adc : Pointer to the ADC register map
+ * @param[in] adc Pointer to the ADC register map
  * @return    : none
  */
 static inline void adc_disable_continuous_conv(ADC_Type *adc)
@@ -222,8 +222,8 @@ static inline void adc_disable_continuous_conv(ADC_Type *adc)
 /**
  * @fn        : void adc_enable_external_trigger(ADC_Type *adc, uint8_t arg)
  * @brief     : Enable external trigger from UTIMER and QEC
- * @param[in] : adc : Pointer to the ADC register map
- * @param[in] : arg : Enable trigger bit fields
+ * @param[in] adc Pointer to the ADC register map
+ * @param[in] arg Enable trigger bit fields
  * @return    : none
  */
 static inline void adc_enable_external_trigger(ADC_Type *adc, uint8_t arg)
@@ -232,10 +232,10 @@ static inline void adc_enable_external_trigger(ADC_Type *adc, uint8_t arg)
 }
 
 /**
- * @fn        : void adc_disable_external_trigger(ADC_Type *adc)
+ * @fn static inline void adc_disable_external_trigger(ADC_Type *adc, uint8_t arg)
  * @brief     : Disable conversion from external trigger from UTIMER and QEC
- * @param[in] : adc : Pointer to the ADC register map
- * @param[in] : arg : Disable trigger bit fields
+ * @param[in] adc Pointer to the ADC register map
+ * @param[in] arg Disable trigger bit fields
  * @return    : none
  */
 static inline void adc_disable_external_trigger(ADC_Type *adc, uint8_t arg)
@@ -244,10 +244,10 @@ static inline void adc_disable_external_trigger(ADC_Type *adc, uint8_t arg)
 }
 
 /*
- * @func         : void adc_init_channel_select(ADC_Type *adc, uint32_t arg)
+ * @fn static inline void adc_init_channel_select(ADC_Type *adc, uint32_t channel)
  * @brief        : control to select initial channel for storing sample value
- * @parameter[1] : adc  : Pointer to the ADC register map
- * @parameter[2] : arg  : selecting initial channel
+ * @param adc Pointer to the ADC register map
+ * @param channel selecting initial channel
  * @return       : ARM_DRIVER_OK              : if driver initialized successfully
  *               : ARM_DRIVER_ERROR_PARAMETER : if parameter is invalid or not
  */
@@ -261,11 +261,11 @@ static inline void adc_init_channel_select(ADC_Type *adc, uint32_t channel)
 }
 
 /*
- * @func         : void adc_set_clock_divisor(ADC_Type *adc, uint32_t divisor)
+ * @fn         : void adc_set_clock_divisor(ADC_Type *adc, uint32_t divisor)
  * @brief        : Setting the value for the clock divisor and
  *                  clock value should be between 2 to 64
- * @parameter[1] : adc  : Pointer to the ADC register map
- * @parameter[2] : clock_value : value to set clock divisor
+ * @param : adc  : Pointer to the ADC register map
+ * @param : clock_value : value to set clock divisor
  * @return       : NONE
  */
 static inline void adc_set_clk_div(ADC_Type *adc, uint32_t divisor)
@@ -274,11 +274,11 @@ static inline void adc_set_clk_div(ADC_Type *adc, uint32_t divisor)
 }
 
 /*
- * @func         : void adc_set_avg_sample(ADC_Type *adc, uint32_t average)
+ * @fn         : void adc_set_avg_sample(ADC_Type *adc, uint32_t average)
  * @brief        : Setting the average value, the value must be
  *                 up to 256 and value should be power of 2
- * @parameter[1] : adc  : Pointer to the ADC register map
- * @parameter[2] : average : value to set average number
+ * @param adc Pointer to the ADC register map
+ * @param average value to set average number
  * @return       : NONE
  */
 static inline void adc_set_avg_sample(ADC_Type *adc, uint32_t average)
@@ -287,11 +287,11 @@ static inline void adc_set_avg_sample(ADC_Type *adc, uint32_t average)
 }
 
 /*
- * @func         : void adc_set_sample_width(ADC_Type *adc, uint32_t width)
+ * @fn         : void adc_set_sample_width(ADC_Type *adc, uint32_t width)
  * @brief        : Setting the sample width and value must be between
  *                 2 to 32
- * @parameter[1] : adc   : Pointer to the ADC register map
- * @parameter[2] : width : value to set sample width
+ * @param adc Pointer to the ADC register map
+ * @param width value to set sample width
  * @return       : NONE
  */
 static inline void adc_set_sample_width(ADC_Type *adc, uint32_t width)
@@ -300,9 +300,9 @@ static inline void adc_set_sample_width(ADC_Type *adc, uint32_t width)
 }
 
 /*
- * @func         : void adc24_enable_continous_sample(ADC_Type *adc)
+ * @fn         : void adc24_enable_continous_sample(ADC_Type *adc)
  * @brief        : Set sample hold bit for adc24
- * @parameter[1] : adc   : Pointer to the ADC register map
+ * @param adc Pointer to the ADC register map
  * @return       : NONE
  */
 static inline void adc24_enable_continous_sample(ADC_Type *adc)
@@ -311,13 +311,13 @@ static inline void adc24_enable_continous_sample(ADC_Type *adc)
 }
 
 /*
- * @func         : void adc_set_n_shift_bit(ADC_Type *adc,
+ * @fn         : void adc_set_n_shift_bit(ADC_Type *adc,
                                             uint32_t shift_number,
                                             uint32_t shift_left_right_control)
  * @brief        : Setting the number of shift to bit (as per user input)
- * @parameter[1] : adc                      : Pointer to the ADC register map
- * @parameter[2] : shift number             : number of bytes to shift
- * @parameter[3] : shift_left_right_control : enable shift control 0 for left
+ * @param adc Pointer to the ADC register map
+ * @param shift_number number             : number of bytes to shift
+ * @param shift_left_right_control enable shift control 0 for left
  *                                            1 for right
  *    @return       : NONE
 */
@@ -328,9 +328,9 @@ static inline void adc_set_n_shift_bit(ADC_Type *adc, uint32_t shift_number,
 }
 
 /*
- * @func         : void adc_unmask_interrupt(ADC_Type *adc)
+ * @fn         : void adc_unmask_interrupt(ADC_Type *adc)
  * @brief        : Enable the interrupts
- * @parameter[1] : adc  : Pointer to the ADC register map
+ * @param adc Pointer to the ADC register map
  * @return       : NONE
  */
 static inline void adc_unmask_interrupt(ADC_Type *adc)
@@ -339,9 +339,9 @@ static inline void adc_unmask_interrupt(ADC_Type *adc)
 }
 
 /*
- * @func         : void adc_mask_interrupt(ADC_Type *adc)
+ * @fn         : void adc_mask_interrupt(ADC_Type *adc)
  * @brief        : Disable the interrupts
- * @parameter[1] : adc  : Pointer to the ADC register map
+ * @param adc Pointer to the ADC register map
  * @return       : NONE
  */
 static inline void adc_mask_interrupt(ADC_Type *adc)
@@ -350,10 +350,10 @@ static inline void adc_mask_interrupt(ADC_Type *adc)
 }
 
 /*
- * @func         : void adc_sequencer_msk_ch_control(ADC_Type *adc, uint32_t mask_channel)
+ * @fn         : void adc_sequencer_msk_ch_control(ADC_Type *adc, uint32_t mask_channel)
  * @brief        : Masking the channel which are not required
- * @parameter[1] : adc  : Pointer to the ADC register map
- * @parameter[2] : arg  : value for masking the un-required channel
+ * @param adc Pointer to the ADC register map
+ * @param mask_channel value for masking the un-required channel
  * @return       : NONE
  */
 static inline void adc_sequencer_msk_ch_control(ADC_Type *adc, uint32_t mask_channel)
@@ -366,10 +366,10 @@ static inline void adc_sequencer_msk_ch_control(ADC_Type *adc, uint32_t mask_cha
 }
 
 /*
- * @func         : void adc_set_comparator_A(ADC_Type *adc, uint32_t threshold)
+ * @fn         : void adc_set_comparator_A(ADC_Type *adc, uint32_t threshold)
  * @brief        : setting comparator A threshold value
- * @parameter[1] : adc  : Pointer to the ADC register map
- * @parameter[2] : arg  : value for threshold
+ * @param adc Pointer to the ADC register map
+ * @param threshold value for threshold
  * @return       : NONE
  */
 static inline void adc_set_comparator_A(ADC_Type *adc, uint32_t threshold)
@@ -378,10 +378,10 @@ static inline void adc_set_comparator_A(ADC_Type *adc, uint32_t threshold)
 }
 
 /*
- * @func         : void adc_set_comparator_B(ADC_Type *adc, uint32_t threshold)
+ * @fn         : void adc_set_comparator_B(ADC_Type *adc, uint32_t threshold)
  * @brief        : setting comparator A threshold value
- * @parameter[1] : adc  : Pointer to the ADC register map
- * @parameter[2] : arg  : value for threshold
+ * @param adc Pointer to the ADC register map
+ * @param threshold value for threshold
  * @return       : NONE
  */
 static inline void adc_set_comparator_B(ADC_Type *adc, uint32_t threshold)
@@ -390,10 +390,10 @@ static inline void adc_set_comparator_B(ADC_Type *adc, uint32_t threshold)
 }
 
 /*
- * @func         : void adc_set_comparator_ctrl_bit(ADC_Type *adc, uint32_t arg)
+ * @fn         : void adc_set_comparator_ctrl_bit(ADC_Type *adc, uint32_t arg)
  * @brief        : setting comparator control bit
- * @parameter[1] : adc  : Pointer to the ADC register map
- * @parameter[2] : arg  : value for threshold
+ * @param adc Pointer to the ADC register map
+ * @param arg value for threshold
  * @return       : NONE
  */
 static inline void adc_set_comparator_ctrl_bit(ADC_Type *adc, uint32_t arg)
@@ -402,9 +402,9 @@ static inline void adc_set_comparator_ctrl_bit(ADC_Type *adc, uint32_t arg)
 }
 
 /*
- * @func         : void adc_output_right_shift(ADC_Type *adc)
+ * @fn         : void adc_output_right_shift(ADC_Type *adc)
  * @brief        : control for right shift of bit
- * @parameter[1] : adc  : Pointer to the ADC register map
+ * @param adc Pointer to the ADC register map
  * @return       : NONE
  */
 static inline void adc_output_right_shift(ADC_Type *adc)
@@ -413,9 +413,9 @@ static inline void adc_output_right_shift(ADC_Type *adc)
 }
 
 /*
- * @func         : void adc_output_left_shift(ADC_Type *adc)
+ * @fn         : void adc_output_left_shift(ADC_Type *adc)
  * @brief        : control for left shift of bit
- * @parameter    : adc  : Pointer to the ADC register map
+ * @param adc Pointer to the ADC register map
  * @return       : NONE
  */
 static inline void adc_output_left_shift(ADC_Type *adc)
@@ -424,10 +424,10 @@ static inline void adc_output_left_shift(ADC_Type *adc)
 }
 
 /*
- * @func         : void adc_set_single_ch_scan_mode(ADC_Type *adc, conv_info_t *conv_info)
+ * @fn         : void adc_set_single_ch_scan_mode(ADC_Type *adc, conv_info_t *conv_info)
  * @brief        : control to single channel scan
- * @parameter[1] : adc       : Pointer to the ADC register map
- * @parameter[2] : conv_info : Pointer to the conv_info_t structure
+ * @param adc Pointer to the ADC register map
+ * @param conv_info Pointer to the conv_info_t structure
  * @return       : NONE
  */
 static inline void adc_set_single_ch_scan_mode(ADC_Type *adc, conv_info_t *conv_info)
@@ -438,10 +438,10 @@ static inline void adc_set_single_ch_scan_mode(ADC_Type *adc, conv_info_t *conv_
 }
 
 /*
- * @func         : void adc_set_multi_ch_scan_mode(ADC_Type *adc, conv_info_t *conv_info)
+ * @fn         : void adc_set_multi_ch_scan_mode(ADC_Type *adc, conv_info_t *conv_info)
  * @brief        : control to rotate through all channels
- * @parameter[1] : adc       : Pointer to the ADC register map
- * @parameter[2] : conv_info : Pointer to the conv_info_t structure
+ * @param adc Pointer to the ADC register map
+ * @param conv_info Pointer to the conv_info_t structure
  * @return       : NONE
  */
 static inline void adc_set_multi_ch_scan_mode(ADC_Type *adc, conv_info_t *conv_info)
@@ -454,8 +454,8 @@ static inline void adc_set_multi_ch_scan_mode(ADC_Type *adc, conv_info_t *conv_i
 /**
  * @fn       : void adc_irq_handler(ADC_Type *adc, conv_info_t *conversion)
  * @brief    : Handle DONE0 (avg sample ready)interrupts for the ADC instance.
- * @param[1] : adc        : Pointer to the ADC register map
- * @param[2] : conversion : The conversion structure for the ADC instance
+ * @param : adc        : Pointer to the ADC register map
+ * @param : conversion : The conversion structure for the ADC instance
  * @return   : none
  */
 void adc_done0_irq_handler(ADC_Type *adc, conv_info_t *conversion);
@@ -463,8 +463,8 @@ void adc_done0_irq_handler(ADC_Type *adc, conv_info_t *conversion);
 /**
  * @fn       : void adc_done1_irq_handler(ADC_Type *adc, conv_info_t *conversion)
  * @brief    : Handle DONE1 (all sample taken)interrupts for the ADC instance.
- * @param[1] : adc        : Pointer to the ADC register map
- * @param[2] : conversion : The conversion structure for the ADC instance
+ * @param adc Pointer to the ADC register map
+ * @param conversion The conversion structure for the ADC instance
  * @return   : none
  */
 void adc_done1_irq_handler(ADC_Type *adc, conv_info_t *conversion);
@@ -472,8 +472,8 @@ void adc_done1_irq_handler(ADC_Type *adc, conv_info_t *conversion);
 /**
  * @fn       : void adc_cmpa_irq_handler(ADC_Type *adc, conv_info_t *conversion)
  * @brief    : Handle CMPA interrupts for the ADC instance.
- * @param[1] : adc        : Pointer to the ADC register map
- * @param[2] : conversion : The conversion structure for the ADC instance
+ * @param adc Pointer to the ADC register map
+ * @param conversion The conversion structure for the ADC instance
  * @return   : none
  */
 void adc_cmpa_irq_handler(ADC_Type *adc, conv_info_t *conversion);
@@ -481,8 +481,8 @@ void adc_cmpa_irq_handler(ADC_Type *adc, conv_info_t *conversion);
 /**
  * @fn       : void adc_cmpb_irq_handler(ADC_Type *adc, conv_info_t *conversion)
  * @brief    : Handle CMPB interrupts for the ADC instance.
- * @param[1] : adc        : Pointer to the ADC register map
- * @param[2] : conversion : The conversion structure for the ADC instance
+ * @param adc Pointer to the ADC register map
+ * @param conversion The conversion structure for the ADC instance
  * @return   : none
  */
 void adc_cmpb_irq_handler(ADC_Type *adc, conv_info_t *conversion);

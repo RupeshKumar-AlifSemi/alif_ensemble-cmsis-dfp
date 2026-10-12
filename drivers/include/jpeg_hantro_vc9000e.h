@@ -9,12 +9,12 @@
  */
 
 /*******************************************************************************
- * @@file     jpeg_hantro_vc9000e.h
- * @@author   Chandra Bhushan Singh
- * @@email    chandrabhushan.singh@alifsemi.com
- * @@version  V1.0.0
- * @@date     14-April-2026
- * @@brief    Low level driver Specific header file.
+ * @file     jpeg_hantro_vc9000e.h
+ * @author   Chandra Bhushan Singh
+ * Email:    chandrabhushan.singh@alifsemi.com
+ * @version  V1.0.0
+ * @date     14-April-2026
+ * @brief    Low level driver Specific header file.
  ******************************************************************************/
 
 #ifndef JPEG_HANTRO_VC9000E_H_
@@ -558,7 +558,7 @@ void jpeg_set_format(JPEG_Type *jpeg, jpeg_image_info_t img_info);
 void jpeg_config_quality(JPEG_Type *jpeg, uint8_t quality);
 
 /**
-  \fn          void jpeg_irq_handler(JPEG_Type *jpeg, jpeg_encode_info_t *transfer)
+  \fn void jpeg_irq_handler(JPEG_Type *jpeg, jpeg_encode_info_t *enc_info)
   \brief       Handle interrupts for the JPEG.
   \param[in]   jpeg        Pointer to the JPEG register map.
   \param[in]   enc_info    The encode structure for the JPEG.

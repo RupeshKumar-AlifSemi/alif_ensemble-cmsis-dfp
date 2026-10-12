@@ -11,13 +11,12 @@
 /*******************************************************************************
  * @file     usbd_control_transfer.c
  * @author   Mahesh Avula
- * @email    mahesh.avula@alifsemi.com
+ * Email:    mahesh.avula@alifsemi.com
  * @version  V1.0.0
  * @date     12-Dec-2023
  * @brief    This file will prepare control ep data trb's for send/recv data
              from the host and issue the start transfer command.
- * @bug      None
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 /* Include necessary system files.  */
@@ -25,13 +24,12 @@
 #include "usbd.h"
 
 /**
- *\fn           usbd_ep0_recv
  *\brief        This function prepares the TRB for recv control data from host
- *\param[in]    pointer to the controller context structure
- *\param[in]    endpoint number
- *\param[in]    endpoint direction
- *\param[in]    data buffer pointer
- *\param[in]    data buffer length
+ *\param[in] drv to the controller context structure
+ *\param[in] ep_num number
+ *\param[in] dir direction
+ *\param[in] bufferptr buffer pointer
+ *\param[in] buf_len buffer length
  *\return       On success 0, failure case returns error.
  **/
 
@@ -91,13 +89,12 @@ int32_t usbd_ep0_recv(USB_DRIVER *drv, uint8_t ep_num, uint8_t dir, uint8_t *buf
 }
 
 /**
- *\fn           usbd_ep0_send
  *\brief        This function prepares the TRB for control data send to host
- *\param[in]    pointer to the controller context structure
- *\param[in]    endpoint number
- *\param[in]    endpoint direction
- *\param[in]    data buffer pointer
- *\param[in]    data buffer length
+ *\param[in] drv to the controller context structure
+ *\param[in] ep_num number
+ *\param[in] dir direction
+ *\param[in] bufferptr buffer pointer
+ *\param[in] buf_len buffer length
  *\return       On success 0, failure case returns error.
  **/
 
@@ -155,12 +152,11 @@ int32_t usbd_ep0_send(USB_DRIVER *drv, uint8_t ep_num, uint8_t dir, uint8_t *buf
 }
 
 /**
- *\fn           usbd_send_ep_cmd
  *\brief        This function sends the controller endpoint commands.
- *\param[in]    pointer to our controller context structure
- *\param[in]    physical endpoint number
- *\param[in]    command to be send
- *\param[in]    endpoint params which contain trb address
+ *\param[in] drv to our controller context structure
+ *\param[in] phy_ep endpoint number
+ *\param[in] cmd to be send
+ *\param[in] params params which contain trb address
  *\return       On success 0, failure case returns error.
  */
 

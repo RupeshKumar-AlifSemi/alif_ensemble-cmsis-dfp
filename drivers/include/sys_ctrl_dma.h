@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     sys_ctrl_dma.h
  * @author   Sudhir Sreedharan
- * @email    sudhir@alifsemi.com
+ * Email:    sudhir@alifsemi.com
  * @version  V1.0.0
  * @date     18-Apr-2023
  * @brief    System Control Device information for DMA.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 #ifndef SYS_CTRL_DMA_H
 

@@ -389,8 +389,7 @@ static inline uint32_t crc_read_output_value(CRC_Type *crc)
 uint32_t crc_bit_reflect(uint32_t input);
 
 /**
-@fn         uint32_t CRC_calculate_unaligned(uint32_t key, const uint8_t *input,
-                                             uint32_t length, uint32_t poly)
+@fn uint32_t crc_calculate_unaligned(uint32_t key, const uint8_t *input, uint32_t length, uint32_t poly)
 @brief      To calculate the CRC result for unaligned input data
 @param[in]  key   : Output of aligned data for CRC from the hardware
 @param[in]  input : unaligned input data

@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     usbd_bulk_transfer.c
  * @author   Mahesh Avula
- * @email    mahesh.avula@alifsemi.com
+ * Email:    mahesh.avula@alifsemi.com
  * @version  V1.0.0
  * @date     13-March-2024
  * @brief    This file will transfers the BULK IN and BULK OUT data
- * @bug      None
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 /* Include necessary system files.  */
@@ -24,13 +23,12 @@
 #include "usbd.h"
 
 /**
- *\fn           usbd_bulk_send
  *\brief        This function will prepare the TRB for sending bulk data to the host.
- *\param[in]    pointer to the controller context structure
- *\param[in]    endpoint number
- *\param[in]    endpoint direction
- *\param[in]    buffer pointer
- *\param[in]    buffer length
+ *\param[in] drv to the controller context structure
+ *\param[in] ep_num number
+ *\param[in] dir direction
+ *\param[in] bufferptr pointer
+ *\param[in] buf_len length
  *\return       On success 0, failure case returns error.
  */
 int32_t usbd_bulk_send(USB_DRIVER *drv, uint8_t ep_num, uint8_t dir, uint8_t *bufferptr,
@@ -100,13 +98,12 @@ int32_t usbd_bulk_send(USB_DRIVER *drv, uint8_t ep_num, uint8_t dir, uint8_t *bu
     return ret;
 }
 /**
- *\fn           usbd_bulk_recv
  *\brief        This function will prepare the TRB for receiving bulk data from host.
- *\param[in]    pointer to the controller context structure
- *\param[in]    endpoint number
- *\param[in]    endpoint direction
- *\param[in]    buffer pointer
- *\param[in]    buffer length
+ *\param[in] drv to the controller context structure
+ *\param[in] ep_num number
+ *\param[in] dir direction
+ *\param[in] bufferptr pointer
+ *\param[in] buf_len length
  *\return       On success 0, failure case returns error.
  */
 

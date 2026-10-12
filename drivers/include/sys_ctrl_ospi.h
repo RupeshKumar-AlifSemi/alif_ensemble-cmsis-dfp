@@ -11,7 +11,7 @@
 /******************************************************************************
  * @file     sys_ctrl_ospi.h
  * @author   Silesh C V, Manoj A Murudi
- * @email    silesh@alifsemi.com, manoj.murudi@alifsemi.com
+ * Email:    silesh@alifsemi.com, manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     19-06-2024
  * @brief    Header file for OSPI Control.

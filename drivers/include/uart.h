@@ -622,13 +622,13 @@ static inline void uart_disable_rx_irq(UART_Type *uart)
 
 /* --------------------------------- RS485 Functions ---------------------------*/
 
-/*  @Note:
+/*  @note:
  *    As per PINMUX,
  *      UART0-UART3 instances has RS232 with RTS/CTS functionality and
  *      UART4-UART7 instances has RS232 without RTS/CTS and RS485 functionality.
  */
 
-/* @Note: Observations with RS485 Transfer Modes:
+/* @note: Observations with RS485 Transfer Modes:
  * 1.) RS485_HW_CONTROL_HALF_DULPLX_MODE: Able to send and receive data properly.
  *      -Both DE and RE signal can be enable at a time,
  *         as Hardware will take care of switching between Drive Enable and
@@ -638,7 +638,7 @@ static inline void uart_disable_rx_irq(UART_Type *uart)
  *      -Drive Enable and Receive Enable signal are mutually exclusive.
  *      -Both DE and RE signal can not be enable at a time.
  *      -Proper Tuning between TX and RX is required with proper delay between TX-RX.
- *      -@Note: Currently Driver APIs are not exposed for SW Control Half Duplex mode.
+ *      -@note: Currently Driver APIs are not exposed for SW Control Half Duplex mode.
  * 3.) RS485_FULL_DULPLX_MODE: Not tested.
  */
 

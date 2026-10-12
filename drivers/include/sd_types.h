@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     sd_types.h
  * @author   Deepak Kumar
- * @email    deepak@alifsemi.com
+ * Email:    deepak@alifsemi.com
  * @version  V0.0.1
  * @date     15-June-2026
  * @brief    Shared SD/SDMMC types, constants, and logging macros.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #ifndef _SD_TYPES_H_

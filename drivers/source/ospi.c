@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     ospi.c
  * @author   Silesh C V, Manoj A Murudi
- * @email    silesh@alifsemi.com, manoj.murudi@alifsemi.com
+ * Email:    silesh@alifsemi.com, manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     19-Jun-2023
  * @brief    Low level OSPI driver.
@@ -21,11 +21,7 @@
 #include "soc_features.h"
 
 /**
-  \fn          void ospi_set_mode(OSPI_Type *ospi, SPI_MODE mode)
   \brief       Set the OSPI mode for the OSPI instance.
-  \param[in]   ospi     Pointer to the OSPI register map
-  \param[in]   mode    The mode to be set.
-  \return      none
 */
 void ospi_set_mode(OSPI_Type *ospi, SPI_MODE mode)
 {
@@ -62,11 +58,7 @@ void ospi_set_mode(OSPI_Type *ospi, SPI_MODE mode)
 }
 
 /**
-  \fn          void ospi_set_dfs(OSPI_Type *ospi, uint8_t dfs)
   \brief       Set the data frame size for the OSPI instance.
-  \param[in]   ospi     Pointer to the OSPI register map
-  \param[in]   dfs     The data frame size
-  \return      none
 */
 void ospi_set_dfs(OSPI_Type *ospi, uint8_t dfs)
 {
@@ -83,11 +75,7 @@ void ospi_set_dfs(OSPI_Type *ospi, uint8_t dfs)
 }
 
 /**
-  \fn          void ospi_set_tmod(OSPI_Type *spi, SPI_TMOD tmod)
   \brief       Set the transfer mode for the OSPI instance.
-  \param[in]   ospi    Pointer to the OSPI register map
-  \param[in]   tmod    Transfer mode
-  \return      none
 */
 void ospi_set_tmod(OSPI_Type *ospi, SPI_TMOD tmod)
 {
@@ -120,11 +108,7 @@ void ospi_set_tmod(OSPI_Type *ospi, SPI_TMOD tmod)
 }
 
 /**
-  \fn          void ospi_set_tx_threshold(OSPI_Type *ospi, uint8_t threshold)
   \brief       Set Transmit FIFO interrupt threshold for the OSPI instance
-  \param[in]   ospi       Pointer to the OSPI register map
-  \param[in]   threshold  Transmit FIFO threshold
-  \return      none
 */
 void ospi_set_tx_threshold(OSPI_Type *ospi, uint8_t threshold)
 {
@@ -135,11 +119,7 @@ void ospi_set_tx_threshold(OSPI_Type *ospi, uint8_t threshold)
 }
 
 /**
-  \fn          void ospi_set_rx_sample_delay(OSPI_Type *ospi, uint8_t rx_sample_delay)
   \brief       Set Receive sample delay for the OSPI instance
-  \param[in]   ospi       Pointer to the OSPI register map
-  \param[in]   threshold  Receive FIFO threshold
-  \return      none
 */
 void ospi_set_rx_sample_delay(OSPI_Type *ospi, uint8_t rx_sample_delay)
 {
@@ -149,11 +129,7 @@ void ospi_set_rx_sample_delay(OSPI_Type *ospi, uint8_t rx_sample_delay)
 }
 
 /**
-  \fn          void ospi_set_ddr_drive_edge(OSPI_Type *ospi, uint8_t ddr_drive_edge)
   \brief       Set DDR drive edge for the OSPI instance
-  \param[in]   ospi       Pointer to the OSPI register map
-  \param[in]   threshold  Receive FIFO threshold
-  \return      none
 */
 void ospi_set_ddr_drive_edge(OSPI_Type *ospi, uint8_t ddr_drive_edge)
 {
@@ -163,12 +139,7 @@ void ospi_set_ddr_drive_edge(OSPI_Type *ospi, uint8_t ddr_drive_edge)
 }
 
 /**
-  \fn          void ospi_control_ss(OSPI_Type *ospi, uint8_t slave, SPI_SS_STATE state)
   \brief       Control the slave select line
-  \param[in]   spi    Pointer to the OSPI register map
-  \param[in]   slave  The slave to be selected
-  \param[in]   state  The state of the slave select line
-  \return      none
 */
 void ospi_control_ss(OSPI_Type *ospi, uint8_t slave, SPI_SS_STATE state)
 {
@@ -184,12 +155,7 @@ void ospi_control_ss(OSPI_Type *ospi, uint8_t slave, SPI_SS_STATE state)
 
 #if SOC_FEAT_OSPI_HAS_XIP_SER
 /**
-  \fn          void ospi_control_xip_ss(OSPI_Type *ospi, uint8_t slave, SPI_SS_STATE state)
   \brief       Control the XIP slave select line
-  \param[in]   ospi   Pointer to the OSPI register map
-  \param[in]   slave  The slave to be selected
-  \param[in]   state  The state of the slave select line
-  \return      none
 */
 void ospi_control_xip_ss(OSPI_Type *ospi, uint8_t slave, SPI_SS_STATE state)
 {
@@ -205,11 +171,7 @@ void ospi_control_xip_ss(OSPI_Type *ospi, uint8_t slave, SPI_SS_STATE state)
 #endif
 
 /**
-  \fn          void ospi_send(OSPI_Type *spi, ospi_transfer_t *transfer)
   \brief       Prepare the OSPI instance for transmission
-  \param[in]   ospi       Pointer to the OSPI register map
-  \param[in]   transfer   Transfer parameters
-  \return      none
 */
 void ospi_send(OSPI_Type *ospi, ospi_transfer_t *transfer)
 {
@@ -240,11 +202,7 @@ void ospi_send(OSPI_Type *ospi, ospi_transfer_t *transfer)
 }
 
 /**
-  \fn          void ospi_receive(OSPI_Type *ospi, ospi_transfer_t *transfer)
   \brief       Prepare the OSPI instance for reception
-  \param[in]   ospi       Pointer to the OSPI register map
-  \param[in]   transfer   Transfer parameters
-  \return      none
 */
 void ospi_receive(OSPI_Type *ospi, ospi_transfer_t *transfer)
 {
@@ -277,11 +235,7 @@ void ospi_receive(OSPI_Type *ospi, ospi_transfer_t *transfer)
 }
 
 /**
-  \fn          void ospi_transfer(OSPI_Type *spi, ospi_transfer_t *transfer)
   \brief       Prepare the OSPI instance for transfer
-  \param[in]   ospi       Pointer to the OSPI register map
-  \param[in]   transfer   Transfer parameters
-  \return      none
 */
 void ospi_transfer(OSPI_Type *ospi, ospi_transfer_t *transfer)
 {
@@ -314,11 +268,7 @@ void ospi_transfer(OSPI_Type *ospi, ospi_transfer_t *transfer)
 }
 
 /**
- * \fn          void ospi_send_polling(OSPI_Type *spi, ospi_transfer_t *transfer)
  * \brief       Send OSPI data in blocking mode
- * \param[in]   ospi       Pointer to the OSPI register map
- * \param[in]   transfer   Transfer parameters
- * \return      none
  */
 void ospi_send_polling(OSPI_Type *ospi, ospi_transfer_t *transfer)
 {
@@ -372,11 +322,7 @@ void ospi_send_polling(OSPI_Type *ospi, ospi_transfer_t *transfer)
 }
 
 /**
- * \fn          void ospi_transfer_polling(OSPI_Type *spi, ospi_transfer_t *transfer)
  * \brief       Send OSPI instruction and receive data
- * \param[in]   ospi       Pointer to the OSPI register map
- * \param[in]   transfer   Transfer parameters
- * \return      none
  */
 void ospi_transfer_polling(OSPI_Type *ospi, ospi_transfer_t *transfer)
 {
@@ -459,11 +405,7 @@ void ospi_transfer_polling(OSPI_Type *ospi, ospi_transfer_t *transfer)
 }
 
 /**
-  \fn          void ospi_dma_send(OSPI_Type *spi, ospi_transfer_t *transfer)
   \brief       Prepare the OSPI instance for transmission with DMA support
-  \param[in]   ospi       Pointer to the OSPI register map
-  \param[in]   transfer   Transfer parameters
-  \return      none
 */
 void ospi_dma_send(OSPI_Type *ospi, ospi_transfer_t *transfer)
 {
@@ -533,13 +475,7 @@ void ospi_dma_transfer(OSPI_Type *ospi, ospi_transfer_t *transfer)
 }
 
 /**
- * \fn          void ospi_psram_xip_cfg(OSPI_Type *ospi, uint8_t wait_cycles,
- *                             bool is_dual_octal)
  * \brief       Initialize OSPI XIP configuration for the PSRAM device
- * \param[in]   ospi          Pointer to the OSPI register map
- * \param[in]   wait_cycles   Wait cycles for the RAM device
- * \param[in]   is_dual_octal OSPI transfer type is Dual Octal
- * \return      none
  */
 void ospi_psram_xip_cfg(OSPI_Type *ospi, uint8_t wait_cycles, bool is_dual_octal, bool rxds_sig_en)
 {
@@ -604,12 +540,7 @@ void ospi_psram_xip_cfg(OSPI_Type *ospi, uint8_t wait_cycles, bool is_dual_octal
 }
 
 /**
-  \fn          void ospi_hyperbus_xip_init(OSPI_Type *ospi, uint8_t wait_cycles, bool is_dual_octal)
   \brief       Initialize hyperbus XIP configuration for the OSPI instance
-  \param[in]   ospi        Pointer to the OSPI register map
-  \param[in]   wait_cycles Wait cycles needed by the hyperbus device
-  \param[in]   is_dual_octal OSPI transfer type is Dual Octal
-  \return      none
 */
 void ospi_hyperbus_xip_init(OSPI_Type *ospi, uint8_t wait_cycles, bool is_dual_octal, bool rxds_sig_en)
 {
@@ -643,11 +574,7 @@ void ospi_hyperbus_xip_init(OSPI_Type *ospi, uint8_t wait_cycles, bool is_dual_o
 }
 
 /**
-  \fn          void ospi_hyperbus_send(OSPI_Type *spi, ospi_transfer_t *transfer)
   \brief       Prepare the OSPI instance for transmission
-  \param[in]   ospi       Pointer to the OSPI register map
-  \param[in]   transfer   Transfer parameters
-  \return      none
 */
 void ospi_hyperbus_send(OSPI_Type *ospi, ospi_transfer_t *transfer)
 {
@@ -698,11 +625,7 @@ void ospi_hyperbus_send(OSPI_Type *ospi, ospi_transfer_t *transfer)
 }
 
 /**
- * \fn          void ospi_hyperbus_receive(OSPI_Type *spi, ospi_transfer_t *transfer)
  * \brief       Prepare the OSPI instance for transmission
- * \param[in]   ospi       Pointer to the OSPI register map
- * \param[in]   transfer   Transfer parameters
- * \return      none
  */
 void ospi_hyperbus_receive(OSPI_Type *ospi, ospi_transfer_t *transfer)
 {
@@ -739,11 +662,7 @@ void ospi_hyperbus_receive(OSPI_Type *ospi, ospi_transfer_t *transfer)
 }
 
 /**
-  \fn          void ospi_irq_handler(OSPI_Type *ospi, ospi_transfer_t *transfer)
   \brief       Handle interrupts for the OSPI instance.
-  \param[in]   ospi      Pointer to the OSPI register map
-  \param[in]   transfer  The transfer structure for the SPI instance
-  \return      none
 */
 void ospi_irq_handler(OSPI_Type *ospi, ospi_transfer_t *transfer)
 {

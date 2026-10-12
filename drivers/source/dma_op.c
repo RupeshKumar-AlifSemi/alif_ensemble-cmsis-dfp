@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     dma_op.c
  * @author   Sudhir Sreedharan
- * @email    sudhir@alifsemi.com
+ * Email:    sudhir@alifsemi.com
  * @version  V1.0.0
  * @date     29-Sep-2023
  * @brief    DMA Driver to generate the microcode
- * @bug      None
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 /* Includes ------------------------------------------------------------------*/
@@ -24,12 +23,8 @@
 #include <stdbool.h>
 
 /**
-  \fn          bool dma_generate_opcode(dma_config_info_t *dma_cfg,
                                         uint8_t            channel_num)
   \brief       Prepare the DMA opcode for the channel
-  \param[in]   dma_cfg  Pointer to DMA Configuration resources
-  \param[in]   channel_num  Channel Number
-  \return      bool false if the buffer is not enough, true otherwise
 */
 bool dma_generate_opcode(dma_config_info_t *dma_cfg, uint8_t channel_num)
 {

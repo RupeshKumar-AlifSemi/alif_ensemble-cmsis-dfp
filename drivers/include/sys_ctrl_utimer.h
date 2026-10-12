@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     sys_ctrl_utimer.h
  * @author   Manoj A Murudi
- * @email    manoj.murudi@alifsemi.com
+ * Email:    manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     11-06-2025
  * @brief    UTIMER system control Specific Header file.
@@ -31,7 +31,6 @@ extern "C" {
 /**
   \fn          static void inline enable_lputimer_clk (void)
   \brief       Enable LPUTIMER clock.
-  \param       none
   \return      none
 */
 static inline void enable_lputimer_clk(void)
@@ -42,7 +41,6 @@ static inline void enable_lputimer_clk(void)
 /**
   \fn          static inline void disable_lputimer_clk (void)
   \brief       Disable LPUTIMER clock.
-  \param       none
   \return      none
 */
 static inline void disable_lputimer_clk(void)

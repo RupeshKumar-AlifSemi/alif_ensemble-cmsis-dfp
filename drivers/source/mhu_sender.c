@@ -178,7 +178,7 @@ mhu_send_status_t MHU_send_message(uint32_t sender_id, uint32_t channel_number,
                                    uint32_t message_data) __attribute__((used));
 
 /**
- * @fn mhu_send_status_t MHU_send_message(uint32_t, uint32_t, uint32_t)
+ * @fn mhu_send_status_t MHU_send_message(uint32_t sender_id, uint32_t channel_number, uint32_t message_data)
  * @brief     This functions sends a message out on a channel
  * @param sender_id
  * @param channel_number

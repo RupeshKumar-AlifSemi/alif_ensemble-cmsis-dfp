@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     sys_ctrl_lptimer.h
  * @author   Manoj A Murudi
- * @email    manoj.murudi@alifsemi.com
+ * Email:    manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     24-04-2023
  * @brief    LPTIMER system control Specific Header file.
@@ -42,8 +42,8 @@ typedef enum _LPTIMER_CLK_SRC {
 } LPTIMER_CLK_SRC;
 
 /**
-  \fn          static inline void select_lptimer_clk (LPTIMER_RESOURCES LPTIMER_RES, uint8_t
-  channel) \brief       LPTIMER input clock selection \param[in]   clk       clock \param[in]
+  \fn static inline void select_lptimer_clk(LPTIMER_CLK_SRC clk, uint8_t channel)
+  \brief       LPTIMER input clock selection \param[in]   clk       clock \param[in]
   channel   used LPTIMER channel \return      none
 */
 static inline void select_lptimer_clk(LPTIMER_CLK_SRC clk, uint8_t channel)

@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     sys_ctrl_usb.h
  * @author   Mahesh Avula
- * @email    mahesh.avula@alifsemi.com
+ * Email:    mahesh.avula@alifsemi.com
  * @version  V1.0.0
  * @date     25-Apr-2023
  * @brief    System Control Device information for USB
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 #ifndef SYS_CTRL_USB_H
 
@@ -40,7 +39,6 @@ extern "C" {
 /**
  *\fn     static inline void usb_phy_por_set(void)
  *\brief  Set the USB phy power on reset bit in USB_CTRL2 register.
- *\param  none.
  *\return none.
  */
 static inline void usb_phy_por_set(void)
@@ -51,7 +49,6 @@ static inline void usb_phy_por_set(void)
 /**
  *\fn     static inline void usb_phy_por_clear(void)
  *\brief  Clear the USB phy power on reset bit in USB_CTRL2 register.
- *\param  none.
  *\return none.
  */
 static inline void usb_phy_por_clear(void)
@@ -62,7 +59,6 @@ static inline void usb_phy_por_clear(void)
 /**
  *\fn     static inline void enable_usb_periph_clk(void)
  *\brief  Enable the USB peripheral clock in PERIPH_CLK_ENA register.
- *\param  none.
  *\return none.
  */
 static inline void enable_usb_periph_clk(void)
@@ -78,7 +74,6 @@ static inline void enable_usb_periph_clk(void)
 /**
  *\fn     static inline void disable_usb_periph_clk(void)
  *\brief  Disable the USB peripheral clock in PERIPH_CLK_ENA register.
- *\param  none.
  *\return none.
  */
 static inline void disable_usb_periph_clk(void)

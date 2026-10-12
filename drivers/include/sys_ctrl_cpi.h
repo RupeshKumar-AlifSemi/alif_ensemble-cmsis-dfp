@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     sys_ctrl_cpi.h
  * @author   Chandra Bhushan Singh
- * @email    chandrabhushan.singh@alifsemi.com
+ * Email:    chandrabhushan.singh@alifsemi.com
  * @version  V1.0.0
  * @date     19-April-2023
  * @brief    CPI system control Specific Header file.

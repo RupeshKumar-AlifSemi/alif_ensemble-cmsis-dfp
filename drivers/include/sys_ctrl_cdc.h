@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     sys_ctrl_cdc.h
  * @author   Prasanna Ravi
- * @email    prasanna.ravi@alifsemi.com
+ * Email:    prasanna.ravi@alifsemi.com
  * @version  V1.0.0
  * @date     10-April-2023
  * @brief    CDC system control Specific Header file.

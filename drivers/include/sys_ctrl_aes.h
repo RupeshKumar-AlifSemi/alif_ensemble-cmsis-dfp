@@ -11,12 +11,11 @@
 /******************************************************************************
  * @file     sys_ctrl_aes.h
  * @author   Silesh C V, Manoj A Murudi
- * @email    silesh@alifsemi.com, manoj.murudi@alifsemi.com
+ * Email:    silesh@alifsemi.com, manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     30-May-2023
  * @brief    AES control.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #ifndef SYS_CTRL_AES_H

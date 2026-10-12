@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     sd_host.h
  * @author   Deepak Kumar
- * @email    deepak@alifsemi.com
+ * Email:    deepak@alifsemi.com
  * @version  V0.0.1
  * @date     09-June-2023
  * @brief    SD Host Controller Register mapping.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #ifndef __SD_HOST_H__

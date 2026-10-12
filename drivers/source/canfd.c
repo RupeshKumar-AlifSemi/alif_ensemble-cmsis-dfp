@@ -11,12 +11,11 @@
 /******************************************************************************
  * @file     canfd.c
  * @author   Shreehari H K
- * @email    shreehari.hk@alifsemi.com
+ * Email:    shreehari.hk@alifsemi.com
  * @version  V1.0.0
  * @date     26-06-2023
  * @brief    Low Level Source File for CANFD.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #include "canfd.h"
@@ -53,12 +52,8 @@ static void canfd_copy_tx_buf(volatile uint32_t *dest, const uint32_t *src, cons
 }
 
 /**
-  \fn          void canfd_enable_acpt_fltr(CANFD_Type* canfd,
   \                                        canfd_acpt_fltr_t filter_config)
   \brief       Configures and enables the particular acceptance filter.
-  \param[in]   canfd          : Pointer to the CANFD register map
-  \param[in]   filter_config  : Filter configuration
-  \return      none
 */
 void canfd_enable_acpt_fltr(CANFD_Type *canfd, canfd_acpt_fltr_t filter_config)
 {
@@ -99,12 +94,8 @@ void canfd_enable_acpt_fltr(CANFD_Type *canfd, canfd_acpt_fltr_t filter_config)
 }
 
 /**
-  \fn          CANFD_ACPT_FLTR_STATUS canfd_get_acpt_fltr_status(CANFD_Type* canfd,
   \                                                              const uint8_t filter)
   \brief       Retrieves whether the filter is free or occupied.
-  \param[in]   canfd  : Pointer to the CANFD register map
-  \param[in]   filter : Acceptance filter number
-  \return      status of the filter (Free/Occupied)
 */
 CANFD_ACPT_FLTR_STATUS canfd_get_acpt_fltr_status(CANFD_Type *canfd, const uint8_t filter)
 {
@@ -116,12 +107,8 @@ CANFD_ACPT_FLTR_STATUS canfd_get_acpt_fltr_status(CANFD_Type *canfd, const uint8
 }
 
 /**
-  \fn          void canfd_get_acpt_fltr_data(CANFD_Type* canfd,
   \                                          canfd_acpt_fltr_t *filter_config)
   \brief       Retrieves the acceptance filter data.
-  \param[in]   canfd          : Pointer to the CANFD register map
-  \param[in]   filter_config  : Filter configuration
-  \return      none
 */
 void canfd_get_acpt_fltr_data(CANFD_Type *canfd, canfd_acpt_fltr_t *filter_config)
 {
@@ -141,10 +128,7 @@ void canfd_get_acpt_fltr_data(CANFD_Type *canfd, canfd_acpt_fltr_t *filter_confi
 }
 
 /**
-  \fn          CANFD_MSG_ERROR canfd_get_last_error_code(CANFD_Type* canfd)
   \brief       Fetches the latest error occurred
-  \param[in]   canfd : Pointer to the CANFD register map
-  \return      last found error type
 */
 CANFD_MSG_ERROR canfd_get_last_error_code(CANFD_Type *canfd)
 {
@@ -174,14 +158,9 @@ CANFD_MSG_ERROR canfd_get_last_error_code(CANFD_Type *canfd)
 }
 
 /**
-  \fn          void canfd_set_nominal_bit_time(CANFD_Type* canfd,
   \                                            const uint32_t bitrate_seg,
   \                                            const uint8_t prescaler)
   \brief       Sets the slow speed bit-timing of CANFD instance.
-  \param[in]   canfd       : Pointer to the CANFD register map
-  \param[in]   bitrate_seg : Segments - Propagation, Sampling
-  \param[in]   prescaler   : Prescaler value
-  \return      none
 */
 void canfd_set_nominal_bit_time(CANFD_Type *canfd, const uint32_t bitrate_seg,
                                 const uint8_t prescaler)
@@ -198,14 +177,9 @@ void canfd_set_nominal_bit_time(CANFD_Type *canfd, const uint32_t bitrate_seg,
 }
 
 /**
-  \fn          void canfd_set_fd_bit_time(CANFD_Type* canfd,
   \                                       const uint32_t bitrate_seg,
   \                                       const uint8_t prescaler)
   \brief       Sets the fast speed bit-timing of CANFD instance.
-  \param[in]   canfd       : Pointer to the CANFD register map
-  \param[in]   bitrate_seg : Segments - Propagation, Sampling
-  \param[in]   prescaler   : Prescaler value
-  \return      none
 */
 void canfd_set_fd_bit_time(CANFD_Type *canfd, const uint32_t bitrate_seg, const uint8_t prescaler)
 {
@@ -221,14 +195,9 @@ void canfd_set_fd_bit_time(CANFD_Type *canfd, const uint32_t bitrate_seg, const 
 }
 
 /**
-  \fn          void canfd_setup_tx_retrans(CANFD_Type* canfd,
   \                                        const uint8_t buf_type,
   \                                        const bool enable)
   \brief       Enables/Disables the Tx msg retransmission
-  \param[in]   canfd    : Pointer to the CANFD register map
-  \param[in]   buf_type : Bufer type
-  \param[in]   enable   : Command to enable/disable msg retransmission
-  \return      none
 */
 void canfd_setup_tx_retrans(CANFD_Type *canfd, const uint8_t buf_type, const bool enable)
 {
@@ -252,14 +221,9 @@ void canfd_setup_tx_retrans(CANFD_Type *canfd, const uint8_t buf_type, const boo
 }
 
 /**
-  \fn          void canfd_setup_tx_delay_comp(CANFD_Type* canfd,
   \                                           const uint8_t offset,
   \                                           const bool enable)
   \brief       Enables/Disables the Tx delay compensation
-  \param[in]   canfd  : Pointer to the CANFD register map
-  \param[in]   offset : Secondary sampling point offest value
-  \param[in]   enable : Command to enable/disable TDC
-  \return      none
 */
 void canfd_setup_tx_delay_comp(CANFD_Type *canfd, const uint8_t offset, const bool enable)
 {
@@ -275,14 +239,10 @@ void canfd_setup_tx_delay_comp(CANFD_Type *canfd, const uint8_t offset, const bo
 }
 
 /**
-  \fn          void canfd_set_err_warn_limit(CANFD_Type* canfd,
   \                                          const uint8_t ewl)
   \brief       Configures Warning limits for Rbuf storage and errors
   \note        If ewl value is greater than CANFD_MAX_ERROR_WARN_LIMIT
   \            the limit will be set to CANFD_MAX_ERROR_WARN_LIMIT
-  \param[in]   canfd : Pointer to the CANFD register map
-  \param[in]   ewl   : Limit value for Error warning
-  \return      none
 */
 void canfd_set_err_warn_limit(CANFD_Type *canfd, const uint8_t ewl)
 {
@@ -298,16 +258,10 @@ void canfd_set_err_warn_limit(CANFD_Type *canfd, const uint8_t ewl)
 }
 
 /**
-  \fn          void canfd_send(CANFD_Type* canfd,
   \                            const canfd_tx_info_t tx_header,
   \                            const uint8_t *data,
   \                            const uint8_t size)
   \brief       Prepares and transmits the message
-  \param[in]   canfd      : Pointer to the CANFD register map
-  \param[in]   tx_header  : Header of tx message
-  \param[in]   data       : Message payload
-  \param[in]   size       : payload size
-  \return      none
 */
 void canfd_send(CANFD_Type *canfd, const canfd_tx_info_t tx_header, const uint8_t *data,
                 const uint8_t size)
@@ -338,12 +292,8 @@ void canfd_send(CANFD_Type *canfd, const canfd_tx_info_t tx_header, const uint8_
 }
 
 /**
-  \fn          void canfd_receive(CANFD_Type* canfd,
   \                               canfd_data_transfer_t *dest_data)
   \brief       Fetches the data from Rx buffer
-  \param[in]   canfd      : Pointer to the CANFD register map
-  \param[in]   dest_data  : Destination Data pointer
-  \return      none
 */
 void canfd_receive(CANFD_Type *canfd, canfd_transfer_t *dest_data)
 {
@@ -371,16 +321,10 @@ void canfd_receive(CANFD_Type *canfd, canfd_transfer_t *dest_data)
 }
 
 /**
-  \fn          void canfd_send_blocking(CANFD_Type* canfd,
   \                                     const canfd_tx_info_t tx_header,
   \                                     const uint8_t *data,
   \                                     const uint8_t size)
   \brief       Prepares and transmits the message in blocking mode
-  \param[in]   canfd      : Pointer to the CANFD register map
-  \param[in]   tx_header  : Header of tx message
-  \param[in]   data       : Message payload
-  \param[in]   size       : payload size
-  \return      none
 */
 void canfd_send_blocking(CANFD_Type *canfd, const canfd_tx_info_t tx_header, const uint8_t *data,
                          const uint8_t size)
@@ -427,12 +371,8 @@ void canfd_send_blocking(CANFD_Type *canfd, const canfd_tx_info_t tx_header, con
 }
 
 /**
-  \fn          void canfd_receive_blocking(CANFD_Type* canfd,
   \                                        canfd_data_transfer_t *dest_data)
   \brief       Fetches the data from Rx buffer in blocking mode
-  \param[in]   canfd      : Pointer to the CANFD register map
-  \param[in]   dest_data  : Destination Data pointer
-  \return      none
 */
 void canfd_receive_blocking(CANFD_Type *canfd, canfd_transfer_t *dest_data)
 {
@@ -464,12 +404,8 @@ void canfd_receive_blocking(CANFD_Type *canfd, canfd_transfer_t *dest_data)
 }
 
 /**
-  \fn          void canfd_clear_interrupt(CANFD_Type* canfd,
                                           const uint32_t event)
   \brief       Clears the interrupt
-  \param[in]   canfd : Pointer to the CANFD register map
-  \param[in]   event : Interrupt event
-  \return      none
 */
 void canfd_clear_interrupt(CANFD_Type *canfd, const uint32_t event)
 {
@@ -496,10 +432,7 @@ void canfd_clear_interrupt(CANFD_Type *canfd, const uint32_t event)
 }
 
 /**
-  \fn          uint32_t canfd_irq_handler(CANFD_Type* canfd)
   \brief       Returns the interrupt event
-  \param[in]   canfd  : Pointer to the CANFD register map
-  \return      CANFD interrupt event
 */
 uint32_t canfd_irq_handler(CANFD_Type *canfd)
 {

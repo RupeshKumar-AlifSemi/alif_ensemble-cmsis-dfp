@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     spi.h
  * @author   Girish BN, Manoj A Murudi
- * @email    girish.bn@alifsemi.com, manoj.murudi@alifsemi.com
+ * Email:    girish.bn@alifsemi.com, manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     20-04-2023
  * @brief    Low Level Header file for SPI.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #ifndef SPI_H_
@@ -589,7 +588,7 @@ void spi_set_protocol(SPI_Type *spi, SPI_PROTO format);
 void spi_set_dfs(SPI_Type *spi, uint8_t dfs);
 
 /**
-  \fn          void spi_set_tmode(SPI_Type *spi, SPI_TMOD tmod)
+  \fn void spi_set_tmod(SPI_Type *spi, SPI_TMOD tmod)
   \brief       Set the transfer mode for the SPI instance.
   \param[in]   spi     Pointer to the SPI register map
   \param[in]   tmod    Transfer mode
@@ -731,7 +730,7 @@ void lpspi_receive_blocking(SPI_Type *lpspi, spi_transfer_t *transfer);
 void lpspi_transfer_blocking(SPI_Type *lpspi, spi_transfer_t *transfer);
 
 /**
-  \fn          void lpspi_set_mode(SPI_Type *spi, SPI_MODE mode)
+  \fn void lpspi_set_mode(SPI_Type *lpspi, SPI_MODE mode)
   \brief       Set the mode for the LPSPI instance.
   \param[in]   lpspi   Pointer to the LPSPI register map
   \param[in]   mode    The mode to be set.
@@ -775,7 +774,7 @@ void lpspi_set_tmod(SPI_Type *lpspi, SPI_TMOD tmod);
 SPI_TMOD lpspi_get_tmod(SPI_Type *lpspi);
 
 /**
-  \fn          void lpspi_send(SPI_Type *spi)
+  \fn void lpspi_send(SPI_Type *lpspi)
   \brief       Prepare the SPI instance for transmission
   \param[in]   lpspi       Pointer to the LPSPI register map
   \return      none
@@ -829,8 +828,8 @@ void spi_mw_receive(SPI_Type *spi, spi_transfer_t *transfer);
 /**
   \fn          uint32_t spi_dma_calc_rx_level(uint32_t total_cnt, uint8_t fifo_threshold)
   \brief       Calculate SPI DMA receive data level
-  \param[in]   fifo_threshold  receive fifo threshold value
-  \param[in]   total_cnt  total number of data count
+  \param[in] total_cnt receive fifo threshold value
+  \param[in] fifo_threshold total number of data count
   \return      final value after calculation
 */
 uint32_t spi_dma_calc_rx_level(uint32_t total_cnt, uint8_t fifo_threshold);
@@ -861,7 +860,7 @@ void spi_dma_receive(SPI_Type *spi, spi_transfer_t *transfer);
 void spi_dma_transfer(SPI_Type *spi);
 
 /**
-  \fn          void lpspi_dma_send(SPI_Type *spi)
+  \fn void lpspi_dma_send(SPI_Type *lpspi)
   \brief       Prepare the SPI instance for DMA transmission
   \param[in]   lpspi       Pointer to the LPSPI register map
   \return      none

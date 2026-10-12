@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     sdio.h
  * @author   Deepak Kumar
- * @email    deepak@alifsemi.com
+ * Email:    deepak@alifsemi.com
  * @version  V0.0.1
  * @date     28-Nov-2022
  * @brief    exposed SDIO Driver variables and APIs.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #ifndef _SDIO_H_

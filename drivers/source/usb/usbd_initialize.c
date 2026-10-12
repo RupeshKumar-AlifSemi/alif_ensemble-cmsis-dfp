@@ -11,12 +11,11 @@
 /******************************************************************************
  * @file     usbd_initialize.c
  * @author   Mahesh Avula
- * @email    mahesh.avula@alifsemi.com
+ * Email:    mahesh.avula@alifsemi.com
  * @version  V1.0.0
  * @date     10-Feb-2022
  * @brief    This file  initializes the USB controller in device/host mode.
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 
 /* Include necessary system files.  */
@@ -30,7 +29,6 @@ static uint8_t              event_buff[USB_EVENT_BUFFER_SIZE]       ATTR_SECTION
 static uint8_t              scratch_pad[USB_SCRATCHPAD_BUF_SIZE]    ATTR_SECTION("usb_dma_buf");
 
 /**
- *\fn         USB_IRQHandler
  *\brief      Process the USB device interrupts
  */
 
@@ -43,9 +41,8 @@ void USB_IRQHandler(void)
 #endif
 
 /**
- *\fn           usbd_initialize_eps
  *\brief        This function initialize the physical endpoints.
- *\param[in]    pointer to the controller context structure
+ *\param[in] drv to the controller context structure
  *\return       none
  **/
 
@@ -74,9 +71,8 @@ static void usbd_initialize_eps(USB_DRIVER *drv)
 }
 
 /**
- *\fn           usbd_set_speed
  *\brief        This function sets speed of USB controller.
- *\param[in]    pointer to the controller context structure
+ *\param[in] drv to the controller context structure
  *\return       none
  **/
 
@@ -90,11 +86,10 @@ static void usbd_set_speed(USB_DRIVER *drv)
     drv->regs->DCFG  = reg;
 }
 /**
- *\fn           usbd_send_generic_cmd
  *\brief        This function send the cmd to the controller for scratchpad buffer.
- *\param[in]    pointer to the controller context structure
- *\param[in]    command to be send
- *\param[in]    params which contains the scratchpad buffer address
+ *\param[in] drv to the controller context structure
+ *\param[in] cmd to be send
+ *\param[in] param which contains the scratchpad buffer address
  *\return       On success 0, else error
  **/
 static uint32_t usbd_send_generic_cmd(USB_DRIVER *drv, uint32_t cmd, uint32_t param)
@@ -123,9 +118,8 @@ static uint32_t usbd_send_generic_cmd(USB_DRIVER *drv, uint32_t cmd, uint32_t pa
 }
 
 /**
- *\fn           usbd_setup_scratchpad
  *\brief        This function setup the scratchpad buffer.
- *\param[in]    pointer to the controller context structure
+ *\param[in] drv to the controller context structure
  *\return       On success 0, else error
  **/
 static uint32_t usbd_setup_scratchpad(USB_DRIVER *drv)
@@ -156,9 +150,8 @@ static uint32_t usbd_setup_scratchpad(USB_DRIVER *drv)
 }
 
 /**
- *\fn           usbd_core_is_valid
  *\brief        This function reads the controller core id and check if it's valid core or not.
- *\param[in]    pointer to the controller context structure
+ *\param[in] drv to the controller context structure
  *\return       On success returns true, else false
  **/
 
@@ -182,7 +175,6 @@ static bool usb_core_is_valid(USB_DRIVER *drv)
 }
 
 /**
- *\fn           usbd_event_buf_allocation
  *\brief        This function allocates the events buffers with required size.
  *\param[in]    pointer to the controller context structure
  *\return       On success return event buf pointer
@@ -201,9 +193,8 @@ static USBD_EVENT_BUFFER *usbd_event_buf_allocation(USB_DRIVER *drv)
 }
 
 /**
- *\fn           usbd_setup_event_buffer
  *\brief        This function setup the allocated events buffers.
- *\param[in]    pointer to the controller context structure
+ *\param[in] drv to the controller context structure
  *\return       none
  **/
 
@@ -220,9 +211,8 @@ static void usbd_setup_event_buffer(USB_DRIVER *drv)
 }
 
 /**
- *\fn           usbd_core_soft_reset
  *\brief        This function reset the controller core
- *\param[in]    pointer to the controller context structure
+ *\param[in] drv to the controller context structure
  *\return       On success 0, else error
  **/
 static int32_t usbd_core_soft_reset(USB_DRIVER *drv)
@@ -258,9 +248,8 @@ static int32_t usbd_core_soft_reset(USB_DRIVER *drv)
 }
 
 /**
- *\fn           usbd_get_properties
  *\brief        This function gets the USB properties
- *\param[in]    pointer to the controller context structure
+ *\param[in] drv to the controller context structure
  *\return       none
  **/
 
@@ -278,9 +267,8 @@ static void usbd_get_properties(USB_DRIVER *drv)
     drv->fladj      = USB_GFLADJ_DEFAULT_VALUE;
 }
 /**
- *\fn           usbd_hwparams
  *\brief        Read the Global Hardware Parameters Registers
- *\param[in]    pointer to the controller context structure
+ *\param[in] drv to the controller context structure
  *\return       none
  **/
 
@@ -300,9 +288,8 @@ static void usbd_hwparams(USB_DRIVER *drv)
 }
 
 /**
- *\fn           usbd_get_mode
  *\brief        This function gets the controller mode .
- *\param[in]    pointer to the controller context structure
+ *\param[in] drv to the controller context structure
  *\return       On success 0, else error
  **/
 static int32_t usbd_get_mode(USB_DRIVER *drv)
@@ -339,9 +326,8 @@ static int32_t usbd_get_mode(USB_DRIVER *drv)
 }
 
 /**
- *\fn           usbd_phy_setup
  *\brief        This function setup controller phy.
- *\param[in]    pointer to the controller context structure
+ *\param[in] drv to the controller context structure
  *\return       none
  **/
 static void usbd_phy_setup(USB_DRIVER *drv)
@@ -388,9 +374,8 @@ static void usbd_phy_setup(USB_DRIVER *drv)
     drv->regs->GUSB2PHYCFG0 = reg;
 }
 /**
- *\fn           usbd_setup_global_control
  *\brief        This function setup the global control register.
- *\param[in]    pointer to the controller context structure
+ *\param[in] drv to the controller context structure
  *\return       none
  **/
 static void usbd_setup_global_control(USB_DRIVER *drv)
@@ -408,9 +393,8 @@ static void usbd_setup_global_control(USB_DRIVER *drv)
     }
 }
 /**
- *\fn           usbd_set_incr_burst_type
  *\brief        This function configure the controller global burst type.
- *\param[in]    pointer to the controller context structure
+ *\param[in] drv to the controller context structure
  *\return       none
  **/
 static void usbd_set_incr_burst_type(USB_DRIVER *drv)
@@ -423,9 +407,8 @@ static void usbd_set_incr_burst_type(USB_DRIVER *drv)
     drv->regs->GSBUSCFG0 = reg;
 }
 /**
- *\fn           usbd_frame_length_adjustment
  *\brief        This function sets the controller frame length.
- *\param[in]    pointer to the controller context structure
+ *\param[in] drv to the controller context structure
  *\return       none
  **/
 static void usbd_frame_length_adjustment(USB_DRIVER *drv)
@@ -442,9 +425,8 @@ static void usbd_frame_length_adjustment(USB_DRIVER *drv)
     }
 }
 /**
- *\fn           usbd_set_prtcap
  *\brief        This function sets the controller mode.
- *\param[in]    pointer to the controller context structure
+ *\param[in] drv to the controller context structure
  *\param[in]    mode(device/host)
  *\return       none
  **/
@@ -461,9 +443,8 @@ static void usbd_set_prtcap(USB_DRIVER *drv, uint32_t mode)
 }
 
 /**
- *\fn           usbd_device_init
  *\brief        This function initialize the USB controller in device mode.
- *\param[in]    pointer to controller context structure
+ *\param[in] drv to controller context structure
  *\return       On success returns 0, else  error
  **/
 
@@ -590,9 +571,8 @@ static uint32_t usbd_device_init(USB_DRIVER *drv)
     return ret;
 }
 /**
- *\fn           usbd_set_mode
  *\brief        This function sets the controller mode(device/host).
- *\param[in]    pointer to the controller context structure
+ *\param[in] drv to the controller context structure
  *\return       On success returns 0, else  error
  */
 static int32_t usbd_set_mode(USB_DRIVER *drv)
@@ -622,9 +602,8 @@ static int32_t usbd_set_mode(USB_DRIVER *drv)
 }
 
 /**
- *\fn           usbd_cleanup_event_buffer
  *\brief        This function clear the event buffer register.
- *\param[in]    pointer to the controller context structure
+ *\param[in] drv to the controller context structure
  *\return       On success returns 0, else  error
  */
 static void usbd_cleanup_event_buffer(USB_DRIVER *drv)
@@ -640,9 +619,8 @@ static void usbd_cleanup_event_buffer(USB_DRIVER *drv)
 }
 
 /**
- *\fn           usbd_phy_reset
  *\brief        This function resets the phy.
- *\param[in]    pointer to the controller context structure
+ *\param[in] drv to the controller context structure
  *\return       On success returns 0, else  error
  */
 void usbd_phy_reset(USB_DRIVER *drv)
@@ -673,9 +651,8 @@ void usbd_phy_reset(USB_DRIVER *drv)
 }
 
 /**
- *\fn           usbd_disconnect
  *\brief        This function stop the usb controller and disables the interrupts.
- *\param[in]    pointer to the controller context structure
+ *\param[in] drv to the controller context structure
  *\return       On success returns 0, else  error
  */
 void usbd_disconnect(USB_DRIVER *drv)
@@ -702,9 +679,8 @@ void usbd_disconnect(USB_DRIVER *drv)
 }
 
 /**
- *\fn           usbd_connect
  *\brief        This function start the usb controller and enables the interrupts.
- *\param[in]    pointer to the controller context structure
+ *\param[in] drv to the controller context structure
  *\return       On success returns 0, else  error
  */
 int32_t usbd_connect(USB_DRIVER *drv)
@@ -738,9 +714,8 @@ next:
 }
 
 /**
- *\fn           usbd_initialize
  *\brief        This function initialize the USB controller.
- *\param[in]    pointer to the controller context structure
+ *\param[in] drv to the controller context structure
  *\return       On success returns 0, else  error
  **/
 

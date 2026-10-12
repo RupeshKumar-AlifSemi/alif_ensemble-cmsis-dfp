@@ -11,12 +11,11 @@
 /******************************************************************************
  * @file     canfd.h
  * @author   Shreehari H K
- * @email    shreehari.hk@alifsemi.com
+ * Email:    shreehari.hk@alifsemi.com
  * @version  V1.0.0
  * @date     05-July-2023
  * @brief    Header file for canfd
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 #ifndef CANFD_H_
 #define CANFD_H_
@@ -736,7 +735,7 @@ static inline bool canfd_rx_msg_available(CANFD_Type *canfd)
 }
 
 /**
-  \fn          static inline void canfd_reset_acpt_fltr(CANFD_Type* canfd)
+  \fn static inline void canfd_reset_acpt_fltrs(CANFD_Type *canfd)
   \brief       Resets all acceptance filters
   \param[in]   canfd  : Pointer to the CANFD register map
   \return      none

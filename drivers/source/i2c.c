@@ -354,11 +354,6 @@ static void i2c_slave_check_error(I2C_Type *i2c, i2c_transfer_info_t *transfer)
 
 /**
  * @brief    set i2c target address for slave device in master mode
- * @param    i2c       : Pointer to i2c resources structure
- * @param    address   : i2c 7-bit or 10-bit slave address
- * @param    addr_mode : Addressing mode (10Bit/7Bit)
- * @param    cur_state : Current transfer state (Master Tx/ Master Rx)
- * @retval   none
  */
 void i2c_set_target_addr(I2C_Type *i2c, const uint32_t address, const i2c_address_mode_t addr_mode,
                          const I2C_XFER_STATE cur_state)
@@ -396,14 +391,10 @@ void i2c_set_target_addr(I2C_Type *i2c, const uint32_t address, const i2c_addres
 /**
  * @brief   Setup i2c master clock configuration
  * @note    none
- * @param   i2c          : Pointer to i2c register map
- * @param   clk_khz      : Clock
- * @param   speed_mode   : Speed
  *          I2C_SPEED_STANDARD /
  *          I2C_SPEED_FAST /
  *          I2C_SPEED_FAST_PLUS /
  *          I2C_SPEED_HIGH
- * @retval  none
  */
 void i2c_master_set_clock(I2C_Type *i2c, const uint32_t clk_khz, uint8_t speed_mode)
 {
@@ -418,9 +409,6 @@ void i2c_master_set_clock(I2C_Type *i2c, const uint32_t clk_khz, uint8_t speed_m
 /**
  * @brief   initialize i2c master
  * @note    none
- * @param   i2c          : Pointer to i2c register map
- * @param   tar_addr     : target address
- * @retval  none
  */
 void i2c_master_init(I2C_Type *i2c, const uint32_t tar_addr)
 {
@@ -448,10 +436,7 @@ void i2c_master_init(I2C_Type *i2c, const uint32_t tar_addr)
 /**
  * @brief   initialize i2c slave
  * @note    none
- * @param   i2c          : Pointer to i2c register map
- * @param   slave_addr   : i2c slave address
  * param    addr_mode    : Addressing mode (10Bit/7Bit)
- * @retval  none
  */
 void i2c_slave_init(I2C_Type *i2c, uint32_t slave_addr, i2c_address_mode_t addr_mode)
 {
@@ -484,9 +469,6 @@ void i2c_slave_init(I2C_Type *i2c, uint32_t slave_addr, i2c_address_mode_t addr_
 
 /**
  * @brief    i2c master transmit data using interrupt method
- * @param    i2c      : Pointer to i2c register map
- * @param    transfer : Pointer to i2c_transfer_info_t
- * @retval   callback event
  */
 void i2c_master_tx_isr(I2C_Type *i2c, i2c_transfer_info_t *transfer)
 {
@@ -575,9 +557,6 @@ void i2c_master_tx_isr(I2C_Type *i2c, i2c_transfer_info_t *transfer)
 
 /**
  * @brief    i2c master receive data using interrupt method
- * @param    i2c      : Pointer to i2c register map
- * @param    transfer : Pointer to i2c_transfer_info_t
- * @retval   callback event
  */
 void i2c_master_rx_isr(I2C_Type *i2c, i2c_transfer_info_t *transfer)
 {
@@ -739,9 +718,6 @@ void i2c_master_rx_isr(I2C_Type *i2c, i2c_transfer_info_t *transfer)
 
 /**
  * @brief    i2c slave transmit data using interrupt method
- * @param    i2c      : Pointer to i2c register map
- * @param    transfer : Pointer to i2c_transfer_info_t
- * @retval   callback event
  */
 void i2c_slave_tx_isr(I2C_Type *i2c, i2c_transfer_info_t *transfer)
 {
@@ -832,9 +808,6 @@ void i2c_slave_tx_isr(I2C_Type *i2c, i2c_transfer_info_t *transfer)
 
 /**
  * @brief    i2c slave receive data using interrupt method
- * @param    i2c      : Pointer to i2c register map
- * @param    transfer : Pointer to i2c_transfer_info_t
- * @retval   callback event
  */
 void i2c_slave_rx_isr(I2C_Type *i2c, i2c_transfer_info_t *transfer)
 {

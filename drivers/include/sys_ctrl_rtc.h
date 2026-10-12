@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     sys_ctrl_rtc.h
  * @author   Manoj A Murudi
- * @email    manoj.murudi@alifsemi.com
+ * Email:    manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     24-04-2023
  * @brief    LPRTC system control Specific Header file.

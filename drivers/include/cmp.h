@@ -158,7 +158,7 @@ static inline void cmp_set_prescaler_ctrl(CMP_Type *cmp, uint32_t arg)
 }
 
 /**
-  @fn          void cmp_irq_handler(CMP_Type *cmp, const uint8_t int_mask) ;
+  @fn void cmp_irq_handler(CMP_Type *cmp, const uint8_t int_mask)
   @brief       Handle interrupts for the CMP instance.
   @param[in]   cmp      Pointer to the CMP register map
   @param[in]   int_mask HSCMP device specific interrupt status

@@ -10,12 +10,11 @@
 /*******************************************************************************
  * @file     i2s.h
  * @author   Sudhir Sreedharan
- * @email    sudhir@alifsemi.com
+ * Email:    sudhir@alifsemi.com
  * @version  V1.0.0
  * @date     23-05-2023
  * @brief    Low Level Header file for I2S
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #ifndef I2S_H_
@@ -260,9 +259,7 @@ static inline void i2s_txblock_disable(I2S_Type *i2s)
 }
 
 /**
-  \fn          void i2s_clock_enable(I2S_Type *i2s)
-                                     I2S_SCLKG sclkg,
-                                     I2S_WSS wss_len)
+  \fn static inline void i2s_clock_enable(I2S_Type *i2s, I2S_SCLKG sclkg, I2S_WSS wss_len)
   \brief       Enable Clock in Master Mode.
   \param[in]   i2s      Pointer to I2S register map
   \param[in]   sclkg    sclk gating value
@@ -383,8 +380,7 @@ static inline void i2s_set_rx_triggerLevel(I2S_Type *i2s, uint8_t trigger_level)
 }
 
 /**
-  \fn          void i2s_set_tx_triggerLevel(I2S_Type *i2s
-                                            uint8_t trigger_level)
+  \fn static inline void i2s_set_tx_triggerLevel(I2S_Type *i2s, uint8_t trigger_level)
   \brief       Set the Trigger Level in TxFIFO
                The channel must be disabled before doing this
   \param[in]   i2s  Pointer to I2S register map

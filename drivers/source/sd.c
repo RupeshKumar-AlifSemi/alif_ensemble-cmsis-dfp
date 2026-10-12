@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     sd.c
  * @author   Deepak Kumar
- * @email    deepak@alifsemi.com
+ * Email:    deepak@alifsemi.com
  * @version  V0.0.1
  * @date     28-Nov-2022
  * @brief    SD Driver APIs.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 /* Includes ------------------------------------------------------------------*/
@@ -59,7 +58,6 @@ SD_DRV_STATUS sd_set_io(sdmmc_io_t *p_sdmmc_io_param, SDMMC_SET_IO_CMD set_io_cm
 /**
  * \fn           static SD_DRV_STATUS sd_error_handler(void)
  * \brief        SD Driver error Handler
- * \param[in]    SD error number
  * \return       sd driver state
  */
 static SD_DRV_STATUS sd_error_handler(void)
@@ -72,8 +70,8 @@ static SD_DRV_STATUS sd_error_handler(void)
 /**
  * \fn           static SD_DRV_STATUS sd_switch_voltage(sd_handle_t *pHsd, uint8_t req_vol)
  * \brief        switch sd line volatge
- * \param[in]    SD Global Handle pointer
- * \param[in]    new voltage
+ * \param[in] pHsd Global Handle pointer
+ * \param[in] req_vol voltage
  * \return       sd driver status
  */
 static SD_DRV_STATUS sd_switch_voltage(sd_handle_t *pHsd, uint8_t req_vol)
@@ -104,7 +102,7 @@ static SD_DRV_STATUS sd_switch_voltage(sd_handle_t *pHsd, uint8_t req_vol)
 /**
  * \fn           static SD_DRV_STATUS sd_identify_card(sd_handle_t *pHsd)
  * \brief        Identify the inserted cards
- * \param[in]    Global SD Handle pointer
+ * \param[in] pHsd SD Handle pointer
  * \return       SD driver status
  */
 static SD_DRV_STATUS sd_identify_card(sd_handle_t *pHsd)
@@ -141,7 +139,7 @@ static SD_DRV_STATUS sd_identify_card(sd_handle_t *pHsd)
 /**
  * \fn           static SD_DRV_STATUS sd_get_card_ifcond(sd_handle_t *pHsd)
  * \brief        Get Card Interface condition
- * \param[in]    Global sd Handle pointer
+ * \param[in] pHsd sd Handle pointer
  * \return       SD driver status
  */
 static SD_DRV_STATUS sd_get_card_ifcond(sd_handle_t *pHsd)
@@ -179,7 +177,7 @@ static SD_DRV_STATUS sd_get_card_ifcond(sd_handle_t *pHsd)
 /**
  * \fn           static SD_DRV_STATUS sd_go_idle(sd_handle_t * pHsd)
  * \brief        put the card in idle mode
- * \param[in]    Global sd Handle pointer
+ * \param[in] pHsd sd Handle pointer
  * \return       SD driver status
  */
 static SD_DRV_STATUS sd_go_idle(sd_handle_t *pHsd)
@@ -200,7 +198,7 @@ static SD_DRV_STATUS sd_go_idle(sd_handle_t *pHsd)
 /**
  * \fn           static SD_DRV_STATUS sd_get_emmc_card_opcond(sd_handle_t *pHsd)
  * \brief        Get eMMC Card operating voltage condition
- * \param[in]    Global sd Handle pointer
+ * \param[in] pHsd sd Handle pointer
  * \return       SD driver status
  */
 static SD_DRV_STATUS sd_get_emmc_card_opcond(sd_handle_t *pHsd)
@@ -248,8 +246,8 @@ static SD_DRV_STATUS sd_get_emmc_card_opcond(sd_handle_t *pHsd)
 /**
  * \fn           static SD_DRV_STATUS sd_get_card_opcond(sd_handle_t *pHsd, uint32_t req_ocr)
  * \brief        Get Card operating voltage condition
- * \param[in]    Global sd Handle pointer
- * \param[in]    requested OCR value
+ * \param[in] pHsd sd Handle pointer
+ * \param[in] req_ocr OCR value
  * \return       SD driver status
  */
 static SD_DRV_STATUS sd_get_card_opcond(sd_handle_t *pHsd, uint32_t req_ocr)
@@ -333,7 +331,7 @@ static SD_DRV_STATUS sd_get_card_opcond(sd_handle_t *pHsd, uint32_t req_ocr)
 /**
  * \fn           static SD_DRV_STATUS sd_get_card_cid(sd_handle_t *pHsd)
  * \brief        Get Card Identification information
- * \param[in]    Global sd Handle pointer
+ * \param[in] pHsd sd Handle pointer
  * \return       SD driver status
  */
 static SD_DRV_STATUS sd_get_card_cid(sd_handle_t *pHsd)
@@ -357,8 +355,8 @@ static SD_DRV_STATUS sd_get_card_cid(sd_handle_t *pHsd)
 /**
  * \fn           static SD_DRV_STATUS sd_get_rca(sd_handle_t *pHsd, uint32_t *prca)
  * \brief        Get the Card Relative Address
- * \param[in]    Global sd Handle pointer
- * \param[in]    RCA destination pointer
+ * \param[in] pHsd sd Handle pointer
+ * \param[in] prca destination pointer
  * \return       SD driver status
  */
 static SD_DRV_STATUS sd_get_rca(sd_handle_t *pHsd, uint32_t *prca)
@@ -385,7 +383,7 @@ static SD_DRV_STATUS sd_get_rca(sd_handle_t *pHsd, uint32_t *prca)
 /**
  * \fn           static SD_DRV_STATUS sd_get_card_csd(sd_handle_t *pHsd)
  * \brief        Get Card Specific Data
- * \param[in]    Global sd Handle pointer
+ * \param[in] pHsd sd Handle pointer
  * \return       SD driver status
  */
 static SD_DRV_STATUS sd_get_card_csd(sd_handle_t *pHsd)
@@ -410,8 +408,8 @@ static SD_DRV_STATUS sd_get_card_csd(sd_handle_t *pHsd)
 /**
  * \fn           static SD_DRV_STATUS sd_sel_card(sd_handle_t *pHsd, uint32_t rca)
  * \brief        Select a card for further operation
- * \param[in]    Global sd Handle pointer
- * \param[in]    Card Relative Address
+ * \param[in] pHsd sd Handle pointer
+ * \param[in] rca Relative Address
  * \return       SD driver status
  */
 static SD_DRV_STATUS sd_sel_card(sd_handle_t *pHsd, uint32_t rca)
@@ -440,8 +438,8 @@ static SD_DRV_STATUS sd_sel_card(sd_handle_t *pHsd, uint32_t rca)
 /**
  * \fn           static SD_DRV_STATUS sd_set_blk_size(sd_handle_t *pHsd, uint32_t blk_size)
  * \brief        Set the Block Size (protocol + register)
- * \param[in]    Global sd Handle pointer
- * \param[in]    Block size
+ * \param[in] pHsd sd Handle pointer
+ * \param[in] blk_size size
  * \return       SD driver status
  */
 static SD_DRV_STATUS sd_set_blk_size(sd_handle_t *pHsd, uint32_t blk_size)
@@ -466,8 +464,8 @@ static SD_DRV_STATUS sd_set_blk_size(sd_handle_t *pHsd, uint32_t blk_size)
 /**
  * \fn           static SD_DRV_STATUS sd_get_card_ext_csd(sd_handle_t *pHsd, uint8_t *pbuff)
  * \brief        Get eMMC Extended CSD Data
- * \param[in]    Global sd Handle pointer
- * \param[in]    buffer pointer
+ * \param[in] pHsd sd Handle pointer
+ * \param[in] pbuff pointer
  * \return       SD driver status
  */
 static SD_DRV_STATUS sd_get_card_ext_csd(sd_handle_t *pHsd, uint8_t *pbuff)
@@ -509,7 +507,7 @@ static SD_DRV_STATUS sd_get_card_ext_csd(sd_handle_t *pHsd, uint8_t *pbuff)
 /**
  * \fn           static SD_DRV_STATUS sd_get_card_scr(sd_handle_t *pHsd)
  * \brief        Get SCR
- * \param[in]    Global sd Handle pointer
+ * \param[in] pHsd sd Handle pointer
  * \return       SD driver status
  */
 static SD_DRV_STATUS sd_get_card_scr(sd_handle_t *pHsd)
@@ -542,8 +540,8 @@ static SD_DRV_STATUS sd_get_card_scr(sd_handle_t *pHsd)
 /**
  * \fn           static SD_DRV_STATUS sd_get_card_status(sd_handle_t *pHsd, uint32_t *pstatus)
  * \brief        Get the Card Status
- * \param[in]    Global sd Handle pointer
- * \param[in]    status pointer
+ * \param[in] pHsd sd Handle pointer
+ * \param[in] pstatus pointer
  * \return       SD driver status
  */
 static SD_DRV_STATUS sd_get_card_status(sd_handle_t *pHsd, uint32_t *pstatus)
@@ -684,8 +682,8 @@ static SD_DRV_STATUS sd_set_block_count(sd_handle_t *pHsd, uint32_t blk_cnt)
 /**
  * \fn           static SD_DRV_STATUS sd_check_speed_mode(sd_handle_t *pHsd, uint8_t mode)
  * \brief        Check if SD card supports a specific speed mode using CMD6
- * \param[in]    Global SD Handle pointer
- * \param[in]    Speed mode to check
+ * \param[in] pHsd SD Handle pointer
+ * \param[in] mode mode to check
  * \return       SD driver status
  */
 static SD_DRV_STATUS sd_check_speed_mode(sd_handle_t *pHsd, uint8_t mode)
@@ -762,8 +760,8 @@ static SD_DRV_STATUS sd_check_speed_mode(sd_handle_t *pHsd, uint8_t mode)
 /**
  * \fn           static SD_DRV_STATUS sd_switch_speed_mode(sd_handle_t *pHsd, uint8_t mode)
  * \brief        Switch SD card to a specific speed mode using CMD6
- * \param[in]    Global SD Handle pointer
- * \param[in]    Speed mode to switch to
+ * \param[in] pHsd SD Handle pointer
+ * \param[in] mode mode to switch to
  * \return       SD driver status
  */
 static SD_DRV_STATUS sd_switch_speed_mode(sd_handle_t *pHsd, uint8_t mode)
@@ -1061,7 +1059,7 @@ SD_DRV_STATUS sd_status(void)
 /**
  * \fn           SD_DRV_STATUS sd_init(sd_param_t *p_sd_param)
  * \brief        main SD initialize function
- * \param[in]    device ID
+ * \param[in] p_sd_param ID
  * \return       sd driver status
  */
 SD_DRV_STATUS sd_init(sd_param_t *p_sd_param)
@@ -1090,8 +1088,8 @@ SD_DRV_STATUS sd_init(sd_param_t *p_sd_param)
 /**
  * \fn           void sdmmc_decode_card_ext_csd(sd_handle_t *pHsd, uint8_t *praw_ext_csd)
  * \brief        decode emmc ext csd data
- * \param[in]    sd handle pointer
- * \param[in]    raw ext csd data pointer
+ * \param[in] pHsd handle pointer
+ * \param[in] praw_ext_csd ext csd data pointer
  * \return       none
  */
 void sdmmc_decode_card_ext_csd(sd_handle_t *pHsd, uint8_t *praw_ext_csd)
@@ -1128,7 +1126,7 @@ void sdmmc_decode_card_ext_csd(sd_handle_t *pHsd, uint8_t *praw_ext_csd)
 /**
  * \fn           void sdmmc_decode_card_csd(sd_handle_t *pHsd)
  * \brief        decode card csd data
- * \param[in]    sd handle pointer
+ * \param[in] pHsd handle pointer
  * \return       none
  */
 void sdmmc_decode_card_csd(sd_handle_t *pHsd)
@@ -1179,7 +1177,7 @@ void sdmmc_decode_card_csd(sd_handle_t *pHsd)
 /**
  * \fn           SD_DRV_STATUS sd_uninit(uint8_t devId)
  * \brief        SD uninitialize function
- * \param[in]    device ID
+ * \param[in] devId ID
  * \return       sd driver status
  */
 SD_DRV_STATUS sd_uninit(uint8_t devId)
@@ -1208,7 +1206,6 @@ SD_DRV_STATUS sd_uninit(uint8_t devId)
 /**
  * \fn           SD_CARD_STATE sd_state(void)
  * \brief        sd state
- * \param[in]    void
  * \return       sd state
  */
 SD_CARD_STATE sd_state(void)
@@ -1224,7 +1221,7 @@ SD_CARD_STATE sd_state(void)
 /**
  * \fn           SD_DRV_STATUS sd_info(sd_cardinfo_t *pinfo)
  * \brief        returns sd card info
- * \param[in]    sd_cardinfo_t * pinfo
+ * \param[in] pinfo * pinfo
  * \return       sd driver status
  */
 SD_DRV_STATUS sd_info(sd_cardinfo_t *pinfo)
@@ -1244,9 +1241,9 @@ SD_DRV_STATUS sd_info(sd_cardinfo_t *pinfo)
  * \fn           static SD_DRV_STATUS sd_xfer_setup(sd_handle_t *pHsd, sd_data_t *data,
  *                                                 uint8_t direction)
  * \brief        Setup transfer parameter and start transfer
- * \param[in]    Global sd Handle pointer
- * \param[in]    Data phase descriptor
- * \param[in]    Transfer direction (SD_DATA_DIR_READ or SD_DATA_DIR_WRITE)
+ * \param[in] pHsd sd Handle pointer
+ * \param[in] data phase descriptor
+ * \param[in] direction direction (SD_DATA_DIR_READ or SD_DATA_DIR_WRITE)
  * \return       SD driver status
  */
 static SD_DRV_STATUS sd_xfer_setup(sd_handle_t *pHsd, sd_data_t *data, uint8_t direction)

@@ -41,7 +41,6 @@ extern uint32_t cmp_clk_ref_cnt;
 /**
  * @fn          void enable_analog_peripherals(void)
  * @brief       Enable LDO and precision bandgap for analog peripherals
- * @param[in]   none
  * @return      none
  */
 static inline void enable_analog_peripherals(void)
@@ -57,7 +56,6 @@ static inline void enable_analog_peripherals(void)
 /**
  * @fn          void disable_analog_peripherals(void)
  * @brief       Disable LDO and precision bandgap for analog peripherals
- * @param[in]   none
  * @return      none
  */
 static inline void disable_analog_peripherals(void)
@@ -79,7 +77,6 @@ static inline void disable_analog_peripherals(void)
  *            This function sets the DAC6 configuration register to output
  *            a specific voltage (0.9V) that can be used as a negative
  *            input for the High-Speed Comparator (HSCMP).
- * @param[in] none
  * @return    none
  */
 static inline void enable_dac6_ref_voltage(void)
@@ -100,7 +97,6 @@ static inline void enable_dac6_ref_voltage(void)
 /**
  * @fn        void disable_dac6_ref_voltage(void)
  * @brief     Disable DAC6 as a negative input reference for HSCMP.
- * @param[in] none
  * @return    none
  */
 static inline void disable_dac6_ref_voltage(void)
@@ -125,7 +121,6 @@ static inline void disable_dac6_ref_voltage(void)
  * @fn        void enable_dac12_ref_voltage(void)
  * @brief     Enables DAC12 voltage reference and internal buffer
  *            for DAC operation.
- * @param[in] none
  * @return    none
  */
 static inline void enable_dac12_ref_voltage(void)
@@ -147,7 +142,6 @@ static inline void enable_dac12_ref_voltage(void)
  * @fn        void disable_dac12_ref_voltage(void)
  * @brief     Disables DAC12 voltage reference and internal buffer
  *            for DAC operation.
- * @param[in] none
  * @return    none
  */
 static inline void disable_dac12_ref_voltage(void)
@@ -174,7 +168,6 @@ static inline void disable_dac12_ref_voltage(void)
  * @brief     Configures the analog control register to enable the reference
  *            divider, turn on the VREF buffer, and set the appropriate control
  *            level for the ADC reference voltage.
- * @param[in] none
  * @return    none
  */
 static inline void enable_adc_ref_voltage(void)
@@ -196,7 +189,6 @@ static inline void enable_adc_ref_voltage(void)
  * @fn        void disable_adc_ref_voltage(void)
  * @brief     Disable the reference divider, VREF buffer,
  *            and ADC reference voltage.
- * @param[in] none
  * @return    none
  */
 static inline void disable_adc_ref_voltage(void)
@@ -219,7 +211,6 @@ static inline void disable_adc_ref_voltage(void)
 /**
  * @fn        static inline void enable_analog_periph_clk(void)
  * @brief     Enable Analog peripheral clock.
- * @param[in] none
  * @return    none.
  */
 static inline void enable_analog_periph_clk(void)
@@ -234,7 +225,6 @@ static inline void enable_analog_periph_clk(void)
 /**
  * @fn        static inline void disable_analog_periph_clk(void)
  * @brief     Disable Analog peripheral clock.
- * @param[in] none
  * @return    none.
  */
 static inline void disable_analog_periph_clk(void)

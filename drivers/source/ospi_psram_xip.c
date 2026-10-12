@@ -11,7 +11,7 @@
 /******************************************************************************
  * @file     ospi_psram_xip.c
  * @author   Silesh C V, Manoj A Murudi
- * @email    silesh@alifsemi.com, manoj.murudi@alifsemi.com
+ * Email:    silesh@alifsemi.com, manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     19-Jul-2023
  * @brief    Implementation of the OSPI PS-RAM XIP init library.
@@ -33,10 +33,13 @@
 #include "sys_ctrl_ospi.h"
 
 /**
-  \fn          int ospi_set_speed(OSPI_Type *ospi, AES_Type *aes, const ospi_psram_xip_config
-  *config) \brief       Set OSPI bus speed for spi transfer. \param[in]   ospi : Pointer to the OSPI
-  register map. \param[in]   aes  : Pointer to the AES register map. \param[in]   config  : Pointer
-  to ram configuration information. \return      -1 on configuration error, 0 on success
+  \fn          static int ospi_set_speed(OSPI_Type *ospi, AES_Type *aes,
+                                         const ospi_psram_xip_config *config)
+  \brief       Set the OSPI bus speed for an SPI transfer.
+  \param[in]   ospi    Pointer to the OSPI register map
+  \param[in]   aes     Pointer to the AES register map
+  \param[in]   config  Pointer to PSRAM configuration
+  \return      0 on success, -1 on configuration error
  */
 static int ospi_set_speed(OSPI_Type *ospi, AES_Type *aes, const ospi_psram_xip_config *config)
 {

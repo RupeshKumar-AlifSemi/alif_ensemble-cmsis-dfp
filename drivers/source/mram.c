@@ -12,12 +12,7 @@
 #include <string.h>
 
 /**
-  \fn          void mram_read(void *p_dst, const void *p_src, uint32_t cnt)
   \brief       Read data from source(MRAM) to destination.
-  \param[out]  p_dst  Pointer to destination address.
-  \param[in]   p_src  Pointer to source address
-  \param[in]   cnt    Number of data items to read.
-  \return      none
 */
 void mram_read(void *p_dst, const void *p_src, uint32_t cnt)
 {
@@ -27,11 +22,7 @@ void mram_read(void *p_dst, const void *p_src, uint32_t cnt)
 }
 
 /**
-  \fn          void mram_write_128bit(uint8_t *p_dst, const uint8_t *p_src)
   \brief       write 128-bit data from source to destination(MRAM).
-  \param[out]  p_dst   Pointer to destination address.
-  \param[in]   p_src   Pointer to source address.
-  \return      none
 */
 void mram_write_128bit(uint8_t *p_dst, const uint8_t *p_src)
 {

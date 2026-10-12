@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     cpi.h
  * @author   Chandra Bhushan Singh
- * @email    chandrabhushan.singh@alifsemi.com
+ * Email:    chandrabhushan.singh@alifsemi.com
  * @version  V1.0.0
  * @date     27-March-2023
  * @brief    Low level driver Specific header file.

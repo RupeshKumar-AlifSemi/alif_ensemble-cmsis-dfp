@@ -11,22 +11,17 @@
 /*******************************************************************************
  * @file     i2s.c
  * @author   Sudhir Sreedharan
- * @email    sudhir@alifsemi.com
+ * Email:    sudhir@alifsemi.com
  * @version  V1.0.0
  * @date     06-06-2023
  * @brief    Low Level Source File for I2S
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #include "i2s.h"
 
 /**
-  \fn          void i2s_tx_irq_handler(I2S_Type *i2s, i2s_transfer_t *transfer)
   \brief       Handle interrupts for the I2S Tx.
-  \param[in]   i2s       Pointer to the I2S register map
-  \param[in]   transfer  The transfer structure for the I2S instance
-  \return      none
 */
 void i2s_tx_irq_handler(I2S_Type *i2s, i2s_transfer_t *transfer)
 {
@@ -111,11 +106,7 @@ void i2s_tx_irq_handler(I2S_Type *i2s, i2s_transfer_t *transfer)
 }
 
 /**
-  \fn          void i2s_rx_irq_handler(I2S_Type *i2s, i2s_transfer_t *transfer)
   \brief       Handle interrupts for the I2S Rx.
-  \param[in]   i2s       Pointer to the I2S register map
-  \param[in]   transfer  The transfer structure for the I2S instance
-  \return      none
 */
 void i2s_rx_irq_handler(I2S_Type *i2s, i2s_transfer_t *transfer)
 {
@@ -215,11 +206,7 @@ void i2s_rx_irq_handler(I2S_Type *i2s, i2s_transfer_t *transfer)
 }
 
 /**
-  \fn          void i2s_send_blocking(I2S_Type *i2s, i2s_transfer_t *transfer)
   \brief       Execute a blocking I2S send described by the transfer structure.
-  \param[in]   i2s       Pointer to the I2S register map
-  \param[in]   transfer  Pointer to transfer structure
-  \return      none
 */
 void i2s_send_blocking(I2S_Type *i2s, i2s_transfer_t *transfer)
 {
@@ -293,11 +280,7 @@ void i2s_send_blocking(I2S_Type *i2s, i2s_transfer_t *transfer)
 }
 
 /**
-  \fn          void i2s_receive_blocking(I2S_Type *i2s, i2s_transfer_t *transfer)
   \brief       Execute a blocking I2S receive described by the transfer structure.
-  \param[in]   i2s       Pointer to the I2S register map
-  \param[in]   transfer  Pointer to transfer structure
-  \return      none
 */
 void i2s_receive_blocking(I2S_Type *i2s, i2s_transfer_t *transfer)
 {

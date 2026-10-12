@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     lptimer.h
  * @author   Girish BN, Manoj A Murudi
- * @email    girish.bn@alifsemi.com, manoj.murudi@alifsemi.com
+ * Email:    girish.bn@alifsemi.com, manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     27-March-2023
  * @brief    Low Level header file for LPTIMER.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #ifndef LPTIMER_H_
@@ -37,8 +36,8 @@ extern "C" {
 #define LPTIMER_CONTROL_REG_TIMER_ON_100PWM_BIT      0x10U
 
 /**
-  \fn          static inline void lptimer_set_mode_userdefined (LPTIMER_Type *lptimer, uint8_t
-  channel) \brief       Set user-defined mode for specified LPTIMER channel \param[in]   lptimer
+  \fn static inline void lptimer_set_mode_userdefined(LPTIMER_Type *lptimer, uint8_t channel)
+  \brief       Set user-defined mode for specified LPTIMER channel \param[in]   lptimer
   Pointer to the LPTIMER register map \param[in]   channel   lptimer channel \return      none
 */
 static inline void lptimer_set_mode_userdefined(LPTIMER_Type *lptimer, uint8_t channel)
@@ -47,8 +46,8 @@ static inline void lptimer_set_mode_userdefined(LPTIMER_Type *lptimer, uint8_t c
 }
 
 /**
-  \fn          static inline void lptimer_set_mode_freerunning (LPTIMER_Type *lptimer, uint8_t
-  channel) \brief       Set free run mode for specified LPTIMER channel \param[in]   lptimer Pointer
+  \fn static inline void lptimer_set_mode_freerunning(LPTIMER_Type *lptimer, uint8_t channel)
+  \brief       Set free run mode for specified LPTIMER channel \param[in]   lptimer Pointer
   to the LPTIMER register map \param[in]   channel   lptimer channel \return      none
 */
 static inline void lptimer_set_mode_freerunning(LPTIMER_Type *lptimer, uint8_t channel)
@@ -57,8 +56,8 @@ static inline void lptimer_set_mode_freerunning(LPTIMER_Type *lptimer, uint8_t c
 }
 
 /**
-  \fn          static inline void lptimer_load_count (LPTIMER_Type *lptimer, uint8_t channel,
-  uint32_t value) \brief       Load counter value \param[in]   lptimer   Pointer to the LPTIMER
+  \fn static inline void lptimer_load_count(LPTIMER_Type *lptimer, uint8_t channel, uint32_t *value)
+  \brief       Load counter value \param[in]   lptimer   Pointer to the LPTIMER
   register map \param[in]   channel   lptimer channel \param[in]   value     Pointer to variable
   which stores value to be assigned to counter \return      none
 */
@@ -80,8 +79,8 @@ static inline void lptimer_load_max_count(LPTIMER_Type *lptimer, uint8_t channel
 }
 
 /**
-  \fn          static inline uint32_t lptimer_get_count (LPTIMER_Type *lptimer, uint8_t channel,
-  uint32_t *value) \brief       Get current counter value \param[in]   lptimer   Pointer to the
+  \fn static inline uint32_t lptimer_get_count(LPTIMER_Type *lptimer, uint8_t channel)
+  \brief       Get current counter value \param[in]   lptimer   Pointer to the
   LPTIMER register map \param[in]   channel   lptimer channel \return      counter value
 */
 static inline uint32_t lptimer_get_count(LPTIMER_Type *lptimer, uint8_t channel)
@@ -155,8 +154,8 @@ static inline void lptimer_unmask_interrupt(LPTIMER_Type *lptimer, uint8_t chann
 
 #if SOC_FEAT_LPTIMER_HAS_PWM
 /**
-  \fn          static inline void lptimer_load_count2 (LPTIMER_Type *lptimer, uint8_t channel,
-  uint32_t value) \brief       Load counter 2 value \param[in]   lptimer   Pointer to the LPTIMER
+  \fn static inline void lptimer_load_count2(LPTIMER_Type *lptimer, uint8_t channel, uint32_t *value)
+  \brief       Load counter 2 value \param[in]   lptimer   Pointer to the LPTIMER
   register map \param[in]   channel   lptimer channel \param[in]   value     Pointer to variable
   which stores value to be assigned to counter \return      none
 */

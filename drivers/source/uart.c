@@ -96,12 +96,8 @@ static inline int32_t uart_get_rx_fifo_available_count(UART_Type *uart)
 }
 
 /**
- * @fn      void uart_send_blocking (UART_Type *uart, UART_TRANSFER *transfer)
  * @brief   uart send using blocking/polling method,
  *           this will block till uart sends all the data.
- * @param   uart     : Pointer to uart register set structure
- * @param   transfer : Pointer to uart transfer structure
- * @retval  none
  */
 void uart_send_blocking(UART_Type *uart, UART_TRANSFER *transfer)
 {
@@ -141,12 +137,8 @@ void uart_send_blocking(UART_Type *uart, UART_TRANSFER *transfer)
 }
 
 /**
- * @fn      void uart_receive_blocking (UART_Type *uart, UART_TRANSFER *transfer)
  * @brief   uart receive using blocking/polling method,
  *           this will block till uart receives all the data.
- * @param   uart     : Pointer to uart register set structure
- * @param   transfer : Pointer to uart transfer structure
- * @retval  none
  */
 void uart_receive_blocking(UART_Type *uart, UART_TRANSFER *transfer)
 {
@@ -209,13 +201,8 @@ void uart_receive_blocking(UART_Type *uart, UART_TRANSFER *transfer)
 }
 
 /**
- * @fn      void uart_set_baudrate (UART_Type  *uart, uint32_t clk, uint32_t baudrate)
  * @brief   set uart baudrate
  * @note    added support for fraction in dlf divisor latch fraction register
- * @param   uart     : Pointer to uart register set structure
- * @param   clk      : clock
- * @param   baudrate : baudrate
- * @retval  none
  */
 void uart_set_baudrate(UART_Type *uart, uint32_t clk, uint32_t baudrate)
 {
@@ -247,18 +234,12 @@ void uart_set_baudrate(UART_Type *uart, uint32_t clk, uint32_t baudrate)
 }
 
 /**
- * @fn      void uart_set_data_parity_stop_bits(UART_Type       *uart,
                                                 UART_DATA_BITS   data_bits,
                                                 UART_PARITY      parity,
                                                 UART_STOP_BITS   stop_bits)
  * @brief   set uart asynchronous parameters:
  *          data bits, parity, stop bits
  * @note    none
- * @param   uart        : Pointer to uart register set structure
- * @param   data_bits   : data bits
- * @param   parity      : parity
- * @param   stop_bits   : stop bits
- * @retval  none
  */
 void uart_set_data_parity_stop_bits(UART_Type *uart, UART_DATA_BITS data_bits, UART_PARITY parity,
                                     UART_STOP_BITS stop_bits)
@@ -317,14 +298,10 @@ void uart_set_data_parity_stop_bits(UART_Type *uart, UART_DATA_BITS data_bits, U
 }
 
 /**
- * @fn      void uart_set_flow_control(UART_Type         *uart,
                                        UART_FLOW_CONTROL  flow_control)
  * @brief   set uart asynchronous parameters:
  *          flow control RTS/CTS
  * @note    none
- * @param   uart         : Pointer to uart register set structure
- * @param   flow_control : flow control RTS/CTS
- * @retval  none
  */
 void uart_set_flow_control(UART_Type *uart, UART_FLOW_CONTROL flow_control)
 {
@@ -350,7 +327,6 @@ void uart_set_flow_control(UART_Type *uart, UART_FLOW_CONTROL flow_control)
 }
 
 /**
- * @fn      void uart_irq_handler (UART_Type *uart, UART_TRANSFER *transfer)
  * @brief   uart interrupt handler
  * @note    only one combined interrupt for
  *              -TX / RX
@@ -360,9 +336,6 @@ void uart_set_flow_control(UART_Type *uart, UART_FLOW_CONTROL flow_control)
  *          in RX_Character_Timeout case not clearing rx busy flag,
  *          it is up to user to decide whether
  *          to wait for remaining bytes or call the abort rx. \ref abort_rx
- * @param   uart     : Pointer to uart register set structure
- * @param   transfer : Pointer to uart transfer structure
- * @retval  none
  */
 void uart_irq_handler(UART_Type *uart, UART_TRANSFER *transfer)
 {

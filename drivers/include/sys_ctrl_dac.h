@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     sys_ctrl_dac.h
  * @author   Nisarga A M
- * @email    nisarga.am@alifsemi.com
+ * Email:    nisarga.am@alifsemi.com
  * @version  V1.0.0
  * @date     27-Apr-2023
  * @brief    System Control Device information for DAC.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #ifndef SYS_CTRL_DAC_H_
@@ -44,7 +43,7 @@ typedef enum _DAC_INSTANCE {
 /**
   \fn     static inline void enable_dac_periph_clk(DAC_INSTANCE instance)
   \brief  Enable DAC0 and DAC1 peripheral clock register.
-  \param  none.
+  \param instance .
   \return none.
  */
 static inline void enable_dac_periph_clk(DAC_INSTANCE instance)
@@ -59,7 +58,7 @@ static inline void enable_dac_periph_clk(DAC_INSTANCE instance)
 /**
   \fn     static inline void disable_dac_periph_clk(DAC_INSTANCE instance)
   \brief  Disable DAC0 and DAC1 peripheral clock register.
-  \param  none.
+  \param instance .
   \return none.
  */
 static inline void disable_dac_periph_clk(DAC_INSTANCE instance)

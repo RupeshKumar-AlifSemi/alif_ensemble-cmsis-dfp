@@ -11,7 +11,7 @@
 /******************************************************************************
  * @file     pinconf.h
  * @author   Silesh C V
- * @email    silesh@alifsemi.com
+ * Email:    silesh@alifsemi.com
  * @version  V1.0.0
  * @date     02-Feb-2023
  * @brief    Pin configuration.
@@ -96,8 +96,8 @@ extern "C" {
 #endif
 
 /**
-  \fn          int32_t pinconf_set(const uint8_t port, const uint8_t pin, const uint8_t alt_func,
-  const uint8_t pad_ctrl) \brief       Set pinmux and pad control configuration for a pin.
+  \fn int32_t pinconf_set(uint8_t port, uint8_t pin, uint8_t alt_func, uint8_t pad_ctrl)
+  \brief       Set pinmux and pad control configuration for a pin.
   \param[in]   port       GPIO port
   \param[in]   pin        GPIO pin
   \param[in]   alt_func   The alternate function to be chosen
@@ -107,11 +107,13 @@ extern "C" {
 int32_t pinconf_set(uint8_t port, uint8_t pin, uint8_t alt_func, uint8_t pad_ctrl);
 
 /**
-  \fn          int32_t pinconf_get(const uint8_t port, const uint8_t pin, uint8_t *alt_func, uint8_t
-  *pad_ctrl) \brief       Get pinmux and pad control configuration for a pin. \param[in]   port GPIO
-  port \param[in]   pin        GPIO pin \param[out]  alt_func   Current alternate function selected
-  for the pin \param[out]  pad_ctrl   Current pad control configuration for the pin \return
-  execution_status
+  \fn          int32_t pinconf_get(uint8_t port, uint8_t pin, uint8_t *alt_func, uint8_t *pad_ctrl)
+  \brief       Get pinmux and pad control configuration for a pin.
+  \param[in]   port      GPIO port
+  \param[in]   pin       GPIO pin
+  \param[out]  alt_func  Current alternate function selected for the pin
+  \param[out]  pad_ctrl  Current pad control configuration for the pin
+  \return      execution status
 */
 int32_t pinconf_get(uint8_t port, uint8_t pin, uint8_t *alt_func, uint8_t *pad_ctrl);
 

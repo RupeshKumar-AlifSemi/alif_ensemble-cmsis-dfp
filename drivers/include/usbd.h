@@ -10,12 +10,11 @@
 /*******************************************************************************
  * @file     usbd.h
  * @author   Mahesh Avula
- * @email    mahesh.avula@alifsemi.com
+ * Email:    mahesh.avula@alifsemi.com
  * @version  V1.0.0
  * @date     10-Feb-2022
  * @brief    Header file for the cmsis usb driver.
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 
 #ifndef USBD_H

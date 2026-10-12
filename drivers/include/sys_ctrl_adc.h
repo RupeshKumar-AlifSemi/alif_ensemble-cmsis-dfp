@@ -208,12 +208,10 @@ static inline uint32_t *adc_get_base(uint8_t instance)
 }
 
 /*
- * @func         : void adc_set_differential_ctrl(uint8_t instance,
-                                                  bool vcm_en,
-                                                  bool differential_en)
+ * @fn static inline void adc_set_differential_ctrl(uint8_t instance, bool differential_en)
  * @brief        : control differential setting
- * @parameter[1] : instance        : adc instances
- * @parameter[3] : differential_en : differential enable
+ * @param instance adc instances
+ * @param differential_en differential enable
  * @return       : NONE
  */
 static inline void adc_set_differential_ctrl(uint8_t instance, bool differential_en)
@@ -244,13 +242,13 @@ static inline void adc_set_differential_ctrl(uint8_t instance, bool differential
 }
 
 /*
- * @func         : void adc_set_comparator_ctrl(uint8_t instance,
+ * @fn         : void adc_set_comparator_ctrl(uint8_t instance,
                              bool comparator_en,
                              uint8_t comparator_bias)
  * @brief        :control differential setting
- * @parameter[1] : instance        : adc instances
- * @parameter[2] : comparator_en   : comparator enable
- * @parameter[3] : comparator_bias : comparator bias value
+ * @param instance adc instances
+ * @param comparator_en comparator enable
+ * @param comparator_bias comparator bias value
  * @return       : NONE
  */
 void adc_set_comparator_ctrl(uint8_t instance, bool comparator_en, uint8_t comparator_bias)
@@ -285,10 +283,10 @@ void adc_set_comparator_ctrl(uint8_t instance, bool comparator_en, uint8_t compa
 }
 
 /**
- * @fn       : void adc_set_clk_control(const ADC_RESOURCES *ADC, bool enable)
+ * @fn static inline void adc_set_clk_control(uint8_t instance, bool enable)
  * @brief    : Enable/Disable ADC input clock
- * @param[1] : instance        : adc instances
- * @param[2] : enable : Enable/Disable control
+ * @param instance adc instances
+ * @param enable Enable/Disable control
  * @return   : NONE
  */
 static inline void adc_set_clk_control(uint8_t instance, bool enable)
@@ -334,9 +332,9 @@ static inline void adc_set_clk_control(uint8_t instance, bool enable)
 }
 
 /**
-  \fn     static inline void enable_adc24(void)
+  \fn static inline void enable_adc24(uint8_t instance)
   \brief  Enable ADC24 from control register
-  \@parameter[1] : instance        : adc instances
+  \@param : instance        : adc instances
   \return none.
  */
 static inline void enable_adc24(uint8_t instance)
@@ -361,7 +359,7 @@ static inline void enable_adc24(uint8_t instance)
 /**
   \fn     static inline void disable_adc24(uint8_t instance)
   \brief  Disable ADC24 from control register
-  \@parameter[1] : instance        : adc instances
+  \@param : instance        : adc instances
   \return none.
  */
 static inline void disable_adc24(uint8_t instance)
@@ -385,10 +383,10 @@ static inline void disable_adc24(uint8_t instance)
 }
 
 /*
- * @func           : void set_adc24_output_rate(uint8_t instance, uint32_t rate)
+ * @fn           : void set_adc24_output_rate(uint8_t instance, uint32_t rate)
  * @brief          : set output rate for adc24
- * @parameter[1]   : instance        : adc instances
- * @parameter[2]   : bias : value for setting bias
+ * @param   : instance        : adc instances
+ * @param   : bias : value for setting bias
  * @return         : NONE
  */
 static inline void set_adc24_bias(uint8_t instance, uint32_t bias)
@@ -412,10 +410,10 @@ static inline void set_adc24_bias(uint8_t instance, uint32_t bias)
 }
 
 /*
- * @func           : void set_adc24_output_rate(uint8_t instance, uint32_t rate)
+ * @fn           : void set_adc24_output_rate(uint8_t instance, uint32_t rate)
  * @brief          : set output rate for adc24
- * @parameter[1]   : instance        : adc instances
- * @parameter[1]   : rate : value for setting output rate
+ * @param instance adc instances
+ * @param rate value for setting output rate
  * @return         : NONE
  */
 static inline void set_adc24_output_rate(uint8_t instance, uint32_t rate)
@@ -440,10 +438,10 @@ static inline void set_adc24_output_rate(uint8_t instance, uint32_t rate)
 }
 
 /*
- * @func           : void enable_adc_pga_gain(uint32_t gain_setting)
+ * @fn static inline void enable_adc_pga_gain(uint8_t instance, uint32_t gain)
  * @brief          : Enable the pga gain for adc instances
- * @parameter[1]   : instance : adc controller instance
- * @parameter[2]   : gain     : setting to configure
+ * @param instance adc controller instance
+ * @param gain setting to configure
  * @return         : NONE
  */
 static inline void enable_adc_pga_gain(uint8_t instance, uint32_t gain)
@@ -517,9 +515,9 @@ static inline void enable_adc_pga_gain(uint8_t instance, uint32_t gain)
 }
 
 /*
- * @func           : void disable_adc_Pga_gain(uint32_t gain_setting)
+ * @fn static inline void disable_adc_pga_gain(uint8_t instance)
  * @brief          : Disable the pga gain for adc instances
- * @parameter[1]   : instance : adc controller instance
+ * @param instance adc controller instance
  * @return         : NONE
  */
 static inline void disable_adc_pga_gain(uint8_t instance)

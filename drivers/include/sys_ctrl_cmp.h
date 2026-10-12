@@ -312,7 +312,6 @@ static void cmp_set_config(uint8_t instance, uint32_t config_value)
 /**
  * @fn          void lpcmp_clear_config(void)
  * @brief       Clear LPCMP configuration value in Vbat reg2.
- * @param[in]   None
  * @return      None
  */
 static void lpcmp_clear_config(void)
@@ -328,7 +327,6 @@ static void lpcmp_clear_config(void)
 /**
  * @fn          uint8_t cmp_int_mask(void)
  * @brief       HSCMP device specific interrupt status
- * @param[in]   None
  * @return      HSCMP device specific interrupt status macro
  */
 static inline uint8_t cmp_int_mask(void)
@@ -339,7 +337,6 @@ static inline uint8_t cmp_int_mask(void)
 /**
  * @fn          uint8_t cmp_window_enable_value(void)
  * @brief       HSCMP device specific window function
- * @param[in]   None
  * @return      HSCMP device specific window function macro
  */
 static inline uint8_t cmp_window_enable_value(void)

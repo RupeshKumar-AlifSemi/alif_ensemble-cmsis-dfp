@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     sdio.c
  * @author   Deepak Kumar
- * @email    deepak@alifsemi.com
+ * Email:    deepak@alifsemi.com
  * @version  V0.0.1
  * @date     28-Nov-2022
  * @brief    SDIO Driver APIs.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 /* Includes ------------------------------------------------------------------*/
@@ -29,7 +28,7 @@ extern sd_handle_t Hsd;
 /**
  * \fn           SD_DRV_STATUS sdio_reset(sd_handle_t *pHsd)
  * \brief        Reset the IO/Combo Card
- * \param[in]    Global sd Handle pointer
+ * \param[in] pHsd sd Handle pointer
  * \return       Host controller driver status
  */
 SD_DRV_STATUS sdio_reset(sd_handle_t *pHsd)
@@ -48,9 +47,9 @@ SD_DRV_STATUS sdio_reset(sd_handle_t *pHsd)
  * \fn           SD_DRV_STATUS sdio_get_opcond(sd_handle_t *pHsd, uint32_t ocr, \
  *                                      uint32_t *rocr)
  * \brief        Get IO card operating condition (CMD5)
- * \param[in]    Global sd Handle pointer
+ * \param[in] pHsd sd Handle pointer
  * \param[in]    ocr value
- * \param[in]    ocr response destination pointer
+ * \param[in] rocr response destination pointer
  * \return       Host controller driver status
  */
 SD_DRV_STATUS sdio_get_opcond(sd_handle_t *pHsd, uint32_t ocr, uint32_t *rocr)
@@ -73,9 +72,9 @@ SD_DRV_STATUS sdio_get_opcond(sd_handle_t *pHsd, uint32_t ocr, uint32_t *rocr)
 }
 
 /**
- * \fn           SD_DRV_STATUS sdio_rw_direct(sd_handle_t *pHsd, ...)
+ * \fn SD_DRV_STATUS sdio_rw_direct(sd_handle_t *pHsd, uint32_t rwFlag, uint32_t fn, uint32_t addr, uint8_t writeData, uint8_t *readPtr)
  * \brief        SDIO CMD52 Read/Write Direct
- * \param[in]    Global sd Handle pointer
+ * \param[in] pHsd sd Handle pointer
  * \param[in]    rwFlag - read/write flag
  * \param[in]    fn - function number
  * \param[in]    addr - register address
@@ -123,9 +122,9 @@ SD_DRV_STATUS sdio_rw_direct(sd_handle_t *pHsd, uint32_t rwFlag, uint32_t fn, ui
 }
 
 /**
- * \fn           SD_DRV_STATUS sdio_rw_extended(sd_handle_t *pHsd, ...)
+ * \fn SD_DRV_STATUS sdio_rw_extended(sd_handle_t *pHsd, uint32_t rwFlag, uint32_t fn, uint32_t addr, uint32_t incr_addr, uint8_t *buf, uint32_t blk_cnt, uint32_t blkSize)
  * \brief        SDIO CMD53 Read/Write Extended
- * \param[in]    Global sd Handle pointer
+ * \param[in] pHsd sd Handle pointer
  * \param[in]    rwFlag - read/write flag
  * \param[in]    fn - function number
  * \param[in]    addr - register address
@@ -228,9 +227,9 @@ exit:
 /**
  * \fn           SD_DRV_STATUS sdio_read_cia(uint8_t *pcia, uint8_t fn, uint8_t offset)
  * \brief        read SDIO Common I/O Area with given offset
- * \param[in]    pointer to Common I/O Area
- * \param[in]    Function number(0-7)
- * \param[in]    Function offset(0x00 - 0xFF)
+ * \param[in] pcia to Common I/O Area
+ * \param[in] fn number(0-7)
+ * \param[in] offset offset(0x00 - 0xFF)
  * \return       SD driver status
  */
 SD_DRV_STATUS sdio_read_cia(uint8_t *pcia, uint8_t fn, uint8_t offset)
@@ -245,9 +244,9 @@ SD_DRV_STATUS sdio_read_cia(uint8_t *pcia, uint8_t fn, uint8_t offset)
 /**
  * \fn           SD_DRV_STATUS sdio_write_cia(uint8_t cia, uint8_t fn, uint8_t offset)
  * \brief        write SDIO Common I/O Area with given offset
- * \param[in]    pointer to Common I/O Area
- * \param[in]    Function number(0-7)
- * \param[in]    Function offset(0x00 - 0xFF)
+ * \param[in] cia to Common I/O Area
+ * \param[in] fn number(0-7)
+ * \param[in] offset offset(0x00 - 0xFF)
  * \return       SD driver status
  */
 SD_DRV_STATUS sdio_write_cia(uint8_t cia, uint8_t fn, uint8_t offset)

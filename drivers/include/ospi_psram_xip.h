@@ -11,7 +11,7 @@
 /******************************************************************************
  * @file     ospi_psram_xip.h
  * @author   Silesh C V, Manoj A Murudi
- * @email    silesh@alifsemi.com, manoj.murudi@alifsemi.com
+ * Email:    silesh@alifsemi.com, manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     19-Jul-2023
  * @brief    Public header file for OSPI PSRAM XIP init library.

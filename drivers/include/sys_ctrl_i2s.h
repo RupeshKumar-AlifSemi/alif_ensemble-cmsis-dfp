@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     sys_ctrl_i2s.h
  * @author   Sudhir Sreedharan
- * @email    sudhir@alifsemi.com
+ * Email:    sudhir@alifsemi.com
  * @version  V1.0.0
  * @date     21-Apr-2023
  * @brief    System Control Device information for I2S
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 #ifndef SYS_CTRL_I2S_H
 
@@ -372,7 +371,7 @@ static inline void set_i2s_clock_divisor(I2S_INSTANCE instance, uint16_t clk_div
   \param[in]   instance  I2S controller instance
   \param[in]   sclk_freq  sclk frequency in Hz
   \param[in]   clock_source  Input clock source in Hz
-  \return      \ret 0 for Success else Error
+  \return      \return 0 for Success else Error
 */
 static inline int32_t set_i2s_sampling_rate(I2S_INSTANCE instance, uint32_t sclk_freq,
                                             uint32_t clock_source)

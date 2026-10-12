@@ -10,12 +10,11 @@
 /*******************************************************************************
  * @file     dma_ctrl.h
  * @author   Sudhir Sreedharan
- * @email    sudhir@alifsemi.com
+ * Email:    sudhir@alifsemi.com
  * @version  V1.0.0
  * @date     11-08-2023
  * @brief    DMA Header file for channel and thread info
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #ifndef DMA_CTRL_H_
@@ -243,9 +242,7 @@ static inline void dma_set_secure_state(dma_config_info_t *dma_cfg, uint8_t chan
 }
 
 /**
-  \fn          DMA_SECURE_STATE dma_get_secure_state(dma_config_info_t *dma_cfg,
-                                                     uint8_t            channel_num,
-                                                     DMA_SECURE_STATE   sec_state)
+  \fn static inline DMA_SECURE_STATE dma_get_secure_state(dma_config_info_t *dma_cfg, uint8_t channel_num)
   \brief       Get the Secure state of the channel desc
   \param[in]   dma_cfg  Pointer to DMA Configuration resources
   \param[in]   channel_num  Channel number

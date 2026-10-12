@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     dsi.h
  * @author   Prasanna Ravi
- * @email    prasanna.ravi@alifsemi.com
+ * Email:    prasanna.ravi@alifsemi.com
  * @version  V1.0.0
  * @date     17-April-2023
  * @brief    Low level driver Specific Header file.
@@ -651,7 +651,7 @@ static inline uint32_t dsi_get_video_packet_size(DSI_Type *dsi)
 }
 
 /**
-  \fn          static inline void dsi_set_video_number_chunks(DSI_Type *dsi, uint32_t pkt_size)
+  \fn static inline void dsi_set_video_number_chunks(DSI_Type *dsi, uint32_t num_chunks)
   \brief       Set dsi video number chunks.
   \param[in]   dsi         Pointer to the dsi register map.
   \param[in]   num_chunks  dsi video number chunks to set.
@@ -678,7 +678,7 @@ static inline uint32_t dsi_get_video_number_chunks(DSI_Type *dsi)
 }
 
 /**
-  \fn          static inline void dsi_set_video_null_packet_size(DSI_Type *dsi, uint32_t pkt_size)
+  \fn static inline void dsi_set_video_null_packet_size(DSI_Type *dsi, uint32_t null_size)
   \brief       Set dsi video null packet size.
   \param[in]   dsi         Pointer to the dsi register map.
   \param[in]   null_size   dsi video null packet size.
@@ -905,7 +905,7 @@ static inline void dsi_set_command_mode_config(DSI_Type *dsi, DSI_CMD_MODE_CFG c
 }
 
 /**
-  \fn          static inline void dsi_set_command_mode_config(DSI_Type *dsi)
+  \fn static inline DSI_CMD_MODE_CFG dsi_get_command_mode_config(DSI_Type *dsi)
   \brief       Get dsi command mode configuration to  low power transition.
   \param[in]   dsi     Pointer to the dsi register map.
   \return      dsi command mode configuration.
@@ -1091,7 +1091,7 @@ static inline uint32_t dsi_get_phy_hs2lp_time(DSI_Type *dsi)
 }
 
 /**
-  \fn          static inline void dsi_dphy_shutdown_enable(DSI_Type *dsi)
+  \fn static inline void dsi_phy_shutdown_enable(DSI_Type *dsi)
   \brief       Enable dsi phy shutdown.
   \param[in]   dsi     Pointer to the dsi register map.
   \return      none
@@ -1102,7 +1102,7 @@ static inline void dsi_phy_shutdown_enable(DSI_Type *dsi)
 }
 
 /**
-  \fn          static inline void dsi_dphy_shutdown_disable(DSI_Type *dsi)
+  \fn static inline void dsi_phy_shutdown_disable(DSI_Type *dsi)
   \brief       Disable dsi phy shutdown.
   \param[in]   dsi     Pointer to the dsi register map.
   \return      none
@@ -1113,7 +1113,7 @@ static inline void dsi_phy_shutdown_disable(DSI_Type *dsi)
 }
 
 /**
-  \fn          static inline void dsi_dphy_reset_enable(DSI_Type *dsi)
+  \fn static inline void dsi_phy_reset_enable(DSI_Type *dsi)
   \brief       Enable dsi phy reset.
   \param[in]   dsi     Pointer to the dsi register map.
   \return      none
@@ -1124,7 +1124,7 @@ static inline void dsi_phy_reset_enable(DSI_Type *dsi)
 }
 
 /**
-  \fn          static inline void dsi_dphy_reset_disable(DSI_Type *dsi)
+  \fn static inline void dsi_phy_reset_disable(DSI_Type *dsi)
   \brief       Disable dsi phy reset.
   \param[in]   dsi     Pointer to the dsi register map.
   \return      none
@@ -1305,7 +1305,7 @@ void dsi_dcs_short_write(DSI_Type *dsi, uint8_t cmd, uint8_t data, uint8_t vc_id
 void dsi_dcs_cmd_short_write(DSI_Type *dsi, uint8_t cmd, uint8_t vc_id);
 
 /**
-  \fn          void dsi_dcs_long_write(DSI_Type *dsi, uint8_t cmd, uint32_t data, uint8_t vc_id)
+  \fn void dsi_dcs_long_write(DSI_Type *dsi, uint8_t *data, uint32_t len, uint8_t vc_id)
   \brief       Perform dsi DCS Short write.
   \param[in]   data pointer to data buffer.
   \param[in]   len data buffer length.

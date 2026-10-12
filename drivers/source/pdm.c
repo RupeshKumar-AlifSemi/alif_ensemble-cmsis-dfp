@@ -11,10 +11,7 @@
 #include "pdm.h"
 
 /**
-  @fn          void pdm_error_detect_irq_handler(PDM_Type *pdm);
   @brief       IRQ handler for the error interrupt
-  @param[in]   pdm      : Pointer to the PDM register map
-  @return      none
 */
 void pdm_error_detect_irq_handler(PDM_Type *pdm)
 {
@@ -22,11 +19,7 @@ void pdm_error_detect_irq_handler(PDM_Type *pdm)
 }
 
 /**
-  @fn          void pdm_audio_detect_irq_handler(PDM_Type *pdm, pdm_transfer_t *transfer )
   @brief       IRQ handler for the audio detect interrupt
-  @param[in]   pdm      : Pointer to the PDM register map
-  @param[in]   transfer : The transfer structure of the PDM instance
-  @return      none
 */
 void pdm_audio_detect_irq_handler(PDM_Type *pdm, pdm_transfer_t *transfer)
 {
@@ -41,11 +34,7 @@ void pdm_audio_detect_irq_handler(PDM_Type *pdm, pdm_transfer_t *transfer)
 }
 
 /**
-  @fn          void pdm_warning_irq_handler(PDM_Type *pdm, pdm_transfer_t *transfer)
   @brief       IRQ handler for the PDM warning interrupt.
-  @param[in]   pdm      : Pointer to the PDM register map
-  @param[in]   transfer : The transfer structure of the PDM instance
-  @return      none
 */
 void pdm_warning_irq_handler(PDM_Type *pdm, pdm_transfer_t *transfer)
 {

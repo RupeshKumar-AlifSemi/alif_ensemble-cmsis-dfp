@@ -55,7 +55,7 @@ static inline void dac_disable(DAC_Type *dac)
 }
 
 /**
- @fn           void dac_set_config(DAC_Type *dac, uint8_t input_mux_val, uint16_t bypass_val)
+ @fn static inline void dac_set_config(DAC_Type *dac, uint8_t input_mux_val, uint8_t conv_input)
  @brief        Configure the DAC
  @param[in]    input_mux_val : To select the Dac input data source
                conv_input    : Converts two's complement to unsigned binary data
@@ -119,8 +119,8 @@ static inline void dac_reset_assert(DAC_Type *dac)
 /**
  @fn           void dac_input(DAC_Type *dac, uint32_t value)
  @brief        Set the DAC input.
- @param[in]    value : DAC input
- @param[in]    dac   : Pointer to dac Type
+ @param[in] dac DAC input
+ @param[in] value Pointer to dac Type
  @return       none
  */
 static inline void dac_input(DAC_Type *dac, uint32_t value)
@@ -132,8 +132,8 @@ static inline void dac_input(DAC_Type *dac, uint32_t value)
 /**
  @fn           void dac_set_output_current(DAC_Type *dac, uint8_t ibias_val)
  @brief        Set the DAC buffer output current.
- @param[in]    ibias_val : DAC output current value
- @param[in]    dac   : Pointer to dac Type
+ @param[in] dac DAC output current value
+ @param[in] ibias_val Pointer to dac Type
  @return       none
  */
 static inline void dac_set_output_current(DAC_Type *dac, uint8_t ibias_val)
@@ -145,8 +145,8 @@ static inline void dac_set_output_current(DAC_Type *dac, uint8_t ibias_val)
 /**
  @fn           void dac_set_bypass_input(DAC_Type *dac, uint32_t bypass_val)
  @brief        Set the DAC input through the bypass mode.
- @param[in]    bypass_val : DAC bypass input
- @param[in]    dac   : Pointer to dac Type
+ @param[in] dac DAC bypass input
+ @param[in] bypass_val Pointer to dac Type
  @return       none
  */
 static inline void dac_set_bypass_input(DAC_Type *dac, uint32_t bypass_val)
@@ -163,8 +163,8 @@ static inline void dac_set_bypass_input(DAC_Type *dac, uint32_t bypass_val)
 /**
  @fn           void dac_set_capacitance(DAC_Type *dac, uint8_t cap_val)
  @brief        Set the DAC capacitance.
- @param[in]    value : DAC capacitance
- @param[in]    dac   : Pointer to dac Type
+ @param[in] dac DAC capacitance
+ @param[in] cap_val Pointer to dac Type
  @return       none
  */
 static inline void dac_set_capacitance(DAC_Type *dac, uint8_t cap_val)

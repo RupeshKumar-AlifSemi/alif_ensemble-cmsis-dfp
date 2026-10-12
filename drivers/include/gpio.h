@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     gpio.h
  * @author   Girish BN, Manoj A Murudi
- * @email    girish.bn@alifsemi.com, manoj.murudi@alifsemi.com
+ * Email:    girish.bn@alifsemi.com, manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     29-March-2023
  * @brief    Alif Low Level header file for GPIO.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #ifndef GPIO_H_
@@ -272,8 +271,8 @@ static inline bool gpio_read_int_rawstatus(GPIO_Type *gpio, uint8_t pin_no)
 }
 
 /**
-  \fn          static inline void gpio_interrupt_set_both_edge_trigger (GPIO_Type *gpio, uint8_t
-  pin_no) \brief       GPIO set interrupt on both edge. \param       gpio     Pointer to the GPIO
+  \fn static inline void gpio_interrupt_set_both_edge_trigger(GPIO_Type *gpio, uint8_t pin_no)
+  \brief       GPIO set interrupt on both edge. \param       gpio     Pointer to the GPIO
   register map \param       pin_no   pin number \return      none
 */
 static inline void gpio_interrupt_set_both_edge_trigger(GPIO_Type *gpio, uint8_t pin_no)

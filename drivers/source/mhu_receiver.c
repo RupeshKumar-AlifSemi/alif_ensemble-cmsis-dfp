@@ -151,7 +151,7 @@ static void MHU_receiver_clear_irq(
 
 /**
  * @brief     Initialize function for MHU receiver interrupts
- * @param[in] None
+ * @param[in] receiver_frame_count
  * @return    None
  */
 static void MHU_receiver_interrupt_initialize(uint32_t receiver_frame_count)

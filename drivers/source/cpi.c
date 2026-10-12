@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     cpi.c
  * @author   Chandra Bhushan Singh
- * @email    chandrabhushan.singh@alifsemi.com
+ * Email:    chandrabhushan.singh@alifsemi.com
  * @version  V1.0.0
  * @date     27-March-2023
  * @brief    Low level driver Specific source file.
@@ -20,10 +20,7 @@
 #include "cpi.h"
 
 /**
-  \fn          void cpi_software_reset(CPI_Type *cpi)
   \brief       CPI software reset
-  \param[in]   cpi      Pointer to the CPI register map.
-  \return      none.
 */
 void cpi_software_reset(CPI_Type *cpi)
 {
@@ -34,7 +31,6 @@ void cpi_software_reset(CPI_Type *cpi)
 }
 
 /**
-  \fn          void cpi_start_capture(CPI_Type *cpi, CPI_MODE_SELECT mode)
   \brief       Capture frame in snapshot/ continuous capture mode.
                    -Set CAM_CTRL = 0—prepare for soft reset
                    -Set CAM_CTRL = 0x100—activate soft reset
@@ -43,8 +39,6 @@ void cpi_software_reset(CPI_Type *cpi)
                     with bit [SNAPSHOT] defining the operation mode:
                         -[SNAPSHOT] = 0—Capture video frames continuously
                         -[SNAPSHOT] = 1—Capture one frame then stop
-  \param[in]   cpi      Pointer to the CPI register map.
-  \param[in]   mode     Select to capture one frame and stop/ or to capture video frames
   continuously \return      none.
 */
 void cpi_start_capture(CPI_Type *cpi, CPI_MODE_SELECT mode)
@@ -61,11 +55,7 @@ void cpi_start_capture(CPI_Type *cpi, CPI_MODE_SELECT mode)
 }
 
 /**
-  \fn           void cpi_set_config(CPI_Type *cpi, cpi_cfg_info_t *info)
   \brief        Configure the cpi with given information.
-  \param[in]    cpi    Pointer to CPI register map
-  \param[in]    info   Pointer to cpi configuration structure.
-  \return       none
 */
 void cpi_set_config(CPI_Type *cpi, cpi_cfg_info_t *info)
 {

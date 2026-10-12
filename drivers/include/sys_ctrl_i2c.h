@@ -11,12 +11,11 @@
 /******************************************************************************
  * @file     sys_ctrl_i2c.h
  * @author   Shreehari H K
- * @email    shreehari.hk@alifsemi.com
+ * Email:    shreehari.hk@alifsemi.com
  * @version  V1.0.0
  * @date     21-Apr-2025
  * @brief    System control header file for i2c
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 
 #ifndef SYS_CTRL_I2C_H

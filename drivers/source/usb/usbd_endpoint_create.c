@@ -11,12 +11,11 @@
 /******************************************************************************
  * @file     usbd_endpoint_create.c
  * @author   Mahesh Avula
- * @email    mahesh.avula@alifsemi.com
+ * Email:    mahesh.avula@alifsemi.com
  * @version  V1.0.0
  * @date     10-Feb-2022
  * @brief    This function will create and configure the all the endpoints.
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 
 /* Include necessary system files.  */
@@ -24,14 +23,13 @@
 #include "usbd.h"
 
 /**
- *\fn           usbd_endpoint_create
  *\brief        This function will creates the all types of endpoints.
- *\param[in]    pointer to the controller context structure
- *\param[in]    endpoint type
- *\param[in]    endpoint num
- *\param[in]    endpoint direction
- *\param[in]    max endpoint pkt size
- *\param[in]    endpoint interval
+ *\param[in] drv to the controller context structure
+ *\param[in] ep_type type
+ *\param[in] ep_num num
+ *\param[in] dir direction
+ *\param[in] ep_max_packet_size endpoint pkt size
+ *\param[in] ep_interval interval
  *\return       On success 0, failure case returns error.
  **/
 
@@ -86,14 +84,13 @@ int32_t usbd_endpoint_create(USB_DRIVER *drv, uint8_t ep_type, uint8_t ep_num, u
 }
 
 /**
- *\fn           usbd_ep_enable
  *\brief        This function enables the physical endpoints.
- *\param[in]    pointer to the controller context structure
- *\param[in]    endpoint num
- *\param[in]    endpoint direction
- *\param[in]    endpoint type
- *\param[in]    max endpoint pkt size
- *\param[in]    endpoint interval
+ *\param[in] drv to the controller context structure
+ *\param[in] ep_num num
+ *\param[in] dir direction
+ *\param[in] ep_type type
+ *\param[in] ep_max_packet_size endpoint pkt size
+ *\param[in] ep_interval interval
  *\return       On success 0, failure case returns error.
  **/
 
@@ -159,14 +156,13 @@ uint32_t usbd_ep_enable(USB_DRIVER *drv, uint8_t ep_num, uint8_t dir, uint8_t ep
 }
 
 /**
- *\fn           usbd_set_ep_config
  *\brief        This function configure the endpoints.
- *\param[in]    pointer to the controller context structure
- *\param[in]    endpoint num
- *\param[in]    endpoint direction
- *\param[in]    endpoint type
- *\param[in]    max endpoint pkt size
- *\param[in]    endpoint interval
+ *\param[in] drv to the controller context structure
+ *\param[in] ep_num num
+ *\param[in] dir direction
+ *\param[in] ep_type type
+ *\param[in] ep_max_packet_size endpoint pkt size
+ *\param[in] ep_interval interval
  *\return       On success 0, failure case returns error.
  **/
 
@@ -206,12 +202,11 @@ uint32_t usbd_set_ep_config(USB_DRIVER *drv, uint8_t ep_num, uint8_t dir, uint8_
 }
 
 /**
- *\fn           usbd_start_ep_config
  *\brief        This function configure the control ep and set the transfer resource
                 index to all physical endpoints.
- *\param[in]    pointer to the controller context structure
- *\param[in]    endpoint num
- *\param[in]    endpoint direction
+ *\param[in] drv to the controller context structure
+ *\param[in] ep_num num
+ *\param[in] dir direction
  *\return       On success 0, failure case returns error.
  **/
 
@@ -249,10 +244,9 @@ uint32_t usbd_start_ep_config(USB_DRIVER *drv, uint8_t ep_num, uint8_t dir)
 }
 
 /**
- *\fn           usbd_set_xfer_resource
  *\brief        This function sends the transfer resource index command.
- *\param[in]    pointer to the controller context structure
- *\param[in]    physical endpoint
+ *\param[in] drv to the controller context structure
+ *\param[in] phy_ep endpoint
  *\return       On success 0, failure case returns error.
  **/
 
@@ -267,11 +261,10 @@ uint32_t usbd_set_xfer_resource(USB_DRIVER *drv, uint8_t phy_ep)
 }
 
 /**
- *\fn           usbd_ep_disable
  *\brief        This function disables the physical endpoints.
- *\param[in]    pointer to the controller context structure
- *\param[in]    endpoint num
- *\param[in]    endpoint direction
+ *\param[in] drv to the controller context structure
+ *\param[in] ep_num num
+ *\param[in] dir direction
  *\return       On success 0, failure case returns error.
  **/
 
@@ -297,12 +290,11 @@ int32_t usbd_ep_disable(USB_DRIVER *drv, uint8_t ep_num, uint8_t dir)
 }
 
 /**
- *\fn           usbd_ep_stall
  *\brief        This function stall the endpoints.
- *\param[in]    pointer to the controller context structure
- *\param[in]    endpoint num
- *\param[in]    endpoint direction
- *\param[in]    if stall is 1-> stall the ep, 0 -> clear the stall.
+ *\param[in] drv to the controller context structure
+ *\param[in] ep_num num
+ *\param[in] dir direction
+ *\param[in] stall stall is 1-> stall the ep, 0 -> clear the stall.
  *\return       On success 0, failure case returns error.
  **/
 int32_t usbd_ep_stall(USB_DRIVER *drv, uint8_t ep_num, uint8_t dir, bool stall)
@@ -354,11 +346,10 @@ int32_t usbd_ep_stall(USB_DRIVER *drv, uint8_t ep_num, uint8_t dir, bool stall)
 }
 
 /**
- *\fn           usbd_ep_transfer_abort
  *\brief        This function abort the transfers on endpoint.
- *\param[in]    pointer to the controller context structure
- *\param[in]    endpoint num
- *\param[in]    endpoint direction
+ *\param[in] drv to the controller context structure
+ *\param[in] ep_num num
+ *\param[in] dir direction
  *\return       On success 0, failure case returns error.
  **/
 

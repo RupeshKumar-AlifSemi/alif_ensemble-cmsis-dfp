@@ -11,7 +11,7 @@
 /******************************************************************************
  * @file     pinconf.c
  * @author   Silesh C V
- * @email    silesh@alifsemi.com
+ * Email:    silesh@alifsemi.com
  * @version  V1.0.0
  * @date     02-Feb-2023
  * @brief    Pin configuration.
@@ -37,7 +37,7 @@ static inline void lpgpio_pinconf_set(const uint8_t pin, const uint8_t pad_ctrl)
 }
 
 /**
-  \fn          static inline void lpgpio_pinconf_set(const uint8_t pin, const uint8_t pad_ctrl)
+  \fn static inline void lpgpio_pinconf_get(const uint8_t pin, uint8_t *pad_ctrl)
   \brief       Get pad control configuration for a pin in the LPGPIO port.
   \param[in]   pin        GPIO pin
   \param[out]  pad_ctrl   Current pad control configuration for the pin
@@ -51,13 +51,7 @@ static inline void lpgpio_pinconf_get(const uint8_t pin, uint8_t *pad_ctrl)
 }
 
 /**
-  \fn          int32_t pinconf_set(const uint8_t port, const uint8_t pin, const uint8_t alt_func,
-  const uint8_t pad_ctrl) \brief       Set pinmux and pad control configuration for a pin.
-  \param[in]   port       GPIO port
-  \param[in]   pin        GPIO pin
-  \param[in]   alt_func   The alternate function to be chosen
-  \param[in]   pad_ctrl   Pad control configuration for the pin
-  \return      execution_status
+  \brief       Set pinmux and pad control configuration for a pin.
 */
 int32_t pinconf_set(const uint8_t port, const uint8_t pin, const uint8_t alt_func,
                     const uint8_t pad_ctrl)
@@ -95,11 +89,7 @@ int32_t pinconf_set(const uint8_t port, const uint8_t pin, const uint8_t alt_fun
 }
 
 /**
-  \fn          int32_t pinconf_get(const uint8_t port, const uint8_t pin, uint8_t *alt_func, uint8_t
-  *pad_ctrl) \brief       Get pinmux and pad control configuration for a pin. \param[in]   port GPIO
-  port. \param[in]   pin        GPIO pin. \param[out]  alt_func   Current alternate function
-  selected for the pin. \param[out]  pad_ctrl   Current pad control configuration for the pin.
-  \return      execution_status
+  \brief       Get pinmux and pad control configuration for a pin.
 */
 int32_t pinconf_get(const uint8_t port, const uint8_t pin, uint8_t *alt_func, uint8_t *pad_ctrl)
 {

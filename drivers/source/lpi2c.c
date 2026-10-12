@@ -11,14 +11,9 @@
 #include "sys_utils.h"
 
 /**
- * @func   : void lpi2c_send(LPI2C_TYPE *lpi2c,
  *                           LPI2C_XFER_INFO_T *transfer,
  *                           const uint32_t delay)
  * @brief  : writing to the register for transmit data
- * @param  : lpi2c    : Pointer to lpi2c register map
- * @param  : transfer : Pointer to LPI2C_XFER_INFO_T
- * @param  : delay    : delay in us
- * @retval : callback event
  */
 void lpi2c_send(LPI2C_TYPE *lpi2c, LPI2C_XFER_INFO_T *transfer, const uint32_t delay)
 {
@@ -45,11 +40,7 @@ void lpi2c_send(LPI2C_TYPE *lpi2c, LPI2C_XFER_INFO_T *transfer, const uint32_t d
 }
 
 /**
- * @func   : void lpi2c_irq_handler(LPI2C_TYPE *lpi2c, LPI2C_XFER_INFO_T *transfer)
  * @brief  : lpi2c irq handler
- * @param  : lpi2c    : Pointer to lpi2c register map
- * @param  : transfer : Pointer to LPI2C_XFER_INFO_T
- * @retval : callback event
  */
 void lpi2c_irq_handler(LPI2C_TYPE *lpi2c, LPI2C_XFER_INFO_T *transfer)
 {

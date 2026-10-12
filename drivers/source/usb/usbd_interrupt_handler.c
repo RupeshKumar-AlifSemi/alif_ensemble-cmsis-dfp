@@ -11,15 +11,14 @@
 /*******************************************************************************
  * @file     usbd_interrupt_handler.c
  * @author   Mahesh Avula
- * @email    mahesh.avula@alifsemi.com
+ * Email:    mahesh.avula@alifsemi.com
  * @version  V1.0.0
  * @date     10-Feb-2022
  * @brief    This function is the interrupt handler for usb controller.
  *           The controller will trigger an interrupt when something happens on
  *           an endpoint whose mask has been set in the interrupt enable
  *           register, or when a bus reset is detected.   .
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 
 /* Include necessary system files.  */
@@ -29,11 +28,10 @@
 extern USB_DRIVER usb_drv;
 
 /**
- *\fn           usbd_event_buffer_handler
  *\brief        Process the event buffer, event buffer has device specific events
                 and endpoint specific events
- *\param[in]    pointer to the controller context structure
- *\param[in]    pointer to the event buffer structure.
+ *\param[in] drv to the controller context structure
+ *\param[in] event_buffer to the event buffer structure.
  *\return       none
  **/
 
@@ -66,7 +64,6 @@ static void usbd_event_buffer_handler(USB_DRIVER *drv, USBD_EVENT_BUFFER *event_
 }
 
 /**
- *\fn           usbd_interrupt_handler
  *\brief        service the usb interrupts.
  *\return       none
  **/
@@ -105,10 +102,9 @@ void usbd_interrupt_handler(void)
 }
 
 /**
- *\fn           usbd_prepare_setup
  *\brief        Prepare the setup TRB to recv the setup pkt from the host
                 and send the start transfer command.
- *\param[in]    pointer to the controller context structure
+ *\param[in] drv to the controller context structure
  *\return       none
  **/
 
@@ -146,12 +142,11 @@ void usbd_prepare_setup(USB_DRIVER *drv)
 }
 
 /**
- *\fn           usbd_get_ep_transfer_resource_index
  *\brief        Get the transfer resource index for the endpoint.
                 and send the start transfer command.
- *\param[in]    pointer to the controller context structure
- *\param[in]    endpoint num
- *\param[in]    endpoint direction
+ *\param[in] drv to the controller context structure
+ *\param[in] ep_num num
+ *\param[in] dir direction
  *\return       transfer resource index.
  **/
 
@@ -171,9 +166,8 @@ uint32_t usbd_get_ep_transfer_resource_index(USB_DRIVER *drv, uint8_t ep_num, ui
 
 
 /**
- *\fn           usbd_transfer_wakeup
  *\brief        Checks the controller state during the transfer and wakeup.
- *\param[in]    pointer to the controller context structure
+ *\param[in] drv to the controller context structure
  *\return       On success 0, failure case returns error.
  **/
 
@@ -228,10 +222,9 @@ int32_t usbd_transfer_wakeup(USB_DRIVER *drv)
 }
 
 /**
- *\fn           usbd_set_link_state
  *\brief        Set the controller link state.
- *\param[in]    pointer to the controller context structure
- *\param[in]    controller link state.
+ *\param[in] drv to the controller context structure
+ *\param[in] state link state.
  *\return       On success 0, failure case returns error.
  **/
 
@@ -273,9 +266,8 @@ int32_t usbd_set_link_state(USB_DRIVER *drv, USBD_LINK_STATE state)
 }
 
 /**
- *\fn           usbd_clear_stall_all_eps
  *\brief        Clears the stall for all endponts.
- *\param[in]    pointer to the controller context structure
+ *\param[in] drv to the controller context structure
  *\return       none
  **/
 
@@ -307,12 +299,11 @@ void usbd_clear_stall_all_eps(USB_DRIVER *drv)
 }
 
 /**
- *\fn           usbd_stop_transfer
  *\brief        stop the current transfers on endpoint.
- *\param[in]    pointer to the controller context structure
- *\param[in]    endpoint num
- *\param[in]    endpoint direction
- *\param[in]    force rm
+ *\param[in] drv to the controller context structure
+ *\param[in] ep_num num
+ *\param[in] dir direction
+ *\param[in] force_rm rm
  *\return       On success 0, failure case returns error.
  **/
 
@@ -380,11 +371,10 @@ int32_t usbd_stop_transfer(USB_DRIVER *drv, uint8_t ep_num, uint8_t dir, uint32_
 }
 
 /**
- *\fn           usbd_ep_clear_stall
  *\brief        clears the stall for the endpoint.
- *\param[in]    pointer to the controller context structure
- *\param[in]    endpoint num
- *\param[in]    endpoint direction
+ *\param[in] drv to the controller context structure
+ *\param[in] ep_num num
+ *\param[in] dir direction
  *\return       On success 0, failure case returns error.
  **/
 
@@ -408,10 +398,9 @@ void usbd_ep_clear_stall(USB_DRIVER *drv, uint8_t ep_num, uint8_t dir)
 }
 
 /**
- *\fn           usbd_ep0_end_control_data
  *\brief        stop sending control ep data using ENDTRANSFER command.
- *\param[in]    pointer to the controller context structure
- *\param[in]    pointer to the endpoint structure
+ *\param[in] drv to the controller context structure
+ *\param[in] ept to the endpoint structure
  *\return       none.
  **/
 
@@ -440,13 +429,12 @@ void usbd_ep0_end_control_data(USB_DRIVER *drv, USBD_EP *ept)
 }
 
 /**
- *\fn           usbd_ep0_stall_restart
  *\brief        stall the control ep and restart.
                 stall is always issued on EP0 not EP1
                 EP0-> control ep OUT, EP1-> control ep IN
- *\param[in]    pointer to the controller context structure
- *\param[in]    endpoint num
- *\param[in]    endpoint direction.
+ *\param[in] drv to the controller context structure
+ *\param[in] ep_num num
+ *\param[in] dir direction.
  *\return       On success 0, failure case returns error..
  **/
 
@@ -475,12 +463,11 @@ int32_t usbd_ep0_stall_restart(USB_DRIVER *drv, uint8_t ep_num, uint8_t dir)
 }
 
 /**
- *\fn           usbd_ep0_data_done
  *\brief        This function is called when Xfercomplete event being generated for control
                 data transfer, it will check the TRB status of data transfer and read the
                 number transferred bytes from the TRB.
- *\param[in]    pointer to the controller context structure
- *\param[in]    physical endpoint number
+ *\param[in] drv to the controller context structure
+ *\param[in] endp_number endpoint number
  *\return       none.
  **/
 
@@ -521,12 +508,11 @@ void usbd_ep0_data_done(USB_DRIVER *drv, uint8_t endp_number)
 }
 
 /**
- *\fn           usbd_ep0_start_status
  *\brief        This function is called when xferNotReady(status) event generated for control
                 endpoint, prepares the status TRB for two stage and three stage control transfers
                 and issue the start transfer command.
- *\param[in]    pointer to the controller context structure
- *\param[in]    physical endpoint number
+ *\param[in] drv to the controller context structure
+ *\param[in] endp_number endpoint number
  *\return       On success 0, failure case returns error..
  **/
 
@@ -584,10 +570,9 @@ int32_t usbd_ep0_start_status(USB_DRIVER *drv, uint8_t endp_number)
 }
 
 /**
- *\fn           usbd_ep0_status_done
  *\brief        This function is called when status send/recv completed for control endpoint
                 it will check the status of TRB and prepares the setup TRB for next setup pkt
- *\param[in]    pointer to the controller context structure
+ *\param[in] drv to the controller context structure
  *\return       none
  **/
 
@@ -620,12 +605,11 @@ void usbd_ep0_status_done(USB_DRIVER *drv)
 }
 
 /**
- *\fn           usbd_ep_xfercomplete
  *\brief        This function is called when xfer_progress event being generated for non control
                 endpoint transfers completes, it will check the TRB status and read the number
                 of transferred bytes from the TRB.
- *\param[in]    pointer to the controller context structure
- *\param[in]    physical endpoint number
+ *\param[in] drv to the controller context structure
+ *\param[in] endp_number endpoint number
  *\return       none.
  **/
 
@@ -683,10 +667,9 @@ void usbd_ep_xfercomplete(USB_DRIVER *drv, uint8_t endp_number)
 }
 
 /**
- *\fn           usbd_clear_trb
  *\brief        clears the TRB HW0 bit.
- *\param[in]    pointer to the controller context structure
- *\param[in]    physical endpoint number
+ *\param[in] drv to the controller context structure
+ *\param[in] endp_number endpoint number
  *\return       none.
  **/
 
@@ -703,10 +686,9 @@ void usbd_clear_trb(USB_DRIVER *drv, uint8_t endp_number)
 }
 
 /**
- *\fn           usbd_devt_handler
  *\brief        process the Device specific events.
- *\param[in]    pointer to the controller context structure
- *\param[in]    Event buffer reg value.
+ *\param[in] drv to the controller context structure
+ *\param[in] reg buffer reg value.
  *\return       none.
  **/
 
@@ -759,10 +741,9 @@ void usbd_devt_handler(USB_DRIVER *drv, uint32_t reg)
 }
 
 /**
- *\fn           usbd_linksts_change_event
  *\brief        process the link status change events.
- *\param[in]    pointer to the controller context structure
- *\param[in]    link status change event info.
+ *\param[in] drv to the controller context structure
+ *\param[in] event_info status change event info.
  *\return       none.
  **/
 
@@ -791,10 +772,9 @@ void usbd_linksts_change_event(USB_DRIVER *drv, uint32_t event_info)
 }
 
 /**
- *\fn           usbd_reset_event
  *\brief        This function is called when a usb reset event detected on bus
                 clears the stall for all ep's and reset the device address to zero.
- *\param[in]    pointer to the controller context structure
+ *\param[in] drv to the controller context structure
  *\return       none.
  **/
 
@@ -818,11 +798,10 @@ void usbd_reset_event(USB_DRIVER *drv)
 }
 
 /**
- *\fn           usbd_connectionDone_event
  *\brief        This function is called when the USB device has successfully completed
                 the connection handshake with the host (i.e., pull-up has been detected
                 and the device is now considered connected by the host
- *\param[in]    pointer to the controller context structure
+ *\param[in] drv to the controller context structure
  *\return       none.
  **/
 void usbd_connectionDone_event(USB_DRIVER *drv)
@@ -850,11 +829,10 @@ void usbd_connectionDone_event(USB_DRIVER *drv)
 }
 
 /**
- *\fn           usbd_depevt_handler
  *\brief        This function is called when endpoint specific(xfercmplt,xferNotready,xferprogress)
                 events has been detected in the event buffer and process those events.
- *\param[in]    pointer to the controller context structure
- *\param[in]    event buffer reg value.
+ *\param[in] drv to the controller context structure
+ *\param[in] reg buffer reg value.
  *\return       none.
  **/
 
@@ -984,9 +962,8 @@ void usbd_depevt_handler(USB_DRIVER *drv, uint32_t reg)
 }
 
 /**
- *\fn           usbd_usb2phy_config_check
  *\brief        Save the current phy state of GUSB2PHYCFG0 and disable the lpm and suspend bits
- *\param[in]    pointer to the controller context structure.
+ *\param[in] drv to the controller context structure.
  *\return       none.
  **/
 
@@ -1013,7 +990,6 @@ void usbd_usb2phy_config_check(USB_DRIVER *drv)
 }
 
 /**
- *\fn           usbd_usb2phy_config_reset
  *\brief        Restore the phy state into GUSB2PHYCFG0 reg.
  *\param[in]    pointer to the controller context structure.
  *\return       none.
@@ -1031,10 +1007,9 @@ void usbd_usb2phy_config_reset(USB_DRIVER *drv)
 }
 
 /**
- *\fn            usbd_set_device_address
  *\brief        This function is used to set device address
- *\param[in]    pointer to controller context structure
- *\param[in]    Address to be set
+ *\param[in] drv to controller context structure
+ *\param[in] addr to be set
  *\return       On success 0, failure cases error
  */
 uint32_t usbd_set_device_address(USB_DRIVER *drv, uint8_t addr)

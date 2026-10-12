@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     csi.h
  * @author   Chandra Bhushan Singh
- * @email    chandrabhushan.singh@alifsemi.com
+ * Email:    chandrabhushan.singh@alifsemi.com
  * @version  V1.0.0
  * @date     12-April-2023
  * @brief    Low level driver Specific header file.
@@ -1055,8 +1055,8 @@ void csi_set_ipi_blanking(CSI_Type *csi, CSI_IPI_BLANKING select);
 void csi_set_ipi_embedded(CSI_Type *csi, CSI_IPI_EMBEDDED select);
 
 /**
-  \fn          void csi_set_ipi_line_event_selection(CSI_Type *csi, CSI_IPI_LINE_EVENT_SELECT
-  line_event) \brief       Set CSI IPI line event. \param[in]   csi        Pointer to the CSI
+  \fn void csi_set_ipi_line_event_selection(CSI_Type *csi, CSI_IPI_LINE_EVENT_SELECT line_event)
+  \brief       Set CSI IPI line event. \param[in]   csi        Pointer to the CSI
   register map. \param[in]   line_event 0: Controller selects it automatically. 1: Select packets
   from list programmed in bits [21-17] of this register. \return      none.
 */
@@ -1073,9 +1073,8 @@ void csi_set_ipi_line_event_selection(CSI_Type *csi, CSI_IPI_LINE_EVENT_SELECT l
 void csi_set_ipi_sync_event_type(CSI_Type *csi, CSI_IPI_SYNC_EVENT sync_event);
 
 /**
-  \fn          void csi_set_vertical_timing(CSI_Type *csi, uint16_t vsa_line, uint16_t vbp_line,
-                                                             uint16_t vfp_line, uint16_t
-  vactive_line) \brief       Set CSI IPI VSA, VBP, VFP and VACTIVE timings. \param[in]   csi Pointer
+  \fn void csi_set_vertical_timing(CSI_Type *csi, uint16_t vsa_lines, uint16_t vbp_lines, uint16_t vfp_lines, uint16_t vactive_lines)
+  \brief       Set CSI IPI VSA, VBP, VFP and VACTIVE timings. \param[in]   csi Pointer
   to the CSI register map. \param[in]   vsa_lines     VSA period measured in number of horizontal
   lines. \param[in]   vbp_lines     VBP period measured in number of horizontal lines. \param[in]
   vfp_lines     VFP period measured in number of horizontal lines. \param[in]   vactive_lines

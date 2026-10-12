@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     sd_host.c
  * @author   Deepak Kumar
- * @email    deepak@alifsemi.com
+ * Email:    deepak@alifsemi.com
  * @version  V0.0.1
  * @date     28-Nov-2022
  * @brief    SD Host Controller Driver APIs.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 /* Includes ------------------------------------------------------------------*/
@@ -90,10 +89,10 @@ void SDMMC_WAKEUP_IRQHandler(void)
 #endif
 
 /**
-  \fn           static void sdhc_set_tout(sd_handle_t *pHsd, uint8_t ToutVal)
+  \fn static void sdhc_set_tout(sd_handle_t *pHsd, uint8_t tout)
   \brief        software reset of the controller
-  \param[in]    Global SD Handle pointer
-  \param[in]    Timeout Value
+  \param[in] pHsd SD Handle pointer
+  \param[in] tout Value
   \return       none
   */
 static void sdhc_set_tout(sd_handle_t *pHsd, uint8_t tout)
@@ -104,10 +103,10 @@ static void sdhc_set_tout(sd_handle_t *pHsd, uint8_t tout)
 }
 
 /**
-  \fn           SDHC_STATUS sdhc_set_bus_power(sd_handle_t *pHsd, uint8_t bus_power) {
+  \fn static SDHC_STATUS sdhc_set_bus_power(sd_handle_t *pHsd, uint8_t bus_power)
   \brief        Set required sd bus power supply
-  \param[in]    Global SD Handle pointer
-  \param[in]    required bus voltage equivalent register value as per \
+  \param[in] pHsd SD Handle pointer
+  \param[in] bus_power bus voltage equivalent register value as per \
                   host controller data sheet
   \return       Host controller driver status
   */
@@ -196,7 +195,7 @@ static SDHC_STATUS sdhc_set_bus_power(sd_handle_t *pHsd, uint8_t bus_power)
 /**
   \fn           SDHC_STATUS sdhc_check_bus_idle(sd_handle_t *pHsd)
   \brief        Check the CMD line is idle or nor
-  \param[in]    Global SD Handle pointer
+  \param[in] pHsd SD Handle pointer
   \return       Host controller driver status
   */
 static SDHC_STATUS sdhc_check_bus_idle(sd_handle_t *pHsd)
@@ -227,8 +226,8 @@ static SDHC_STATUS sdhc_check_bus_idle(sd_handle_t *pHsd)
 /**
   \fn           SDHC_STATUS sdhc_set_clk_freq(sd_handle_t *pHsd, uint32_t clk_freq)
   \brief        Sets required clock
-  \param[in]    Global SD Handle pointer
-  \param[in]    required bus clock frequency in Hz
+  \param[in] pHsd SD Handle pointer
+  \param[in] clk_freq bus clock frequency in Hz
   \return       Host controller driver status
   */
 static SDHC_STATUS sdhc_set_clk_freq(sd_handle_t *pHsd, uint32_t clk_freq)
@@ -394,8 +393,8 @@ static void sdhc_config_default_intr(sd_handle_t *pHsd)
 /**
   \fn           SDHC_STATUS sdhc_get_capabilities(sd_handle_t *pHsd, uint32_t *phcaps)
   \brief        Get the Host Controller Capabilities
-  \param[in]    Global sd Handle pointer
-  \param[in]    Capabilities pointer
+  \param[in] pHsd sd Handle pointer
+  \param[in] phcaps pointer
   \return       Host controller driver status
   */
 static SDHC_STATUS sdhc_get_capabilities(sd_handle_t *pHsd, uint32_t *phcaps)
@@ -408,7 +407,6 @@ static SDHC_STATUS sdhc_get_capabilities(sd_handle_t *pHsd, uint32_t *phcaps)
 }
 
 /**
- * \fn           sdhc_set_io
  * \brief        SDHC set IO common api for power and clock
  * \param[in]    p_sdmmc_io_param - SD IO parameters
  * \param[in]    set_io_cmd - IO command type
@@ -477,7 +475,7 @@ SDHC_STATUS sdhc_set_io(sdmmc_io_t *p_sdmmc_io_param, SDMMC_SET_IO_CMD set_io_cm
   \fn         SDHC_STATUS sdhc_send_cmd(sd_handle_t *pHsd, sd_cmd_t *pCmd)
   \brief       Configure Host controller to send SD command
   \param[in]   pHsd - Global SD Handle pointer
-  \param[in]   pcmd - command info pointer
+  \param[in] pCmd - command info pointer
   \return      Host controller driver API status.
   */
 SDHC_STATUS sdhc_send_cmd(sd_handle_t *pHsd, sd_cmd_t *pCmd)
@@ -582,8 +580,8 @@ RETRY:
 /**
   \fn           SDHC_STATUS sdhc_reset(sd_handle_t *pHsd, uint8_t reset_val)
   \brief        software reset of the controller
-  \param[in]    Global SD Handle pointer
-  \param[in]    Reset Value
+  \param[in] pHsd SD Handle pointer
+  \param[in] reset_val Value
   \return       Host controller driver status
   */
 SDHC_STATUS sdhc_reset(sd_handle_t *pHsd, uint8_t reset_val)
@@ -605,7 +603,7 @@ SDHC_STATUS sdhc_reset(sd_handle_t *pHsd, uint8_t reset_val)
 /**
   \fn           SDHC_STATUS sdhc_power_cycle(sd_handle_t *pHsd)
   \brief        software reset and power cycle of the controller
-  \param[in]    Global SD Handle pointer
+  \param[in] pHsd SD Handle pointer
   \return       Host controller driver status
   */
 void sdhc_power_cycle(sd_handle_t *pHsd)
@@ -630,7 +628,7 @@ void sdhc_power_cycle(sd_handle_t *pHsd)
 /**
   \fn           static SDHC_STATUS sdhc_config_dma(sd_handle_t *pHsd,uint8_t dmaMask)
   \brief        Host Controller DMA configuration
-  \param[in]    Global SD Handle pointer
+  \param[in] pHsd SD Handle pointer
   \param[in]    dmaMask - Host ctrl 1 register value
   \return       Host controller driver status
   */
@@ -713,10 +711,7 @@ void sdhc_set_led(sd_handle_t *pHsd, bool enable)
 }
 
 /**
-  \fn           SD_host_init
   \brief        initialize host controller
-  \param[in]    SD Global Handle pointer
-  \return       sd driver status
   */
 SD_DRV_STATUS sdhc_init(sd_handle_t *pHsd, sd_param_t *p_sd_param)
 {
@@ -819,8 +814,8 @@ SD_DRV_STATUS sdhc_init(sd_handle_t *pHsd, sd_param_t *p_sd_param)
 /**
   \fn           SDHC_STATUS sdhc_set_blk_size(sd_handle_t *pHsd, uint32_t blk_size)
   \brief        Set the Block Size in Host Controller register only
-  \param[in]    Global sd Handle pointer
-  \param[in]    Block size
+  \param[in] pHsd sd Handle pointer
+  \param[in] blk_size size
   \return       Host controller driver status
   */
 SDHC_STATUS sdhc_set_blk_size(sd_handle_t *pHsd, uint32_t blk_size)
@@ -834,7 +829,7 @@ SDHC_STATUS sdhc_set_blk_size(sd_handle_t *pHsd, uint32_t blk_size)
 /**
   \fn           SDHC_STATUS sdhc_get_response1(sd_handle_t *pHsd)
   \brief        Get the Card Response1
-  \param[in]    Global sd Handle pointer
+  \param[in] pHsd sd Handle pointer
   \return       response
   */
 uint32_t sdhc_get_response1(sd_handle_t *pHsd)
@@ -847,7 +842,7 @@ uint32_t sdhc_get_response1(sd_handle_t *pHsd)
 /**
   \fn           SDHC_STATUS sdhc_get_response2(sd_handle_t *pHsd)
   \brief        Get the Card Response2
-  \param[in]    Global sd Handle pointer
+  \param[in] pHsd sd Handle pointer
   \return       response
   */
 uint32_t sdhc_get_response2(sd_handle_t *pHsd)
@@ -859,7 +854,7 @@ uint32_t sdhc_get_response2(sd_handle_t *pHsd)
 /**
   \fn           SDHC_STATUS sdhc_get_response3(sd_handle_t *pHsd)
   \brief        Get the Card Response3
-  \param[in]    Global sd Handle pointer
+  \param[in] pHsd sd Handle pointer
   \return       response
   */
 uint32_t sdhc_get_response3(sd_handle_t *pHsd)
@@ -871,7 +866,7 @@ uint32_t sdhc_get_response3(sd_handle_t *pHsd)
 /**
   \fn           SDHC_STATUS sdhc_get_response4(sd_handle_t *pHsd)
   \brief        Get the Card Response1
-  \param[in]    Global sd Handle pointer
+  \param[in] pHsd sd Handle pointer
   \return       response
   */
 uint32_t sdhc_get_response4(sd_handle_t *pHsd)
@@ -950,8 +945,8 @@ SDHC_STATUS sdhc_xfer_dma_setup(sd_handle_t *pHsd, sd_data_t *data)
 /**
   \fn           SDHC_STATUS sdhc_check_xfer_done(sd_handle_t *pHsd, uint32_t timeout_cnt)
   \brief        Check for transfer complete
-  \param[in]    Global sd Handle pointer
-  \param[in]    timeout Count
+  \param[in] pHsd sd Handle pointer
+  \param[in] timeout_cnt Count
   \return       Host controller driver status
   */
 SDHC_STATUS sdhc_check_xfer_done(sd_handle_t *pHsd, uint32_t timeout_cnt)
@@ -986,11 +981,7 @@ SDHC_STATUS sdhc_check_xfer_done(sd_handle_t *pHsd, uint32_t timeout_cnt)
 }
 
 /**
-  \fn          int sdhc_card_present(struct _sd_handle_t *pHsd, int (*card_det_cb)(void))
   \brief       Check if SD card is present using GPIO callback or PSTATE register
-  \param[in]   pHsd: SD host handle
-  \param[in]   card_det_cb: Optional GPIO card detect callback
-  \return      1 if card present, 0 if not
 */
 int sdhc_card_present(struct _sd_handle_t *pHsd, int (*card_det_cb)(void))
 {

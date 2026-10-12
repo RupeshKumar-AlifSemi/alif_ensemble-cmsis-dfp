@@ -19,11 +19,7 @@
 #include <cdc.h>
 
 /**
- * @fn      void cdc_set_cfg (CDC_Type *const cdc, const cdc_cfg_info_t *const info)
  * @brief   Configure the CDC with given information.
- * @param   cdc   Pointer to the cdc register map structure. See {@ref CDC_Type} for details.
- * @param   info  Pointer to the cdc configuration structure. See {@ref cdc_cfg_info_t} for details.
- * @retval  none
  */
 void cdc_set_cfg(CDC_Type *const cdc, const cdc_cfg_info_t *const info)
 {
@@ -66,11 +62,7 @@ void cdc_set_cfg(CDC_Type *const cdc, const cdc_cfg_info_t *const info)
 }
 
 /**
- * @fn      void cdc_set_hsync_polarity(CDC_Type *const cdc, const CDC_POLARITY hsync_pol)
  * @brief   CDC hsync polarity.
- * @param   cdc  Pointer to the cdc register map structure. See {@ref CDC_Type} for details.
- * @param   hsync_pol  CDC HSYNC polarity
- * @retval  none.
  */
 void cdc_set_hsync_polarity(CDC_Type *const cdc, const CDC_POLARITY hsync_pol)
 {
@@ -82,11 +74,7 @@ void cdc_set_hsync_polarity(CDC_Type *const cdc, const CDC_POLARITY hsync_pol)
 }
 
 /**
- * @fn      void cdc_set_vsync_polarity(CDC_Type *const cdc, const CDC_POLARITY vsync_pol)
  * @brief   CDC vsync polarity.
- * @param   cdc  Pointer to the cdc register map structure. See {@ref CDC_Type} for details.
- * @param   vsync_pol  CDC VSYNC polarity
- * @retval  none.
  */
 void cdc_set_vsync_polarity(CDC_Type *const cdc, const CDC_POLARITY vsync_pol)
 {
@@ -98,12 +86,8 @@ void cdc_set_vsync_polarity(CDC_Type *const cdc, const CDC_POLARITY vsync_pol)
 }
 
 /**
- * @fn      void cdc_set_pclkout_polarity(CDC_Type *const cdc, const CDC_PIXCLK_POLARITY
  * pclkout_pol)
  * @brief   CDC pixel clock output polarity.
- * @param   cdc  Pointer to the cdc register map structure. See {@ref CDC_Type} for details.
- * @param   pclkout_pol  CDC pixel clock output polarity
- * @retval  none.
  */
 void cdc_set_pclkout_polarity(CDC_Type *const cdc, const CDC_PIXCLK_POLARITY pclkout_pol)
 {
@@ -115,11 +99,7 @@ void cdc_set_pclkout_polarity(CDC_Type *const cdc, const CDC_PIXCLK_POLARITY pcl
 }
 
 /**
- * @fn      void cdc_set_blank_polarity(CDC_Type *const cdc, const CDC_POLARITY blank_pol)
  * @brief   CDC blank polarity.
- * @param   cdc  Pointer to the cdc register map structure. See {@ref CDC_Type} for details.
- * @param   blank_pol  CDC blank polarity
- * @retval  none.
  */
 void cdc_set_blank_polarity(CDC_Type *const cdc, const CDC_POLARITY blank_pol)
 {
@@ -131,14 +111,9 @@ void cdc_set_blank_polarity(CDC_Type *const cdc, const CDC_POLARITY blank_pol)
 }
 
 /**
- * @fn      void cdc_set_layer_cfg (CDC_Type *const cdc, const CDC_LAYER layer, const
  * cdc_layer_info_t *const info)
  * @brief   Configure the CDC layer with given information.
- * @param   cdc   Pointer to the cdc register map structure. See {@ref CDC_Type} for details.
- * @param   layer The layer number needs to be configure. See {@ref CDC_LAYER} for details.
- * @param   info  Pointer to the cdc layer information structure. See {@ref cdc_layer_info_t} for
  * details.
- * @retval  none
  */
 void cdc_set_layer_cfg(CDC_Type *const cdc, const CDC_LAYER layer,
                        const cdc_layer_info_t *const info)
@@ -217,13 +192,8 @@ void cdc_set_layer_cfg(CDC_Type *const cdc, const CDC_LAYER layer,
 }
 
 /**
- * @fn      void cdc_layer_on (CDC_Type *const cdc, const CDC_LAYER layer, const CDC_SHADOW_RELOAD
  * sh_rld)
  * @brief   CDC layer on.
- * @param   cdc     Pointer to the cdc register map structure. See {@ref CDC_Type} for details.
- * @param   layer   The layer number needs to be configure. See {@ref CDC_LAYER} for details.
- * @param   sh_rld  The shadow register update method. See {@ref CDC_SHADOW_RELOAD} for details.
- * @retval  none
  */
 void cdc_layer_on(CDC_Type *const cdc, const CDC_LAYER layer, const CDC_SHADOW_RELOAD sh_rld)
 {
@@ -235,13 +205,8 @@ void cdc_layer_on(CDC_Type *const cdc, const CDC_LAYER layer, const CDC_SHADOW_R
 }
 
 /**
- * @fn      void cdc_layer_off (CDC_Type *const cdc, const CDC_LAYER layer, const CDC_SHADOW_RELOAD
  * sh_rld)
  * @brief   CDC layer off.
- * @param   cdc     Pointer to the cdc register map structure. See {@ref CDC_Type} for details.
- * @param   layer   The layer number needs to be configure. See {@ref _CDC_LAYER} for details.
- * @param   sh_rld  The shadow register update method. See {@ref CDC_SHADOW_RELOAD} for details.
- * @retval  none
  */
 void cdc_layer_off(CDC_Type *const cdc, const CDC_LAYER layer, const CDC_SHADOW_RELOAD sh_rld)
 {
@@ -253,14 +218,8 @@ void cdc_layer_off(CDC_Type *const cdc, const CDC_LAYER layer, const CDC_SHADOW_
 }
 
 /**
- * @fn      void cdc_set_layer_fb_addr (CDC_Type *const cdc, const CDC_LAYER layer,
  *                                      const CDC_SHADOW_RELOAD sh_rld, const uint32_t fb_addr)
  * @brief   Set layer frame buffer address..
- * @param   cdc      Pointer to the cdc register map structure. See {@ref CDC_Type} for details.
- * @param   layer    The layer number needs to be configure. See {@ref CDC_LAYER} for details.
- * @param   sh_rld   The shadow register update method. See {@ref CDC_SHADOW_RELOAD} for details.
- * @param   fb_addr  The Color FB start address.
- * @retval  none
  */
 void cdc_set_layer_fb_addr(CDC_Type *const cdc, const CDC_LAYER layer,
                            const CDC_SHADOW_RELOAD sh_rld, const uint32_t fb_addr)
@@ -273,16 +232,10 @@ void cdc_set_layer_fb_addr(CDC_Type *const cdc, const CDC_LAYER layer,
 }
 
 /**
- * @fn      void cdc_set_layer_fb_window (CDC_Type *const cdc, const CDC_LAYER layer,
  *                                        const CDC_SHADOW_RELOAD sh_rld, const cdc_window_info_t
  * *win_info)
  * @brief   Set layer frame buffer window.
- * @param   cdc       Pointer to the cdc register map structure. See {@ref CDC_Type} for details.
- * @param   layer     The layer number needs to be configure. See {@ref CDC_LAYER} for details.
- * @param   sh_rld    The shadow register update method. See {@ref CDC_SHADOW_RELOAD} for details.
- * @param   win_info  Pointer to the layer window information structure. See {@ref
  * cdc_window_info_t} for details.
- * @retval  none
  */
 void cdc_set_layer_fb_window(CDC_Type *const cdc, const CDC_LAYER layer,
                              const CDC_SHADOW_RELOAD sh_rld, const cdc_window_info_t *win_info)
@@ -298,19 +251,12 @@ void cdc_set_layer_fb_window(CDC_Type *const cdc, const CDC_LAYER layer,
 }
 
 /**
- * @fn      void cdc_set_layer_blending (CDC_Type *const cdc, const CDC_LAYER layer, const
  * CDC_SHADOW_RELOAD sh_rld, const uint8_t const_alpha, const CDC_BLEND_FACTOR blend_factor )
  * @brief   Set layer blending.
- * @param   cdc           Pointer to the cdc register map structure. See {@ref CDC_Type} for
  * details.
- * @param   layer         The layer number needs to be configure. See {@ref CDC_LAYER} for details.
- * @param   sh_rld        The shadow register update method. See {@ref CDC_SHADOW_RELOAD} for
  * details.
- * @param   const_alpha   The layer constant alpha range from 0 (fully transparent) to 255 or 1.0
  * (fully opaque).
- * @param   blend_factor  The layer blending factor selection. See {@ref CDC_BLEND_FACTOR} for
  * details.
- * @retval  none
  */
 void cdc_set_layer_blending(CDC_Type *const cdc, const CDC_LAYER layer,
                             const CDC_SHADOW_RELOAD sh_rld, const uint8_t const_alpha,

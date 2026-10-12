@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     rtc.h
  * @author   Tanay Rami, Manoj A Murudi
- * @email    tanay@alifsemi.com, manoj.murudi@alifsemi.com
+ * Email:    tanay@alifsemi.com, manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     23-March-2023
  * @brief    Device Specific Low Level Header file for RTC Driver.
@@ -200,8 +200,8 @@ static inline void lprtc_interrupt_ack(LPRTC_Type *lprtc)
 /**
   \fn           static inline void lprtc_load_prescaler (LPRTC_Type *lprtc, uint16_t value)
   \brief        Load 16-bit lprtc prescaler value
-  \param[in]    value        : lprtc prescaler value
-  \param[in]    lplprtc      : Pointer to lprtc register block
+  \param[in] lprtc lprtc prescaler value
+  \param[in] value Pointer to lprtc register block
   \return       none
 */
 static inline void lprtc_load_prescaler(LPRTC_Type *lprtc, uint16_t value)
@@ -223,8 +223,8 @@ static inline uint16_t lprtc_get_prescaler(LPRTC_Type *lprtc)
 /**
   \fn           static inline void lprtc_load_count (LPRTC_Type *lprtc, uint32_t value)
   \brief        Load lprtc counter value
-  \param[in]    value     : lprtc prescaler value
-  \param[in]    lplprtc   : Pointer to lprtc register block
+  \param[in] lprtc lprtc prescaler value
+  \param[in] value Pointer to lprtc register block
   \return       none
 */
 static inline void lprtc_load_count(LPRTC_Type *lprtc, uint32_t value)
@@ -233,8 +233,8 @@ static inline void lprtc_load_count(LPRTC_Type *lprtc, uint32_t value)
 }
 
 /**
-  \fn           static inline void lprtc_load_counter_match_register (LPRTC_Type *lprtc, uint32_t
-  value) \brief        Interrupt match register,When the internal counter matches this register, an
+  \fn static inline void lprtc_load_counter_match_register(LPRTC_Type *lprtc, uint32_t value)
+  \brief        Interrupt match register,When the internal counter matches this register, an
   interrupt is generated, provided interrupt generation is enabled. \param[in]    value : lprtc
   counter match register value \param[in]    lprtc : Pointer to lprtc register block \return none
 */

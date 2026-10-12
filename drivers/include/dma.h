@@ -10,12 +10,11 @@
 /*******************************************************************************
  * @file     dma.h
  * @author   Sudhir Sreedharan
- * @email    sudhir@alifsemi.com
+ * Email:    sudhir@alifsemi.com
  * @version  V1.0.0
  * @date     11-08-2023
  * @brief    Low Level Header file for DMA
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #ifndef DMA_H_
