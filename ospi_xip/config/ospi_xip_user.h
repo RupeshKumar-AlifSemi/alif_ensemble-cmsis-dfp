@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     ospi_xip_user.h
  * @author   Khushboo Singh
- * @email    khushboo.singh@alifsemi.com
+ * Email:    khushboo.singh@alifsemi.com
  * @version  V1.0.0
  * @date     05-Dec-2022
  * @brief    User configuration parameters for flash XIP application.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #ifndef OSPI_XIP_USER_H_

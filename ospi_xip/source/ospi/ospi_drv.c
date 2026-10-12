@@ -12,8 +12,7 @@
  * @file     ospi_drv.c
  * @version  V1.0.0
  * @brief    OSPI driver to set up flash in XIP mode
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 #include "RTE_Components.h"
 #include CMSIS_device_header
@@ -60,8 +59,8 @@ bool ospi_xip_enabled(ospi_flash_cfg_t *ospi_cfg)
 }
 
 /**
-  \fn        void ospi_setup_read(ospi_flash_cfg_t *ospi_cfg, uint32_t addr_len, uint32_t read_len,
-  uint32_t wait_cycles) \brief     Set up for Flash read operation \param[in] ospi_cfg : OSPI
+  \fn void ospi_setup_read(ospi_flash_cfg_t *ospi_cfg, uint32_t addr_len, uint32_t read_len, uint32_t wait_cycles)
+  \brief     Set up for Flash read operation \param[in] ospi_cfg : OSPI
   configuration structure \param[in] addr_len : Address length \param[in] read_len : No. of bytes to
   be read \param[in] wait_cycles : Cycles required to read the data \return    none
 */
@@ -182,7 +181,7 @@ void ospi_push(ospi_flash_cfg_t *ospi_cfg, uint32_t data)
 }
 
 /**
-  \fn        void ospi_recv_blocking(ospi_flash_cfg_t *ospi_cfg, uint32_t command)
+  \fn void ospi_recv_blocking(ospi_flash_cfg_t *ospi_cfg, uint32_t command, uint8_t *buffer)
   \brief     Send the command and read the data into RX buffer
   \param[in] ospi_cfg : OSPI configuration structure
   \param[in] command : Flash command
@@ -207,7 +206,7 @@ void ospi_recv_blocking(ospi_flash_cfg_t *ospi_cfg, uint32_t command, uint8_t *b
 }
 
 /**
-  \fn        void ospi_xip_enter(ospi_flash_cfg_t *ospi_cfg)
+  \fn void ospi_xip_enter(ospi_flash_cfg_t *ospi_cfg, uint16_t incr_command, uint16_t wrap_command)
   \brief     To enter the XIP mode, if the Flash boots up in SDR / DDR mode.
   \param[in] ospi_cfg : OSPI configuration structure
   \return    none
@@ -293,7 +292,7 @@ void ospi_xip_exit(ospi_flash_cfg_t *ospi_cfg, uint16_t incr_command, uint16_t w
 }
 
 /**
-  \fn        void ospi_init(ospi_flash_cfg_t *ospi_cfg)
+  \fn void ospi_init(ospi_flash_cfg_t *ospi_cfg, OSPI_INSTANCE drv_instance)
   \brief     This function initializes the OSPI
   \param[in] ospi_cfg : OSPI configuration structure
   \return    none

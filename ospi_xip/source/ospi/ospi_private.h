@@ -12,8 +12,7 @@
  * @file     ospi_private.h
  * @version  V1.0.0
  * @brief    Private header file for OSPI driver to set up flash in XIP mode.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #ifndef OSPI_PRIVATE_H

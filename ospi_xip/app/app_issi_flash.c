@@ -15,7 +15,6 @@
  * @date     05-Dec-2022
  * @brief    Application to set up flash in XIP mode and jump to the flash
  *           image address.
- * @bug      None.
  * \note     None
  ******************************************************************************/
 
@@ -48,9 +47,8 @@ typedef void (*pfun)(void);
 static pfun EntryPoint;
 
 /**
-  \fn        static int32_t setup_PinMUX(void)
+  \fn static int32_t setup_pinmux(void)
   \brief     Set up PinMUX and PinPAD
-  \param[in] none
   \return    -1: If any error
  */
 static int32_t setup_pinmux(void)
@@ -251,7 +249,6 @@ static int32_t setup_pinmux(void)
 /**
   \fn        int main ()
   \brief     Main Function
-  \param[in] none
   \return    0 : Success
  */
 int main(void)

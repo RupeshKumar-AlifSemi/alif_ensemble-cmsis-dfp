@@ -12,8 +12,7 @@
  * @file     ospi_drv.h
  * @version  V1.0.0
  * @brief    Header file for OSPI driver to set up flash in XIP mode.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #ifndef OSPI_DRV_H

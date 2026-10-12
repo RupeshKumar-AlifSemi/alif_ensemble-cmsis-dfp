@@ -12,8 +12,7 @@
  * @file     setup_flash_xip.h
  * @version  V1.0.0
  * @brief    Header file for API to set up flash in XIP mode
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #ifndef SETUP_FLASH_XIP_H
@@ -26,7 +25,6 @@ extern "C" {
 /**
   \fn        int setup_flash_xip(void)
   \brief     This function initializes the Flash and OSPI and enters the XIP mode.
-  \param[in] none.
   \return    The status of operation (Success or Failed)
 */
 int setup_flash_xip(void);
@@ -34,7 +32,6 @@ int setup_flash_xip(void);
 /**
   \fn         bool flash_xip_enabled(void)
   \brief      Return the status of xip initialization.
-  \param[in]  none
   \return     true or false
  */
 bool flash_xip_enabled(void);

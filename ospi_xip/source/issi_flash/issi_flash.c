@@ -12,8 +12,7 @@
  * @file     issi_flash.c
  * @version  V1.0.0
  * @brief    Flash driver to set up flash in XIP mode
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 #include "RTE_Components.h"
 #include CMSIS_device_header
@@ -63,7 +62,7 @@ static uint8_t issi_decode_id(ospi_flash_cfg_t *ospi_cfg, uint8_t *buffer)
 }
 
 /**
-  \fn        uint8_t ospi_flash_ReadID(ospi_flash_cfg_t *ospi_cfg)
+  \fn static uint8_t issi_flash_ReadID(ospi_flash_cfg_t *ospi_cfg)
   \brief     This function reads the Device ID , if the ISSI NOR Flash boots up in SDR mode
   \param[in] ospi_cfg : OSPI configuration structure
   \return    Device ID of NOR Flash
@@ -79,8 +78,8 @@ static uint8_t issi_flash_ReadID(ospi_flash_cfg_t *ospi_cfg)
 }
 
 /**
-  \fn      static void issi_flash_set_configuration_register_SDR(ospi_flash_cfg_t *ospi_cfg, uint8_t
-  cmd, uint8_t address, uint8_t value) \brief   This function sets the configuration register of the
+  \fn static void issi_flash_set_configuration_register_SDR(ospi_flash_cfg_t *ospi_cfg, uint8_t cmd, uint8_t address, uint8_t value)
+  \brief   This function sets the configuration register of the
   ISSI NOR Flash in SDR mode \param[in] ospi_cfg : OSPI configuration structure \param[in] cmd :
   Command \param[in] address : Address of register \param[in] value : Value to be set \return none
  */
@@ -147,7 +146,6 @@ static int flash_xip_init(ospi_flash_cfg_t *ospi_cfg)
 /**
   \fn         bool flash_xip_enabled(void)
   \brief      Return the status of xip initialization
-  \param[in]  none
   \return     true or false
  */
 bool flash_xip_enabled(void)
@@ -164,7 +162,6 @@ bool flash_xip_enabled(void)
 /**
   \fn         int setup_flash_xip(void)
   \brief      This function initializes the NOR Flash and OSPI and enters the XIP mode
-  \param[in]  none
   \return     Success or Fail
  */
 int setup_flash_xip(void)

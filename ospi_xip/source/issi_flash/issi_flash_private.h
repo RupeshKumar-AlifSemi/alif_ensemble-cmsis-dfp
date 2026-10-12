@@ -12,8 +12,7 @@
  * @file     issi_flash_private.h
  * @version  V1.0.0
  * @brief    Private header file for Flash driver to set up flash in XIP mode.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 #ifndef ISSI_FLASH_PRIVATE_H
 #define ISSI_FLASH_PRIVATE_H
