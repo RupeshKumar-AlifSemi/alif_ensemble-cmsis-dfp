@@ -176,8 +176,7 @@ static const AR0145_REG cfg_8bit_2Lane_Pxlclk80MHz_Extclk25MHz[] = {
 };
 
 /**
-  \fn           int32_t AR0145_Bulk_Write_Reg(const AR0145_REG AR0145_reg[],
-                                              uint32_t total_num, uint32_t reg_size))
+  \fn static int32_t AR0145_Bulk_Write_Reg(const AR0145_REG AR0145_reg[], uint32_t total_num, uint32_t reg_size)
   \brief        write array of registers value to AR0145 Camera Sensor registers.
   \param[in]    AR0145_reg : AR0145 Camera Sensor Register Array Structure
   \ref AR0145_REG
@@ -209,7 +208,6 @@ static int32_t AR0145_Bulk_Write_Reg(const AR0145_REG AR0145_reg[], uint32_t tot
 /**
   \fn           void AR0145_Sensor_Enable_Clk_Src(void)
   \brief        Enable AR0145 Camera Sensor external clock source configuration.
-  \param[in]    none
   \return       none
   */
 static void AR0145_Sensor_Enable_Clk_Src(void)
@@ -220,7 +218,6 @@ static void AR0145_Sensor_Enable_Clk_Src(void)
 /**
   \fn           void AR0145_Sensor_Disable_Clk_Src(void)
   \brief        Disable AR0145 Camera Sensor external clock source configuration.
-  \param[in]    none
   \return       none
   */
 static void AR0145_Sensor_Disable_Clk_Src(void)
@@ -231,7 +228,6 @@ static void AR0145_Sensor_Disable_Clk_Src(void)
 /**
   \fn           int32_t AR0145_Camera_Hard_Reseten(void)
   \brief        Hard Reset AR0145 Camera Sensor
-  \param[in]    none
   \return       \ref execution_status
   */
 static int32_t AR0145_Camera_Hard_Reseten(void)
@@ -300,7 +296,6 @@ static int32_t AR0145_Camera_Hard_Reseten(void)
 /**
   \fn           int32_t AR0145_Camera_Soft_Reseten(void)
   \brief        Software Reset AR0145 Camera Sensor
-  \param[in]    none
   \return       \ref execution_status
   */
 static int32_t AR0145_Camera_Soft_Reseten(void)
@@ -323,7 +318,6 @@ static int32_t AR0145_Camera_Soft_Reseten(void)
 /**
   \fn           int32_t AR0145_Sensor_Configuration(void)
   \brief        AR0145 Camera Sensor configuration
-  \param[in]    none
   \return       \ref execution_status
   */
 int32_t AR0145_Sensor_Configuration(void)
@@ -678,7 +672,6 @@ int32_t AR0145_Init(void)
 /**
   \fn           int32_t AR0145_Start(void)
   \brief        Start AR0145 Camera Sensor Streaming.
-  \param[in]    none
   \return       \ref execution_status
   */
 int32_t AR0145_Start(void)
@@ -703,7 +696,6 @@ int32_t AR0145_Start(void)
 /**
   \fn           int32_t AR0145_Stop(void)
   \brief        Stop AR0145 Camera Sensor Streaming.
-  \param[in]    none
   \return       \ref execution_status
   */
 int32_t AR0145_Stop(void)
@@ -741,7 +733,6 @@ int32_t AR0145_Control(uint32_t control, uint32_t arg)
 /**
   \fn           int32_t AR0145_Uninit(void)
   \brief        Un-initialize AR0145 Camera Sensor.
-  \param[in]    none
   \return       \ref execution_status
   */
 int32_t AR0145_Uninit(void)

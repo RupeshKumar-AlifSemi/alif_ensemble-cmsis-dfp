@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     ILI6122_LCD_panel.c
  * @author   Chandra Bhushan Singh
- * @email    chandrabhushan.singh@alifsemi.com
+ * Email:    chandrabhushan.singh@alifsemi.com
  * @version  V1.0.0
  * @date     04-Oct-23
  * @brief    Focus ILI6122 LCD panel driver.
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 
 /* System Includes */

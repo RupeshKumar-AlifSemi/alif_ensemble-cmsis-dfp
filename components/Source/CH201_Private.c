@@ -9,15 +9,14 @@
  */
 
 /*******************************************************************************
- * @file     : CH201_Private.c
+ * @file     CH201_Private.c
  * @author   : Shreehari H K
- * @email    : shreehari.hk@alifsemi.com
+ * Email:    : shreehari.hk@alifsemi.com
  * @version  : V1.0.0
  * @date     : 21-Nov-2025
  * @brief    : Alif's Board Support file for CH201 Time of Flight sensor
  *
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 
 /* Project Includes */
@@ -167,7 +166,6 @@ static int32_t chbsp_intr_enable(ARM_DRIVER_GPIO *io_driver,
 
 /**
  * @brief       LPTIMER setup function.
- * @param[in]   None
  * @return      \ref execution_status
  */
 static int32_t chbsp_lptimer_init(void)
@@ -191,7 +189,6 @@ static int32_t chbsp_lptimer_init(void)
 
 /**
  * @brief       LPTIMER De-Initialize function.
- * @param[in]   None
  * @return      \ref execution_status
  */
 static int32_t chbsp_lptimer_deinit(void)
@@ -220,7 +217,6 @@ static int32_t chbsp_lptimer_deinit(void)
 
 /**
  * @brief       RTC setup function.
- * @param[in]   None
  * @return      \ref execution_status
  */
 static int32_t chbsp_rtc_init(void)
@@ -252,7 +248,6 @@ static int32_t chbsp_rtc_init(void)
 
 /**
  * @brief       RTC De-Initialize function.
- * @param[in]   None
  * @return      \ref execution_status
  */
 static int32_t chbsp_rtc_deinit(void)
@@ -278,7 +273,6 @@ static int32_t chbsp_rtc_deinit(void)
 
 /**
  * @brief       GPIO setup function.
- * @param[in]   None
  * @return      \ref execution_status
  */
 static int32_t chbsp_gpios_init(void)
@@ -341,7 +335,6 @@ static int32_t chbsp_gpios_init(void)
 
 /**
  * @brief       GPIO De-Initialize function.
- * @param[in]   None
  * @return      \ref execution_status
  */
 static int32_t chbsp_gpios_deinit(void)
@@ -516,7 +509,6 @@ void chbsp_debug_off(uint8_t dbg_pin_num)
 
 /**
  * @brief       Assert reset for all sensors (drive RESET_N low).
- * @param[in]   None
  * @return      None
  */
 void chbsp_reset_assert(void)
@@ -528,7 +520,6 @@ void chbsp_reset_assert(void)
 
 /**
  * @brief       Deassert reset for all sensors (drive RESET_N high).
- * @param[in]   None
  * @return      None
  */
 void chbsp_reset_release(void)
@@ -905,7 +896,6 @@ void chbsp_delay_ms(uint32_t ms)
 
 /**
  * @brief       Return a free-running counter value in milliseconds.
- * @param[in]   None
  * @return      Milliseconds tick count
  */
 uint32_t chbsp_timestamp_ms(void)
@@ -984,7 +974,6 @@ void chbsp_event_wait_setup(uint32_t event_mask)
 
 /**
  * @brief       Initialize host I2C hardware and software structures.
- * @param[in]   None
  * @return      0 on success, 1 on failure
  */
 int chbsp_i2c_init(void)
@@ -1019,7 +1008,6 @@ int chbsp_i2c_init(void)
 
 /**
  * @brief       De-Initialize host I2C hardware and software structures.
- * @param[in]   None
  * @return      \ref Execution status
  */
 static int chbsp_i2c_deinit(void)
@@ -1365,7 +1353,6 @@ void chbsp_print_str(const char *str)
 
 /**
  * @brief       Initialize the periodic timer.
- * @param       None
  * @return      Execution status
  */
 int chbsp_periodic_timer_init(void)
@@ -1375,7 +1362,6 @@ int chbsp_periodic_timer_init(void)
 
 /**
  * @brief       De-Initialize the periodic timer.
- * @param       None
  * @return      Execution status
  */
 int chbsp_periodic_timer_deinit(void)
@@ -1385,7 +1371,6 @@ int chbsp_periodic_timer_deinit(void)
 
 /**
  * @brief       Setup board dependencies.
- * @param[in]   None
  * @return      Execution status
  */
 int chbsp_board_init(void)
@@ -1406,7 +1391,6 @@ int chbsp_board_init(void)
 
 /**
  * @brief       De initialize board dependencies.
- * @param[in]   None
  * @return      Execution status
  */
 int chbsp_board_deinit(void)
@@ -1432,9 +1416,6 @@ int chbsp_board_deinit(void)
 
 /**
  * @brief       Start the periodic timer.
- * @param[in]   interval_ms       Interval in millisec
- * @param[in]   callback_func_ptr Callback function
- * @return      Execution status
  */
 int chbsp_periodic_timer_start(uint16_t interval_ms,
                                ch_timer_callback_t callback_func_ptr)
@@ -1469,7 +1450,6 @@ int chbsp_periodic_timer_start(uint16_t interval_ms,
 
 /**
  * @brief       Stop the periodic timer.
- * @param       None
  * @return      Execution status
  */
 int chbsp_periodic_timer_stop(void)

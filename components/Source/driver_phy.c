@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     driver_phy.c
  * @author   Silesh C V
- * @email    silesh@alifsemi.com
+ * Email:    silesh@alifsemi.com
  * @version  V1.0.0
  * @date     22-Mar-2022
  * @brief    CMSIS driver for ETH PHY.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #include "driver_phy.h"

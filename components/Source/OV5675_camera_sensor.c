@@ -895,7 +895,6 @@ static int32_t OV5675_Camera_Gain_Set(uint32_t gain_q16_16)
 /**
  * @fn           void OV5675_Sensor_Enable_Clk_Src(void)
  * @brief        Enable OV5675 Camera Sensor external clock source configuration.
- * @param[in]    none
  * @return       none
  */
 static void OV5675_Sensor_Enable_Clk_Src(void)
@@ -906,7 +905,6 @@ static void OV5675_Sensor_Enable_Clk_Src(void)
 /**
  * @fn           void OV5675_Sensor_Disable_Clk_Src(void)
  * @brief        Disable OV5675 Camera Sensor external clock source configuration.
- * @param[in]    none
  * @return       none
  */
 static void OV5675_Sensor_Disable_Clk_Src(void)
@@ -942,7 +940,6 @@ static int32_t OV5675_Bulk_Write_Reg(const OV5675_REG OV5675_reg[], uint32_t tot
 /**
  * @fn           int32_t OV5675_Camera_Hard_Reseten(void)
  * @brief        Hard Reset OV5675 Camera Sensor
- * @param[in]    none
  * @return       \ref execution_status
  */
 static int32_t OV5675_Camera_Hard_Reseten(void)
@@ -1064,7 +1061,6 @@ static int32_t OV5675_Init(void)
 /**
  * @fn           int32_t OV5675_Start(void)
  * @brief        Start OV5675 Camera Sensor Streaming.
- * @param[in]    none
  * @return       \ref execution_status
  */
 static int32_t OV5675_Start(void)
@@ -1076,7 +1072,6 @@ static int32_t OV5675_Start(void)
 /**
  * @fn           int32_t OV5675_Stop(void)
  * @brief        Stop OV5675 Camera Sensor Streaming.
- * @param[in]    none
  * @return       \ref execution_status
  */
 static int32_t OV5675_Stop(void)
@@ -1136,7 +1131,6 @@ static int32_t OV5675_Control(uint32_t control, uint32_t arg)
 /**
  * @fn           int32_t OV5675_Uninit(void)
  * @brief        Un-initialize OV5675 Camera Sensor.
- * @param[in]    none
  * @return       \ref execution_status
  */
 static int32_t OV5675_Uninit(void)

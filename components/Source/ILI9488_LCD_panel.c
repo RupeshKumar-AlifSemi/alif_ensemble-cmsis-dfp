@@ -80,7 +80,6 @@ uint8_t adjust_ctrl[]       = {0xF7, 0xA9, 0x51, 0x2C, 0x82};
 /**
   \fn           int32_t ILI9488_Display_Reset (void)
   \brief        Reset ILI9488 Display Panel
-  \param[in]    none
   \return       \ref execution_status
   */
 static int32_t ILI9488_Display_Reset(void)
@@ -287,7 +286,7 @@ static int32_t ILI9488_Control(uint32_t control)
 }
 
 /**
-  \fn           int32_t ILI9488_start(void)
+  \fn static int32_t ILI9488_Start(void)
   \brief        start ILI9488 Display Panel
   \return       \ref execution_status
   */
@@ -297,7 +296,7 @@ static int32_t ILI9488_Start(void)
 }
 
 /**
-  \fn           int32_t ILI9488_stop(void)
+  \fn static int32_t ILI9488_Stop(void)
   \brief        stop ILI9488 Display Panel
   \return       \ref execution_status
   */

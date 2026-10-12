@@ -10,12 +10,11 @@
 /******************************************************************************
  * @file     sensor_utils.h
  * @author   Shreehari H K
- * @email    shreehari.hk@alifsemi.com
+ * Email:    shreehari.hk@alifsemi.com
  * @brief    Common Utility header for all sensors
  * @version  V1.0.0
  * @date     18-Aug-2025
- * @bug      None
- * @Note     None
+ * @note     None
  ******************************************************************************/
 #ifndef SENSOR_UTILS_H
 #define SENSOR_UTILS_H

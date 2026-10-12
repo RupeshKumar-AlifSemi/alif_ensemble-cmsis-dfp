@@ -10,12 +10,11 @@
 /*******************************************************************************
  * @file     MT9M114_Camera_Sensor.c
  * @author   Tanay Rami
- * @email    tanay@alifsemi.com
+ * Email:    tanay@alifsemi.com
  * @version  V1.0.0
  * @date     29-Sep-2021
  * @brief    ONsemi MT9M114 Camera Sensor driver.
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 /* System Includes */
 #include "RTE_Device.h"
@@ -676,7 +675,6 @@ static ARM_DRIVER_GPIO *GPIO_Driver_CAM_PWR =
 /**
   \fn           void MT9M114_Sensor_Enable_Clk_Src(void)
   \brief        Enable MT9M114 Camera Sensor external clock source configuration.
-  \param[in]    none
   \return       none
   */
 static void MT9M114_Sensor_Enable_Clk_Src(void)
@@ -687,7 +685,6 @@ static void MT9M114_Sensor_Enable_Clk_Src(void)
 /**
   \fn           int32_t mt9m114_power_on(void)
   \brief        Power On MT9M114 Camera Sensor.
-  \param[in]    none
   \return       \ref execution_status
   */
 static int32_t mt9m114_power_on(void)
@@ -769,7 +766,6 @@ static int32_t mt9m114_power_on(void)
 /**
   \fn           int32_t mt9m114_power_off(void)
   \brief        Power Off MT9M114 Camera Sensor.
-  \param[in]    none
   \return       \ref execution_status
   */
 static int32_t mt9m114_power_off(void)
@@ -1448,10 +1444,12 @@ static int32_t mt9m114_mipi_camera_init(CAMERA_SENSOR_SLAVE_I2C_CONFIG *i2c_cfg)
 }
 
 /**
-  \fn           int32_t MT9M114_Camera_AE(const uint32_t enable, CAMERA_SENSOR_SLAVE_I2C_CONFIG
-  *i2c_cfg) \brief        Set camera Auto Exposure \param[in]    enable: 0=disable, 1=enable
-  \param[in]    i2c_cfg  : Pointer to Camera Sensor i2c configuration.
-  \return       \ref execution_statusn
+  \fn          static int32_t MT9M114_Camera_AE(const uint32_t enable,
+                                                CAMERA_SENSOR_SLAVE_I2C_CONFIG *i2c_cfg)
+  \brief       Set camera auto exposure.
+  \param[in]   enable   0 to disable, 1 to enable
+  \param[in]   i2c_cfg  Pointer to the camera sensor I2C configuration
+  \return      \ref execution_status
   */
 static int32_t MT9M114_Camera_AE(const uint32_t enable, CAMERA_SENSOR_SLAVE_I2C_CONFIG *i2c_cfg)
 {

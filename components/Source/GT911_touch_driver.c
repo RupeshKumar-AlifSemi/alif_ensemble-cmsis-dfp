@@ -11,13 +11,12 @@
 /*******************************************************************************
  * @file     GT911_touch_driver.c
  * @author   Prasanna Ravi, Ahmad Rashed and Chandra Bhushan Singh
- * @email    prasanna.ravi@alifsemi.com , ahmad.rashed@alifsemi.com and
+ * Email:    prasanna.ravi@alifsemi.com , ahmad.rashed@alifsemi.com and
  *           chandrabhushan.singh@alifsemi.com
  * @version  V1.0.0
  * @date     3 August 2023
  * @brief    GT911 touch screen driver.
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 
 #include <stdint.h>
@@ -303,7 +302,6 @@ static void TOUCH_GPIO_CB(uint32_t event)
 /**
   \fn           int32_t TOUCH_Reset(void)
   \brief        Hard Reset GT911 Touch Screen.
-  \param[in]    none.
   \return       \ref execution_status.
   */
 static int32_t TOUCH_Reset(void)
@@ -381,7 +379,6 @@ static int32_t TOUCH_Reset(void)
                 This function will
                     - initialize i2c instance.
                     - initialize gpio interrupt and reset instance.
-  \param[in]    none.
   \return       \ref execution_status.
   */
 int32_t TOUCH_Init(void)
@@ -431,7 +428,6 @@ int32_t TOUCH_Init(void)
   \brief        Setup GT911 Touch Screen.
                 This function will
   -                read GT911 product id, proceed only it is correct.
-  \param[in]    none.
   \return       \ref execution_status.
   */
 int32_t TOUCH_Setup(void)
@@ -473,7 +469,6 @@ int32_t TOUCH_Setup(void)
 /**
   \fn           int32_t TOUCH_Deinit(void)
   \brief        Un-initialize GT911 Touch Screen.
-  \param[in]    none.
   \return       \ref execution_status.
   */
 int32_t TOUCH_Deinit(void)
@@ -496,7 +491,6 @@ int32_t TOUCH_Deinit(void)
 /**
   \fn          int32_t  ARM_TOUCH_SCREEN_Initialize (void)
   \brief       Initialize touch screen Interface.
-  \param[in]   none.
   \return      \ref execution_status.
 */
 static int32_t ARM_TOUCH_SCREEN_Initialize(void)

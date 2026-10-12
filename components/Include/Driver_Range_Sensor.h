@@ -10,12 +10,11 @@
 /******************************************************************************
  * @file     Driver_Range_Sensor.h
  * @author   Shreehari H K
- * @email    shreehari.hk@alifsemi.com
+ * Email:    shreehari.hk@alifsemi.com
  * @version  V1.0.0
  * @date     30-Nov-2025
  * @brief    Driver for Range Measurement Sensor
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 
 

@@ -10,12 +10,11 @@
 /*******************************************************************************
  * @file     OV5640_Camera_Sensor.c
  * @author   Chandra Bhushan Singh
- * @email    chandrabhushan.singh@alifsemi.com
+ * Email:    chandrabhushan.singh@alifsemi.com
  * @version  V1.0.0
  * @date     11-March-2026
  * @brief    Ovti OV5640 Camera Sensor driver.
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 
 /* System Includes */
@@ -497,7 +496,6 @@ static int32_t ov5640_bulk_write_reg(CAMERA_SENSOR_SLAVE_I2C_CONFIG *i2c_cfg,
 /*
  * \fn           int32_t ov5640_power_on(void)
  * \brief        Power On OV5640 Camera Sensor.
- * \param[in]    none
  * \return       \ref execution_status
  */
 int32_t ov5640_power_on(void)

@@ -11,7 +11,7 @@
 /******************************************************************************
  * @file     MX66UW1G.c
  * @author   Manoj A Murudi
- * @email    manoj.murudi@alifsemi.com
+ * Email:    manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     10-Dec-2025
  * @brief    Source file for MX66UW1G flash.
@@ -203,7 +203,7 @@ static ARM_FLASH_CAPABILITIES ARM_Flash_GetCapabilities(void)
 }
 
 /**
- * @fn         int32_t MX66UW1G_Read(uint32_t addr, uint8_t *buffer, uint32_t length)
+ * @fn static int32_t MX66UW1G_Read(uint16_t command, uint32_t addr, uint16_t *data, size_t len)
  * @brief      Read data from the flash device.
  * @param[in]  addr     Start address to read from
  * @param[in]  buffer   Pointer to the buffer where read data will be stored

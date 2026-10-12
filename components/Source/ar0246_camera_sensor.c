@@ -1080,8 +1080,7 @@ static const AR0246_REG cfg_684x472_12bit_40fps_2Lane_sensor_reg_settings[] = {
 };
 
 /**
-  \fn           int32_t AR0246_Bulk_Write_Reg(const AR0246_REG AR0246_reg[],
-                                              uint32_t total_num, uint32_t reg_size))
+  \fn static int32_t AR0246_Bulk_Write_Reg(const AR0246_REG AR0246_reg[], uint32_t total_num, uint32_t reg_size)
   \brief        write array of registers value to AR0246 Camera Sensor registers.
   \param[in]    AR0246_reg : AR0246 Camera Sensor Register Array Structure \ref AR0246_REG
   \param[in]    total_num   : total number of registers(size of array)
@@ -1106,7 +1105,6 @@ static int32_t AR0246_Bulk_Write_Reg(const AR0246_REG AR0246_reg[], uint32_t tot
 /**
   \fn           void AR0246_Sensor_Enable_Clk_Src(void)
   \brief        Enable AR0246 Camera Sensor external clock source configuration.
-  \param[in]    none
   \return       none
   */
 static void AR0246_Sensor_Enable_Clk_Src(void)
@@ -1117,7 +1115,6 @@ static void AR0246_Sensor_Enable_Clk_Src(void)
 /**
   \fn           void AR0246_Sensor_Disable_Clk_Src(void)
   \brief        Disable AR0246 Camera Sensor external clock source configuration.
-  \param[in]    none
   \return       none
   */
 static void AR0246_Sensor_Disable_Clk_Src(void)
@@ -1128,7 +1125,6 @@ static void AR0246_Sensor_Disable_Clk_Src(void)
 /**
   \fn           int32_t AR0246_Camera_Hard_Reseten(void)
   \brief        Hard Reset AR0246 Camera Sensor
-  \param[in]    none
   \return       \ref execution_status
   */
 static int32_t AR0246_Camera_Hard_Reseten(void)
@@ -1197,7 +1193,6 @@ static int32_t AR0246_Camera_Hard_Reseten(void)
 /**
   \fn           int32_t AR0246_Camera_Soft_Reseten(void)
   \brief        Software Reset AR0246 Camera Sensor
-  \param[in]    none
   \return       \ref execution_status
   */
 static int32_t AR0246_Camera_Soft_Reseten(void)
@@ -1283,7 +1278,6 @@ int32_t AR0246_Init(void)
 /**
   \fn           int32_t AR0246_Start(void)
   \brief        Start AR0246 Camera Sensor Streaming.
-  \param[in]    none
   \return       \ref execution_status
   */
 int32_t AR0246_Start(void)
@@ -1303,7 +1297,6 @@ int32_t AR0246_Start(void)
 /**
   \fn           int32_t AR0246_Stop(void)
   \brief        Stop AR0246 Camera Sensor Streaming.
-  \param[in]    none
   \return       \ref execution_status
   */
 int32_t AR0246_Stop(void)
@@ -1351,7 +1344,6 @@ int32_t AR0246_Control(uint32_t control, uint32_t arg)
 /**
   \fn           int32_t AR0246_Uninit(void)
   \brief        Un-initialize AR0246 Camera Sensor.
-  \param[in]    none
   \return       \ref execution_status
   */
 int32_t AR0246_Uninit(void)

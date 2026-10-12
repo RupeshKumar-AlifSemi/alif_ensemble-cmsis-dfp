@@ -11,7 +11,7 @@
 /******************************************************************************
  * @file     S80K_HyperRAM.h
  * @author   Manoj A Murudi
- * @email    manoj.murudi@alifsemi.com
+ * Email:    manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     22-May-2025
  * @brief    Header file for S80K Hyperram init library.

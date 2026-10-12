@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     WM8904_driver.c
  * @author   Manoj A Murudi
- * @email    manoj.murudi@alifsemi.com
+ * Email:    manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     19-Nov-2024
  * @brief    driver for WM8904 Codec Device.
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 
 #include "WM8904_driver.h"
@@ -68,7 +67,6 @@ static int32_t WM8904_UpdateVolume(uint8_t volume)
 /**
   \fn        int32_t WM8904_Config(void)
   \brief     configure codec
-  \param[in] none
   \return    execution_status
 */
 static int32_t WM8904_Config(void)
@@ -177,7 +175,7 @@ static int32_t ARM_WM8904_Uninitialize(void)
 }
 
 /**
-  \fn      int32_t ARM_WM8904_PowerControl(ARM_POWER_STATE state).
+  \fn static int32_t ARM_WM8904_PowerControl(ARM_POWER_STATE state)
   \brief   Handles the WM8904 codec power.
   \param   state  : power state.
   \return  execution_status

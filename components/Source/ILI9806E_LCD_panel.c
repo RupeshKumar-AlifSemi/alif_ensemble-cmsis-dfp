@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     ILI9806E_LCD_panel.c
  * @author   Prasanna Ravi and Chandra Bhushan Singh
- * @email    prasanna.ravi@alifsemi.com and chandrabhushan.singh@alifsemi.com
+ * Email:    prasanna.ravi@alifsemi.com and chandrabhushan.singh@alifsemi.com
  * @version  V1.0.0
  * @date     28-Sep-23
  * @brief    Focus ILI9806E LCD panel driver.
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 
 /* System Includes */
@@ -163,7 +162,6 @@ static LCD_Page_cmd page0_cfg[] = {{0x3A, 0x70}};
 /**
   \fn           int32_t ILI9806E_Display_Reset (void)
   \brief        Reset ILI9806E Display Panel
-  \param[in]    none
   \return       \ref execution_status
   */
 static int32_t ILI9806E_Display_Reset(void)
@@ -391,7 +389,7 @@ static int32_t ILI9806E_Control(uint32_t control)
 }
 
 /**
-  \fn           int32_t ILI9806E_start(void)
+  \fn static int32_t ILI9806E_Start(void)
   \brief        start ILI9806E Display Panel
   \return       \ref execution_status
   */
@@ -408,7 +406,7 @@ static int32_t ILI9806E_Start(void)
 }
 
 /**
-  \fn           int32_t ILI9806E_stop(void)
+  \fn static int32_t ILI9806E_Stop(void)
   \brief        stop ILI9806E Display Panel
   \return       \ref execution_status
   */

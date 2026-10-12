@@ -10,12 +10,11 @@
 /******************************************************************************
  * @file     ICM42670P_IMU.c
  * @author   Shreehari H K
- * @email    shreehari.hk@alifsemi.com
+ * Email:    shreehari.hk@alifsemi.com
  * @version  V1.0.0
  * @date     02-July-2024
  * @brief    Driver for Inertial Measurement Unit ICM42670P
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 
 #include "RTE_Components.h"
@@ -1006,7 +1005,6 @@ static int32_t IMU_Deinit(void)
 /**
   \fn          int32_t  ARM_IMU_Initialize (void)
   \brief       Initializes IMU Interface.
-  \param[in]   none.
   \return      \ref execution_status.
 */
 static int32_t ARM_IMU_Initialize(void)
@@ -1032,7 +1030,6 @@ static int32_t ARM_IMU_Initialize(void)
 /**
   \fn          int32_t  ARM_IMU_Uninitialize(void)
   \brief       Uninitializes IMU Interface.
-  \param[in]   none.
   \return      \ref execution_status.
 */
 static int32_t ARM_IMU_Uninitialize(void)

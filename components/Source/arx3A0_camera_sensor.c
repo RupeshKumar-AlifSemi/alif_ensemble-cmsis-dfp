@@ -13,7 +13,6 @@
  * @version  V1.0.0
  * @date     19-April-2023
  * @brief    ONsemi ARX3A0 Camera Sensor driver.
- * @bug      None.
  * \note     None.
  ******************************************************************************/
 /* System Includes */
@@ -1387,8 +1386,7 @@ static const ARX3A0_REG arx3a0_560_regs[] = {
 };
 
 /**
-  \fn           int32_t ARX3A0_Bulk_Write_Reg(const ARX3A0_REG arx3A0_reg[],
-                                              uint32_t total_num, uint32_t reg_size))
+  \fn static int32_t ARX3A0_Bulk_Write_Reg(const ARX3A0_REG arx3A0_reg[], uint32_t total_num, uint32_t reg_size)
   \brief        write array of registers value to ARX3A0 Camera Sensor registers.
   \param[in]    arx3A0_reg : ARX3A0 Camera Sensor Register Array Structure
   \ref ARX3A0_REG
@@ -1414,7 +1412,6 @@ static int32_t ARX3A0_Bulk_Write_Reg(const ARX3A0_REG arx3A0_reg[], uint32_t tot
 /**
   \fn           void ARX3A0_Sensor_Enable_Clk_Src(void)
   \brief        Enable ARX3A0 Camera Sensor external clock source configuration.
-  \param[in]    none
   \return       none
   */
 static void ARX3A0_Sensor_Enable_Clk_Src(void)
@@ -1425,7 +1422,6 @@ static void ARX3A0_Sensor_Enable_Clk_Src(void)
 /**
   \fn           void ARX3A0_Sensor_Disable_Clk_Src(void)
   \brief        Disable ARX3A0 Camera Sensor external clock source configuration.
-  \param[in]    none
   \return       none
   */
 static void ARX3A0_Sensor_Disable_Clk_Src(void)
@@ -1436,7 +1432,6 @@ static void ARX3A0_Sensor_Disable_Clk_Src(void)
 /**
   \fn           int32_t ARX3A0_Camera_Hard_Reseten(void)
   \brief        Hard Reset ARX3A0 Camera Sensor
-  \param[in]    none
   \return       \ref execution_status
   */
 static int32_t ARX3A0_Camera_Hard_Reseten(void)
@@ -1505,7 +1500,6 @@ static int32_t ARX3A0_Camera_Hard_Reseten(void)
 /**
   \fn           int32_t ARX3A0_Camera_Soft_Reseten(void)
   \brief        Software Reset ARX3A0 Camera Sensor
-  \param[in]    none
   \return       \ref execution_status
   */
 static int32_t ARX3A0_Camera_Soft_Reseten(void)
@@ -1779,13 +1773,12 @@ static int32_t ARX3A0_Camera_Gain_Set(const uint32_t gain)
 }
 
 /**
-  \fn           int32_t ARX3A0_Init(ARM_CAMERA_RESOLUTION cam_resolution)
+  \fn static int32_t ARX3A0_Init(void)
   \brief        Initialize ARX3A0 Camera Sensor
   this function will
   - initialize i2c using i3c instance
   - software reset ARX3A0 Camera Sensor
   - read ARX3A0 chip-id, proceed only it is correct.
-  \param[in]    cam_resolution  : Camera Resolution \ref ARM_CAMERA_RESOLUTION
   \return       \ref execution_status
   */
 static int32_t ARX3A0_Init(void)
@@ -1872,7 +1865,6 @@ static int32_t ARX3A0_Init(void)
 /**
   \fn           int32_t ARX3A0_Start(void)
   \brief        Start ARX3A0 Camera Sensor Streaming.
-  \param[in]    none
   \return       \ref execution_status
   */
 static int32_t ARX3A0_Start(void)
@@ -1885,7 +1877,6 @@ static int32_t ARX3A0_Start(void)
 /**
   \fn           int32_t ARX3A0_Stop(void)
   \brief        Stop ARX3A0 Camera Sensor Streaming.
-  \param[in]    none
   \return       \ref execution_status
   */
 static int32_t ARX3A0_Stop(void)
@@ -1931,7 +1922,6 @@ static int32_t ARX3A0_Control(uint32_t control, uint32_t arg)
 /**
   \fn           int32_t ARX3A0_Uninit(void)
   \brief        Un-initialize ARX3A0 Camera Sensor.
-  \param[in]    none
   \return       \ref execution_status
   */
 static int32_t ARX3A0_Uninit(void)

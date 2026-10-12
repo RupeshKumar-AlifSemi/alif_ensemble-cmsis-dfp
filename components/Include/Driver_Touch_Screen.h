@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     Driver_Touch_Screen.h
  * @author   Prasanna Ravi
- * @email    prasanna.ravi@alifsemi.com
+ * Email:    prasanna.ravi@alifsemi.com
  * @version  V1.0.0
  * @date     5-January-23
  * @brief    Touch screen driver header.
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 
 #ifndef DRIVER_TOUCH_SCREEN_H_

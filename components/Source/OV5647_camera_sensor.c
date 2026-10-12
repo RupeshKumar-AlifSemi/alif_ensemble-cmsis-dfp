@@ -137,8 +137,7 @@ static const OV5647_REG ov5647_640x480_10bpp[] = {
 };
 
 /**
-  \fn           int32_t OV5647_Bulk_Write_Reg(const OV5647_REG OV5647_reg[],
-                                              uint32_t total_num, uint32_t reg_size))
+  \fn static int32_t OV5647_Bulk_Write_Reg(const OV5647_REG OV5647_reg[], uint32_t total_num, uint32_t reg_size)
   \brief        write array of registers value to OV5647 Camera Sensor registers.
   \param[in]    OV5647_reg : OV5647 Camera Sensor Register Array Structure
   \ref OV5647_REG
@@ -165,7 +164,6 @@ static int32_t OV5647_Bulk_Write_Reg(const OV5647_REG OV5647_reg[], uint32_t tot
 /**
   \fn           int32_t OV5647_Camera_Hard_Reseten(void)
   \brief        Hard Reset OV5647 Camera Sensor
-  \param[in]    none
   \return       \ref execution_status
   */
 static int32_t OV5647_Camera_Hard_Reseten(void)
@@ -202,7 +200,6 @@ static int32_t OV5647_Camera_Hard_Reseten(void)
 /**
   \fn           int32_t OV5647_Stream_On(void)
   \brief        Start streaming OV5647 Camera Sensor
-  \param[in]    none
   \return       \ref execution_status
   */
 static int32_t OV5647_Stream_On(void)
@@ -228,7 +225,6 @@ static int32_t OV5647_Stream_On(void)
 /**
   \fn           int32_t OV5647_Stream_Off(void)
   \brief        Stop streaming OV5647 Camera Sensor
-  \param[in]    none
   \return       \ref execution_status
   */
 static int32_t OV5647_Stream_Off(void)
@@ -316,7 +312,6 @@ static int32_t OV5647_Init(void)
 /**
   \fn           int32_t OV5647_Start(void)
   \brief        Start OV5647 Camera Sensor Streaming.
-  \param[in]    none
   \return       \ref execution_status
   */
 static int32_t OV5647_Start(void)
@@ -328,7 +323,6 @@ static int32_t OV5647_Start(void)
 /**
   \fn           int32_t OV5647_Stop(void)
   \brief        Stop OV5647 Camera Sensor Streaming.
-  \param[in]    none
   \return       \ref execution_status
   */
 static int32_t OV5647_Stop(void)
@@ -360,7 +354,6 @@ static int32_t OV5647_Control(uint32_t control, uint32_t arg)
 /**
   \fn           int32_t OV5647_Uninit(void)
   \brief        Un-initialize OV5647 Camera Sensor.
-  \param[in]    none
   \return       \ref execution_status
   */
 static int32_t OV5647_Uninit(void)

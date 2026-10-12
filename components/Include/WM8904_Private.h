@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     WM8904_Private.h
  * @author   Manoj A Murudi
- * @email    manoj.murudi@alifsemi.com
+ * Email:    manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     19-Nov-2024
  * @brief    header file for WM8904 driver file.
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 
 #ifndef WM8904_PRIVATE_H_
@@ -148,7 +147,6 @@ static int32_t WM8904_UpdateVolume(uint8_t volume);
 /**
   \fn        int32_t WM8904_Config(void)
   \brief     configure codec
-  \param[in] none
   \return    execution_status
 */
 static int32_t WM8904_Config(void);

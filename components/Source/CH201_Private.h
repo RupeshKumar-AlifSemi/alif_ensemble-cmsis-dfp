@@ -9,15 +9,14 @@
  */
 
 /*******************************************************************************
- * @file     : CH201_Private.h
+ * @file     CH201_Private.h
  * @author   : Shreehari H K
- * @email    : shreehari.hk@alifsemi.com
+ * Email:    : shreehari.hk@alifsemi.com
  * @version  : V1.0.0
  * @date     : 21-Nov-2025
  * @brief    : Alif's Board Support file header for CH201 Time of Flight sensor
  *
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 
 #ifndef CH201_PRIVATE_H_
@@ -89,28 +88,24 @@ typedef struct _CH201_DRV_INFO {
 
 /**
  * @brief       Setup board dependencies.
- * @param[in]   None
  * @return      Execution status
  */
 int chbsp_board_init(void);
 
 /**
  * @brief       De initialize board dependencies.
- * @param[in]   None
  * @return      Execution status
  */
 int chbsp_board_deinit(void);
 
 /**
  * @brief       Initialize the periodic timer.
- * @param       None
  * @return      Execution status
  */
 int chbsp_periodic_timer_init(void);
 
 /**
  * @brief       De-Initialize the periodic timer.
- * @param       None
  * @return      Execution status
  */
 int chbsp_periodic_timer_deinit(void);
@@ -126,7 +121,6 @@ int chbsp_periodic_timer_start(uint16_t interval_ms,
 
 /**
  * @brief       Stop the periodic timer.
- * @param       None
  * @return      Execution status
  */
 int chbsp_periodic_timer_stop(void);

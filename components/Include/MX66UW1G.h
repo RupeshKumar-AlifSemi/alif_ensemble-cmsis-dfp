@@ -11,7 +11,7 @@
 /******************************************************************************
  * @file     MX66UW1G.h
  * @author   Manoj A Murudi
- * @email    manoj.murudi@alifsemi.com
+ * Email:    manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     10-Dec-2025
  * @brief    Header file for MX66UW1G flash.

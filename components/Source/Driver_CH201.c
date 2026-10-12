@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     Driver_CH201.c
  * @author   Shreehari H K
- * @email    shreehari.hk@alifsemi.com
+ * Email:    shreehari.hk@alifsemi.com
  * @version  V1.0.0
  * @date     30-Nov-2025
  * @brief    Alif Driver for CH201 Chirp sensor.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #include "invn/soniclib/sensor_fw/ch201/ch201_gprmt.h"
@@ -62,7 +61,6 @@ extern CH201_DRV_INFO ch201_drv_info;
 
 /**
  * @brief       Periodic timer trigger.
- * @param[in]   None
  * @return      None
  */
 static void ARM_CH201_Periodic_Timer_Trigger(void)
@@ -329,7 +327,6 @@ static int32_t ARM_CH201_Control(uint32_t control, uint32_t arg)
 
 /**
  * @brief       Initializes CH201 Interface.
- * @param[in]   None
  * @return      \ref execution_status
  */
 static int32_t ARM_CH201_Initialize(void)
@@ -368,7 +365,6 @@ static int32_t ARM_CH201_Initialize(void)
 
 /**
  * @brief       Uninitializes CH201 Interface.
- * @param[in]   None
  * @return      \ref execution_status
  */
 static int32_t ARM_CH201_Uninitialize(void)

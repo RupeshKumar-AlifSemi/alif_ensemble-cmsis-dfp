@@ -11,7 +11,7 @@
 /******************************************************************************
  * @file     S80K_HyperRAM.c
  * @author   Manoj A Murudi
- * @email    manoj.murudi@alifsemi.com
+ * Email:    manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     22-May-2025
  * @brief    S80K Hyperram init library.
@@ -22,11 +22,7 @@
 #include "sys_utils.h"
 
 /**
-  \fn          int32_t s80k_hyperram_init(OSPI_Type *ospi, AES_Type *aes)
   \brief       S80K HyperRAM init function.
-  \param[in]   ospi    : Pointer to the OSPI register map.
-  \param[in]   aes     : Pointer to the AES register map.
-  \return      status
  */
 int32_t s80k_hyperram_init(OSPI_Type *ospi, AES_Type *aes)
 {

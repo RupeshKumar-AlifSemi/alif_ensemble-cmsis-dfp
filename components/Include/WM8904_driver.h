@@ -11,14 +11,13 @@
 /*******************************************************************************
  * @file     WM8904_driver.h
  * @author   Manoj A Murudi
- * @email    manoj.murudi@alifsemi.com
+ * Email:    manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     19-Nov-2024
  * @brief    The driver initializes the WM8904 codec for stereo audio mode with
  *           a 48KHz sample rate on the headphone outputs (HPOUTL and HPOUTR).
  *           It also provides options for mute, unmute, and volume control.
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 
 #ifndef WM8904_DRIVER_H_

@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     IS25WX256.c
  * @author   Khushboo Singh, Manoj A Murudi
- * @email    khushboo.singh@alifsemi.com, manoj.murudi@alifsemi.com
+ * Email:    khushboo.singh@alifsemi.com, manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     21-Oct-2022
  * @brief    ISSI FLASH Driver.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #include "Driver_Flash.h"

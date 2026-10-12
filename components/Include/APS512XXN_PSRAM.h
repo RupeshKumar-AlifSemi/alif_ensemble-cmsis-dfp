@@ -11,7 +11,7 @@
 /******************************************************************************
  * @file     APS512XXN_PSRAM.h
  * @author   Manoj A Murudi
- * @email    manoj.murudi@alifsemi.com
+ * Email:    manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     18-Nov-2025
  * @brief    Header file for APS512XXN PSRAM init library.

@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     WM8904_codec_i2c.h
  * @author   Manoj A Murudi
- * @email    manoj.murudi@alifsemi.com
+ * Email:    manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     19-Nov-2024
  * @brief    header file for i2c driver for WM8904 Codec Slave Device Communication.
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 
 #ifndef WM8904_CODEC_I2C_H_

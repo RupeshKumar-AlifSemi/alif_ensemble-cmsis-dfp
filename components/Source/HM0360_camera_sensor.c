@@ -10,7 +10,7 @@
 /*******************************************************************************
  * @file     HM0360_camera_sensor.c
  * @author   Prasanna Ravi
- * @email    prasanna.ravi@alifsemi.com
+ * Email:    prasanna.ravi@alifsemi.com
  * @version  V1.0.0
  * @date     05-April-2024
  * @brief    HM0360 camera sensor driver.
@@ -224,8 +224,7 @@ static const HM0360_REG hm0360_regs[] = {
 };
 
 /**
-  \fn           int32_t HM0360_Bulk_Write_Reg(const HM0360_REG HM0360_reg[],
-                                              uint32_t total_num, uint32_t reg_size))
+  \fn static int32_t HM0360_Bulk_Write_Reg(const HM0360_REG HM0360_reg[], uint32_t total_num, uint32_t reg_size)
   \brief        write array of registers value to HM0360 Camera Sensor registers.
   \param[in]    HM0360_reg : HM0360 Camera Sensor Register Array Structure
   \ref HM0360_REG
@@ -252,7 +251,6 @@ static int32_t HM0360_Bulk_Write_Reg(const HM0360_REG HM0360_reg[], uint32_t tot
 /**
  * \fn           int32_t HM0360_Check_Power_State(void)
  * \brief        Check current power state of HM0360 Camera Sensor
- * \param[in]    none
  * \return       \ref execution_status
  */
 static int32_t HM0360_Check_Power_State(void)
@@ -283,7 +281,6 @@ static int32_t HM0360_Check_Power_State(void)
 /**
  * \fn           int32_t HM0360_Suspend(void)
  * \brief        Put HM0360 Camera Sensor to Sleep state.
- * \param[in]    none
  * \return       \ref execution_status
  */
 static int32_t HM0360_Suspend(void)
@@ -295,7 +292,6 @@ static int32_t HM0360_Suspend(void)
 /**
  * \fn           int32_t HM0360_Resume(void)
  * \brief        Resume HM0360 Camera Sensor from Sleep state.
- * \param[in]    none
  * \return       \ref execution_status
  */
 static int32_t HM0360_Resume(void)
@@ -348,7 +344,6 @@ static int32_t HM0360_Resume(void)
 /**
  * \fn           int32_t HM0360_Camera_Hard_Reseten(void)
  * \brief        Hard Reset HM0360 Camera Sensor
- * \param[in]    none
  * \return       \ref execution_status
  */
 static int32_t HM0360_Camera_Hard_Reseten(void)
@@ -529,7 +524,6 @@ static int32_t HM0360_Init(void)
 /**
   \fn           int32_t HM0360_Start(void)
   \brief        Start HM0360 Camera Sensor Streaming.
-  \param[in]    none
   \return       \ref execution_status
   */
 static int32_t HM0360_Start(void)
@@ -539,7 +533,7 @@ static int32_t HM0360_Start(void)
 }
 
 /**
-  \fn           int32_t HM0360_SnapShot(uint8_t)
+  \fn static int32_t HM0360_Snapshot(uint8_t num_frames)
   \brief        Start HM0360 Camera Sensor Streaming in Snapshot mode.
   \param[in]    num_frames  : Number of frames to capture
   \return       \ref execution_status
@@ -558,7 +552,6 @@ static int32_t HM0360_Snapshot(uint8_t num_frames)
 /**
   \fn           int32_t HM0360_Stop(void)
   \brief        Stop HM0360 Camera Sensor Streaming.
-  \param[in]    none
   \return       \ref execution_status
   */
 static int32_t HM0360_Stop(void)
@@ -584,7 +577,6 @@ static int32_t HM0360_Control(uint32_t control, uint32_t arg)
 /**
   \fn           int32_t HM0360_Uninit(void)
   \brief        Un-initialize HM0360 Camera Sensor.
-  \param[in]    none
   \return       \ref execution_status
   */
 static int32_t HM0360_Uninit(void)

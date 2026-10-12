@@ -11,7 +11,7 @@
 /******************************************************************************
  * @file     APS512XXN_PSRAM.c
  * @author   Manoj A Murudi
- * @email    manoj.murudi@alifsemi.com
+ * Email:    manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     18-Nov-2025
  * @brief    APS512XXN PSRAM init library.
@@ -110,11 +110,7 @@ static void aps512xxn_write_reg(OSPI_Type *ospi, uint32_t reg_addr,
 
 
 /**
- * @fn      int32_t aps512xxn_psram_init(OSPI_Type *ospi, AES_Type *aes)
  * @brief   APS512XXN PSRAM init function.
- * @param   ospi    : Pointer to the OSPI register map.
- * @param   aes     : Pointer to the AES register map.
- * @retval  status
  */
 int32_t aps512xxn_psram_init(OSPI_Type *ospi, AES_Type *aes)
 {

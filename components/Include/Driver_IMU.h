@@ -10,12 +10,11 @@
 /******************************************************************************
  * @file     Driver_IMU.h
  * @author   Shreehari H K
- * @email    shreehari.hk@alifsemi.com
+ * Email:    shreehari.hk@alifsemi.com
  * @version  V1.0.0
  * @date     02-July-2024
  * @brief    Driver for Inertial Measurement System
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 
 #ifndef DRIVER_IMU_H_

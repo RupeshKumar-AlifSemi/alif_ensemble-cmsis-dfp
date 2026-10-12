@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     WM8904_codec_i2c.c
  * @author   Manoj A Murudi
- * @email    manoj.murudi@alifsemi.com
+ * Email:    manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     19-Nov-2024
  * @brief    i2c driver for WM8904 Codec Slave Device Communication.
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 
 /* System Includes */
@@ -72,11 +71,8 @@ static void codec_i2c_callback(uint32_t event)
 }
 
 /**
-  \fn           int32_t WM8904_codec_i2c_init(WM8904_CODEC_SLAVE_I2C_CONFIG *i2c)
   \brief        initialize i2c driver connected to WM8904 Codec device.
-  \param[in]    i2c  : Pointer to i2c configurations structure
                         \ref WM8904_CODEC_SLAVE_I2C_CONFIG
-  \return       \ref execution_status
 */
 int32_t WM8904_codec_i2c_init(WM8904_CODEC_SLAVE_I2C_CONFIG *i2c)
 {
@@ -121,11 +117,8 @@ error_uninitialize:
 }
 
 /**
-  \fn           int32_t WM8904_codec_i2c_uninit(WM8904_CODEC_SLAVE_I2C_CONFIG *i2c)
   \brief        un-initialize i2c driver connected to WM8904 Codec device.
-  \param[in]    i2c  : Pointer to i2c configurations structure
                         \ref WM8904_CODEC_SLAVE_I2C_CONFIG
-  \return       \ref execution_status
 */
 int32_t WM8904_codec_i2c_uninit(WM8904_CODEC_SLAVE_I2C_CONFIG *i2c)
 {
@@ -148,15 +141,10 @@ int32_t WM8904_codec_i2c_uninit(WM8904_CODEC_SLAVE_I2C_CONFIG *i2c)
 }
 
 /**
-  \fn           int32_t WM8904_sensor_i2c_write(WM8904_CODEC_SLAVE_I2C_CONFIG *i2c,
                                                 uint8_t                        reg_addr,
                                                 uint16_t                       reg_value)
   \brief        write value to WM8904 codec slave device register using i2c.
-  \param[in]    i2c        : Pointer to i2c configurations structure
                               \ref WM8904_CODEC_SLAVE_I2C_CONFIG
-  \param[in]    reg_addr   : register address of codec Sensor slave device
-  \param[in]    reg_value  : register value
-  \return       \ref execution_status
 */
 int32_t WM8904_codec_i2c_write(WM8904_CODEC_SLAVE_I2C_CONFIG *i2c, uint8_t reg_addr,
                                uint16_t reg_value)
@@ -242,15 +230,10 @@ error_poweroff:
 }
 
 /**
-  \fn           int32_t WM8904_codec_i2c_read(WM8904_CODEC_SLAVE_I2C_CONFIG *i2c,
                                               uint8_t                       reg_addr,
                                               uint16_t                      *reg_value)
   \brief        read value from WM8904 Codec slave device register using i2c.
-  \param[in]    i2c        : Pointer to WM8904 Codec device i2c configurations structure
                               \ref WM8904_CODEC_SLAVE_I2C_CONFIG
-  \param[in]    reg_addr   : register address of WM8904 codec slave device
-  \param[in]    reg_value  : pointer to register value
-  \return       \ref execution_status
 */
 int32_t WM8904_codec_i2c_read(WM8904_CODEC_SLAVE_I2C_CONFIG *i2c, uint8_t reg_addr,
                               uint16_t *reg_value)

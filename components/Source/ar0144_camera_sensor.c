@@ -173,8 +173,7 @@ static CAMERA_SENSOR_SLAVE_I2C_CONFIG ar0144_camera_sensor_i2c_cnfg = {
 };
 
 /**
-  \fn           int32_t AR0144_Bulk_Write_Reg(const AR0144_REG ar0144_reg[],
-                                              uint32_t total_num, uint32_t reg_size))
+  \fn static int32_t AR0144_Bulk_Write_Reg(const AR0144_REG ar0144_reg[], uint32_t total_num, uint32_t reg_size)
   \brief        write array of registers value to AR0144 Camera Sensor registers.
   \param[in]    ar0144_reg : AR0144 Camera Sensor Register Array Structure
   \ref AR0144_REG
@@ -204,7 +203,6 @@ static int32_t AR0144_Bulk_Write_Reg(const AR0144_REG ar0144_reg[], uint32_t tot
 /**
   \fn           void AR0144_Sensor_Enable_Clk_Src(void)
   \brief        Enable AR0144 Camera Sensor external clock source configuration.
-  \param[in]    none
   \return       none
   */
 static void AR0144_Sensor_Enable_Clk_Src(void)
@@ -215,7 +213,6 @@ static void AR0144_Sensor_Enable_Clk_Src(void)
 /**
   \fn           void AR0144_Sensor_Disable_Clk_Src(void)
   \brief        Disable AR0144 Camera Sensor external clock source configuration.
-  \param[in]    none
   \return       none
   */
 static void AR0144_Sensor_Disable_Clk_Src(void)
@@ -226,7 +223,6 @@ static void AR0144_Sensor_Disable_Clk_Src(void)
 /**
   \fn           int32_t AR0144_Camera_Hard_Reseten(void)
   \brief        Hard Reset AR0144 Camera Sensor
-  \param[in]    none
   \return       \ref execution_status
   */
 static int32_t AR0144_Camera_Hard_Reseten(void)
@@ -295,7 +291,6 @@ static int32_t AR0144_Camera_Hard_Reseten(void)
 /**
   \fn           int32_t AR0144_Camera_Soft_Reseten(void)
   \brief        Software Reset AR0144 Camera Sensor
-  \param[in]    none
   \return       \ref execution_status
   */
 static int32_t AR0144_Camera_Soft_Reseten(void)
@@ -316,7 +311,7 @@ static int32_t AR0144_Camera_Soft_Reseten(void)
 }
 
 /**
-  \fn           int32_t AR0144_Camera_Cfg(ARM_CAMERA_RESOLUTION cam_resolution)
+  \fn static int32_t AR0144_Camera_Cfg(void)
   \brief        Initialize AR0144 Camera Sensor.
   \return       \ref execution_status
   */
@@ -577,7 +572,6 @@ int32_t AR0144_Init(void)
 /**
   \fn           int32_t AR0144_Start(void)
   \brief        Start AR0144 Camera Sensor Streaming.
-  \param[in]    none
   \return       \ref execution_status
   */
 int32_t AR0144_Start(void)
@@ -602,7 +596,6 @@ int32_t AR0144_Start(void)
 /**
   \fn           int32_t AR0144_Stop(void)
   \brief        Stop AR0144 Camera Sensor Streaming.
-  \param[in]    none
   \return       \ref execution_status
   */
 int32_t AR0144_Stop(void)
@@ -709,7 +702,6 @@ int32_t AR0144_Control(uint32_t control, uint32_t arg)
 /**
   \fn           int32_t AR0144_Uninit(void)
   \brief        Un-initialize AR0144 Camera Sensor.
-  \param[in]    none
   \return       \ref execution_status
   */
 int32_t AR0144_Uninit(void)
