@@ -8,14 +8,13 @@
  */
 
 /******************************************************************************
- * @file     : demo_bmi323.c
+ * @file     demo_bmi323.c
  * @author   : Shreehari H K
- * @email    : shreehari.hk@alifsemi.com
+ * Email:    : shreehari.hk@alifsemi.com
  * @version  : V1.0.0
  * @date     : 28-Oct-2024
  * @brief    : Baremetal app to verify BMI323 IMU sensor
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 
 /* System Includes */
@@ -45,7 +44,6 @@ static ARM_DRIVER_IMU *Drv_IMU = &BMI323;
   \brief       i3c hardware pin initialization:
                 - PIN-MUX configuration
                 - PIN-PAD configuration
-  \param[in]   none
   \return      0:success; -1:failure
 */
 static int32_t hardware_init(void)

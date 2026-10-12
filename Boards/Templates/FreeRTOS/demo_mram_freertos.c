@@ -9,16 +9,15 @@
  */
 
 /******************************************************************************
- * @file     : demo_mram_freertos.c
+ * @file     demo_mram_freertos.c
  * @author   : Tanay Rami
- * @email    : tanay@alifsemi.com
+ * Email:    : tanay@alifsemi.com
  * @version  : V1.0.0
  * @date     : 18-August-2023
  * @brief    : TestApp to verify MRAM(On-chip NVM (Non-Volatile Memory)) interface
  *             using FreeRTOS as a operating system.
  *             Verify Read/Write to/from MRAM.
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 
 /* System Includes */
@@ -109,14 +108,14 @@ uint8_t buff_TX[BUFFER_SIZE] = {0x00};
 uint8_t buff_RX[BUFFER_SIZE] = {0x00};
 
 /**
- * @function    void MRAM_thread_entry(void *pvParameters)
+ * @fn void MRAM_Thread_entry(void *pvParameters)
  * @brief       TestApp to verify MRAM(On-Chip NVM) interface
  *              using FreeRtos as an operating system.
  *                 - Verify Read/Write to/from MRAM.
  *                 - write 1MB data to MRAM
  *                 - read back and compare wrote data
  * @note        none
- * @param       none
+ * @param pvParameters
  * @retval      none
  */
 void MRAM_Thread_entry(void *pvParameters)

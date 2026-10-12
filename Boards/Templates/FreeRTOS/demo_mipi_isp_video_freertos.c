@@ -10,13 +10,12 @@
 /**************************************************************************//**
  * @file     demo_mipi_isp_video_freertos.c
  * @author   Shivakumar Malke
- * @email    shivakumar.malke@alifsemi.com
+ * Email:    shivakumar.malke@alifsemi.com
  * @version  V1.0.0
  * @date     2026-07-22
  * @brief    ISP video streaming demo for ILI9806E LCD panel using FreeRTOS.
  *           Supports OV5675 / ARX3A0 / MT9M114 camera sensors.
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 
 /* System Includes */

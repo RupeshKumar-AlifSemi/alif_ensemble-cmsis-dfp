@@ -7,9 +7,9 @@
  * contact@alifsemi.com, or visit: https://alifsemi.com/license
  */
 /*******************************************************************************
- * @file     : demo_adc_potentiometer.c
+ * @file     demo_adc_potentiometer.c
  * @author   : Prabhakar kumar
- * @email    : prabhakar.kumar@alifsemi.com
+ * Email:    : prabhakar.kumar@alifsemi.com
  * @version  : V1.0.0
  * @date     : 15-SEPT-2023
  * @brief    : Baremetal demo application code for potentiometer input
@@ -57,7 +57,7 @@ uint32_t adc_sample[NUM_CHANNELS];
 volatile uint32_t num_samples = 0;
 
 /*
- * @func   : void adc_conversion_callback(uint32_t event, uint8_t channel, uint32_t sample_output)
+ * @fn   : void adc_conversion_callback(uint32_t event, uint8_t channel, uint32_t sample_output)
  * @brief  : adc conversion isr callback
  * @return : NONE
  */
@@ -72,7 +72,7 @@ static void adc_conversion_callback(uint32_t event, uint8_t channel, uint32_t sa
 }
 
 /**
- *    @func   : void adc_potentiometer_demo()
+ *    @fn   : void adc_potentiometer_demo()
  *    @brief  : ADC Potentiometer demo
  *             - test to verify the potentiometer analog input
  *             - Internal input of potentiometer in analog signal corresponding

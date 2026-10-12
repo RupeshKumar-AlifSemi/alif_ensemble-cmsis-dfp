@@ -9,9 +9,9 @@
  */
 
 /*******************************************************************************
- * @file     : demo_crc.c
+ * @file     demo_crc.c
  * @author   : Nisarga A M
- * @email    : nisarga.am@alifsemi.com
+ * Email:    : nisarga.am@alifsemi.com
  * @version  : V1.0.0
  * @date     : 7-July-2023
  * @brief    : Baremetal demo application code for CRC driver
@@ -84,7 +84,7 @@ static uint32_t polynomial         = 0x2CEEA6C8; /* polynomial value for 32 bit 
 #endif
 
 /*
- * @func   : void crc_compute_callback(uint32_t event)
+ * @fn   : void crc_compute_callback(uint32_t event)
  * @brief  : CRC compute callback event
  *.@return : NONE
  */

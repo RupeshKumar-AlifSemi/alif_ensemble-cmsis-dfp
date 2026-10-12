@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     retarget_config.h
  * @author   Raj Ranjan
- * @email    raj.ranjan@alifsemi.com
+ * Email:    raj.ranjan@alifsemi.com
  * @version  V1.0.0
  * @date     16-Aug-2023
  * @brief    Disable Semihosting
  * @bug      None.
- * @Note     None
  ******************************************************************************/
 
 #ifndef RETARGET_STD_IN_OUT_CONFIG_H__

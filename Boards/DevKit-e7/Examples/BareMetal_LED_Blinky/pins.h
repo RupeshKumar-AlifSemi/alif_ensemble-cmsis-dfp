@@ -5,8 +5,6 @@
  * @version  v1.0.0
  * @date     16-10-2023
  * @brief   	Pin MUX and Pin Config settings for "" project with AE722F80F55D5AS
- * @bug      None.
- * @note     None.
  ******************************************************************************/
 /*
  *   Copyright (C) 2023 Alif Semiconductor - All Rights Reserved.

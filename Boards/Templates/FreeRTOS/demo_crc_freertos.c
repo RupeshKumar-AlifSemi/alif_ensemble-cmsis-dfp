@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     demo_crc_freertos.c
  * @author   Nisarga A M
- * @email    nisarga.am@alifsemi.com
+ * Email:    nisarga.am@alifsemi.com
  * @version  V1.0.0
  * @date     18-July-2023
  * @brief    TestApp to verify CRC(Cyclic Redundancy Check) interface using
@@ -122,7 +122,7 @@ uint32_t seed_value_32C_bit = (0xFFFFFFFF); /* Seed value for 32 bit custom poly
 uint32_t polynomial         = 0x2CEEA6C8; /* polynomial value for 32 bit custom polynomial */
 
 /*
- * @func   : void crc_compute_callback(uint32_t event)
+ * @fn   : void crc_compute_callback(uint32_t event)
  * @brief  : CRC compute callback event
  *.@return : NONE
  */

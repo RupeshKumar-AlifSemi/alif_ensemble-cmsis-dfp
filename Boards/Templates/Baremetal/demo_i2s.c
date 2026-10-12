@@ -9,9 +9,9 @@
  */
 
 /*******************************************************************************
- * @file     : demo_i2s.c
+ * @file     demo_i2s.c
  * @author   : Manoj A Murudi
- * @email    : manoj.murudi@alifsemi.com
+ * Email:    : manoj.murudi@alifsemi.com
  * @version  : V1.0.0
  * @date     : 3-May-2023
  * @brief    : Test Application for I2S for E7 Devkit
@@ -21,8 +21,7 @@
  *              Test Application for I2S for E1C Devkit using WM8904 codec
  *                I2S0 is configured as master transmitter (DAC).
  *                LPI2S(ADC) is configured as master receiver SPH0645LM4H-1 device 24bit
- * @bug      : None.
- * @Note     : None
+ * @note     : None
  ******************************************************************************/
 
 /*System Includes */
@@ -188,7 +187,6 @@ static int32_t board_wm8904_i2c_pins_config(void)
 /**
   \fn          void DAC_Init(void)
   \brief       DAC routine for master transmission
-  \param[in]   None
 */
 void DAC_Init(void)
 {
@@ -460,7 +458,6 @@ static int32_t board_i2s_adc_pins_config(void)
 /**
   \fn          int32_t ADC_Init(void)
   \brief       ADC routine to initialize ADC
-  \param[in]   None
   \return      status
 */
 int32_t ADC_Init(void)
@@ -522,7 +519,6 @@ int32_t ADC_Init(void)
 /**
   \fn          int32_t Receiver(void)
   \brief       Function performing reception from mic
-  \param[in]   None
   \return      status
 */
 int32_t Receiver(void)

@@ -9,9 +9,9 @@
  */
 
 /*******************************************************************************
- * @file     : demo_uart4_freertos.c
+ * @file     demo_uart4_freertos.c
  * @author   : Sudarshan Iyengar
- * @email    : sudarshan.iyengar@alifsemi.com
+ * Email:    : sudarshan.iyengar@alifsemi.com
  * @version  : V1.0.0
  * @date     : 27-May-2023
  * @brief    : TestApp to verify UART interface using FreeRTOS as an operating system.
@@ -19,8 +19,7 @@
  *               UART waits for a char on serial terminal;
  *                 if 'Enter' key is received; UART Sends back "Hello World!".
  *                 else, it sends back received character.
- * @bug      : None.
- * @Note     : Updated for B0 PinMux.
+ * @note     : Updated for B0 PinMux.
  ******************************************************************************/
 
 /* Includes ----------------------------------------------------------------- */
@@ -123,7 +122,7 @@ void vApplicationIdleHook(void)
 /*****************Only for FreeRTOS use *************************/
 
 /**
- * @function   void UART_callback(uint32_t event)
+ * @fn void myUART_callback(uint32_t event)
  * @brief      UART isr callabck
  * @note       none
  * @param      event: USART Event

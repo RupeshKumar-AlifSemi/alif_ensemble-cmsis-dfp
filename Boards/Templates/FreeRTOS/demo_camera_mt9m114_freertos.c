@@ -9,15 +9,14 @@
  */
 
 /*******************************************************************************
- * @file     : demo_camera_mt9m114_freertos.c
+ * @file     demo_camera_mt9m114_freertos.c
  * @author   : Chandra Bhushan Singh
- * @email    : chandrabhushan.singh@alifsemi.com
+ * Email:    : chandrabhushan.singh@alifsemi.com
  * @version  : V1.0.0
  * @date     : 07-Sept-2023
  * @brief    : TestApp to verify MT9M114 Camera Sensor with
  *             FREERTOS as an Operating System.
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 
 /* System Includes */
@@ -110,7 +109,7 @@ void vApplicationIdleHook(void)
 
 /*****************Only for FreeRTOS use *************************/
 
-/* @Note: MT9M114 Camera Sensor configurations
+/* @note: MT9M114 Camera Sensor configurations
  *        are directly borrowed from MT9M114 Camera Sensor drivers,
  *        for detail refer MT9M114 driver.
  *
@@ -248,7 +247,6 @@ void camera_callback(uint32_t event)
   \brief       i2c hardware pin initialization:
                  - PIN-MUX configuration
                  - PIN-PAD configuration
-  \param[in]   none
   \return      0:success; -1:failure
 */
 int32_t i2c_pinmux(void)
@@ -508,7 +506,6 @@ static int32_t board_camera_pins_config(void)
                  - PIN-PAD configuration
                - Camera hardware pin initialization:
                  - PIN-MUX configuration
-  \param[in]   none
   \return      0:success; -1:failure
 */
 int32_t hardware_init(void)
@@ -535,20 +532,11 @@ int32_t hardware_init(void)
 
 /**
   \fn          void camera_demo_thread_entry(void *pvParameters)
-  \brief       TestApp to verify MT9M114 Camera Sensor with
-                FREERTOS as an Operating System.
-
-               This demo thread does:
-                 - initialize i2c and Camera hardware pins
-                    using PinMux Driver;
-                 - initialize Camera driver
-                 - capture one frame
-                   - captured data will be stored in to allocated
-                     frame buffer address
-                 - stop Camera capture
-                 - dump captured RAW Bayer image data from memory address
-                    using any debugger
-  @param       pvParameters.
+  \brief       Test application for the MT9M114 camera sensor under FreeRTOS.
+               Initializes the I2C and camera pins, initializes the camera
+               driver, captures one frame into the allocated frame buffer,
+               stops capture, and leaves the RAW Bayer image in memory.
+  \param       pvParameters Unused thread argument.
   \return      none
 */
 void camera_demo_thread_entry(void *pvParameters)

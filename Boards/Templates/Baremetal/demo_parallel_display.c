@@ -9,14 +9,13 @@
  */
 
 /*******************************************************************************
- * @file     : demo_parallel_display.c
+ * @file     demo_parallel_display.c
  * @author   : Chandra Bhushan Singh
- * @email    : chandrabhushan.singh@alifsemi.com
+ * Email:    : chandrabhushan.singh@alifsemi.com
  * @version  : V1.0.0
  * @date     : 19-June-2023
  * @brief    : Baremetal demo application code for parallel display
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 
 /* System Includes */
@@ -78,7 +77,7 @@ extern ARM_DRIVER_CDC200  Driver_CDC200;
 static ARM_DRIVER_CDC200 *CDCdrv = &Driver_CDC200;
 
 /**
- *    @func    : void display_callback()
+ *    @fn static void display_callback(uint32_t event)
  *    @brief   : Parallel display demo callback
  *                 - normally is not called
  *    @return  : NONE
@@ -388,7 +387,7 @@ int board_cdc200_pins_config(void)
 #endif
 
 /**
- *    @func         : void Paralle_Display_Demo()
+ *    @fn static void Parallel_Display_Demo()
  *    @brief        : Parallel display demo
  *                  - initialize the CDC200 controller
  *                  - initialize the LCD panel

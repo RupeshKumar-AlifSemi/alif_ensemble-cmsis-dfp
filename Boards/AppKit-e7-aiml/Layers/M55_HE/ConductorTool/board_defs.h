@@ -14,7 +14,6 @@
  * @date     2024-10-29
  * @brief    Board info/settings for "AI/ML AppKit D1 (AK-E7-AIML)" project
  *           with AE722F80F55D5LS
- * @bug      None.
  * @note     To modify this file manually, take care to modify pins.h and gpios.h
  *           accordingly when required.
  ******************************************************************************/

@@ -8,14 +8,13 @@
  */
 
 /******************************************************************************
- * @file     : demo_icm42670p.c
+ * @file     demo_icm42670p.c
  * @author   : Shreehari H K
- * @email    : shreehari.hk@alifsemi.com
+ * Email:    : shreehari.hk@alifsemi.com
  * @version  : V1.0.0
  * @date     : 03-July-2024
  * @brief    : Baremetal app to verify ICM42670P IMU sensor
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 
 /* System Includes */
@@ -46,7 +45,6 @@ static ARM_DRIVER_IMU *Drv_IMU = &ICM42670P;
   \brief       i3c hardware pin initialization:
                 - PIN-MUX configuration
                 - PIN-PAD configuration
-  \param[in]   none
   \return      0:success; -1:failure
 */
 static int32_t hardware_init(void)

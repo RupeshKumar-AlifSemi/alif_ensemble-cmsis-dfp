@@ -14,8 +14,6 @@
  * @date     2024-10-29
  * @brief   	Pseudo-static GPIO pin settings for "AI/ML AppKit D1 (AK-E7-AIML)"
  *           project with AE722F80F55D5LS.
- * @bug      None.
- * @note     None.
  ******************************************************************************/
 
 #ifndef __GPIOS_H__

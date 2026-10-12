@@ -9,9 +9,9 @@
  */
 
 /******************************************************************************
- * @file     : demo_hyperram_e7.c
+ * @file     demo_hyperram_e7.c
  * @author   : Silesh C V
- * @email    : silesh@alifsemi.com
+ * Email:    : silesh@alifsemi.com
  * @version  : V1.0.0
  * @date     : 20-Jul-2023
  * @brief    : Demo program for the OSPI hyperram XIP library API.

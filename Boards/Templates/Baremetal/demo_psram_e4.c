@@ -9,9 +9,9 @@
  */
 
 /***************************************************************************************
- * @file     : demo_psram_e4.c
+ * @file     demo_psram_e4.c
  * @author   : Manoj A Murudi
- * @email    : manoj.murudi@alifsemi.com
+ * Email:    : manoj.murudi@alifsemi.com
  * @version  : V1.0.0
  * @date     : 18-Nov-2025
  * @brief    : Demo program for the PSRAM device using XIP write/read.

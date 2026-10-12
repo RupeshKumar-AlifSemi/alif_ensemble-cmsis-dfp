@@ -9,15 +9,14 @@
  */
 
 /*******************************************************************************
- * @file     : demo_spi_loopback_freertos.c
+ * @file     demo_spi_loopback_freertos.c
  * @author   : Manoj A Murudi
- * @email    : manoj.murudi@alifsemi.com
+ * Email:    : manoj.murudi@alifsemi.com
  * @version  : V1.0.0
  * @date     : 29-May-2023
  * @brief    : FreeRTOS demo application for SPI0 and SPI1.
  *             - Data transfer between SPI0(master) and SPI1(slave).
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 /* System Includes */
 #include <stdio.h>

@@ -9,17 +9,16 @@
  */
 
 /******************************************************************************
- * @file     : demo_hwsem_freertos.c
+ * @file     demo_hwsem_freertos.c
  * @author   : Khushboo Singh
- * @email    : khushboo.singh@alifsemi.com
+ * Email:    : khushboo.singh@alifsemi.com
  * @version  : V1.0.0
  * @date     : 27-June-2022
  * @brief    : TestApp to verify HWSEM interface with FreeRTOS.
  *             It locks the HWSEM, sends the message through UART and then unlocks.
  *               This application will run on two cores
  *               to demonstrate the working of the Hardware Semaphore.
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 
 #include <stdio.h>
@@ -124,7 +123,7 @@ void vApplicationIdleHook(void)
 #define UART_CB_RX_TIMEOUT 1U << 2
 
 /**
- * @function    void myUART_callback(uint32_t event)
+ * @fn    void myUART_callback(uint32_t event)
  * @brief       UART isr callabck
  * @note        none
  * @param       event: USART Event
@@ -139,7 +138,7 @@ static void myUART_callback(uint32_t event)
 #endif
 
 /**
- * @function   void HWSEM_callback(int32_t event, uint8_t sem_id)
+ * @fn static void myHWSEM_callback(int32_t event, uint8_t sem_id)
  * @brief      HWSEM isr callabck
  * @note       none
  * @param      event: HWSEM Event
@@ -155,12 +154,12 @@ static void myHWSEM_callback(int32_t event, uint8_t sem_id)
 }
 
 /**
- * @function    static void Hwsem_Thread(void *pvParameters)
+ * @fn    static void Hwsem_Thread(void *pvParameters)
  * @brief       TestApp to verify HWSEM interface
  *              Get the lock, send message through UART
  *              and then unlock
  * @note        none
- * @param       none
+ * @param pvParameters
  * @retval      none
  */
 static void Hwsem_Thread(void *pvParameters)

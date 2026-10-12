@@ -9,15 +9,14 @@
  */
 
 /*******************************************************************************
- * @file     : demo_camera_arx3a0_freertos.c
+ * @file     demo_camera_arx3a0_freertos.c
  * @author   : Chandra Bhushan Singh
- * @email    : chandrabhushan.singh@alifsemi.com
+ * Email:    : chandrabhushan.singh@alifsemi.com
  * @version  : V1.0.0
  * @date     : 07-Sept-2023
  * @brief    : TestApp to verify ARX3A0 Camera Sensor with
  *             FREERTOS as an Operating System.
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 
 //* System Includes */
@@ -257,7 +256,6 @@ void camera_callback(uint32_t event)
   \brief       i2c hardware pin initialization:
                   - PIN-MUX configuration
                   - PIN-PAD configuration
-  \param[in]   none
   \return      0:success; -1:failure
   */
 int32_t i2c_pinmux(void)
@@ -299,7 +297,6 @@ int32_t i2c_pinmux(void)
   \fn          int32_t camera_pinmux(void)
   \brief       Camera hardware pin initialization:
                    - PIN-MUX configuration
-  \param[in]   none
   \return      0:success; -1:failure
   */
 int32_t camera_pinmux(void)
@@ -322,12 +319,8 @@ int32_t camera_pinmux(void)
 #if (!USE_CONDUCTOR_TOOL_PINS_CONFIG)
 /**
   \fn          int32_t hardware_init(void)
-  \brief       - i2c hardware pin initialization:
-                   - PIN-MUX configuration
-                   - PIN-PAD configuration
-               - Camera hardware pin initialization:
-                   - PIN-MUX configuration
-  \param[in]   none
+  \brief       Initialize I2C pin mux and pad configuration, then initialize
+               the camera pin mux.
   \return      0:success; -1:failure
   */
 int32_t hardware_init(void)
@@ -356,21 +349,11 @@ int32_t hardware_init(void)
 
 /**
   \fn          void camera_demo_thread_entry(void *pvParameters)
-  \brief       TestApp to verify ARX3A0 Camera Sensor with
-               FREERTOS as an Operating System.
-               This demo thread does:
-                    - initialize i3c and Camera hardware pins
-                      using PinMux Driver;
-                    - initialize DPHY Tx.
-                    - initialize Camera driver
-                    - capture one frame
-                    - captured data will be stored in to allocated
-                      frame buffer address
-                    - stop Camera capture
-                    - dump captured  image data from memory address
-                      using any debugger
-                    - display image
-  @param       pvParameters.
+  \brief       Test application for the ARX3A0 camera sensor under FreeRTOS.
+               Initializes the I3C and camera pins, the DPHY transmitter, and
+               the camera driver, captures one frame into the allocated frame
+               buffer, stops capture, and displays the image.
+  \param       pvParameters Unused thread argument.
   \return      none
   */
 void camera_demo_thread_entry(void *pvParameters)

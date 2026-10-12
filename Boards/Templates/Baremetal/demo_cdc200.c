@@ -9,9 +9,9 @@
  */
 
 /*******************************************************************************
- * @file     : demo_cdc200.c
+ * @file     demo_cdc200.c
  * @author   : Ahmad Rashed
- * @email    : ahmad.rashed@alifsemi.com
+ * Email:    : ahmad.rashed@alifsemi.com
  * @version  : V1.0.0
  * @date     : 22-Nov-2022
  * @brief    : Baremetal demo application code for CDC200 driver
@@ -21,8 +21,7 @@
  *              - Must use either Focus LCDs E50RA-I-MW550-N or E43GB-I-MW405-C
  *              - GPIO port P4_4 is used to enable/disable boost converter for LED backlight
  *              - GPIO port P4_6 is used to drive LCD panel reset
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 
 /* System Includes */
@@ -67,7 +66,7 @@ extern ARM_DRIVER_CDC200  Driver_CDC200;
 static ARM_DRIVER_CDC200 *CDCdrv = &Driver_CDC200;
 
 /**
- *    @func         : void display_callback()
+ *    @fn static void display_callback(uint32_t event)
  *    @brief        : CDC demo callback
  *                  - normally is not called
  *    @return       : NONE
@@ -81,7 +80,7 @@ static void display_callback(uint32_t event)
 }
 
 /**
- *    @func         : void CDC_demo()
+ *    @fn         : void CDC_demo()
  *    @brief        : CDC demo
  *                  - initialize the CDC200 controller
  *                  - write various colors to the memory address.

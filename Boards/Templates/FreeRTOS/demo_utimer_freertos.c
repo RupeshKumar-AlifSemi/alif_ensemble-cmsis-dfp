@@ -9,9 +9,9 @@
  */
 
 /*******************************************************************************
- * @file     : demo_utimer_freertos.c
+ * @file     demo_utimer_freertos.c
  * @author   : Sudarshan Iyengar, Manoj A Murudi
- * @email    : sudarshan.iyengar@alifsemi.com, manoj.murudi@alifsemi.com
+ * Email:    : sudarshan.iyengar@alifsemi.com, manoj.murudi@alifsemi.com
  * @version  : V1.0.0
  * @date     : 17-July-2023
  * @brief    : FreeRTOS demo application for UTIMER.
@@ -20,8 +20,7 @@
  *             - Configuring the UTIMER Channel 3 for counter start triggering mode.
  *             - Configuring the UTIMER Channel 4 for driver A, double buffering capture mode.
  *             - Configuring the UTIMER Channel 5 for driver A, double buffering compare mode.
- * @bug      : None.
- * @Note     : None
+ * @note     : None
  ******************************************************************************/
 
 /* System Includes */
@@ -145,7 +144,7 @@ void vApplicationIdleHook(void)
 /*****************Only for FreeRTOS use *************************/
 
 /**
- * @function    int gpio_init(ARM_UTIMER_MODE mode)
+ * @fn    int gpio_init(ARM_UTIMER_MODE mode)
  * @brief       GPIO initialization using gpio driver
  * @note        none
  * @param       mode
@@ -272,10 +271,9 @@ static int32_t gpio_init(ARM_UTIMER_MODE mode)
 
 #if (!USE_CONDUCTOR_TOOL_PINS_CONFIG)
 /**
- * @function    int32_t board_utimer_pins_config(void)
+ * @fn    int32_t board_utimer_pins_config(void)
  * @brief       UTIMER pinmux config
  * @note        none
- * @param       mode
  * @retval      execution status
  */
 static int32_t board_utimer_pins_config(void)
@@ -374,7 +372,7 @@ static int32_t board_utimer_pins_config(void)
 
 #ifdef BOARD_BASIC_MODE_UTIMER_INSTANCE
 /**
- * @function    void utimer_basic_mode_cb_func(uint8_t event)
+ * @fn    void utimer_basic_mode_cb_func(uint8_t event)
  * @brief       utimer basic mode callback function
  * @note        none
  * @param       event
@@ -396,10 +394,10 @@ static void utimer_basic_mode_cb_func(uint8_t event)
 }
 
 /**
- * @function    void utimer_basic_mode_app(void *pvParameters)
+ * @fn    void utimer_basic_mode_app(void *pvParameters)
  * @brief       utimer basic mode application
  * @note        none
- * @param       pointer to thread input param
+ * @param pvParameters to thread input param
  * @retval      none
  */
 static void utimer_basic_mode_app(void *pvParameters)
@@ -510,7 +508,7 @@ error_basic_mode_uninstall:
 
 #ifdef BOARD_BUFFER_MODE_UTIMER_INSTANCE
 /**
- * @function    void utimer_buffering_mode_cb_func(uint8_t event)
+ * @fn    void utimer_buffering_mode_cb_func(uint8_t event)
  * @brief       utimer buffer mode callback function
  * @note        none
  * @param       event
@@ -532,10 +530,10 @@ static void utimer_buffering_mode_cb_func(uint8_t event)
 }
 
 /**
- * @function    void utimer_buffering_mode_app(void *pvParameters)
+ * @fn    void utimer_buffering_mode_app(void *pvParameters)
  * @brief       utimer buffer mode application
  * @note        none
- * @param       pointer to thread input param
+ * @param pvParameters to thread input param
  * @retval      none
  */
 static void utimer_buffering_mode_app(void *pvParameters)
@@ -679,7 +677,7 @@ error_buffering_mode_uninstall:
 
 #ifdef BOARD_TRIGGER_MODE_UTIMER_INSTANCE
 /**
- * @function    void utimer_trigger_mode_cb_func(uint8_t event)
+ * @fn    void utimer_trigger_mode_cb_func(uint8_t event)
  * @brief       utimer trigger mode callback function
  * @note        none
  * @param       event
@@ -701,10 +699,10 @@ static void utimer_trigger_mode_cb_func(uint8_t event)
 }
 
 /**
- * @function    void utimer_trigger_mode_app(void *pvParameters)
+ * @fn    void utimer_trigger_mode_app(void *pvParameters)
  * @brief       utimer trigger mode application
  * @note        none
- * @param       pointer to thread input param
+ * @param pvParameters to thread input param
  * @retval      none
  */
 static void utimer_trigger_mode_app(void *pvParameters)
@@ -839,7 +837,7 @@ error_trigger_mode_uninstall:
 
 #ifdef BOARD_CAPTURE_MODE_UTIMER_INSTANCE
 /**
- * @function    void utimer_capture_mode_cb_funcc(event)
+ * @fn static void utimer_capture_mode_cb_func(uint8_t event)
  * @brief       utimer capture mode callback function
  * @note        none
  * @param       event
@@ -863,10 +861,10 @@ static void utimer_capture_mode_cb_func(uint8_t event)
 }
 
 /**
- * @function    void utimer_capture_mode_app(void *pvParameters)
+ * @fn    void utimer_capture_mode_app(void *pvParameters)
  * @brief       utimer capture mode application
  * @note        none
- * @param       pointer to thread input param
+ * @param pvParameters to thread input param
  * @retval      none
  */
 static void utimer_capture_mode_app(void *pvParameters)
@@ -1016,7 +1014,7 @@ error_capture_mode_uninstall:
 
 #ifdef BOARD_COMPARE_MODE_UTIMER_INSTANCE
 /**
- * @function    void utimer_compare_mode_cb_func(uint8_t event)
+ * @fn    void utimer_compare_mode_cb_func(uint8_t event)
  * @brief       utimer compare mode callback function
  * @note        none
  * @param       event
@@ -1068,10 +1066,10 @@ static void utimer_compare_mode_cb_func(uint8_t event)
 }
 
 /**
- * @function    void utimer_compare_mode_app(void *pvParameters)
+ * @fn    void utimer_compare_mode_app(void *pvParameters)
  * @brief       utimer compare mode application
  * @note        none
- * @param       pointer to thread input param
+ * @param pvParameters to thread input param
  * @retval      none
  */
 static void utimer_compare_mode_app(void *pvParameters)

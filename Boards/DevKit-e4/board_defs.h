@@ -14,7 +14,6 @@
  * @date     2025-5-7
  * @brief    Board info/settings for "DevKit-e4" project
  *           with AE402FA0E5597
- * @bug      None.
  * @note     To modify this file manually, take care to modify pins.h and gpios.h
  *           accordingly when required.
  ******************************************************************************/

@@ -14,8 +14,6 @@
  * @date     2025-5-7
  * @brief   	Pseudo-static GPIO pin settings for "DevKit C (DK-E1C)"
  *           project with AE1C1F4051920PH.
- * @bug      None.
- * @note     None.
  ******************************************************************************/
 
 #ifndef __GPIOS_H__

@@ -7,9 +7,9 @@
  * contact@alifsemi.com, or visit: https://alifsemi.com/license
  */
 /*******************************************************************************
- * @file     : demo_tsens_freertos.c
+ * @file     demo_tsens_freertos.c
  * @author   : Prabhakar kumar
- * @email    : prabhakar.kumar@alifsemi.com
+ * Email:    : prabhakar.kumar@alifsemi.com
  * @version  : V1.0.0
  * @date     : 12-FEB-2024
  * @brief    : Freertos demo application code for ADC driver temperature sensor
@@ -22,8 +22,7 @@
  *            Common temperature sensor is internally connected to ADC12 6th channel
  *            of each instance.
  *            no hardware setup required.
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 
 /* System Includes */
@@ -110,7 +109,7 @@ uint32_t ulAdcSample[NUM_CHANNELS];
 volatile uint32_t ulNumSamples = 0;
 
 /*
- * @func   : void adc_conversion_callback(uint32_t event,
+ * @fn   : void adc_conversion_callback(uint32_t event,
  *                                        uint8_t channel,
  *                                        uint32_t sample_output)
  * @brief  : adc conversion isr callback
@@ -137,13 +136,13 @@ static void prvAdcConversionCallBack(uint32_t ulEvent, uint8_t ucChannel, uint32
 }
 
 /**
- * @func         : void prvTsensDemoThreadEntry(void *pvParameters)
+ * @fn         : void prvTsensDemoThreadEntry(void *pvParameters)
  * @brief        : tsens demo (temperature sensor)
  *               - test to verify the temperature sensor of adc.
  *               - Internal input of temperature  in analog signal
  *                 corresponding output is digital value.
  *               - converted value is the allocated user memory address.
- * @parameter[1] : thread_input : thread input
+ * @param pvParameters thread input
  * @return       : NONE
  */
 static void prvTsensDemoThreadEntry(void *pvParameters)

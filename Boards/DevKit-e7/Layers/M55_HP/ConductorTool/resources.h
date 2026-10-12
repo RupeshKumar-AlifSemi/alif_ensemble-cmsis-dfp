@@ -4,8 +4,6 @@
  * @version  v1.0.0
  * @date     2025-5-30
  * @brief    Firewall and DMA settings for "DevKit D1 (DK-E7)" project with AE722F80F55D5LS
- * @bug      None.
- * @note     None.
  ******************************************************************************/
 /*
  *   Copyright (C) 2025 Alif Semiconductor - All Rights Reserved.

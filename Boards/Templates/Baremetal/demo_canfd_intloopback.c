@@ -9,15 +9,14 @@
  */
 
 /******************************************************************************
- * @file     : demo_canfd_intloopback.c
+ * @file     demo_canfd_intloopback.c
  * @author   : Shreehari H K
- * @email    : shreehari.hk@alifsemi.com
+ * Email:    : shreehari.hk@alifsemi.com
  * @version  : V1.0.0
  * @date     : 05-July-2023
  * @brief    : Baremetal demo application for CANFD.
  *             - Performs Internal loopback test.
- * @bug      : None
- * @Note     : None
+ * @note     : None
  ******************************************************************************/
 
 #include <stdio.h>
@@ -160,7 +159,6 @@ static void cb_object_event(uint32_t obj_idx, uint32_t event)
  * @fn      static void canfd_lbi_demo_thread_entry(void)
  * @brief   CANFD Internal Loopback Demo
  * @note    none
- * @param   none
  * @retval  none
  */
 static void canfd_lbi_demo_thread_entry(void)
@@ -362,7 +360,6 @@ uninitialise_canfd:
  * @fn      int main()
  * @brief   main function of the CANFD Application
  * @note    none
- * @param   none
  * @retval  software execution status
  */
 int main()
@@ -387,7 +384,6 @@ int main()
  * @fn      static void canfd_check_error(void)
  * @brief   Checks for the errors in CANFD
  * @note    none
- * @param   none
  * @retval  none
  */
 static void canfd_check_error(void)
@@ -408,7 +404,6 @@ static void canfd_check_error(void)
  * @fn      static void canfd_process_rx_message(void)
  * @brief   Processes the received messages
  * @note    none
- * @param   none
  * @retval  none
  */
 static bool canfd_process_rx_message(void)
@@ -467,10 +462,10 @@ static bool canfd_process_rx_message(void)
 }
 
 /**
- * @fn      static void canfd_transmit_message(void)
+ * @fn static void canfd_transmit_message(const CANFD_FRAME msg_type)
  * @brief   Prepares and sends message
  * @note    none
- * @param   none
+ * @param msg_type
  * @retval  none
  */
 static void canfd_transmit_message(const CANFD_FRAME msg_type)

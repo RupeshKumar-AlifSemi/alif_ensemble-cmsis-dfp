@@ -7,9 +7,9 @@
  * contact@alifsemi.com, or visit: https://alifsemi.com/license
  */
 /*******************************************************************************
- * @file     : demo_adc_clickboard_freertos.c
+ * @file     demo_adc_clickboard_freertos.c
  * @author   : Prabhakar kumar
- * @email    : prabhakar.kumar@alifsemi.com
+ * Email:    : prabhakar.kumar@alifsemi.com
  * @version  : V1.0.0
  * @date     : 12-FEB-2024
  * @brief    : Freertos demo application code click board analog input
@@ -110,7 +110,7 @@ uint32_t ulAdcSample[NUM_CHANNELS];
 volatile uint32_t ulNumSamples = 0;
 
 /*
- * @func   : static void prvAdcConversionCallBack(uint32_t ulEvent,
+ * @fn   : static void prvAdcConversionCallBack(uint32_t ulEvent,
  *                                   uint8_t  ucChannel,
  *                                   uint32_t ulSampleOutput)
  * @brief  : adc conversion isr callback
@@ -137,7 +137,7 @@ static void prvAdcConversionCallBack(uint32_t ulEvent, uint8_t ucChannel, uint32
 }
 
 /**
- *    @func   : static void prvAdcPotentiometerDemo( void *pvParameters )
+ *    @fn   : static void prvAdcPotentiometerDemo( void *pvParameters )
  *    @brief  : ADC Click Board demo
  *             - test to verify the click board analog input of adc.
  *             - Internal input of click board in analog signal corresponding

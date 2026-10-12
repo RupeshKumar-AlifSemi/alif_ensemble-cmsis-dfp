@@ -9,9 +9,9 @@
  */
 
 /******************************************************************************
- * @file     : demo_pdm_freertos.c
+ * @file     demo_pdm_freertos.c
  * @author   : Nisarga A M
- * @email    : nisarga.am@alifsemi.com
+ * Email:    : nisarga.am@alifsemi.com
  * @version  : V1.0.0
  * @date     : 29-May-2023
  * @brief    : TestApp to verify PDM(Pulse Density Modulation) interface using
@@ -227,7 +227,7 @@ static void PDM_fifo_callback(uint32_t event)
 
 #if (!USE_CONDUCTOR_TOOL_PINS_CONFIG)
 /**
- * @fn      static int32_t board_lppdm_pins_config(void)
+ * @fn static int32_t board_pdm_pins_config(void)
  * @brief   Configure PDM pinmux which not
  *          handled by the board support library.
  * @retval  execution status.

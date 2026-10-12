@@ -9,15 +9,14 @@
  */
 
 /******************************************************************************
- * @file     : demo_canfd_busmonitor.c
+ * @file     demo_canfd_busmonitor.c
  * @author   : Shreehari H K
- * @email    : shreehari.hk@alifsemi.com
+ * Email:    : shreehari.hk@alifsemi.com
  * @version  : V1.0.0
  * @date     : 05-July-2023
  * @brief    : Baremetal demo application for CANFD.
  *             - Performs Bus Monitor test (Listen only mode).
- * @bug      : None
- * @Note     : None
+ * @note     : None
  ******************************************************************************/
 
 #include <stdio.h>
@@ -185,7 +184,6 @@ static void cb_object_event(uint32_t obj_idx, uint32_t event)
  * @fn      static void canfd_lom_demo_thread_entry(void)
  * @brief   CANFD Listen only mode Demo
  * @note    none.
- * @param   none
  * @retval  none
  */
 static void canfd_lom_demo_thread_entry(void)
@@ -368,7 +366,6 @@ uninitialise_canfd:
  * @fn      int main()
  * @brief   main function of the CANFD Application
  * @note    none
- * @param   none
  * @retval  software execution status
  */
 int main()
@@ -391,7 +388,6 @@ int main()
  * @fn      static void canfd_check_error(void)
  * @brief   Checks for the errors in CANFD
  * @note    none
- * @param   none
  * @retval  none
  */
 static void canfd_check_error(void)
@@ -433,7 +429,6 @@ static void canfd_check_error(void)
  * @fn      static void canfd_process_rx_message(void)
  * @brief   Processes the received messages
  * @note    none
- * @param   none
  * @retval  none
  */
 static void canfd_process_rx_message(void)

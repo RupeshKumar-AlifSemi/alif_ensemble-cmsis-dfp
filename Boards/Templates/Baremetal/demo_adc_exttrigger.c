@@ -9,9 +9,9 @@
  */
 
 /*******************************************************************************
- * @file     : demo_adc_exttrigger.c
+ * @file     demo_adc_exttrigger.c
  * @author   : Prabhakar kumar
- * @email    : prabhakar.kumar@alifsemi.com
+ * Email:    : prabhakar.kumar@alifsemi.com
  * @version  : V1.0.0
  * @date     : 04-Sept-2023
  * @brief    : Baremetal demo application code for testing the external trigger
@@ -40,8 +40,7 @@
  *                - +ve connected to P0_0 (ADC122 channel 0) at 1.0V and
  *                  +ve connected to P0_4 (ADC122 channel 1) at 0.5V
  *                - -ve connect to GND.
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 
 #include <stdio.h>
@@ -148,7 +147,7 @@ static int32_t board_adc_pins_config(void)
 #endif
 
 /*
- * @func   : void adc_conversion_callback(uint32_t event, uint8_t channel, uint32_t sample_output)
+ * @fn   : void adc_conversion_callback(uint32_t event, uint8_t channel, uint32_t sample_output)
  * @brief  : adc conversion isr callback
  * @return : NONE
  */
@@ -163,7 +162,7 @@ static void adc_conversion_callback(uint32_t event, uint8_t channel, uint32_t sa
 }
 
 /**
- * @function    void utimer_compare_mode_cb_func(event)
+ * @fn    void utimer_compare_mode_cb_func(event)
  * @brief       utimer compare mode callback function
  * @note        none
  * @param       event
@@ -177,10 +176,9 @@ static void utimer_compare_mode_cb_func(uint8_t event)
 }
 
 /**
- * @function    void utimer_compare_mode_app(void)
+ * @fn    void utimer_compare_mode_app(void)
  * @brief       utimer compare mode application
  * @note        none
- * @param       none
  * @retval      none
  */
 static void utimer_compare_mode_app(void)

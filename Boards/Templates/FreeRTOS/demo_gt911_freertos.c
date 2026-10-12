@@ -9,15 +9,14 @@
  */
 
 /*******************************************************************************
- * @file     : demo_gt911_freertos.c
+ * @file     demo_gt911_freertos.c
  * @author   : Chandra Bhushan Singh
- * @email    : chandrabhushan.singh@alifsemi.com
+ * Email:    : chandrabhushan.singh@alifsemi.com
  * @version  : V1.0.0
  * @date     : 07-Sept-2023
  * @brief    : TestApp to verify GT911 touch screen with
  *             FREERTOS as an Operating System.
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 
 /* System Includes */
@@ -104,7 +103,7 @@ void vApplicationIdleHook(void)
 /*****************Only for FreeRTOS use *************************/
 
 /**
-  * @function    void touchscreen_demo_thread_entry(void *pvParameters)
+  * @fn    void touchscreen_demo_thread_entry(void *pvParameters)
   \brief         TestApp to verify GT911 touch screen with
                  FREERTOS as an Operating System.
                  This demo thread does:

@@ -15,7 +15,6 @@
  * @brief   	Pin MUX and Pin Config settings for "DevKit-e8"
  *           project with AE822FA0E5597.
  * @bug      None.
- * @note     None.
  ******************************************************************************/
 
 #ifndef __PINS_H__

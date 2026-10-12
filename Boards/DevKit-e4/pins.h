@@ -14,8 +14,6 @@
  * @date     2025-5-7
  * @brief   	Pin MUX and Pin Config settings for "DevKit-e4"
  *           project with AE402FA0E5597.
- * @bug      None.
- * @note     None.
  ******************************************************************************/
 
 #ifndef __PINS_H__

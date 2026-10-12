@@ -9,9 +9,9 @@
  */
 
 /******************************************************************************
- * @file     : demo_lppdm.c
+ * @file     demo_lppdm.c
  * @author   : Nisarga A M
- * @email    : nisarga.am@alifsemi.com
+ * Email:    : nisarga.am@alifsemi.com
  * @version  : V1.0.0
  * @date     : 15-Jan-2023
  * @brief    : Baremetal code for LPPDM(Low power Pulse Density Modulation).

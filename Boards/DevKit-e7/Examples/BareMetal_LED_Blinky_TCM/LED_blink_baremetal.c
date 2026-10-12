@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     LED_blink_baremetal.c
  * @author   Girish BN, Manoj A Murudi
- * @email    girish.bn@alifsemi.com, manoj.murudi@alifsemi.com
+ * Email:    girish.bn@alifsemi.com, manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     25-May-2023
  * @brief    DEMO application for LED blink.
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 
 #include "Driver_GPIO.h"
@@ -81,7 +80,6 @@ void delay(uint32_t nticks)
 /**
   \fn         void led_blink_app(void)
   \brief      LED blinky function
-  \param[in]  none
   \return     none
 */
 void led_blink_app(void)

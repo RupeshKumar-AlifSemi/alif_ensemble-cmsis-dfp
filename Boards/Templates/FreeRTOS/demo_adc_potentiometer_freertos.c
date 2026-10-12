@@ -7,9 +7,9 @@
  * contact@alifsemi.com, or visit: https://alifsemi.com/license
  */
 /*******************************************************************************
- * @file     : demo_adc_potentiometer_freertos.c
+ * @file     demo_adc_potentiometer_freertos.c
  * @author   : Prabhakar kumar
- * @email    : prabhakar.kumar@alifsemi.com
+ * Email:    : prabhakar.kumar@alifsemi.com
  * @version  : V1.0.0
  * @date     : 12-FEB-2024
  * @brief    : Freertos demo application code for potentiometer input
@@ -108,9 +108,7 @@ uint32_t ulAdcSample[NUM_CHANNELS];
 volatile uint32_t ulNumSamples = 0;
 
 /*
- * @func   : static void prvAdcConversionCallBack(uint32_t event,
- *                                                uint8_t channel,
- *                                                uint32_t sample_output)
+ * @fn static void prvAdcConversionCallBack(uint32_t ulEvent, uint8_t ucChannel, uint32_t ulSampleOutput)
  * @brief  : adc conversion isr callback
  * @return : NONE
  */
@@ -135,7 +133,7 @@ static void prvAdcConversionCallBack(uint32_t ulEvent, uint8_t ucChannel, uint32
 }
 
 /**
- * @func   : static void prvAdcPotentiometerDemo( void *pvParameters )
+ * @fn   : static void prvAdcPotentiometerDemo( void *pvParameters )
  * @brief  : ADC Potentiometer demo
  *          - test to verify the potentiometer analog input
  *          - Internal input of potentiometer in analog signal corresponding

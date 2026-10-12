@@ -9,15 +9,14 @@
  */
 
 /*******************************************************************************
- * @file     : demo_lpspi.c
+ * @file     demo_lpspi.c
  * @author   : Manoj A Murudi
- * @email    : manoj.murudi@alifsemi.com
+ * Email:    : manoj.murudi@alifsemi.com
  * @version  : V1.0.0
  * @date     : 29-May-2023
  * @brief    : baremetal demo application for LPSPI and SPI0.
  *             - Data transfer between LPSPI(master) and SPI0(slave).
- * @bug      : None.
- * @Note     : Demo application will work only on M55-HE core.
+ * @note     : Demo application will work only on M55-HE core.
  ******************************************************************************/
 #include <stdio.h>
 #include <inttypes.h>
@@ -173,7 +172,6 @@ static void SPI0_cb_func(uint32_t event)
  * @fn      void lpspi_spi0_transfer(void)
  * @brief   demo application function for data transfer.
  * @note    none.
- * @param   none.
  * @retval  none.
  */
 void lpspi_spi0_transfer(void)

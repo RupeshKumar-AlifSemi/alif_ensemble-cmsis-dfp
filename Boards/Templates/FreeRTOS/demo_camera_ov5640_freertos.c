@@ -9,15 +9,14 @@
  */
 
 /*******************************************************************************
- * @file     : demo_camera_ov5640_freertos.c
+ * @file     demo_camera_ov5640_freertos.c
  * @author   : Chandra Bhushan Singh
- * @email    : chandrabhushan.singh@alifsemi.com
+ * Email:    : chandrabhushan.singh@alifsemi.com
  * @version  : V1.0.0
  * @date     : 11-Mar-2026
  * @brief    : TestApp to verify OV5640 Camera Sensor with
  *             FREERTOS as an Operating System.
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 
 /* System Includes */
@@ -104,7 +103,7 @@ void vApplicationIdleHook(void)
 
 /*****************Only for FreeRTOS use *************************/
 
-/* @Note: OV5640 Camera Sensor configurations
+/* @note: OV5640 Camera Sensor configurations
  *        are directly borrowed from OV5640 Camera Sensor drivers,
  *        for detail refer OV5640 driver.
  *
@@ -212,7 +211,6 @@ void camera_callback(uint32_t event)
  * \brief       i2c hardware pin initialization:
  *                - PIN-MUX configuration
  *                - PIN-PAD configuration
- * \param[in]   none
  * \return      0:success; -1:failure
  */
 int32_t i2c_pinmux(void)
@@ -361,7 +359,6 @@ static int32_t board_camera_pins_config(void)
  *                - PIN-PAD configuration
  *              - Camera hardware pin initialization:
  *                - PIN-MUX configuration
- * \param[in]   none
  * \return      0:success; -1:failure
  */
 int32_t hardware_init(void)

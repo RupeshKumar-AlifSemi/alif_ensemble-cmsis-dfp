@@ -9,9 +9,9 @@
  */
 
 /*******************************************************************************
- * @file     : demo_i3c_i2cbusproxy.c
+ * @file     demo_i3c_i2cbusproxy.c
  * @author   : Tanay Rami
- * @email    : tanay@alifsemi.com
+ * Email:    : tanay@alifsemi.com
  * @version  : V1.0.0
  * @date     : 04-April-2022
  * @brief    : Baremetal TestApp to verify i2c communication with
@@ -27,8 +27,7 @@
  *             P0_6 (SDA)
  *             P0_5 (SCL)
  *
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 
 /* System Includes */
@@ -83,7 +82,7 @@ void I3C_callback(uint32_t event)
 }
 
 /**
-  \fn          void i2c_using_i3c_demo_thread_entry(ULONG thread_input)
+  \fn void i2c_using_i3c_demo_thread_entry()
   \brief       TestApp to verify i2c communication with
                 multiple i2c slave devices using i3c IP.
 
@@ -222,7 +221,7 @@ void i2c_using_i3c_demo_thread_entry()
     }
 
     /*
-     * @Note:
+     * @note:
      *  How much data(register address + actual data) user has to Transmit/Receive ?
      *   it depends on Slave's register address location bytes.
      *

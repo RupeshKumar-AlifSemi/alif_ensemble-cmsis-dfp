@@ -4,8 +4,6 @@
  * @version  v1.0.0
  * @date     2025-4-11
  * @brief    Clocking settings for "AI/ML AppKit D1 (AK-E7-AIML)" project with AE722F80F55D5LS
- * @bug      None.
- * @note     None.
  ******************************************************************************/
 /*
  *   Copyright (C) 2025 Alif Semiconductor - All Rights Reserved.

@@ -9,9 +9,9 @@
  */
 
 /*******************************************************************************
- * @file     : demo_cmp_freertos.c
+ * @file     demo_cmp_freertos.c
  * @author   : Nisarga A M
- * @email    : nisarga.am@alifsemi.com
+ * Email:    : nisarga.am@alifsemi.com
  * @version  : V1.0.0
  * @date     : 18-June-2022
  * @brief    : TestApp to verify analog Comparator interface using FreeRTOS as
@@ -177,7 +177,7 @@ TaskHandle_t utimer_compare_xHandle;
 #define UTIMER_COMPARE_A_CB_EVENT (1U << 2U)
 
 /**
- * @function    void utimer_compare_mode_cb_func(uint8_t event)
+ * @fn    void utimer_compare_mode_cb_func(uint8_t event)
  * @brief       utimer compare mode callback function
  * @note        none
  * @param       event
@@ -198,10 +198,10 @@ static void utimer_compare_mode_cb_func(uint8_t event)
 }
 
 /**
- * @function    void utimer_compare_mode_app(void)
+ * @fn static void utimer_compare_mode_app(void *pvParameters)
  * @brief       utimer compare mode application
  * @note        none
- * @param       none
+ * @param pvParameters
  * @retval      none
  */
 static void utimer_compare_mode_app(void *pvParameters)
@@ -380,7 +380,6 @@ static int32_t board_cmp_pins_config(void)
  *            - Enable the power for LED0_R
  *            - Set direction for LED0_R
  *            - Set value for LED0_R
- * @param[in]  None
  * return      status
  */
 static int32_t led_init(void)
@@ -453,7 +452,6 @@ error_uninitialize_LED:
 /**
  * @fn        cmp_get_status(void)
  * @brief     - Get the Status of CMP output pin.
- * @param[in]  None
  * return      status
  */
 static int32_t cmp_get_status(void)
@@ -485,7 +483,6 @@ error_power_off_LED:
 /**
  * @fn         led_toggle(void)
  * @brief      - set LED0_R for toggle
- * @param[in]  None
  * return      status
  */
 int32_t led_toggle(void)

@@ -14,8 +14,6 @@
  * @date     04-06-2025
  * @brief    Pin MUX and Pin Config settings for "DevKit C (DK-E1C)"
  *           project with AE1C1F4051920PH.
- * @bug      None.
- * @note     None.
  ******************************************************************************/
 
 #ifndef __PINS_H__

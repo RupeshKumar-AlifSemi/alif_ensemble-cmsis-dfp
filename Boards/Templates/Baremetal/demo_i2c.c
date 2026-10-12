@@ -9,7 +9,7 @@
  */
 
 /******************************************************************************
- * @file     : demo_i2c.c
+ * @file     demo_i2c.c
  * @brief    : Baremetal demo application to verify I2C Master and
  *             Slave functionality without any operating system
  *
@@ -28,8 +28,7 @@
  *             - Connecting GPIO pins of I2C1 TO I2C0
  *               SDA pin P7_2(J14) to P7_0(J14)
  *               SCL pin P7_3(J14) to P7_1(J14).
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 
 #include <stdio.h>
@@ -145,7 +144,6 @@ static void i2c_slv_conversion_callback(uint32_t event)
  * @fn      static void I2C_demo(void)
  * @brief   Performs I2C master and slave comm demo
  * @note    none
- * @param   none
  * @retval  none
  */
 static void I2C_demo(void)
@@ -362,7 +360,6 @@ error_uninitialize:
  * @fn      int main(void)
  * @brief   Entry point for I2C comm
  * @note    none
- * @param   none
  * @retval  none
  */
 int main(void)

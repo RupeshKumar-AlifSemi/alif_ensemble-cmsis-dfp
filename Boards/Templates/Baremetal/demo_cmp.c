@@ -9,9 +9,9 @@
  */
 
 /*******************************************************************************
- * @file     : demo_cmp.c
+ * @file     demo_cmp.c
  * @author   : Nisarga A M
- * @email    : nisarga.am@alifsemi.com
+ * Email:    : nisarga.am@alifsemi.com
  * @version  : V1.0.0
  * @date     : 20-June-2022
  * @brief    : Baremetal code for analog Comparator.
@@ -127,7 +127,7 @@ extern ARM_DRIVER_UTIMER Driver_UTIMER0;
 ARM_DRIVER_UTIMER       *ptrUTIMER = &Driver_UTIMER0;
 
 /**
- * @function    void utimer_compare_mode_cb_func(event)
+ * @fn    void utimer_compare_mode_cb_func(event)
  * @brief       utimer compare mode callback function
  * @note        none
  * @param       event
@@ -141,10 +141,9 @@ static void utimer_compare_mode_cb_func(uint8_t event)
 }
 
 /**
- * @function    void utimer_compare_mode_app(void)
+ * @fn    void utimer_compare_mode_app(void)
  * @brief       utimer compare mode application
  * @note        none
- * @param       none
  * @retval      none
  */
 static void utimer_compare_mode_app(void)
@@ -313,7 +312,6 @@ static int32_t board_cmp_pins_config(void)
  *            - Enable the power for LED0_R
  *            - Set direction for LED0_R
  *            - Set value for LED0_R
- * @param[in]  None
  * return      status
  */
 static int32_t led_init(void)
@@ -388,7 +386,6 @@ error_uninitialize_LED:
 /**
  * @fn        cmp_get_status(void)
  * @brief     - Get the Status of CMP output pin.
- * @param[in]  None
  * return      status
  */
 static int32_t cmp_get_status(void)
@@ -420,7 +417,6 @@ error_power_off_LED:
 /**
  * @fn         led_toggle(void)
  * @brief      - set LED0_R for toggle
- * @param[in]  None
  * return      status
  */
 static int32_t led_toggle(void)

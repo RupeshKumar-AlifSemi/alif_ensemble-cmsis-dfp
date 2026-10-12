@@ -9,15 +9,14 @@
  */
 
 /*******************************************************************************
- * @file     : demo_spi_loopback.c
+ * @file     demo_spi_loopback.c
  * @author   : Manoj A Murudi
- * @email    : manoj.murudi@alifsemi.com
+ * Email:    : manoj.murudi@alifsemi.com
  * @version  : V1.0.0
  * @date     : 29-May-2023
  * @brief    : baremetal demo application for SPI0 and SPI1.
  *             - Data transfer between SPI0(master) and SPI1(slave).
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 
 #include <stdio.h>
@@ -169,7 +168,6 @@ static void SPI1_cb_func(uint32_t event)
  * @fn      static void spi0_spi1_transfer(void)
  * @brief   demo application function for data transfer.
  * @note    none.
- * @param   none.
  * @retval  none.
  */
 static void spi0_spi1_transfer(void)

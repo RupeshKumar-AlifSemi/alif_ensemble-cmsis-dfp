@@ -9,14 +9,13 @@
  */
 
 /*******************************************************************************
- * @file     : demo_qec_freertos.c
+ * @file     demo_qec_freertos.c
  * @author   : Manoj A Murudi
- * @email    : manoj.murudi@alifsemi.com
+ * Email:    : manoj.murudi@alifsemi.com
  * @version  : V1.0.0
  * @date     : 21-July-2023
  * @brief    : FreeRTOS demo application for QEC0 channel.
- * @bug      : None.
- * @Note     : None
+ * @note     : None
  ******************************************************************************/
 
 #include <stdio.h>
@@ -65,10 +64,9 @@ TaskHandle_t qec0_xHandle;
 
 #if (!USE_CONDUCTOR_TOOL_PINS_CONFIG)
 /**
- * @function    int board_qec_pins_config(void)
+ * @fn    int board_qec_pins_config(void)
  * @brief       QEC h/w pin init using pinmux driver
  * @note        none
- * @param       none
  * @retval      execution status
  */
 static int32_t board_qec_pins_config(void)
@@ -138,10 +136,9 @@ static int32_t board_qec_pins_config(void)
 #endif
 
 /**
- * @function    int gpio_init(void)
+ * @fn    int gpio_init(void)
  * @brief       GPIO initialization using gpio driver
  * @note        none
- * @param       none
  * @retval      execution status
  */
 static int32_t gpio_init(void)
@@ -215,10 +212,10 @@ static int32_t gpio_init(void)
 }
 
 /**
- * @function    void qec0_app(void *pvParameters)
+ * @fn    void qec0_app(void *pvParameters)
  * @brief       QEC0 demo application
  * @note        none
- * @param       none
+ * @param pvParameters
  * @retval      none
  */
 static void qec0_app(void *pvParameters)

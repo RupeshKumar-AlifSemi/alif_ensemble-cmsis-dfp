@@ -8,12 +8,11 @@
 /*******************************************************************************
  * @file     demo_mci_mdk_cmsisrtos2.c
  * @author   Deepak Kumar
- * @email    deepak@alifsemi.com
+ * Email:    deepak@alifsemi.com
  * @version  V1.0.0
  * @date     24-Jan-2025
  * @brief    MCI testApp using cmsis_os2 and MDK-MW-File_System
- * @bug      None.
- * @Note     Enable STDIN/OUT redirection to get cmd i/p from user
+ * @note     Enable STDIN/OUT redirection to get cmd i/p from user
  ******************************************************************************/
 
 #include "RTE_Components.h"
@@ -771,7 +770,7 @@ int sd_reset(void)
   call FileSystem API functions. Type 'help' in the terminal to display the list
   of supported commands.
 
-  \param[in]  arg      thread argument (unused)
+  \param[in] argument thread argument (unused)
   */
 __NO_RETURN void app_main_thread(void *argument)
 {

@@ -14,7 +14,6 @@
  * @date     13-8-2024
  * @brief    Board info/settings for "DevKit D1 (DK-E7)" project
  *           with AE722F80F55D5LS
- * @bug      None.
  * @note     To modify this file manually, take care to modify pins.h and gpios.h
  *           accordingly when required.
  ******************************************************************************/

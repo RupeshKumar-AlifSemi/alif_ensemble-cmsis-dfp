@@ -9,17 +9,16 @@
  */
 
 /****************************************************************************
- * @file     : demo_i2s_freertos.c
+ * @file     demo_i2s_freertos.c
  * @author   : Sudhir Sreedharan
- * @email    : sudhir@alifsemi.com
+ * Email:    : sudhir@alifsemi.com
  * @version  : V1.0.0
  * @date     : 24-Jan-2024
  * @brief    : Test Application for I2S for Devkit
  *             For HP, I2S1 is configured as master transmitter (DAC).
  *             For HE, LPI2S will be used as DAC.
  *             I2S3(ADC) is configured as master receiver SPH0645LM4H-1 device 24bit
- * @bug      : None.
- * @Note     : None
+ * @note     : None
  ******************************************************************************/
 
 /*System Includes */

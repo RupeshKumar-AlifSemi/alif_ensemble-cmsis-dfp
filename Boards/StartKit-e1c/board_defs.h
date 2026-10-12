@@ -14,7 +14,6 @@
  * @date     20-01-2026
  * @brief    Board info/settings for "E1C StartKit" project
  *           with AE1C1F4051920PH0
- * @bug      None.
  * @note     To modify this file manually, take care to modify pins.h and gpios.h
  *           accordingly when required.
  ******************************************************************************/

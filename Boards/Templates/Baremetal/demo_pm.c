@@ -9,9 +9,9 @@
  */
 
 /*******************************************************************************
- * @file     : demo_pm.c
+ * @file     demo_pm.c
  * @author   : Raj Ranjan
- * @email    : raj.ranjan@alifsemi.com
+ * Email:    : raj.ranjan@alifsemi.com
  * @version  : V2.0.0
  * @date     : 23-Feb-2023
  * @brief    : This testcase uses UART for selecting the different sleep modes
@@ -127,7 +127,7 @@ static int rtc_error_power_off(void)
 }
 
 /**
-  @fn           int set_rtc()
+  @fn static int set_rtc(uint32_t timeout)
   @brief        set RTC timeout value (in second i.e. timeout = 10 means 10 sec)
   @return       none
 */

@@ -9,14 +9,13 @@
  */
 
 /*******************************************************************************
- * @file     : demo_flash.c
+ * @file     demo_flash.c
  * @author   : Khushboo Singh
- * @email    : khushboo.singh@alifsemi.com
+ * Email:    : khushboo.singh@alifsemi.com
  * @version  : V1.0.0
  * @date     : 26-Oct-2022
  * @brief    : Baremetal Application to demo the APIs of FLASH Driver.
- * @bug      : None.
- * @Note     : None
+ * @note     : None
  ******************************************************************************/
 
 #include <stdio.h>
@@ -50,7 +49,6 @@ ARM_DRIVER_GPIO       *GPIODrv = &ARM_Driver_GPIO_(BOARD_OSPI_FLASH_RESET_GPIO_P
  * @fn      static int32_t setup_PinMUX(void)
  * @brief   Set up PinMUX and PinPAD
  * @note    none
- * @param   none
  * @retval  -1 : On Error
  *           0 : On Success
  */
@@ -101,7 +99,6 @@ uint16_t write_buff[BUFFER_SIZE];
  * @fn      int main ()
  * @brief   Main Function
  * @note    none
- * @param   none
  * @retval  0 : Success
  */
 int main(void)

@@ -9,7 +9,7 @@
  */
 
 /******************************************************************************
- * @file     : demo_lpi2c0.c
+ * @file     demo_lpi2c0.c
  * @brief    : TestApp to verify I2C Master and LPI2C0 Slave functionality
  *           : using Baremetal without any operating system.
  * @note     : Code will verify:
@@ -229,7 +229,6 @@ static int32_t board_lpi2c_pins_config(void)
  * @fn      static void LPI2C0_demo(void)
  * @brief   Performs LPI2C0 Demo
  * @note    none
- * @param   none
  * @retval  none
  */
 static void LPI2C0_demo(void)
@@ -405,7 +404,6 @@ error_uninitialize:
  * @fn      int main(void)
  * @brief   Entry function of LPI2C0
  * @note    none
- * @param   none
  * @retval  none
  */
 int main(void)

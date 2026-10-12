@@ -14,8 +14,6 @@
 * @date     2026-2-19
 * @brief   	Pin MUX and Pin Config settings for "AI/ML AppKit Gen 2 (AK-E7-AIML)"
 *           project with AE722F80F55D5LS.
-* @bug      None.
-* @note     None.
 ******************************************************************************/
 
 #ifndef __PINS_H__

@@ -9,16 +9,15 @@
  */
 
 /******************************************************************************
- * @file     : demo_mram.c
+ * @file     demo_mram.c
  * @author   : Tanay Rami
- * @email    : tanay@alifsemi.com
+ * Email:    : tanay@alifsemi.com
  * @version  : V1.0.0
  * @date     : 01-June-2023
  * @brief    : TestApp to verify MRAM(On-chip NVM (Non-Volatile Memory)) interface
  *             using baremetal, with no operating system.
  *             Verify Read/Write to/from MRAM.
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 
 /* System Includes */
@@ -64,14 +63,13 @@ uint8_t buff_TX[BUFFER_SIZE] = {0x00};
 uint8_t buff_RX[BUFFER_SIZE] = {0x00};
 
 /**
- * @function    void MRAM_thread_entry()
+ * @fn void MRAM_Thread_entry()
  * @brief       TestApp to verify MRAM(On-Chip NVM) interface
  *              using baremetal, with no operating system.
  *                 - Verify Read/Write to/from MRAM.
  *                 - write 1MB data to MRAM
  *                 - read back and compare wrote data
  * @note        none
- * @param       none
  * @retval      none
  */
 void MRAM_Thread_entry()

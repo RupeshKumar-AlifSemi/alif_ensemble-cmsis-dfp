@@ -9,15 +9,14 @@
  */
 
 /*******************************************************************************
- * @file     : demo_led_blinky_freertos.c
+ * @file     demo_led_blinky_freertos.c
  * @author   : Manoj A Murudi
- * @email    : manoj.murudi@alifsemi.com
+ * Email:    : manoj.murudi@alifsemi.com
  * @version  : V1.0.0
  * @date     : 25-May-2023
  * @brief    : FreeRTOS DEMO application for LED blink.
  *             - Toggle LED0_R and LED1_B alternately
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 
 /* Includes */

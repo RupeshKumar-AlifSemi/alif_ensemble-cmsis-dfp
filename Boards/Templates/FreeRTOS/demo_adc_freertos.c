@@ -9,9 +9,9 @@
  */
 
 /*******************************************************************************
- * @file     : demo_adc_freertos.c
+ * @file     demo_adc_freertos.c
  * @author   : Prabhakar kumar
- * @email    : prabhakar.kumar@alifsemi.com
+ * Email:    : prabhakar.kumar@alifsemi.com
  * @version  : V1.0.0
  * @date     : 23-AUG-2023
  * @brief    : TestApp to verify ADC Driver using Freertos as an operating system.
@@ -98,8 +98,7 @@
  *                - Used ADC instance 2,all channels(0-5) are connected to dc supply
  *                - channel 2 and 4 are masked using MASK_CHANNEL macro.
  *                - GND both dc supply channel -ve
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 
 /* System Includes */
@@ -418,7 +417,7 @@ static int32_t board_adc_pins_config(void)
 #endif
 
 /*
- *    @func        : void adc_conversion_callback(uint32_t event, uint8_t channel, uint32_t
+ *    @fn        : void adc_conversion_callback(uint32_t event, uint8_t channel, uint32_t
  *sample_output)
  *    @brief       : adc conversion isr callback
  *.   @return      : NONE
@@ -463,12 +462,12 @@ static void adc_conversion_callback(uint32_t event, uint8_t channel, uint32_t sa
 }
 
 /**
- *    @func         : void ADC_Thread(void *pvParameters)
+ *    @fn         : void ADC_Thread(void *pvParameters)
  *    @brief        : ADC demo thread
  *                  - test to verify the adc.
  *                  - input analog signal corresponding convert into digital value
  *                  - converted value is the allocated user memory address.
- *    @parameter[1] : thread_input : thread input
+ *    @param pvParameters thread input
  *    @return       : NONE
  */
 void ADC_Thread(void *pvParameters)

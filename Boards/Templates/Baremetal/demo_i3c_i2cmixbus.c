@@ -9,9 +9,9 @@
  */
 
 /*******************************************************************************
- * @file     : demo_i3c_i2cmixbus.c
+ * @file     demo_i3c_i2cmixbus.c
  * @author   : Tanay Rami
- * @email    : tanay@alifsemi.com
+ * Email:    : tanay@alifsemi.com
  * @version  : V1.0.0
  * @date     : 04-April-2022
  * @brief    : Baremetal testapp to verify Mix Bus i2c and i3c communication with
@@ -26,8 +26,7 @@
  *                 P7_7 (SCL)
  *                 GND
  *
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 
 /* System Includes */
@@ -66,7 +65,6 @@ volatile int32_t cb_event_flag;
   \brief       i3c hardware pin initialization:
                 - PIN-MUX configuration
                 - PIN-PAD configuration
-  \param[in]   void
   \return      0:success; -1:failure
 */
 int32_t hardware_init(void)
@@ -152,7 +150,6 @@ void I3C_callback(uint32_t event)
                     for all the attached slaves;
                  - display result depending on whether
                    slave has given ACK or NACK.
-  \param[in]   none
   \return      none
 */
 void mix_bus_i2c_i3c_demo_entry()
@@ -305,7 +302,7 @@ void mix_bus_i2c_i3c_demo_entry()
     }
 
     /* Delay for 1000 micro second.
-     *  @Note: Minor delay is required if prints are disable.
+     *  @note: Minor delay is required if prints are disable.
      */
     sys_busy_loop_us(1000);
 
@@ -455,7 +452,7 @@ void mix_bus_i2c_i3c_demo_entry()
     }
 
     /*
-     * @Note:
+     * @note:
      *  How much data(register address + actual data) user has to Transmit/Receive ?
      *   it depends on Slave's register address location bytes.
      *

@@ -9,17 +9,16 @@
  */
 
 /******************************************************************************
- * @file     : demo_hwsem.c
+ * @file     demo_hwsem.c
  * @author   : Khushboo Singh
- * @email    : khushboo.singh@alifsemi.com
+ * Email:    : khushboo.singh@alifsemi.com
  * @version  : V1.0.0
  * @date     : 27-June-2022
  * @brief    : TestApp to verify HWSEM interface using baremetal, no operating system.
  *             It locks the HWSEM, sends the message through UART and then unlocks.
  *               This application will run on two cores
  *               to demonstrate the working of the Hardware Semaphore.
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 
 #include <RTE_Components.h>
@@ -76,7 +75,7 @@ static ARM_DRIVER_HWSEM *HWSEMdrv = &ARM_Driver_HWSEM_(HWSEM);
 volatile uint32_t event_flags_uart;
 
 /**
- * @function    static void myUART_callback(uint32_t event)
+ * @fn    static void myUART_callback(uint32_t event)
  * @brief       UART isr callabck
  * @note        none
  * @param       event: USART Event
@@ -102,7 +101,7 @@ static void myUART_callback(uint32_t event)
 #endif
 
 /**
- * @function    static void myHWSEM_callback(int32_t event, uint8_t sem_id)
+ * @fn    static void myHWSEM_callback(int32_t event, uint8_t sem_id)
  * @brief       HWSEM isr callabck
  * @note        none
  * @param       event: HWSEM Available Event
@@ -119,12 +118,11 @@ static void myHWSEM_callback(int32_t event, uint8_t sem_id)
 }
 
 /**
- * @function    void uart_hwsem_demo()
+ * @fn    void uart_hwsem_demo()
  * @brief       TestApp to verify HWSEM interface
  *              Get the lock, send message through UART
  *              and then unlock
  * @note        none
- * @param       none
  * @retval      none
  */
 void uart_hwsem_demo()

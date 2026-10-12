@@ -9,14 +9,13 @@
  */
 
 /*******************************************************************************
- * @file     : demo_dma_memcpy_freertos.c
+ * @file     demo_dma_memcpy_freertos.c
  * @author   : Sudhir Sreedharan
- * @email    : sudhir@alifsemi.com
+ * Email:    : sudhir@alifsemi.com
  * @version  : V1.0.0
  * @date     : 15-Mar-2023
  * @brief    : ThreadX demo app for memcpy
- * @bug      : None.
- * @Note     : None
+ * @note     : None
  ******************************************************************************/
 
 #include <stdio.h>

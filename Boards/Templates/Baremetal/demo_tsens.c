@@ -7,9 +7,9 @@
  * contact@alifsemi.com, or visit: https://alifsemi.com/license
  */
 /*******************************************************************************
- * @file     : demo_tsens.c
+ * @file     demo_tsens.c
  * @author   : Prabhakar kumar
- * @email    : prabhakar.kumar@alifsemi.com
+ * Email:    : prabhakar.kumar@alifsemi.com
  * @version  : V1.0.0
  * @date     : 21-AUG-2023
  * @brief    : Baremetal demo application code for ADC driver temperature sensor
@@ -26,7 +26,7 @@
  *            Common temperature sensor is internally connected to ADC12 6th channel
  *            of each instance.
  *            no hardware setup required.
- * @Note     : Shift the bits in the converted value to match a 12-bit format.
+ * @note     : Shift the bits in the converted value to match a 12-bit format.
  ******************************************************************************/
 
 /* System Includes */
@@ -62,7 +62,7 @@ uint32_t adc_sample[NUM_CHANNELS];
 volatile uint32_t num_samples = 0;
 
 /*
- * @func   : void adc_conversion_callback(uint32_t event, uint8_t channel, uint32_t sample_output)
+ * @fn   : void adc_conversion_callback(uint32_t event, uint8_t channel, uint32_t sample_output)
  * @brief  : adc conversion isr callback
  * @return : NONE
  */
@@ -77,7 +77,7 @@ static void adc_conversion_callback(uint32_t event, uint8_t channel, uint32_t sa
 }
 
 /**
- *    @func   : void adc_tsens_demo()
+ *    @fn   : void adc_tsens_demo()
  *    @brief  : adc temperature sensor demo
  *             - test to verify the temperature sensor of adc.
  *             - Internal input of temperature  in analog signal corresponding

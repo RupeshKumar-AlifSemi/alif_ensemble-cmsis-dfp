@@ -9,14 +9,13 @@
  */
 
 /*******************************************************************************
- * @file     : demo_rtc_freertos.c
+ * @file     demo_rtc_freertos.c
  * @author   : Sudarshan Iyengar
- * @email    : sudarshan.iyengar@alifsemi.com
+ * Email:    : sudarshan.iyengar@alifsemi.com
  * @version  : V1.0.0
  * @date     : 18-Sep-2021
  * @brief    : TestApp to verify RTC Driver using FreeRTOS as an operating system.
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 
 /* Includes ----------------------------------------------------------------- */

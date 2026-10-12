@@ -10,13 +10,12 @@
 /**************************************************************************//**
  * @file     demo_mipi_interface_video_freertos.c
  * @author   Chandra Bhushan Singh
- * @email    chandrabhushan.singh@alifsemi.com
+ * Email:    chandrabhushan.singh@alifsemi.com
  * @version  V1.0.0
  * @date     04-Sep-2025
  * @brief    TestApp to verify ARX3A0 Camera Sensor and ILI9806E LCD Panel
  *           with FREERTOS as an Operating System.
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 /* System Includes */
 #include <stdio.h>
@@ -178,7 +177,7 @@ uint8_t cam_framebuffer_pool[CAMERA_FRAMEBUFFER_POOL_SIZE]
         CAMERA_FRAMEBUFFER_ATTR;
 #endif
 
-/* @Note: ILI9806E LCD Panel configurations
+/* @note: ILI9806E LCD Panel configurations
  *        are directly borrowed from ILI9806E LCD Panel drivers,
  *        for detail refer ILI9806E LCD Panel driver.
  *
@@ -346,7 +345,6 @@ void Display_callback(uint32_t event)
  * \brief       i2c hardware pin initialization:
  *                 - PIN-MUX configuration
  *                 - PIN-PAD configuration
- * \param[in]   none
  * \return      0:success; -1:failure
  */
 int i2c_pinmux(void)
@@ -386,7 +384,6 @@ int i2c_pinmux(void)
  * \fn          int32_t camera_pinmux(void)
  * \brief       Camera hardware pin initialization:
  *                  - PIN-MUX configuration
- * \param[in]   none
  * \return      0:success; -1:failure
  */
 int32_t camera_pinmux(void)
@@ -412,7 +409,6 @@ int32_t camera_pinmux(void)
  *                 - PIN-PAD configuration
  *              - Camera hardware pin initialization:
  *                 - PIN-MUX configuration
- * \param[in]   none
  * \return      0:success; -1:failure
  */
 int hardware_init(void)
@@ -458,7 +454,7 @@ int hardware_init(void)
  *                    we are cropping and interpolate the captured image
  *                    to 480x480.
  *                  - Stream captured image on LCD Panel
- * \param[in]   thread_input : thread input
+ * \param[in] pvParameters thread input
  * \return      none
  */
 void video_demo_thread_entry(void *pvParameters)

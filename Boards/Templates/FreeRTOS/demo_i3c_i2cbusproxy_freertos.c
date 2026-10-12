@@ -9,9 +9,9 @@
  */
 
 /*******************************************************************************
- * @file     : demo_i3c_i2cbusproxy_freertos.c
+ * @file     demo_i3c_i2cbusproxy_freertos.c
  * @author   : Tanay Rami
- * @email    : tanay@alifsemi.com
+ * Email:    : tanay@alifsemi.com
  * @version  : V1.0.0
  * @date     : 31-May-2023
  * @brief    : FreeRtos TestApp to verify i2c communication with
@@ -27,8 +27,7 @@
  *             P0_6 (SDA)
  *             P0_5 (SCL)
  *
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 
 /* System Includes */

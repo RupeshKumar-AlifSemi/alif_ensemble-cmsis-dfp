@@ -14,8 +14,6 @@
  * @date     20-01-2026
  * @brief   	Pseudo-static GPIO pin settings for "E1C StartKit"
  *           project with AE1C1F4051920PH0.
- * @bug      None.
- * @note     None.
  ******************************************************************************/
 
 #ifndef __GPIOS_H__

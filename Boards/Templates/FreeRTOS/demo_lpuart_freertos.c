@@ -9,14 +9,13 @@
  */
 
 /*******************************************************************************
- * @file     : demo_lpuart_freertos.c
+ * @file     demo_lpuart_freertos.c
  * @author   : Tanay Rami
- * @email    : tanay@alifsemi.com
+ * Email:    : tanay@alifsemi.com
  * @version  : V1.0.0
  * @date     : 27-May-2023
  * @brief    : Taken Reference from "uart4_testapp.c"
- * @bug      : None.
- * @Note     : Updated for B0 PinMux.
+ * @note     : Updated for B0 PinMux.
  ******************************************************************************/
 
 /* Includes ----------------------------------------------------------------- */
@@ -120,7 +119,7 @@ void vApplicationIdleHook(void)
 /*****************Only for FreeRTOS use *************************/
 
 /**
- * @function   void UART_callback(uint32_t event)
+ * @fn void myUART_callback(uint32_t event)
  * @brief      UART isr callabck
  * @note       none
  * @param      event: USART Event

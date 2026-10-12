@@ -9,14 +9,13 @@
  */
 
 /*******************************************************************************
- * @file     : demo_rtc.c
+ * @file     demo_rtc.c
  * @author   : Manoj A Murudi
- * @email    : manoj.murudi@alifsemi.com
+ * Email:    : manoj.murudi@alifsemi.com
  * @version  : V1.0.0
  * @date     : 12-April-2022
  * @brief    : Baremetal testApp to verify RTC Driver.
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 
 /* System Includes */
@@ -65,7 +64,6 @@ static void rtc_callback(uint32_t event)
                     reads the current counter value and sets up an alarm to ring in the future.
                     The alarms are setup with increasing timeouts starting with 5 counts and
                     ending with 25 counts.
-  \param[in]    none
   \return       none
 */
 void rtc_demo_Thread_entry()

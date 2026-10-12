@@ -9,9 +9,9 @@
  */
 
 /*******************************************************************************
- * @file     : demo_dac.c
+ * @file     demo_dac.c
  * @author   : Nisarga A M
- * @email    : nisarga.am@alifsemi.com
+ * Email:    : nisarga.am@alifsemi.com
  * @version  : V1.0.0
  * @date     : 22-Feb-2022
  * @brief    : -As DAC is 12 bit resolution, If the input value is maximum than the

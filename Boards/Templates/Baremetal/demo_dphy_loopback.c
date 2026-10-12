@@ -9,9 +9,9 @@
  */
 
 /*******************************************************************************
- * @file     : demo_dphy_loopback.c
+ * @file     demo_dphy_loopback.c
  * @author   : Chandra Bhushan Singh
- * @email    : chandrabhushan.singh@alifsemi.com
+ * Email:    : chandrabhushan.singh@alifsemi.com
  * @version  : V1.0.0
  * @date     : 14-Feb-2023
  * @brief    : DPHY loopback test source File.

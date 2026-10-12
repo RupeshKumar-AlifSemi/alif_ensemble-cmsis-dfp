@@ -5,8 +5,6 @@
  * @date     2024-10-29
  * @brief    Firewall and DMA settings for "AI/ML AppKit D1 (AK-E7-AIML)" project with
  *AE722F80F55D5LS
- * @bug      None.
- * @note     None.
  ******************************************************************************/
 /*
  *   Copyright (C) 2024 Alif Semiconductor - All Rights Reserved.

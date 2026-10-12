@@ -9,14 +9,13 @@
  */
 
 /******************************************************************************
- * @file     : dphy_loopback.c
+ * @file     dphy_loopback.c
  * @author   : Prasanna Ravi and Chandra Bhushan Singh
- * @email    : prasanna.ravi@alifsemi.com and chandrabhushan.singh@alifsemi.com
+ * Email:    : prasanna.ravi@alifsemi.com and chandrabhushan.singh@alifsemi.com
  * @version  : V1.0.0
  * @date     : 14-May-2024
  * @brief    : Driver for MIPI DPHY loopback test.
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 #include <stdint.h>
 #include <inttypes.h>
@@ -150,8 +149,8 @@ static int32_t PHY_2_PHY_BIST_Test(void)
 }
 
 /**
-  \fn          int32_t DPHY_External_Loopback_Test (uint32_t frequency, uint32_t
-  loopback_test_run_time_us) \brief       External Loopback test. \param[in]   frequency to
+  \fn int32_t DPHY_External_Loopback_Test(uint32_t frequency, uint32_t loopback_test_run_time_us)
+  \brief       External Loopback test. \param[in]   frequency to
   configure DPHY PLL. \param[in]   time in microseconds for which loopback test should run. \return
   return test status TPASS or TFAIL.
   */

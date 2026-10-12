@@ -9,14 +9,13 @@
  */
 
 /*******************************************************************************
- * @file     : lvgl_port_disp.c
+ * @file     lvgl_port_disp.c
  * @author   : Ahmad Rashed
- * @email    : ahmad.rashed@alifsemi.com
+ * Email:    : ahmad.rashed@alifsemi.com
  * @version  : V1.0.0
  * @date     : 28-March-2022
  * @brief    : for lvgl library display init with touch input
- * @bug      : None.
- * @Note     : None
+ * @note     : None
  ******************************************************************************/
 
 /* System Includes */
@@ -93,9 +92,8 @@ void hw_disp_cb(uint32_t event)
 }
 
 /**
- * @function    static void hw_disp_init(void)
+ * @fn    static void hw_disp_init(void)
   \brief        Initializes CDC200 controller
-  \param[in]    none
   \return       none
   */
 static void hw_disp_init(void)
@@ -239,7 +237,7 @@ extern ARM_DRIVER_TOUCH_SCREEN  GT911;
 static ARM_DRIVER_TOUCH_SCREEN *Drv_Touchscreen = &GT911;
 
 /**
-  \function     static void lv_touch_get(lv_indev_drv_t * drv, lv_indev_data_t * data)
+  \fn     static void lv_touch_get(lv_indev_drv_t * drv, lv_indev_data_t * data)
   \brief        Check touch screen is pressed or not
   \param[in]    drv: pointer to LVGL driver
                 data: data to LVGL driver
@@ -261,11 +259,10 @@ static void lv_touch_get(lv_indev_drv_t *drv, lv_indev_data_t *data)
 }
 
 /**
-  \function	   static void hw_touch_init(void)
+  \fn	   static void hw_touch_init(void)
   \brief	   This hardware initialization of GT911 touch screen does:
                  - initialize i3c AND gpio2 port hardware pins
                  - initialize GT911 Touch screen driver.
-  \param[in]   none
   \return      none
   */
 static void hw_touch_init(void)
@@ -309,8 +306,8 @@ error_GT911_uninitialize:
 #endif
 
 /**
-  \function    void lv_disp_flush(lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_color_t *
-  color_p)) \brief       Flush the data in buffer to display. \param[in]   disp_drv Pointer
+  \fn static void lv_disp_flush(lv_disp_drv_t *disp_drv, const lv_area_t *area, lv_color_t *color_p)
+  \brief       Flush the data in buffer to display. \param[in]   disp_drv Pointer
   descriptor of a display driver. \param[in]   area     Area of the buffer containing data to be
   displayed. \param[in]   color_p  buffer containing the data to be flushed to display. \return none
   */
@@ -347,12 +344,11 @@ static void lv_disp_flush(lv_disp_drv_t *disp_drv, const lv_area_t *area, lv_col
 }
 
 /**
-  \function void lv_port_disp_init(void)
+  \fn void lv_port_disp_init(void)
   \brief    This function does:
                 - storing data in temporary buffer.
                 - flushing the data to display using callback function
                 - enabling a touch pointer as a input device to display
-  \param[in]   none
   \return      none
   */
 void lv_port_disp_init(void)

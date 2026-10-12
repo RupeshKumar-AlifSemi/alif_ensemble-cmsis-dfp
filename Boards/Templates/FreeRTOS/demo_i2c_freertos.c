@@ -9,7 +9,7 @@
  */
 
 /******************************************************************************
- * @file     : demo_i2c_freertos.c
+ * @file     demo_i2c_freertos.c
  * @brief    : FreeRtos demo application to verify I2C Master and
  *             Slave functionality with FreeRtos as an operating system
  *
@@ -27,8 +27,7 @@
  *             - Connecting GPIO pins of I2C1 TO I2C0
  *               SDA pin P7_2(J14) to P7_0(J14)
  *               SCL pin P7_3(J14) to P7_1(J14).
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 
 #include <stdio.h>
@@ -459,7 +458,6 @@ error_uninitialize:
  * @fn      int main(void)
  * @brief   Entry point for I2C comm
  * @note    none
- * @param   none
  * @retval  none
  */
 int main(void)

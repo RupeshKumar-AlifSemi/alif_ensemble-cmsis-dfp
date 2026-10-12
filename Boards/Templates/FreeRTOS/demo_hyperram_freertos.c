@@ -9,14 +9,13 @@
  */
 
 /*******************************************************************************
- * @file     : demo_hyperram_freertos.c
+ * @file     demo_hyperram_freertos.c
  * @author   : Manoj A Murudi
- * @email    : manoj.murudi@alifsemi.com
+ * Email:    : manoj.murudi@alifsemi.com
  * @version  : V1.0.0
  * @date     : 24-April-2025
  * @brief    : TestApp to verify OSPI0 HyperRAM XIP using FreeRTOS.
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 
 /*

@@ -9,14 +9,13 @@
  */
 
 /*******************************************************************************
- * @file     : demo_gt911.c
+ * @file     demo_gt911.c
  * @author   : Chandra Bhushan Singh
- * @email    : chandrabhushan.singh@alifsemi.com
+ * Email:    : chandrabhushan.singh@alifsemi.com
  * @version  : V1.0.0
  * @date     : 08-August-2023
  * @brief    : Baremetal demo application to verify GT911 touch screen.
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 
 /* System Includes */
@@ -43,7 +42,7 @@ void touchscreen_demo();
 #define ACTIVE_TOUCH_POINTS 5
 
 /**
- * @function    void touchscreen_demo()
+ * @fn    void touchscreen_demo()
 \brief          Bare Metal TestApp to verify GT911 touch screen.
                 This demo application does:
                     - initialize i2c AND gpio9 port hardware pins

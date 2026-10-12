@@ -9,15 +9,14 @@
  */
 
 /******************************************************************************
- * @file     : demo_canfd_intloopback_freertos.c
+ * @file     demo_canfd_intloopback_freertos.c
  * @author   : Shreehari H K
- * @email    : shreehari.hk@alifsemi.com
+ * Email:    : shreehari.hk@alifsemi.com
  * @version  : V1.0.0
  * @date     : 05-July-2023
  * @brief    : FreeRTOS demo application for CANFD.
  *             - Performs Internal loopback test.
- * @bug      : None
- * @Note     : None
+ * @note     : None
  ******************************************************************************/
 
 #include <stdio.h>
@@ -451,7 +450,6 @@ uninitialise_canfd:
  * @fn      int main()
  * @brief   main function of the CANFD Application
  * @note    none
- * @param   none
  * @retval  software execution status
  */
 int main()
@@ -491,7 +489,6 @@ int main()
  * @fn      static void canfd_check_error(void)
  * @brief   Checks for the errors in CANFD
  * @note    none
- * @param   none
  * @retval  none
  */
 static void canfd_check_error(void)
@@ -511,7 +508,6 @@ static void canfd_check_error(void)
  * @fn      static bool canfd_process_rx_message(void)
  * @brief   Processes the received messages
  * @note    none
- * @param   none
  * @retval  none
  */
 static bool canfd_process_rx_message(void)

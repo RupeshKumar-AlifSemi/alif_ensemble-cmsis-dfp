@@ -9,14 +9,13 @@
  */
 
 /*******************************************************************************
- * @file     : demo_lvgl.c
+ * @file     demo_lvgl.c
  * @author   : Ahmad Rashed
- * @email    : ahmad.rashed@alifsemi.com
+ * Email:    : ahmad.rashed@alifsemi.com
  * @version  : V1.0.0
  * @date     : 28-March-2022
  * @brief    : lvgl application code
- * @bug      : None.
- * @Note     : None
+ * @note     : None
  ******************************************************************************/
 
 #include "lvgl.h"

@@ -8,14 +8,13 @@
  *
  */
 /******************************************************************************
- * @file     : demo_lpi2c0_freertos.c
+ * @file     demo_lpi2c0_freertos.c
  * @author   : Shreehari H K
- * @email    : shreehari.hk@alifsemi.com
+ * Email:    : shreehari.hk@alifsemi.com
  * @version  : V1.0.0
  * @date     : 05-Sept-2024
  * @brief    : TestApp to verify I2C Master and LPI2C0 Slave functionality
  *             using FreeRTOS without any operating system.
- * @bug      : None
  * @note     : Code will verify:
  *              1.)Master transmit and Slave receive
  *              2.)Master receive  and Slave transmit
@@ -504,7 +503,6 @@ slave_error_uninitialize:
  * @fn      static void LPI2C0_demo(void)
  * @brief   Performs LPI2C0 demo
  * @note    none
- * @param   none
  * @retval  none
  */
 static void LPI2C0_demo(void)
@@ -566,7 +564,6 @@ static void LPI2C0_demo(void)
  * @fn      int main(void)
  * @brief   Entry function of LPI2C0
  * @note    none
- * @param   none
  * @retval  none
  */
 int main(void)

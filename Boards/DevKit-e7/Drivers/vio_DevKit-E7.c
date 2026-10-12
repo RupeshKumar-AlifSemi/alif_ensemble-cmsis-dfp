@@ -1,5 +1,5 @@
 /******************************************************************************
- * @file     vio_DevKit-E7.c.c
+ * @file     vio_DevKit-E7.c
  * @brief    Virtual I/O implementation for Alif Semiconductor Ensemble DevKit-E7
  * @version  V1.0.0
  * @date     30. May 2025

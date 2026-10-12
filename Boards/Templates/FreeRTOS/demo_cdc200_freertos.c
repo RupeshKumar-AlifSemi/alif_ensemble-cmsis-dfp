@@ -9,9 +9,9 @@
  */
 
 /*******************************************************************************
- * @file     : demo_cdc_freertos.c
+ * @file     demo_cdc200_freertos.c
  * @author   : Chandra Bhushan Singh
- * @email    : chandrabhushan.singh@alifsemi.com
+ * Email:    : chandrabhushan.singh@alifsemi.com
  * @version  : V1.0.0
  * @date     : 16-Oct-2023
  * @brief    : FreeRTOS demo application code for CDC200 driver
@@ -21,8 +21,7 @@
  *              - Must use either Focus LCDs E50RA-I-MW550-N or E43GB-I-MW405-C
  *              - GPIO port P6_1 is used to enable/disable boost converter for LED backlight
  *              - GPIO port P15_5 is used to drive LCD panel reset
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 
 /* System Includes */
@@ -123,10 +122,10 @@ static uint8_t lcd_image[DIMAGE_Y][DIMAGE_X][PIXEL_BYTES]
     __attribute__((section(".bss.lcd_frame_buf")));
 
 /**
- *    @func         : void display_callback(uint32_t event)
+ *    @fn         : void display_callback(uint32_t event)
  *    @brief        : CDC demo callback
  *                  - normally is not called
- *    \param[in]    : event: Display Event
+ *    \param[in] event Display Event
  *    @return       : NONE
  */
 static void display_callback(uint32_t event)
@@ -138,11 +137,11 @@ static void display_callback(uint32_t event)
 }
 
 /**
- *    @func         : void cdc_demo_thread_entry(void *pvParameters)
+ *    @fn         : void cdc_demo_thread_entry(void *pvParameters)
  *    @brief        : CDC demo using FreeRTOS operating system.
  *                  - initialize the CDC200 controller
  *                  - write various colors to the memory address.
- *    @param        : pvParameters.
+ *    @param pvParameters .
  *    @return       : NONE
  */
 void cdc_demo_thread_entry(void *pvParameters)

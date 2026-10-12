@@ -9,9 +9,9 @@
  */
 
 /*******************************************************************************
- * @file     : demo_dac_freertos.c
+ * @file     demo_dac_freertos.c
  * @author   : Nisarga A M
- * @email    : nisarga.am@alifsemi.com
+ * Email:    : nisarga.am@alifsemi.com
  * @version  : V1.0.0
  * @date     : 06-June-2023
  * @brief    : TestApp to verify DAC(Digital to Analog converter) interface using

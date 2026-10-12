@@ -7,9 +7,9 @@
  * contact@alifsemi.com, or visit: https://alifsemi.com/license
  */
 /*******************************************************************************
- * @file     : demo_adc_clickboard.c
+ * @file     demo_adc_clickboard.c
  * @author   : Prabhakar kumar
- * @email    : prabhakar.kumar@alifsemi.com
+ * Email:    : prabhakar.kumar@alifsemi.com
  * @version  : V1.0.0
  * @date     : 15-sept-2023
  * @brief    : Baremetal demo application code click board analog input
@@ -59,7 +59,7 @@ uint32_t adc_sample[NUM_CHANNELS];
 volatile uint32_t num_samples;
 
 /*
- * @func   : void adc_conversion_callback(uint32_t event, uint8_t channel, uint32_t sample_output)
+ * @fn   : void adc_conversion_callback(uint32_t event, uint8_t channel, uint32_t sample_output)
  * @brief  : adc conversion isr callback
  * @return : NONE
  */
@@ -74,7 +74,7 @@ static void adc_conversion_callback(uint32_t event, uint8_t channel, uint32_t sa
 }
 
 /**
- *    @func   : void adc_click_board_demo()
+ *    @fn   : void adc_click_board_demo()
  *    @brief  : ADC Click Board demo
  *             - test to verify the click board analog input of adc.
  *             - Internal input of click board in analog signal corresponding

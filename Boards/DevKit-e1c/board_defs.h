@@ -14,7 +14,6 @@
  * @date     13-8-2024
  * @brief    Board info/settings for "DevKit C (DK-E1C)" project
  *           with AE1C1F4051920PH
- * @bug      None.
  * @note     To modify this file manually, take care to modify pins.h and gpios.h
  *           accordingly when required.
  ******************************************************************************/

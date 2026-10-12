@@ -8,14 +8,13 @@
  */
 
 /*******************************************************************************
- * @file     : demo_flash_freertos.c
+ * @file     demo_flash_freertos.c
  * @author   : Khushboo Singh
- * @email    : khushboo.singh@alifsemi.com
- * @Version  : V1.0.0
+ * Email:    : khushboo.singh@alifsemi.com
+ * @version  V1.0.0
  * @date     : 28-Oct-2022
  * @brief    : FreeRTOS Application to demo the APIs of FLASH Driver.
- * @bug      : None.
- * @Note     : None
+ * @note     : None
  ******************************************************************************/
 
 #include <stdio.h>
@@ -63,7 +62,6 @@ uint16_t usWriteBuff[BUFFER_SIZE];
  * @fn      static int32_t prvSetupPinMUX( void )
  * @brief   Set up PinMUX and PinPAD
  * @note    none
- * @param   none
  * @retval  -1 : On Error
  *           0 :  On Success
  */
@@ -110,7 +108,7 @@ static int32_t prvSetupPinMUX(void)
  * @fn      void vFlashThread ( void *pvParameters )
  * @brief   Used to read, write and erase the flash.
  * @note    none.
- * @param   thread_input : thread input.
+ * @param pvParameters thread input.
  * @retval  none.
  */
 void vFlashThread(void *pvParameters)

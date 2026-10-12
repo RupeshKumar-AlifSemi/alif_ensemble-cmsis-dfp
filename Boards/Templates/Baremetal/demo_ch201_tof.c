@@ -9,9 +9,9 @@
  */
 
 /*******************************************************************************
- * @file     : demo_ch201_tof.c
+ * @file     demo_ch201_tof.c
  * @author   : Shreehari H K
- * @email    : shreehari.hk@alifsemi.com
+ * Email:    : shreehari.hk@alifsemi.com
  * @version  : V1.0.0
  * @date     : 21-Nov-2025
  * @brief    : Baremetal testapp to verify CH201 Time of Flight sensor data
@@ -25,8 +25,7 @@
  *                 P7_3 (SCL)
  *                 GND
  *
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 
 /* System Includes */
@@ -95,7 +94,6 @@ ARM_RANGE_SENSOR_THRESHOLD ch201_detect_thresholds[CH201_MAX_SUPPORTED_THRESHOLD
  * This function initializes the CH201 sensor and runs
  * the Time-of-Flight demonstration routine.
  *
- * @param[in]  None
  *
  * @return None
  */
@@ -213,7 +211,6 @@ error_uninitialize:
  * Use this function to initialize the system
  * and start the application loop.
  *
- * @param[in]  None
  *
  * @return 0 on success, or an error code otherwise.
  */

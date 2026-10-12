@@ -9,9 +9,9 @@
  */
 
 /*******************************************************************************
- * @file     : demo_utimer.c
+ * @file     demo_utimer.c
  * @author   : Manoj A Murudi
- * @email    : manoj.murudi@alifsemi.com
+ * Email:    : manoj.murudi@alifsemi.com
  * @version  : V1.0.0
  * @date     : 30-May-2023
  * @brief    : Baremetal demo application for UTIMER.
@@ -23,8 +23,7 @@
  *buffering capture mode.
  *             - Configuring the UTIMER Channel 5 for driver A, double buffering compare mode (only
  *for E7).
- * @bug      : None.
- * @Note     : None
+ * @note     : None
  ******************************************************************************/
 
 /* History:
@@ -79,7 +78,7 @@ ARM_DRIVER_GPIO       *ptrCapt1GPO = &ARM_Driver_GPIO_(BOARD_UT_CAPTURE_MODE_GPO
                                 }
 
 /**
- * @function    int gpio_init(ARM_UTIMER_MODE mode)
+ * @fn    int gpio_init(ARM_UTIMER_MODE mode)
  * @brief       GPIO initialization using gpio driver
  * @note        none
  * @param       mode
@@ -205,10 +204,9 @@ static int32_t gpio_init(ARM_UTIMER_MODE mode)
 
 #if (!USE_CONDUCTOR_TOOL_PINS_CONFIG)
 /**
- * @function    int32_t board_utimer_pins_config(void)
+ * @fn    int32_t board_utimer_pins_config(void)
  * @brief       UTIMER pinmux config
  * @note        none
- * @param       mode
  * @retval      execution status
  */
 static int32_t board_utimer_pins_config(void)
@@ -308,7 +306,7 @@ static int32_t board_utimer_pins_config(void)
 #ifdef BOARD_BASIC_MODE_UTIMER_INSTANCE
 static volatile uint32_t cb_basic_status;
 /**
- * @function    void utimer_basic_mode_cb_func(event)
+ * @fn    void utimer_basic_mode_cb_func(event)
  * @brief       utimer basic mode callback function
  * @note        none
  * @param       event
@@ -322,10 +320,9 @@ static void utimer_basic_mode_cb_func(uint8_t event)
 }
 
 /**
- * @function    void utimer_basic_mode_app(void)
+ * @fn    void utimer_basic_mode_app(void)
  * @brief       utimer basic mode application
  * @note        none
- * @param       none
  * @retval      none
  */
 static void utimer_basic_mode_app(void)
@@ -440,7 +437,7 @@ error_basic_mode_uninstall:
 #ifdef BOARD_BUFFER_MODE_UTIMER_INSTANCE
 static volatile uint32_t cb_buffer_status;
 /**
- * @function    void utimer_buffering_mode_cb_func(event)
+ * @fn    void utimer_buffering_mode_cb_func(event)
  * @brief       utimer buffer mode callback function
  * @note        none
  * @param       event
@@ -454,10 +451,9 @@ static void utimer_buffering_mode_cb_func(uint8_t event)
 }
 
 /**
- * @function    void utimer_buffering_mode_app(void)
+ * @fn    void utimer_buffering_mode_app(void)
  * @brief       utimer buffer mode application
  * @note        none
- * @param       none
  * @retval      none
  */
 static void utimer_buffering_mode_app(void)
@@ -606,7 +602,7 @@ error_buffering_mode_uninstall:
 #ifdef BOARD_TRIGGER_MODE_UTIMER_INSTANCE
 static volatile uint32_t cb_trigger_status;
 /**
- * @function    void utimer_trigger_mode_cb_func(event)
+ * @fn    void utimer_trigger_mode_cb_func(event)
  * @brief       utimer trigger mode callback function
  * @note        none
  * @param       event
@@ -620,10 +616,9 @@ static void utimer_trigger_mode_cb_func(uint8_t event)
 }
 
 /**
- * @function    void utimer_trigger_mode_app(void)
+ * @fn    void utimer_trigger_mode_app(void)
  * @brief       utimer trigger mode application
  * @note        none
- * @param       none
  * @retval      none
  */
 static void utimer_trigger_mode_app(void)
@@ -760,7 +755,7 @@ error_trigger_mode_uninstall:
 #ifdef BOARD_CAPTURE_MODE_UTIMER_INSTANCE
 static volatile uint32_t cb_capture_status;
 /**
- * @function    void utimer_capture_mode_cb_func(event)
+ * @fn    void utimer_capture_mode_cb_func(event)
  * @brief       utimer capture mode callback function
  * @note        none
  * @param       event
@@ -776,10 +771,9 @@ static void utimer_capture_mode_cb_func(uint8_t event)
 }
 
 /**
- * @function    void utimer_capture_mode_app(void)
+ * @fn    void utimer_capture_mode_app(void)
  * @brief       utimer capture mode application
  * @note        none
- * @param       none
  * @retval      none
  */
 static void utimer_capture_mode_app(void)
@@ -932,7 +926,7 @@ static volatile uint32_t cb_compare_a_buf2_status;
 static volatile uint32_t cb_overflow_status      ;
 
 /**
- * @function    void utimer_compare_mode_cb_func(event)
+ * @fn    void utimer_compare_mode_cb_func(event)
  * @brief       utimer compare mode callback function
  * @note        none
  * @param       event
@@ -955,10 +949,9 @@ static void utimer_compare_mode_cb_func(uint8_t event)
 }
 
 /**
- * @function    void utimer_compare_mode_app(void)
+ * @fn    void utimer_compare_mode_app(void)
  * @brief       utimer compare mode application
  * @note        none
- * @param       none
  * @retval      none
  */
 static void utimer_compare_mode_app(void)

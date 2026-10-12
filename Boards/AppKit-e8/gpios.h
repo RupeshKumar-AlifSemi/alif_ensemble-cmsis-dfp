@@ -14,8 +14,6 @@
  * @date     2025-10-29
  * @brief    Pseudo-static GPIO pin settings for "AppKit-e8"
  *           project with AE822FA0E5597.
- * @bug      None.
- * @note     None.
  ******************************************************************************/
 
 #ifndef __GPIOS_H__

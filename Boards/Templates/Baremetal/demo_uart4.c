@@ -9,9 +9,9 @@
  */
 
 /******************************************************************************
- * @file     : demo_uart4.c
+ * @file     demo_uart4.c
  * @author   : Ahmad Rashed
- * @email    : ahmad.rashed@alifsemi.com
+ * Email:    : ahmad.rashed@alifsemi.com
  * @version  : V1.0.1
  * @date     : 31-March-2023
  * @brief    : TestApp to verify UART interface using baremetal, no operating system.
@@ -19,8 +19,7 @@
  *               UART waits for a char on serial terminal;
  *                 if 'Enter' key is received; UART Sends back "Hello World!".
  *                 else, it sends back received character.
- * @bug      : None.
- * @Note     : Updated for B0
+ * @note     : Updated for B0
  ******************************************************************************/
 
 /* System Includes */
@@ -68,7 +67,7 @@ void myUART_Thread_entry();
 volatile uint32_t event_flags_uart;
 
 /**
- * @function    void myUART_callback(uint32_t event)
+ * @fn    void myUART_callback(uint32_t event)
  * @brief       UART isr callabck
  * @note        none
  * @param       event: USART Event
@@ -113,14 +112,13 @@ void myUART_callback(uint32_t event)
 }
 
 /**
- * @function    void myUART_Thread_entry()
+ * @fn    void myUART_Thread_entry()
  * @brief       TestApp to verify UART interface
  *              UART interactive console application:
  *                  UART waits for a char on serial terminal;
  *                  if 'Enter' key is received; UART Sends back "Hello World!".
  *                  else, it sends back received character.
  * @note        none
- * @param       none
  * @retval      none
  */
 void myUART_Thread_entry()

@@ -9,16 +9,15 @@
  */
 
 /******************************************************************************
- * @file     : demo_canfd_blockingmode.c
+ * @file     demo_canfd_blockingmode.c
  * @author   : Shreehari H K
- * @email    : shreehari.hk@alifsemi.com
+ * Email:    : shreehari.hk@alifsemi.com
  * @version  : V1.0.0
  * @date     : 22-Feb-2024
  * @brief    : Baremetal demo application for CANFD.
  *              - Performs Blocking (Polling) mode test.
  *              - External loopback communication is done.
- * @bug      : None
- * @Note     : The Hardware connection to be done as per External Loopback Test
+ * @note     : The Hardware connection to be done as per External Loopback Test
  ******************************************************************************/
 
 #include <stdio.h>
@@ -161,7 +160,6 @@ static int32_t board_canfd_pins_config(void)
  * @brief   CANFD Blocking mode demo with the
  *          help of External Loopback
  * @note    none
- * @param   none
  * @retval  none
  */
 static void canfd_blocking_mode_demo(void)
@@ -380,7 +378,6 @@ uninitialise_canfd:
  * @fn      int main()
  * @brief   main function of the CANFD Application
  * @note    none
- * @param   none
  * @retval  software execution status
  */
 int main()
@@ -407,7 +404,6 @@ int main()
  * @fn      static void canfd_process_rx_message(void)
  * @brief   Processes the received messages
  * @note    none
- * @param   none
  * @retval  none
  */
 static void canfd_process_rx_message(void)
@@ -460,7 +456,6 @@ static void canfd_process_rx_message(void)
  * @fn      static void canfd_check_error(void)
  * @brief   Checks for the errors in CANFD
  * @note    none
- * @param   none
  * @retval  none
  */
 static void canfd_check_error(void)
@@ -481,10 +476,10 @@ static void canfd_check_error(void)
 }
 
 /**
- * @fn      static void canfd_transmit_message(void)
+ * @fn static void canfd_transmit_message(const CANFD_FRAME msg_type)
  * @brief   Prepares and sends message
  * @note    none
- * @param   none
+ * @param msg_type
  * @retval  none
  */
 static void canfd_transmit_message(const CANFD_FRAME msg_type)

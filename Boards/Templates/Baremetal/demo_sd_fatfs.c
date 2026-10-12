@@ -9,14 +9,13 @@
  */
 
 /*******************************************************************************
- * @file     : demo_sd_fatfs.c
+ * @file     demo_sd_fatfs.c
  * @author   : Deepak Kumar
- * @email    : deepak@alifsemi.com
+ * Email:    : deepak@alifsemi.com
  * @version  : V0.0.1
  * @date     : 02-Sep-2024
  * @brief    : Test App for baremetal generic fatfs.
- * @bug      : None.
- * @Note     : None
+ * @note     : None
  ******************************************************************************/
 /* System Includes */
 #include "RTE_Device.h"

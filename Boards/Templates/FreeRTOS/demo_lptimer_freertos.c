@@ -9,15 +9,14 @@
  */
 
 /*******************************************************************************
- * @file     : demo_lptimer_freertos.c
+ * @file     demo_lptimer_freertos.c
  * @author   : Sudarshan Iyengar
- * @email    : sudarshan.iyengar@alifsemi.com
+ * Email:    : sudarshan.iyengar@alifsemi.com
  * @version  : V1.0.0
  * @date     : 28-August-2021
  * @brief    : demo application for lptimer.
  *             - Configuring the lptimer channel 0 for 5 seconds.
- * @bug      : None.
- * @Note     : None
+ * @note     : None
  ******************************************************************************/
 /* System Includes */
 #include <stdio.h>

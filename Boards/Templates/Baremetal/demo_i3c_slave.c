@@ -8,9 +8,9 @@
  */
 
 /*******************************************************************************
- * @file     : demo_i3c_slave.c
+ * @file     demo_i3c_slave.c
  * @author   : Prabhakar kumar
- * @email    : prabhakar.kumar@alifsemi.com
+ * Email:    : prabhakar.kumar@alifsemi.com
  * @version  : V1.0.0
  * @date     : 27-May-2023
  * @brief    : Baremetal to verify slave side loop back test
@@ -36,8 +36,7 @@
  *              - SDA P0_6 -> SDA P0_6
  *              - SCL P0_5 -> SCL P0_5
  *              - GND      -> GND
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 
 /* System Includes */
@@ -88,7 +87,6 @@ typedef enum _I3C_CB_EVENT {
   \brief       i3c hardware pin initialization:
                 - PIN-MUX configuration
                 - PIN-PAD configuration
-  \param[in]   void
   \return      0:success; -1:failure
 */
 int32_t hardware_init(void)

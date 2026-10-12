@@ -9,9 +9,9 @@
  */
 
 /*******************************************************************************
- * @file     : demo_adc.c
+ * @file     demo_adc.c
  * @author   : Prabhakar kumar
- * @email    : prabhakar.kumar@alifsemi.com
+ * Email:    : prabhakar.kumar@alifsemi.com
  * @version  : V1.0.0
  * @date     : 22-Feb-2022
  * @brief    : Baremetal demo application code for ADC driver
@@ -108,8 +108,7 @@
  *                - +ve connected to P0_0 (ADC122 channel 0) at 1.0V and
  *                  +ve connected to P0_4 (ADC122 channel 1) at 0.5V
  *                - -ve connect to GND.
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 
 /* System Includes */
@@ -425,7 +424,7 @@ static int32_t board_adc_pins_config(void)
 #endif
 
 /*
- * @func   : void adc_conversion_callback(uint32_t event, uint8_t channel, uint32_t sample_output)
+ * @fn   : void adc_conversion_callback(uint32_t event, uint8_t channel, uint32_t sample_output)
  * @brief  : adc conversion isr callback
  * @return : NONE
  */
@@ -486,7 +485,7 @@ static void adc_conversion_callback(uint32_t event, uint8_t channel, uint32_t sa
 }
 
 /**
- *    @func         : void ADC_demo()
+ *    @fn         : void ADC_demo()
  *    @brief        : ADC demo
  *                  - test to verify the adc.
  *                  - input analog signal corresponding convert into digital value

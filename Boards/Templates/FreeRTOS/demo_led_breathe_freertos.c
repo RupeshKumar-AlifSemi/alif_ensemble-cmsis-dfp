@@ -9,14 +9,13 @@
  */
 
 /*******************************************************************************
- * @file     : demo_led_breathe_freertos.c
+ * @file     demo_led_breathe_freertos.c
  * @author   : Manoj A Murudi
- * @email    : manoj.murudi@alifsemi.com
+ * Email:    : manoj.murudi@alifsemi.com
  * @version  : V1.0.0
  * @date     : 19-Sept-2023
  * @brief    : FreeRTOS demo application for LED brightness control using PWM.
- * @bug      : None.
- * @Note     : None
+ * @note     : None
  ******************************************************************************/
 #include <stdio.h>
 #include <inttypes.h>
@@ -127,7 +126,7 @@ static int32_t board_utimer_pins_config(void)
 #endif
 
 /**
- * @function    void utimer_led_cb_func(uint8_t event)
+ * @fn    void utimer_led_cb_func(uint8_t event)
  * @brief       utimer callback function
  * @note        none
  * @param       event
@@ -147,7 +146,7 @@ static void utimer_led_cb_func(uint8_t event)
 }
 
 /**
- * @function    int32_t led_init (uint8_t channel)
+ * @fn    int32_t led_init (uint8_t channel)
  * @brief       UTIMER channel init for mentioned LED
  * @note        none
  * @param       channel
@@ -191,7 +190,7 @@ static int32_t led_init(uint8_t channel)
 }
 
 /**
- * @function    int32_t led_start (uint8_t channel)
+ * @fn    int32_t led_start (uint8_t channel)
  * @brief       UTIMER channel counter start for mentioned LED
  * @note        none
  * @param       channel
@@ -210,7 +209,7 @@ static int32_t led_start(uint8_t channel)
 }
 
 /**
- * @function    int32_t led_set_brightness (uint8_t channel, ARM_UTIMER_COUNTER counter, uint32_t
+ * @fn    int32_t led_set_brightness (uint8_t channel, ARM_UTIMER_COUNTER counter, uint32_t
  * duty_cycle)
  * @brief       UTIMER channel set Compare value for mentioned LED
  * @note        none
@@ -233,7 +232,7 @@ static int32_t led_set_brightness(uint8_t channel, ARM_UTIMER_COUNTER counter, u
 }
 
 /**
- * @function    int32_t led_stop (uint8_t channel)
+ * @fn    int32_t led_stop (uint8_t channel)
  * @brief       UTIMER channel counter stop for mentioned LED
  * @note        none
  * @param       channel
@@ -253,7 +252,7 @@ static int32_t led_stop(uint8_t channel)
 }
 
 /**
- * @function    void led_breathe_thread (void *pvParameters)
+ * @fn    void led_breathe_thread (void *pvParameters)
  * @brief       LED brightness control using pwm
  * @note        none
  * @param       pvParameters

@@ -475,9 +475,9 @@ const float tempData[][2] = {
 
 
 /*
- * @func         : float get_temperature (uint32_t adc_value)
+ * @fn         : float get_temperature (uint32_t adc_value)
  * @brief        : Converts the digital value into a temperature reading
- * @parameter[1] : adc_value  : The digital value obtained from TSENS conversion
+ * @param adc_value The digital value obtained from TSENS conversion
  * @return       : temperature
  */
 float get_temperature(uint32_t adc_value)

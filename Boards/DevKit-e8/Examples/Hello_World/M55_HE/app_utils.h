@@ -10,12 +10,11 @@
 /******************************************************************************
  * @file     app_utils.h
  * @author   Raj Ranjan
- * @email    raj.ranjan@alifsemi.com
+ * Email:    raj.ranjan@alifsemi.com
  * @brief    Common Header File for all testapps
  * @version  V1.0.0
  * @date     22-Jul-2025
- * @bug      None
- * @Note     None
+ * @note     None
  ******************************************************************************/
 #ifndef APP_UTILS_H
 #define APP_UTILS_H

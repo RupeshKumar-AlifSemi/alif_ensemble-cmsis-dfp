@@ -8,14 +8,13 @@
  *
  */
 /*******************************************************************************
- * @file     : demo_sd.c
+ * @file     demo_sd.c
  * @author   : Deepak Kumar
- * @email    : deepak@alifsemi.com
+ * Email:    : deepak@alifsemi.com
  * @version  : V0.0.1
  * @date     : 28-Nov-2022
  * @brief    : Baremeetal sd driver test Application.
- * @bug      : None.
- * @Note     : None
+ * @note     : None
  ******************************************************************************/
 /* System Includes */
 #include <stdio.h>
@@ -53,8 +52,8 @@ volatile uint32_t dma_done_irq = 0;
 /**
   \fn           sd_cb(uint16_t cmd_status, uint16_t xfer_status)
   \brief        SD interrupt callback
-  \param[in]    uint16_t cmd_status
-  \param[in]    uint16_t xfer_status
+  \param[in] cmd_status
+  \param[in] xfer_status
   \return       none
 */
 void sd_cb(uint16_t cmd_status, uint16_t xfer_status)
@@ -101,7 +100,7 @@ void sd_pwr_cb(uint8_t power_on)
 /**
   \fn           BareMetalSDTest(uint32_t startSec, uint32_t EndSector)
   \brief        Baremetal SD driver Test Function
-  \param[in]    starSecr - Test Read/Write start sector number
+  \param[in] startSec - Test Read/Write start sector number
   \param[in]    EndSector - Test Read/Write End sector number
   \return       none
 */

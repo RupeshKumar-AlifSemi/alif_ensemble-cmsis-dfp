@@ -9,9 +9,9 @@
  */
 
 /******************************************************************************
- * @file     : demo_pdm.c
+ * @file     demo_pdm.c
  * @author   : Nisarga A M
- * @email    : nisarga.am@alifsemi.com
+ * Email:    : nisarga.am@alifsemi.com
  * @version  : V1.0.0
  * @date     : 15-Jan-2023
  * @brief    : Baremetal code for PDM(Pulse Density Modulation).
@@ -159,7 +159,7 @@ static void PDM_fifo_callback(uint32_t event)
 
 #if (!USE_CONDUCTOR_TOOL_PINS_CONFIG)
 /**
- * @fn      static int32_t board_lppdm_pins_config(void)
+ * @fn static int32_t board_pdm_pins_config(void)
  * @brief   Configure PDM pinmux which not
  *          handled by the board support library.
  * @retval  execution status.

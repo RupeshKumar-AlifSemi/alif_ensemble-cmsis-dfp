@@ -14,8 +14,6 @@
  * @date     2025-5-7
  * @brief       Pin MUX and Pin Config settings for "DevKit D1 (DK-E7)"
  *           project with AE722F80F55D5LS.
- * @bug      None.
- * @note     None.
  ******************************************************************************/
 
 #ifndef __PINS_H__

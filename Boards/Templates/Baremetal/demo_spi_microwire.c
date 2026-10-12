@@ -9,17 +9,16 @@
  */
 
 /*******************************************************************************
- * @file     : demo_spi_microwire.c
+ * @file     demo_spi_microwire.c
  * @author   : Manoj A Murudi
- * @email    : manoj.murudi@alifsemi.com
+ * Email:    : manoj.murudi@alifsemi.com
  * @version  : V1.0.0
  * @date     : 28-Jan-2024
  * @brief    : Baremetal demo app configures the BOARD_MW_SPI_MASTER_INSTANCE instance in master
  *             mode with Microwire frame format and configures the BOARD_MW_SPI_SLAVE_INSTANCE
  *instance in slave mode with Microwire frame format. The data transfer occurs between master and
  *slave or slave and master based on the MASTER_TO_SLAVE_TRANSFER macro.
- * @bug      : None.
- * @Note     : None
+ * @note     : None
  ******************************************************************************/
 
 #include <stdio.h>
@@ -168,7 +167,6 @@ static void SPI_Slave_Callback_func(uint32_t event)
  * @fn      void MW_Demo_func(void)
  * @brief   Microwire application function.
  * @note    none.
- * @param   none.
  * @retval  None
  */
 static void MW_Demo_func(void)

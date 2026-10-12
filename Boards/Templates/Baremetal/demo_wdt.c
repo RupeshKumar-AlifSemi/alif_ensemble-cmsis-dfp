@@ -9,14 +9,13 @@
  */
 
 /*******************************************************************************
- * @file     : demo_wdt.c
+ * @file     demo_wdt.c
  * @author   : Manoj A Murudi
- * @email    : manoj.murudi@alifsemi.com
+ * Email:    : manoj.murudi@alifsemi.com
  * @version  : V1.0.0
  * @date     : 26-April-2022
  * @brief    : TestApp to verify Wachdog Driver.
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 
 /* Project Includes */
@@ -53,7 +52,6 @@ void NMI_Handler(void)
                  - feed  the watchdog;
                  - stop feeding after n iterations;
                  - wait for system to RESET on timeout
-  \param[in]   none
   \return      none
 */
 void watchdog_demo_entry()

@@ -9,9 +9,9 @@
  */
 
 /******************************************************************************
- * @file     : demo_hyperram_e1c.c
+ * @file     demo_hyperram_e1c.c
  * @author   : Silesh C V, Manoj A Murudi
- * @email    : silesh@alifsemi.com, manoj.murudi@alifsemi.com
+ * Email:    : silesh@alifsemi.com, manoj.murudi@alifsemi.com
  * @version  : V1.0.0
  * @date     : 3-April-2025
  * @brief    : Demo program for the OSPI hyperram XIP for Balletto family.

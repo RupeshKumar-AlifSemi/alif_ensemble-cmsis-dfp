@@ -9,7 +9,7 @@
  */
 
 /*******************************************************************************
- * @file     : demo_wdt_freertos.c
+ * @file     demo_wdt_freertos.c
  * @author   : Rohan Gautam
  * @version  : V1.1.0
  * @date     : 11-March-2026

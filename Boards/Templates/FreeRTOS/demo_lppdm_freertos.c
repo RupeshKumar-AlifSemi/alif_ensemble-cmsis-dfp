@@ -9,9 +9,9 @@
  */
 
 /******************************************************************************
- * @file     : demo_lppdm_freertos.c
+ * @file     demo_lppdm_freertos.c
  * @author   : Nisarga A M
- * @email    : nisarga.am@alifsemi.com
+ * Email:    : nisarga.am@alifsemi.com
  * @version  : V1.0.0
  * @date     : 29-May-2023
  * @brief    : TestApp to verify LPPDM(Low Power Pulse Density Modulation) interface

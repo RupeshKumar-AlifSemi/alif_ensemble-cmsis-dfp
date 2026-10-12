@@ -9,14 +9,13 @@
  */
 
 /*******************************************************************************
- * @file     : demo_led_blinky.c
+ * @file     main.c
  * @author   : Girish BN, Manoj A Murudi
- * @email    : girish.bn@alifsemi.com, manoj.murudi@alifsemi.com
+ * Email:    : girish.bn@alifsemi.com, manoj.murudi@alifsemi.com
  * @version  : V1.0.0
  * @date     : 25-May-2023
  * @brief    : DEMO application for LED blink.
- * @bug      : None.
- * @Note     : None.
+ * @note     : None.
  ******************************************************************************/
 #include <stdio.h>
 #include <inttypes.h>
@@ -132,7 +131,6 @@ static int32_t board_led_pins_config(void)
 /**
   \fn         void led_blink_app(void)
   \brief      LED blinky function
-  \param[in]  none
   \return     none
 */
 void led_blink_app(void)

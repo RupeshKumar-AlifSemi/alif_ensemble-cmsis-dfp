@@ -9,15 +9,14 @@
  */
 
 /*******************************************************************************
- * @file     : demo_lpspi_freertos.c
+ * @file     demo_lpspi_freertos.c
  * @author   : Manoj A Murudi
- * @email    : manoj.murudi@alifsemi.com
+ * Email:    : manoj.murudi@alifsemi.com
  * @version  : V1.0.0
  * @date     : 29-May-2023
  * @brief    : FreeRTOS demo application for LPSPI and SPI0.
  *             - Data transfer between LPSPI(master) and SPI0(slave).
- * @bug      : None.
- * @Note     : Demo application will work only on M55-HE core.
+ * @note     : Demo application will work only on M55-HE core.
  ******************************************************************************/
 /* System Includes */
 #include <stdio.h>

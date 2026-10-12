@@ -9,15 +9,14 @@
  */
 
 /*******************************************************************************
- * @file     : demo_lptimer.c
+ * @file     demo_lptimer.c
  * @author   : Manoj A Murudi
- * @email    : manoj.murudi@alifsemi.com
+ * Email:    : manoj.murudi@alifsemi.com
  * @version  : V1.0.0
  * @date     : 22-March-2022
  * @brief    : baremetal demo application for lptimer.
  *             - Configuring the lptimer channel 0 for 5 seconds.
- * @bug      : None.
- * @Note     : None
+ * @note     : None
  ******************************************************************************/
 
 #include <stdio.h>

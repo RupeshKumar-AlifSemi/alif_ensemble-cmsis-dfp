@@ -9,14 +9,13 @@
  */
 
 /*******************************************************************************
- * @file     : demo_dma_memcpy.c
+ * @file     demo_dma_memcpy.c
  * @author   : Sudhir Sreedharan
- * @email    : sudhir@alifsemi.com
+ * Email:    : sudhir@alifsemi.com
  * @version  : V1.0.0
  * @date     : 16-Sep-2023
  * @brief    : Baremetal demo app for memcpy
- * @bug      : None.
- * @Note     : None
+ * @note     : None
  ******************************************************************************/
 
 #include <stdio.h>
