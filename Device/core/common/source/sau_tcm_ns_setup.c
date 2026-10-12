@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     sau_tcm_ns_setup.c
  * @author   Sudhir Sreedharan
- * @email    sudhir@alifsemi.com
+ * Email:    sudhir@alifsemi.com
  * @version  V1.0.0
  * @date     06-August-2024
  * @brief    TCM paritioning to non-secure by configuring the SAU and TGU
@@ -20,7 +20,6 @@
  *           non-secure only when the CMSE feature is not enabled.
  *           If complete trustzone is going to be used, please do the
  *           modifications in the respective tz.h header file.
- * @bug      None.
  ******************************************************************************/
 
 /* Includes ------------------------------------------------------------------*/

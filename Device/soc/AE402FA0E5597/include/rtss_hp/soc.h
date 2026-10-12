@@ -5,7 +5,7 @@
  * ALIF SHALL NOT, IN ANY CIRCUMSTANCES, BE LIABLE FOR SPECIAL, INCIDENTAL, OR
  * CONSEQUENTIAL DAMAGES, FOR ANY REASON WHATSOEVER.
  *
- * @file     AE402FA0E5597LE0_CM55_HP_View.h
+ * @file     soc.h
  * @brief    CMSIS HeaderFile
  * @version  1.0
  * @date     31. January 2025

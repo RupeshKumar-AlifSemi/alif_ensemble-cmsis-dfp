@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     tgu.h
  * @author   Silesh C V
- * @email    silesh@alifsemi.com
+ * Email:    silesh@alifsemi.com
  * @version  V1.0.0
  * @date     3-Jun-2021
  * @brief    TGU initialization code.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #ifndef TGU_H

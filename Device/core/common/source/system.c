@@ -28,13 +28,12 @@
 /******************************************************************************
  * @file     system.c
  * @author   Rupesh Kumar
- * @email    rupesh@alifsemi.com
+ * Email:    rupesh@alifsemi.com
  * @brief    CMSIS Device System Source File for
  *           Alif Semiconductor M55_HP / M55_HE Device
  * @version  V1.0.0
  * @date     23. Feb 2021
- * @bug      None
- * @Note	   None
+ * @note	   None
  ******************************************************************************/
 
 #include "soc.h"

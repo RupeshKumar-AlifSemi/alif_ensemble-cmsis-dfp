@@ -10,12 +10,11 @@
 /******************************************************************************
  * @file     cache.h
  * @author   Sudhir Sreedharan
- * @email    sudhir@alifsemi.com
+ * Email:    sudhir@alifsemi.com
  * @brief    Cache Utility functions
  * @version  V1.0.0
  * @date     13. May 2021
- * @bug      None
- * @Note     None
+ * @note     None
  ******************************************************************************/
 #ifndef CACHE_H
 #define CACHE_H

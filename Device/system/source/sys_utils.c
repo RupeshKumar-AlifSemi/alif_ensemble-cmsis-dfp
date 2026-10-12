@@ -10,12 +10,11 @@
 /******************************************************************************
  * @file     sys_utils.c
  * @author   Sudhir Sreedharan
- * @email    sudhir@alifsemi.com
+ * Email:    sudhir@alifsemi.com
  * @brief    System  Utility functions
  * @version  V1.0.0
  * @date     13. May 2021
- * @bug      None
- * @Note     None
+ * @note     None
  ******************************************************************************/
 #include <sys_utils.h>
 #include "sys_clocks.h"
@@ -35,15 +34,12 @@ void sys_busy_loop_init_ns(void)
 }
 
 /**
-  \fn          int32_t sys_busy_loop_ns(uint32_t delay_ns)
   \brief       Using REFCLK counter for delay.
   \note        REFCLK Counter module should be running before calling this.
                User should call sys_busy_loop_init_ns() once to
                make sure the module is running.
                Minimum delay = 10ns (Note: depends on refclk freq)
                Maximum delay = 100ms
-  \param[in]   delay_ns delay in nano seconds.
-  \return      0 for Success -1 for Overflow error.
 */
 int32_t sys_busy_loop_ns(uint32_t delay_ns)
 {
@@ -88,12 +84,9 @@ void sys_busy_loop_init(void)
 }
 
 /**
-  \fn          int32_t sys_busy_loop_us(uint32_t delay_us)
   \brief       Using S32K counter for delay.
                Minimum delay = 30.51us
                Maximum delay = 100ms
-  \param[in]   delay_us delay in micro seconds.
-  \return      0 for Success -1 for Overflow error.
 */
 int32_t sys_busy_loop_us(uint32_t delay_us)
 {

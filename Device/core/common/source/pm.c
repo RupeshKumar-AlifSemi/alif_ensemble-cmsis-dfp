@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     pm.c
  * @author   Kevin Bracey | Raj Ranjan
- * @email    kevin.bracey@alifsemi.com | raj.ranjan@alifsemi.com
+ * Email:    kevin.bracey@alifsemi.com | raj.ranjan@alifsemi.com
  * @version  V1.0.0
  * @date     13-Feb-2023
  * @brief    Power Management Services
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 /* Includes ------------------------------------------------------------------*/
@@ -546,7 +545,7 @@ void pm_core_request_subsys_off_from_spurious_wakeup(void)
 }
 
 /**
-  @fn       uint32_t pm_peek_subsystem reset_status(void)
+  @fn uint32_t pm_peek_subsystem_reset_status(void)
   @brief    Peek reset status
             Returns the value of the current subsystem's reset status register,
             without clearing it. If pm_get_subsystem_reset_status() is not used
@@ -560,7 +559,7 @@ uint32_t pm_peek_subsystem_reset_status(void)
 }
 
 /**
-  @fn       uint32_t pm_get_subsystem reset_status(void)
+  @fn uint32_t pm_get_subsystem_reset_status(void)
   @brief    Get reset status
             Returns the value of the current subsystem's reset status register,
             and clears it. So if this call isn't made on every reset, it may

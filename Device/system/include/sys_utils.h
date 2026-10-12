@@ -10,12 +10,11 @@
 /******************************************************************************
  * @file     sys_utils.h
  * @author   Sudhir Sreedharan
- * @email    sudhir@alifsemi.com
+ * Email:    sudhir@alifsemi.com
  * @brief    System Header File for Utility functions
  * @version  V1.0.0
  * @date     13. May 2021
- * @bug      None
- * @Note     None
+ * @note     None
  ******************************************************************************/
 #ifndef SYS_UTILS_H
 #define SYS_UTILS_H
@@ -44,7 +43,7 @@ extern "C" {
 
 #ifndef MASK
 /**
- * @Note : 1st arg should be higher bit & 2nd arg should be lower i.e. (h > l)
+ * @note : 1st arg should be higher bit & 2nd arg should be lower i.e. (h > l)
  */
 #define MASK(h, l)   (((~(0U)) << (l)) & (~(0U) >> (32 - 1 - (h))))
 #define MASK64(h, l) (((~(0UL)) << (l)) & (~(0UL) >> (32 - 1 - (h))))
@@ -100,7 +99,7 @@ void sys_busy_loop_init_ns(void);
   \fn          int32_t sys_busy_loop_ns(uint32_t delay_ns)
   \brief       Using REFCLK counter for delay.
   \note        REFCLK Counter module should be running before calling this.
-               User should call sys_high_res_busy_loop_init() once to
+               User should call sys_busy_loop_init_ns() once to
                make sure the module is running.
                Minimum delay = 10ns (Note: depends on refclk freq)
                Maximum delay = 100ms

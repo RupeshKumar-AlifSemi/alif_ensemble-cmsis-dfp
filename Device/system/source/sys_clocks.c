@@ -10,7 +10,7 @@
 /*******************************************************************************
  * @file     sys_clocks.c
  * @author   Sudhir Sreedharan
- * @email    sudhir@alifsemi.com
+ * Email:    sudhir@alifsemi.com
  * @version  V1.0.0
  * @date     29-Nov-2023
  * @brief    Clock information

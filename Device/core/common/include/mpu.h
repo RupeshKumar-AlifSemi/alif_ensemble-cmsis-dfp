@@ -10,7 +10,7 @@
 /*******************************************************************************
  * @file     mpu.h
  * @author   Sudhir Sreedharan
- * @emial    sudhir@alifsemi.com
+ * Email:    sudhir@alifsemi.com
  * @version  V1.0.0
  * @date     14-December-2021
  * @brief    MPU header file
@@ -29,7 +29,6 @@ extern "C" {
  * @brief  Clear all the MPU registers
  * @note   This function disables the MPU and clear
  *         all the existing regions.
- * @param  None
  * @retval None
  */
 void MPU_Clear_All_Regions(void);
@@ -42,7 +41,6 @@ void MPU_Clear_All_Regions(void);
  * @note   This function will be invoked much early in the boot process
  *         and before the scatterload. User must ensure that this function
  *         is included in the primary load region.
- * @param  None
  * @retval None
  */
 void MPU_Load_Regions(void);
@@ -55,7 +53,6 @@ void MPU_Load_Regions(void);
  * @note   This function will be invoked much early in the boot process
  *         and before the scatterload. User must ensure that this function
  *         is included in the primary load region.
- * @param  None
  * @retval None
  */
 void MPU_Setup(void);

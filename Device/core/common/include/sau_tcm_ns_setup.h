@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     sau_tcm_ns_setup.h
  * @author   Sudhir Sreedharan
- * @email    sudhir@alifsemi.com
+ * Email:    sudhir@alifsemi.com
  * @version  V1.0.0
  * @date     6-August-2024
  * @brief    Set TCM Nonsecure Partitioning in SAU and TGU
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #ifndef SAU_TCM_NS_SETUP_H

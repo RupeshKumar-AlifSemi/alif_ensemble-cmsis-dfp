@@ -10,12 +10,11 @@
 /******************************************************************************
  * @file     cache.c
  * @author   Sudhir Sreedharan
- * @email    sudhir@alifsemi.com
+ * Email:    sudhir@alifsemi.com
  * @brief    Cache  Utility functions
  * @version  V1.0.0
  * @date     13. May 2021
- * @bug      None
- * @Note     None
+ * @note     None
  ******************************************************************************/
 #include <cache.h>
 #include <sys_utils.h>
@@ -40,11 +39,8 @@ __attribute__((weak)) bool RTSS_IsGlobalCacheClean_Required(void)
 }
 
 /**
-  \fn          void RTSS_IsCacheClean_Required_by_Addr (volatile void *addr, int32_t size)
   \brief       Return True if Cache Clean operation is required for the provided
                address region else return False.
-  \param[in]   addr    address
-  \param[in]   size   size of memory block (in number of bytes)
   return       True : If CacheOperation Required, else False
 */
 __attribute__((weak)) bool RTSS_IsCacheClean_Required_by_Addr(volatile void *addr, int32_t size)
@@ -74,11 +70,8 @@ __attribute__((weak)) bool RTSS_IsCacheClean_Required_by_Addr(volatile void *add
 }
 
 /**
-  \fn          void RTSS_IsCacheInvalidate_Required_by_Addr (volatile void *addr, int32_t size)
   \brief       Return True if Cache Invalidate operation is required for the provided
                address region else return False.
-  \param[in]   addr    address
-  \param[in]   size   size of memory block (in number of bytes)
   return       True : If CacheOperation Required, else False
 */
 __attribute__((weak)) bool RTSS_IsCacheInvalidate_Required_by_Addr(volatile void *addr,

@@ -28,12 +28,11 @@
 /******************************************************************************
  * @file     system.h
  * @author   Rupesh Kumar
- * @email    rupesh@alifsemi.com
+ * Email:    rupesh@alifsemi.com
  * @brief    CMSIS Device System Header File
  * @version  V1.0.0
  * @date     23. Feb 2021
- * @bug      None
- * @Note	   None
+ * @note	   None
  ******************************************************************************/
 
 #ifndef SYSTEM_H
