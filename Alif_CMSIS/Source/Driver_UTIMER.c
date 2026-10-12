@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     Driver_UTIMER.c
  * @author   Girish BN, Manoj A Murudi
- * @email    girish.bn@alifsemi.com, manoj.murudi@alifsemi.com
+ * Email:    girish.bn@alifsemi.com, manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     02-April-2023
  * @brief    CMSIS Driver for UTIMER.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #include "Driver_UTIMER.h"

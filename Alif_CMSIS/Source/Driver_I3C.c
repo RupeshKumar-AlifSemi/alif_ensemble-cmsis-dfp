@@ -665,9 +665,7 @@ static int32_t I3C_DMA_Start_TX(I3C_RESOURCES *i3c, const void *src_addr, uint32
 }
 
 /**
-  \fn          int32_t I3C_DMA_Start_RX(I3C_RESOURCES *i3c,
-                                        void          *dst_addr
-                                        uint32_t       len)
+  \fn static int32_t I3C_DMA_Start_RX(I3C_RESOURCES *i3c, void *dst_addr, uint32_t len)
   \brief       Start receiving data from I3C RX FIFO using DMA
   \param[in]   i3c      : Pointer to i3c resources structure
   \param[in]   dst_addr : Pointer to destination address
@@ -760,9 +758,7 @@ static int I3cMasterGetFreePos(I3C_RESOURCES *i3c)
 }
 
 /**
-  \fn           int I3Cx_GetSlaveDynamicAddr(I3C_RESOURCES *i3c,
-                                             uint8_t* addr_list,
-                                             uint8_t count)
+  \fn static int I3Cx_GetSlaveDynamicAddr(I3C_RESOURCES *i3c, uint8_t static_addr, uint8_t *dynamic_addr)
   \brief        Fetches the slave's dynamic address from DAT
   \             given the static address
   \param[in]    i3c           : Pointer to i3c resources structure
@@ -787,15 +783,11 @@ static int I3Cx_GetSlaveDynamicAddr(I3C_RESOURCES *i3c, uint8_t static_addr, uin
 }
 
 /**
-  \fn           int I3Cx_GetSlvsInfo(I3C_RESOURCES *i3c,
-                                     ARM_I3C_DEV_CHAR* data,
-                                     const uint8_t value)
-  \             Note: It is valid only for secondary masters, not for
-  \                   current bus master
+  \fn static int I3Cx_GetSlvsInfo(I3C_RESOURCES *i3c, void *data, const uint8_t value)
   \brief        Fetches the slaves info from DCT
   \param[in]    i3c       : Pointer to i3c resources structure
   \param[in]    data      : Device characteristics data
-  \param[in]    count     : Slaves count
+  \param[in] value Slaves count
   \return       \ref execution_status
 */
 static int I3Cx_GetSlvsInfo(I3C_RESOURCES *i3c, void *data, const uint8_t value)
@@ -896,8 +888,7 @@ static int I3Cx_GetSlaveList(I3C_RESOURCES *i3c, uint8_t *addr_list, uint8_t *co
 }
 
 /**
-  \fn           static void I3C_DetachSlaves(I3C_RESOURCES *i3c,
-                                             uint8_t slv_cnt)
+  \fn static void I3C_DetachSlaves(I3C_RESOURCES *i3c, uint8_t slv_cnt, uint32_t ccc_cmd)
   \brief        Detach already attached i3c devices from the i3c bus.
   \param[in]    i3c      : Pointer to i3c resources structure
   \param[in]    slv_cnt  : Slaves count
@@ -2398,7 +2389,7 @@ static int32_t I3Cx_PowerControl(I3C_RESOURCES *i3c, ARM_POWER_STATE state)
   \brief       Callback function from DMA for I3C
   \param[in]   event     Event from DMA
   \param[in]   peri_num  Peripheral number
-  \param[in]   I3C       Pointer to I3C resources
+  \param[in] i3c Pointer to I3C resources
   \return      none
 */
 static void I3Cx_DMACallback(uint32_t event, int8_t peri_num, I3C_RESOURCES *i3c)

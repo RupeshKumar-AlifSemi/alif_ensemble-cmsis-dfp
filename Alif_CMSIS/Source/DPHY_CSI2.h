@@ -9,9 +9,9 @@
  */
 
 /******************************************************************************
- * @file     DPHY_DSI.h
+ * @file     DPHY_CSI2.h
  * @author   Prasanna Ravi
- * @email    prasanna.ravi@alifsemi.com
+ * Email:    prasanna.ravi@alifsemi.com
  * @version  V1.0.0
  * @date     14-May-2024
  * @brief    Driver Specific Header file for DPHY CSI2 Driver.

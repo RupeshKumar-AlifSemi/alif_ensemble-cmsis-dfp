@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     Driver_DAC.h
  * @author   Nisarga A M
- * @email    nisarga.am@alifsemi.com
+ * Email:    nisarga.am@alifsemi.com
  * @version  V1.0.0
  * @date     22-Feb-2022
  * @brief    DAC(Digital to Analog Converter) driver definitions.

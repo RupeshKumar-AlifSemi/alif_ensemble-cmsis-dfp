@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     driver_mac.h
  * @author   Silesh C V
- * @email    silesh@alifsemi.com
+ * Email:    silesh@alifsemi.com
  * @version  V1.1.0
  * @date     04-Feb-2026
  * @brief    CMSIS driver for ETH MAC.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #ifndef _DRIVER_MAC_H_

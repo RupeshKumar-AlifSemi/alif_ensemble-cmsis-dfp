@@ -35,7 +35,6 @@ static const ARM_I2C_CAPABILITIES DriverCapabilities = {
 /**
  * @brief   get i2c version
  * @note    none
- * @param   none
  * @retval  driver version
  */
 static ARM_DRIVER_VERSION ARM_I2C_GetVersion(void)
@@ -46,7 +45,6 @@ static ARM_DRIVER_VERSION ARM_I2C_GetVersion(void)
 /**
  * @brief   get i2c capabilites
  * @note    none
- * @param   none
  * @retval  driver capabilites
  */
 static ARM_I2C_CAPABILITIES ARM_I2C_GetCapabilities(void)
@@ -660,7 +658,7 @@ static int32_t i2c_dma_rx_cmd_submit_chunk(I2C_RESOURCES *I2C, uint32_t prefix_c
  * @brief   CMSIS-Driver i2c initialize
  * @note    it will use interrupt method for data send and receive.
  * @param   cb_event    : Pointer to \ref ARM_I2C_SignalEvent
- * @param   i2c         : Pointer to i2c resources structure
+ * @param I2C Pointer to i2c resources structure
  * @retval  ARM_DRIVER_OK : successfully initialized
  */
 static int32_t ARM_I2C_Initialize(ARM_I2C_SignalEvent_t cb_event, I2C_RESOURCES *I2C)
@@ -714,7 +712,7 @@ static int32_t ARM_I2C_Initialize(ARM_I2C_SignalEvent_t cb_event, I2C_RESOURCES 
 /**
  * @brief   CMSIS-Driver i2c uninitialize
  * @note    none
- * @param   i2c    : Pointer to i2c resources structure
+ * @param I2C Pointer to i2c resources structure
  * @retval  ARM_DRIVER_OK : successfully uninitialized
  */
 static int32_t ARM_I2C_Uninitialize(I2C_RESOURCES *I2C)
@@ -774,10 +772,9 @@ static int32_t ARM_I2C_Uninitialize(I2C_RESOURCES *I2C)
 }
 
 /**
- * @func    : CMSIS Driver I2C Power Control
  * @brief   : Power the driver and enable the NVIC
- * @param   : state : Power state
- * @param   : I2C   : Pointer to i2c resources structure
+ * @param state Power state
+ * @param I2C Pointer to i2c resources structure
  * @return  : ARM_DRIVER_OK
  */
 static int32_t ARM_I2C_PowerControl(ARM_POWER_STATE state, I2C_RESOURCES *I2C)
@@ -1020,10 +1017,10 @@ static int32_t ARM_I2C_MasterTransmit(I2C_RESOURCES *I2C, uint32_t addr, const u
  * @brief   CMSIS-Driver i2c master receive
  *          Start receiving data from i2c receiver.
  * @note    none
- * @param   data         : Pointer to buffer for data to receive from i2c receiver
+ * @param I2C Pointer to buffer for data to receive from i2c receiver
  * @param   addr         : Target slave address
- * @param   num          : Number of data items to receive
- * @param   I2C          : Pointer to i2c resources structure
+ * @param data Number of data items to receive
+ * @param num Pointer to i2c resources structure
  * @param   xfer_pending : Transfer operation is pending - Stop condition will not be
  *                         generated
  * @retval  ARM_DRIVER_ERROR_PARAMETER  : error in parameter
@@ -1306,9 +1303,9 @@ static int32_t ARM_I2C_SlaveTransmit(I2C_RESOURCES *I2C, const uint8_t *data, ui
  * @brief   CMSIS-Driver i2c slave receive
  *          Start receiving data from i2c master.
  * @note    none
- * @param   data : Pointer to buffer for data to receive from i2c master
- * @param   num  : Number of data items to receive
- * @param   I2C  : Pointer to i2c resources structure
+ * @param I2C Pointer to buffer for data to receive from i2c master
+ * @param data Number of data items to receive
+ * @param num Pointer to i2c resources structure
  * @retval  ARM_DRIVER_ERROR_PARAMETER  : error in parameter
  * @retval  ARM_DRIVER_ERROR            : error in driver
  * @retval  ARM_DRIVER_OK               : success in interrupt case
@@ -1454,13 +1451,11 @@ static int32_t ARM_I2C_GetDataCount(const I2C_RESOURCES *I2C)
 }
 
 /**
- * @brief   CMSIS-Driver i2c control
- *          Control i2c Interface.
- * @note    none
- * @param   control : Operation
- * @param   arg     : Argument of operation (optional)
- * @param   I2C     : Pointer to i2c resources structure
- * @retval  common \ref execution_status and driver specific \ref i2c_execution_status
+ * @brief   Control the I2C interface.
+ * @param   I2C      Pointer to the I2C resources
+ * @param   control  Operation code
+ * @param   arg      Argument of the operation
+ * @return  \ref execution_status
  */
 static int32_t ARM_I2C_Control(I2C_RESOURCES *I2C, uint32_t control, uint32_t arg)
 {

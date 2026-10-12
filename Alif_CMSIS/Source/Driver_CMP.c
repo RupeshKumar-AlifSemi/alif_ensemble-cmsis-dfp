@@ -39,7 +39,6 @@ static const ARM_COMPARATOR_CAPABILITIES DriverCapabilities = {
 /**
  @fn           ARM_DRIVER_VERSION CMP_GetVersion(void)
  @brief        get CMP version
- @param        none
  @return       driver version
  */
 static ARM_DRIVER_VERSION CMP_GetVersion(void)
@@ -50,7 +49,6 @@ static ARM_DRIVER_VERSION CMP_GetVersion(void)
 /**
  @fn           ARM_COMPARATOR_CAPABILITIES CMP_GetCapabilities(void)
  @brief        get Comparator Capabilities
- @param        none
  @return       driver Capabilities
  */
 static ARM_COMPARATOR_CAPABILITIES CMP_GetCapabilities(void)

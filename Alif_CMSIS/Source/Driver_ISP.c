@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file         Driver_ISP.c
  * @author       Yogender Kumar Arya
- * @email        yogender.kumar@alifsemi.com
+ * Email:        yogender.kumar@alifsemi.com
  * @version      V1.0.0
  * @date         06-September-2025
  * @brief        CMSIS-Driver for Image Signal Processor
- * @bug          None.
- * @Note         None.
+ * @note         None.
  ******************************************************************************/
 
 /* System Includes */

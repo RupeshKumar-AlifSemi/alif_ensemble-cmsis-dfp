@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     Driver_DMA_Private.h
  * @author   Sudhir Sreedharan
- * @email    sudhir@alifsemi.com
+ * Email:    sudhir@alifsemi.com
  * @version  V1.0.0
  * @date     04-Nov-2020
  * @brief    DMA Driver Private header
- * @bug      None
- * @Note     None
+ * @note     None
  ******************************************************************************/
 #ifndef DRIVER_DMA_PRIVATE_H
 

@@ -11,12 +11,11 @@
 /******************************************************************************
  * @file     DPHY_Common.c
  * @author   Prasanna Ravi and Chandra Bhushan Singh
- * @email    prasanna.ravi@alifsemi.com and chandrabhushan.singh@alifsemi.com
+ * Email:    prasanna.ravi@alifsemi.com and chandrabhushan.singh@alifsemi.com
  * @version  V1.0.0
  * @date     14-May-2024
  * @brief    Driver for MIPI DPHY test and control interface and common data.
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 #include <stdint.h>
 #include <stddef.h>

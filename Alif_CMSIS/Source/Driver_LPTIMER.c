@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     Driver_LPTIMER.c
  * @author   Girish BN, Manoj A Murudi, Kavya
- * @email    girish.bn@alifsemi.com, manoj.murudi@alifsemi.com, kavya.s@alifsemi.com
+ * Email:    girish.bn@alifsemi.com, manoj.murudi@alifsemi.com, kavya.s@alifsemi.com
  * @version  V1.0.0
  * @date     27-March-2023
  * @brief    CMSIS_Driver for LPTIMER.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #include "Driver_LPTIMER.h"
@@ -60,8 +59,7 @@ static int32_t ARM_LPTIMER_Initialize(LPTIMER_RESOURCES *LPTIMER_RES, uint8_t ch
 }
 
 /**
- * @fn      int32_t ARM_LPTIMER_PowerControl (LPTIMER_RESOURCES *LPTIMER, uint8_t channel,
- * ARM_POWER_STATE state).
+ * @fn static int32_t ARM_LPTIMER_PowerControl(LPTIMER_RESOURCES *LPTIMER_RES, uint8_t channel, ARM_POWER_STATE state)
  * @brief   Handles the LPTIMER power.
  * @note    none.
  * @param   LPTIMER_RES : Pointer to LPTIMER resources structure.
@@ -218,7 +216,7 @@ static int32_t ARM_LPTIMER_Control(LPTIMER_RESOURCES *LPTIMER_RES, uint8_t chann
 }
 
 /**
- * @fn      int32_t ARM_LPTIMER_Start (LPTIMER_RESOURCES *LPTIMER, uint8_t channel)
+ * @fn static int32_t ARM_LPTIMER_Start(LPTIMER_RESOURCES *LPTIMER_RES, uint8_t channel)
  * @brief   Used to start LPTIMER counter.
  * @note    none.
  * @param   LPTIMER_RES : Pointer to LPTIMER resources structure.
@@ -286,7 +284,7 @@ static int32_t ARM_LPTIMER_Stop(LPTIMER_RESOURCES *LPTIMER_RES, uint8_t channel)
 }
 
 /**
- * @fn      int32_t ARM_LPTIMER_Uninitialize (LPTIMER_RESOURCES *LPTIMER, uint8_t channel)
+ * @fn static int32_t ARM_LPTIMER_Uninitialize(LPTIMER_RESOURCES *LPTIMER_RES, uint8_t channel)
  * @brief   Un-Initialize the LPTIMER.
  * @note    none.
  * @param   LPTIMER_RES : Pointer to lptimer resources structure.

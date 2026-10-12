@@ -11,12 +11,11 @@
 /******************************************************************************
  * @file     CANFD_Private.h
  * @author   Shreehari H K
- * @email    shreehari.hk@alifsemi.com
+ * Email:    shreehari.hk@alifsemi.com
  * @version  V1.0.0
  * @date     05-July-2023
  * @brief    Private container of canfd
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #ifndef CANFD_PRIVATE_H_

@@ -11,12 +11,11 @@
 /******************************************************************************
  * @file     Driver_I3C_I2C.c
  * @author   Prasanna Ravi
- * @email    prasanna.ravi@alifsemi.com
+ * Email:    prasanna.ravi@alifsemi.com
  * @version  V1.0.0
  * @date     24-Feb-2022
  * @brief    Driver for I2C over I3C adapter.
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 #include "Driver_I2C.h"
 #include "Driver_I3C.h"
@@ -55,7 +54,7 @@ static const ARM_I2C_CAPABILITIES DriverCapabilities = {
 /**
  * @fn      void i3c_driver_callback (uint32_t event)
  * @brief   callback routine from the i3c driver mapped to i2c signal events
- * @param   none
+ * @param event
  * @retval  none
  */
 static void i3c_driver_callback(uint32_t event)
@@ -72,7 +71,6 @@ static void i3c_driver_callback(uint32_t event)
 /**
  * @fn      ARM_DRIVER_VERSION ARM_I3C_I2C_GetVersion (void)
  * @brief   get i2c over i3c driver version
- * @param   none
  * @retval  driver version
  */
 static ARM_DRIVER_VERSION ARM_I3C_I2C_GetVersion(void)
@@ -83,7 +81,6 @@ static ARM_DRIVER_VERSION ARM_I3C_I2C_GetVersion(void)
 /**
  * @fn      static ARM_I2C_CAPABILITIES ARM_I3C_I2C_GetCapabilities (void)
  * @brief   get i2c over i3c capabilities
- * @param   none
  * @retval  driver capabilities
  */
 static ARM_I2C_CAPABILITIES ARM_I3C_I2C_GetCapabilities(void)

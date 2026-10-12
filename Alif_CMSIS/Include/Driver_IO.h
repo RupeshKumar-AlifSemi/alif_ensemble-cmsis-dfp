@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     Driver_IO.h
  * @author   Girish BN
- * @email    girish.bn@alifsemi.com
+ * Email:    girish.bn@alifsemi.com
  * @version  V1.0.0
  * @date     21-Aug-2020
  * @brief    CMSIS-Driver for GPIO.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 #ifndef __DRIVER_IO_H__
 #define __DRIVER_IO_H__

@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     Driver_DSI_Private.h
  * @author   Prasanna Ravi
- * @email    prasanna.ravi@alifsemi.com
+ * Email:    prasanna.ravi@alifsemi.com
  * @version  V1.0.0
  * @date     17-April-2023
  * @brief    DSI driver Specific Header file.

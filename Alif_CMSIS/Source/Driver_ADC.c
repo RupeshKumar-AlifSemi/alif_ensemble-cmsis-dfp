@@ -34,9 +34,9 @@ static const ARM_ADC_CAPABILITIES DriverCapabilities = {
 #if ADC_DMA_ENABLE
 
 /*
- * @func         : int32_t ADC_DMA_Initialize(DMA_PERIPHERAL_CONFIG *dma_periph)
+ * @fn         : int32_t ADC_DMA_Initialize(DMA_PERIPHERAL_CONFIG *dma_periph)
  * @brief        : Initialize the DMA driver
- * @parameter    : dma_periph : pointer to DMA_PERIPHERAL_CONFIG for the RX channel
+ * @param dma_periph pointer to DMA_PERIPHERAL_CONFIG for the RX channel
  * @return       : ARM_DRIVER_OK    : DMA driver initialized successfully
  *                 ARM_DRIVER_ERROR : DMA driver reported failure
  */
@@ -46,9 +46,9 @@ __STATIC_INLINE int32_t ADC_DMA_Initialize(DMA_PERIPHERAL_CONFIG *dma_periph)
 }
 
 /*
- * @func         : int32_t ADC_DMA_Uninitialize(DMA_PERIPHERAL_CONFIG *dma_periph)
+ * @fn         : int32_t ADC_DMA_Uninitialize(DMA_PERIPHERAL_CONFIG *dma_periph)
  * @brief        : Un-initialize the DMA driver
- * @parameter    : dma_periph : pointer to DMA_PERIPHERAL_CONFIG for the RX channel
+ * @param dma_periph pointer to DMA_PERIPHERAL_CONFIG for the RX channel
  * @return       : ARM_DRIVER_OK    : DMA driver un-initialized successfully
  *                 ARM_DRIVER_ERROR : DMA driver reported failure
  */
@@ -58,11 +58,11 @@ __STATIC_INLINE int32_t ADC_DMA_Uninitialize(DMA_PERIPHERAL_CONFIG *dma_periph)
 }
 
 /*
- * @func         : int32_t ADC_DMA_PowerControl(ARM_POWER_STATE state,
+ * @fn         : int32_t ADC_DMA_PowerControl(ARM_POWER_STATE state,
  *                                              DMA_PERIPHERAL_CONFIG *dma_periph)
  * @brief        : Drive the DMA controller power state
- * @parameter[1] : state      : target power state
- * @parameter[2] : dma_periph : pointer to DMA_PERIPHERAL_CONFIG for the RX channel
+ * @param state target power state
+ * @param dma_periph pointer to DMA_PERIPHERAL_CONFIG for the RX channel
  * @return       : ARM_DRIVER_OK    : power state applied successfully
  *                 ARM_DRIVER_ERROR : DMA driver reported failure
  */
@@ -73,10 +73,10 @@ __STATIC_INLINE int32_t ADC_DMA_PowerControl(ARM_POWER_STATE        state,
 }
 
 /*
- * @func         : int32_t ADC_DMA_Allocate(DMA_PERIPHERAL_CONFIG *dma_periph)
+ * @fn         : int32_t ADC_DMA_Allocate(DMA_PERIPHERAL_CONFIG *dma_periph)
  * @brief        : Allocate a DMA channel and wire the event-router
  *                 request/ack + handshake lines.
- * @parameter    : dma_periph : pointer to DMA_PERIPHERAL_CONFIG for the RX channel
+ * @param dma_periph pointer to DMA_PERIPHERAL_CONFIG for the RX channel
  * @return       : ARM_DRIVER_OK    : channel allocated and evtrtr configured
  *                 ARM_DRIVER_ERROR : DMA driver Allocate reported failure
  */
@@ -96,10 +96,10 @@ __STATIC_INLINE int32_t ADC_DMA_Allocate(DMA_PERIPHERAL_CONFIG *dma_periph)
 }
 
 /*
- * @func         : int32_t ADC_DMA_DeAllocate(DMA_PERIPHERAL_CONFIG *dma_periph)
+ * @fn         : int32_t ADC_DMA_DeAllocate(DMA_PERIPHERAL_CONFIG *dma_periph)
  * @brief        : Deallocate the DMA channel and event-router wiring
  *                 previously set up by ADC_DMA_Allocate.
- * @parameter    : dma_periph : pointer to DMA_PERIPHERAL_CONFIG for the RX channel
+ * @param dma_periph pointer to DMA_PERIPHERAL_CONFIG for the RX channel
  * @return       : ARM_DRIVER_OK    : channel released and evtrtr disabled
  *                 ARM_DRIVER_ERROR : DMA driver DeAllocate reported failure
  */
@@ -117,11 +117,11 @@ __STATIC_INLINE int32_t ADC_DMA_DeAllocate(DMA_PERIPHERAL_CONFIG *dma_periph)
 }
 
 /*
- * @func         : int32_t ADC_DMA_Usermcode(DMA_PERIPHERAL_CONFIG *dma_periph,
+ * @fn         : int32_t ADC_DMA_Usermcode(DMA_PERIPHERAL_CONFIG *dma_periph,
  *                                           uint32_t mcode_addr)
  * @brief        : Point the DMA channel at a user-provided mcode program.
- * @parameter[1] : dma_periph : pointer to DMA_PERIPHERAL_CONFIG for the RX channel
- * @parameter[2] : mcode_addr : global-address view of the mcode entry point
+ * @param dma_periph pointer to DMA_PERIPHERAL_CONFIG for the RX channel
+ * @param mcode_addr global-address view of the mcode entry point
  * @return       : ARM_DRIVER_OK    : mcode installed
  *                 ARM_DRIVER_ERROR : DMA driver Control reported failure
  */
@@ -136,11 +136,11 @@ __STATIC_INLINE int32_t ADC_DMA_Usermcode(DMA_PERIPHERAL_CONFIG *dma_periph,
 }
 
 /*
- * @func         : int32_t ADC_DMA_Start(DMA_PERIPHERAL_CONFIG *dma_periph,
+ * @fn         : int32_t ADC_DMA_Start(DMA_PERIPHERAL_CONFIG *dma_periph,
  *                                       ARM_DMA_PARAMS *dma_params)
  * @brief        : Start the DMA transfer described by dma_params.
- * @parameter[1] : dma_periph : pointer to DMA_PERIPHERAL_CONFIG for the RX channel
- * @parameter[2] : dma_params : pointer to ARM_DMA_PARAMS describing the transfer
+ * @param dma_periph pointer to DMA_PERIPHERAL_CONFIG for the RX channel
+ * @param dma_params pointer to ARM_DMA_PARAMS describing the transfer
  * @return       : ARM_DRIVER_OK    : transfer started
  *                 ARM_DRIVER_ERROR : DMA driver Start reported failure
  */
@@ -153,9 +153,9 @@ __STATIC_INLINE int32_t ADC_DMA_Start(DMA_PERIPHERAL_CONFIG *dma_periph,
 }
 
 /*
- * @func         : int32_t ADC_DMA_Stop(DMA_PERIPHERAL_CONFIG *dma_periph)
+ * @fn         : int32_t ADC_DMA_Stop(DMA_PERIPHERAL_CONFIG *dma_periph)
  * @brief        : Halt the DMA channel used by this ADC.
- * @parameter    : dma_periph : pointer to DMA_PERIPHERAL_CONFIG for the RX channel
+ * @param dma_periph pointer to DMA_PERIPHERAL_CONFIG for the RX channel
  * @return       : ARM_DRIVER_OK    : channel stopped
  *                 ARM_DRIVER_ERROR : DMA driver Stop reported failure
  */
@@ -166,15 +166,15 @@ __STATIC_INLINE int32_t ADC_DMA_Stop(DMA_PERIPHERAL_CONFIG *dma_periph)
 }
 
 /*
- * @func         : uint32_t ADC_DMA_DeriveChunkSize(ADC_RESOURCES *ADC,
+ * @fn         : uint32_t ADC_DMA_DeriveChunkSize(ADC_RESOURCES *ADC,
  *                                                  uint32_t active_ch,
  *                                                  uint32_t samples_per_buf)
  * @brief        : Pick the per-chunk sample count. Legacy path is bounded
  *                 by the mcode buffer budget; slim path is bounded by the
  *                 DMALP LC1/LC0 iteration cap.
- * @parameter[1] : ADC             : pointer to ADC_RESOURCES structure
- * @parameter[2] : active_ch       : number of unmasked channels per sweep
- * @parameter[3] : samples_per_buf : app buffer capacity in samples
+ * @param : ADC             : pointer to ADC_RESOURCES structure
+ * @param : active_ch       : number of unmasked channels per sweep
+ * @param : samples_per_buf : app buffer capacity in samples
  * @return       : chunk size in samples (>= active_ch)
  */
 #if SOC_FEAT_ADC_HAS_SAMPLE_INT_CLR_BIT
@@ -244,11 +244,11 @@ static uint32_t ADC_DMA_DeriveChunkSize(ADC_RESOURCES *ADC,
 #endif
 
 /*
- * @func         : void ADC_DMA_DrainChunk(ADC_RESOURCES *ADC, uint32_t n_samples)
+ * @fn         : void ADC_DMA_DrainChunk(ADC_RESOURCES *ADC, uint32_t n_samples)
  * @brief        : Absorb the current chunk's samples captured at
  *                 ADC_Stop() or DMA abort.
- * @parameter[1] : ADC       : pointer to ADC_RESOURCES structure
- * @parameter[2] : n_samples : sample count to absorb from this chunk
+ * @param ADC pointer to ADC_RESOURCES structure
+ * @param n_samples sample count to absorb from this chunk
  * @return       : none
  */
 static void ADC_DMA_DrainChunk(ADC_RESOURCES *ADC, uint32_t n_samples)
@@ -263,10 +263,10 @@ static void ADC_DMA_DrainChunk(ADC_RESOURCES *ADC, uint32_t n_samples)
 }
 
 /*
- * @func         : void ADC_DMA_SnapshotAndStop(ADC_RESOURCES *ADC)
+ * @fn         : void ADC_DMA_SnapshotAndStop(ADC_RESOURCES *ADC)
  * @brief        : Halt the DMA channel and fold the partly-filled chunk's
  *                 sample count into buffer_idx.
- * @parameter[1] : ADC : pointer to ADC_RESOURCES structure
+ * @param ADC pointer to ADC_RESOURCES structure
  * @return       : none
  */
 static void ADC_DMA_SnapshotAndStop(ADC_RESOURCES *ADC)
@@ -291,13 +291,13 @@ static void ADC_DMA_SnapshotAndStop(ADC_RESOURCES *ADC)
 }
 
 /*
- * @func         : uint32_t ADC_DMA_BuildMcode(ADC_RESOURCES *ADC, void *dst_buf)
+ * @fn         : uint32_t ADC_DMA_BuildMcode(ADC_RESOURCES *ADC, void *dst_buf)
  * @brief        : Build the per-chunk DMA mcode program. The legacy form is
  *                 fully unrolled with a per-sample intr-clear step; the slim
  *                 form (compiled when SOC_FEAT_ADC_HAS_SAMPLE_INT_CLR_BIT is
  *                 set) is a fixed-size header + nested DMALP body + footer.
- * @parameter[1] : ADC     : pointer to ADC_RESOURCES structure
- * @parameter[2] : dst_buf : first chunk's destination base (buf_a)
+ * @param : ADC     : pointer to ADC_RESOURCES structure
+ * @param : dst_buf : first chunk's destination base (buf_a)
  * @return       : instruction bytes emitted, or 0 on overflow / invalid inputs
  */
 #if SOC_FEAT_ADC_HAS_SAMPLE_INT_CLR_BIT
@@ -574,12 +574,12 @@ static uint32_t ADC_DMA_BuildMcode(ADC_RESOURCES *ADC, void *dst_buf)
 #endif
 
 /*
- * @func         : void ADC_DMA_PatchDars(ADC_RESOURCES *ADC, void *chunk_base)
+ * @fn         : void ADC_DMA_PatchDars(ADC_RESOURCES *ADC, void *chunk_base)
  * @brief        : Patch DAR immediates in the built mcode to point at
  *                 chunk_base. Legacy path patches one imm per sample; slim
  *                 path patches only the one header DAR imm.
- * @parameter[1] : ADC        : pointer to ADC_RESOURCES structure
- * @parameter[2] : chunk_base : destination base for the next chunk
+ * @param : ADC        : pointer to ADC_RESOURCES structure
+ * @param : chunk_base : destination base for the next chunk
  * @return       : none
  */
 #if SOC_FEAT_ADC_HAS_SAMPLE_INT_CLR_BIT
@@ -616,12 +616,12 @@ static void ADC_DMA_PatchDars(ADC_RESOURCES *ADC, void *chunk_base)
 #endif
 
 /*
- * @func         : void ADC_DMA_FillParams(ADC_RESOURCES *ADC, ARM_DMA_PARAMS *p,
+ * @fn         : void ADC_DMA_FillParams(ADC_RESOURCES *ADC, ARM_DMA_PARAMS *p,
  *                                         void *dst_buf)
  * @brief        : Populate ARM_DMA_PARAMS for a DMA restart on this chunk.
- * @parameter[1] : ADC     : pointer to ADC_RESOURCES structure
- * @parameter[2] : p       : ARM_DMA_PARAMS to fill
- * @parameter[3] : dst_buf : chunk destination base
+ * @param ADC pointer to ADC_RESOURCES structure
+ * @param p ARM_DMA_PARAMS to fill
+ * @param dst_buf chunk destination base
  * @return       : none
  */
 __STATIC_INLINE void ADC_DMA_FillParams(ADC_RESOURCES *ADC, ARM_DMA_PARAMS *p,
@@ -640,12 +640,12 @@ __STATIC_INLINE void ADC_DMA_FillParams(ADC_RESOURCES *ADC, ARM_DMA_PARAMS *p,
 }
 
 /*
- * @func         : int32_t ADC_DMA_ArmChunk(ADC_RESOURCES *ADC, void *dst_buf,
+ * @fn         : int32_t ADC_DMA_ArmChunk(ADC_RESOURCES *ADC, void *dst_buf,
  *                                          uint32_t invalidate_bytes)
  * @brief        : Arm the DMA channel to fill the next chunk at dst_buf.
- * @parameter[1] : ADC              : pointer to ADC_RESOURCES structure
- * @parameter[2] : dst_buf          : destination base for the next chunk
- * @parameter[3] : invalidate_bytes : dcache invalidate range in bytes
+ * @param ADC pointer to ADC_RESOURCES structure
+ * @param dst_buf destination base for the next chunk
+ * @param invalidate_bytes dcache invalidate range in bytes
  * @return       : ARM_DRIVER_OK    : channel armed; sequencer will resume
  *                 ARM_DRIVER_ERROR : Usermcode or Start reported failure;
  *                                    caller must tear the capture down
@@ -671,10 +671,10 @@ __STATIC_INLINE int32_t ADC_DMA_ArmChunk(ADC_RESOURCES *ADC, void *dst_buf,
 }
 
 /*
- * @func         : void ADC_DMA_TeardownAndNotifyStopped(ADC_RESOURCES *ADC)
+ * @fn         : void ADC_DMA_TeardownAndNotifyStopped(ADC_RESOURCES *ADC)
  * @brief        : Clear conv/StartN state and emit STOPPED after an
  *                 unrecoverable DMA/arm failure.
- * @parameter    : ADC : pointer to ADC_RESOURCES structure
+ * @param ADC pointer to ADC_RESOURCES structure
  * @return       : none
  */
 static void ADC_DMA_TeardownAndNotifyStopped(ADC_RESOURCES *ADC)
@@ -700,13 +700,13 @@ static void ADC_DMA_TeardownAndNotifyStopped(ADC_RESOURCES *ADC)
 }
 
 /*
- * @func         : void ADCx_DMACallback(uint32_t event, int8_t peri_num,
+ * @fn         : void ADCx_DMACallback(uint32_t event, int8_t peri_num,
  *                                       ADC_RESOURCES *ADC)
  * @brief        : Shared DMA-complete dispatcher for all ADC instances.
  *                 Called by each per-instance ADCxxx_DMACallback shim.
- * @parameter[1] : event    : DMA event mask from the DMA driver
- * @parameter[2] : peri_num : DMA peripheral number (unused)
- * @parameter[3] : ADC      : pointer to ADC_RESOURCES structure
+ * @param event DMA event mask from the DMA driver
+ * @param peri_num DMA peripheral number (unused)
+ * @param ADC pointer to ADC_RESOURCES structure
  * @return       : none
  */
 static void ADCx_DMACallback(uint32_t event, int8_t peri_num, ADC_RESOURCES *ADC)
@@ -813,9 +813,8 @@ static void ADCx_DMACallback(uint32_t event, int8_t peri_num, ADC_RESOURCES *ADC
 #endif /* ADC_DMA_ENABLE */
 
 /*
- * @func      : void Analog_config()
+ * @fn static void Analog_Config(void)
  * @brief     : vbat comparator value and register configuration
- * @parameter : NONE
  * @return    : NONE
  */
 static void Analog_Config(void)
@@ -828,10 +827,10 @@ static void Analog_Config(void)
 }
 
 /*
- * @func           : int32_t ADC_Initialize(ADC_RESOURCES *ADC, ARM_ADC_SignalEvent_t cb_event)
+ * @fn           : int32_t ADC_Initialize(ADC_RESOURCES *ADC, ARM_ADC_SignalEvent_t cb_event)
  * @brief          : initialize the device
- * @parameter[1]   : adc      : Pointer to /ref ADC_RESOURCES structure
- * @parameter[2]   : cb_event : Pointer to /ref ARM_ADC_Signal_Event_t cb_event
+ * @param ADC Pointer to /ref ADC_RESOURCES structure
+ * @param cb_event Pointer to /ref ARM_ADC_Signal_Event_t cb_event
  * @return         : ARM_DRIVER_OK              : if driver initialized successfully
  *                 : ARM_DRIVER_ERROR_PARAMETER : if parameter is invalid or not
  */
@@ -876,9 +875,9 @@ static int32_t ADC_Initialize(ADC_RESOURCES *ADC, ARM_ADC_SignalEvent_t cb_event
 }
 
 /*
- * @func           : int32_t ADC_Uninitialize (ARM_ADC_SignalEvent_t cb_event)
+ * @fn static int32_t ADC_Uninitialize(ADC_RESOURCES *ADC)
  * @brief          : Uninitialize the device
- * @parameter[in]  : ADC    : Pointer to the structure ADC_RESOURCES
+ * @param[in] ADC Pointer to the structure ADC_RESOURCES
  * @return         : ARM_DRIVER_OK              : if adc is successfully initialized
  *                 : ARM_DRIVER_ERROR_PARAMETER : if adc device is invalid
  */
@@ -923,10 +922,10 @@ static int32_t ADC_Uninitialize(ADC_RESOURCES *ADC)
 }
 
 /*
- * @func         : int32_t ADC_PowerControl(ARM_POWER_status status, ADC_RESOURCES *adc)
+ * @fn static int32_t ADC_PowerControl(ADC_RESOURCES *ADC, ARM_POWER_STATE state)
  * @brief        : power the driver and enable NVIC
- * @parameter[1] : ADC              : pointer to /ref ADC_RESOURCES
- * @parameter[2] : state            : power state
+ * @param ADC pointer to /ref ADC_RESOURCES
+ * @param state power state
  * @return       : ARM_DRIVER_OK    : if power done successful
  *                 ARM_DRIVER_ERROR : if initialize is not done
  */
@@ -1106,9 +1105,9 @@ static int32_t ADC_PowerControl(ADC_RESOURCES *ADC, ARM_POWER_STATE state)
 }
 
 /*
- * @func        : int32_t ADC_Start( ADC_RESOURCES *ADC)
+ * @fn        : int32_t ADC_Start( ADC_RESOURCES *ADC)
  * @brief       : Start the adc and initialize interrupt
- * @parameter   : ADC  : pointer to ADC_RESOURCES structure
+ * @param ADC pointer to ADC_RESOURCES structure
  * @return      : ARM_DRIVER_OK              : if the function are return successful
  *                ARM_DRIVER_ERROR_PARAMETER : if parameter are invalid
  */
@@ -1150,9 +1149,9 @@ static int32_t ADC_Start(ADC_RESOURCES *ADC)
 }
 
 /*
- * @func      : int32_t ADC_Stop( ADC_RESOURCES *adc)
+ * @fn static int32_t ADC_Stop(ADC_RESOURCES *ADC)
  * @brief     : Disable the adc
- * @parameter : ADC  : pointer to ADC_RESOURCES structure
+ * @param ADC pointer to ADC_RESOURCES structure
  * @return    : ARM_DRIVER_OK : if function return successfully
  */
 static int32_t ADC_Stop(ADC_RESOURCES *ADC)
@@ -1220,7 +1219,7 @@ static int32_t ADC_Stop(ADC_RESOURCES *ADC)
 }
 
 /*
- * @func         : int32_t ADC_StartN(ADC_RESOURCES *ADC,
+ * @fn         : int32_t ADC_StartN(ADC_RESOURCES *ADC,
  *                                    void *buf_a, void *buf_b,
  *                                    uint32_t samples_per_buf)
  * @brief        : Arm ping-pong buffers for continuous-mode
@@ -1238,11 +1237,11 @@ static int32_t ADC_Stop(ADC_RESOURCES *ADC)
  *                 hold raw ADC_SAMPLE_REG_ values as uint32_t so both ADC12
  *                 and ADC24 instances share the same layout.
  *
- * @parameter[1] : ADC             : pointer to ADC_RESOURCES structure
- * @parameter[2] : buf_a           : caller-owned primary buffer, non-NULL
- * @parameter[3] : buf_b           : caller-owned secondary buffer for
+ * @param ADC pointer to ADC_RESOURCES structure
+ * @param buf_a caller-owned primary buffer, non-NULL
+ * @param buf_b caller-owned secondary buffer for
  *                                   ping-pong, or NULL for one-shot
- * @parameter[4] : samples_per_buf : sample capacity of each buffer
+ * @param samples_per_buf sample capacity of each buffer
  * @return       : ARM_DRIVER_OK              : buffer(s) armed
  *                 ARM_DRIVER_ERROR           : not powered
  *                 ARM_DRIVER_ERROR_PARAMETER : bad args, wrong mode,
@@ -1358,12 +1357,12 @@ static int32_t ADC_StartN(ADC_RESOURCES *ADC,
 }
 
 /*
- * @func      : uint32_t ADC_GetSampleCount(ADC_RESOURCES *ADC)
+ * @fn      : uint32_t ADC_GetSampleCount(ADC_RESOURCES *ADC)
  * @brief     : Return the number of samples written into the caller's
  *              buffer since the last StartN. Snapshot value; safe to
  *              call at any time. Reset to 0 by the next StartN; preserved
  *              across Stop so the caller can read the final count.
- * @parameter : ADC : pointer to ADC_RESOURCES structure
+ * @param ADC pointer to ADC_RESOURCES structure
  * @return    : samples-written count
  */
 static uint32_t ADC_GetSampleCount(ADC_RESOURCES *ADC)
@@ -1372,7 +1371,7 @@ static uint32_t ADC_GetSampleCount(ADC_RESOURCES *ADC)
 }
 
 /*
- * @func         : in32_t ADC_Control(uint32_t control , uint32_t arg, ADC_RESOURCES adc)
+ * @fn static int32_t ADC_Control(ADC_RESOURCES *ADC, uint32_t Control, uint32_t arg)
  * @brief        : control the following
  *                 - ARM_SET_SHIFT_CONTROL             : to control shift control of bits
  *                 - ARM_SET_SEQUENCER_CTRL            : selecting sample individual or rotate
@@ -1383,11 +1382,11 @@ static uint32_t ADC_GetSampleCount(ADC_RESOURCES *ADC)
  *                 - ARM_SET_ADC_COMPARATOR_B          : to set comparator b value
  *                 - ARM_SET_ADC_THRESHOLD_COMPARISON  : to set the threshold comparison
  *                 - ARM_ADC_SET_CONVERSION_MODE       : to set conversion mode
- * @parameter[1] : ADC  : pointer to ADC_RESOURCES structure
- * @parameter[2] : Control : Selecting the operation
- * @parameter[3] : arg     : values for the the operation
- * @return[1]    : ARM_DRIVER_OK              : if function return successfully
- * @return[2]    : ARM_DRIVER_ERROR_PARAMETER : if adc parameter are invalid
+ * @param ADC pointer to ADC_RESOURCES structure
+ * @param Control Selecting the operation
+ * @param arg values for the the operation
+ * @return    : ARM_DRIVER_OK              : if function return successfully
+ * @return    : ARM_DRIVER_ERROR_PARAMETER : if adc parameter are invalid
  */
 static int32_t ADC_Control(ADC_RESOURCES *ADC, uint32_t Control, uint32_t arg)
 {
@@ -1706,7 +1705,6 @@ static void ADC120_DMACallback(uint32_t event, int8_t peri_num)
 /**
  @fn        : void ADC120_DONE0_IRQHandler(void)
  @brief     : DONE0 (AVG SAMPLE RDY) Interrupt Handler
- @parameter : NONE
  @return    : NONE
 **/
 void ADC120_DONE0_IRQHandler(void)
@@ -1750,7 +1748,6 @@ void ADC120_DONE0_IRQHandler(void)
 /**
  @fn        : void ADC120_DONE1_IRQHandler (void)
  @brief     : DONE1 (All sample taken) Interrupt Handler
- @parameter : NONE
  @return    : NONE
 **/
 void ADC120_DONE1_IRQHandler(void)
@@ -1775,7 +1772,6 @@ void ADC120_DONE1_IRQHandler(void)
 /**
  @fn        : void ADC120_CMPA_IRQHandler (void)
  @brief     : CMPA Interrupt Handler
- @parameter : NONE
  @return    : NONE
 **/
 void ADC120_CMPA_IRQHandler(void)
@@ -1809,7 +1805,6 @@ void ADC120_CMPA_IRQHandler(void)
 /**
  @fn        : void ADC120_CMPB_IRQHandler (void)
  @brief     : CMPB Interrupt Handler
- @parameter : NONE
  @return    : NONE
 **/
 void ADC120_CMPB_IRQHandler(void)
@@ -1862,7 +1857,7 @@ static ARM_ADC_CAPABILITIES ADC120_GetCapabilities(void)
 /**
  @fn           : int32_t ADC120_Initialize(ARM_ADC_SignalEvent_t cb_event)
  @brief        : Initialize the ADC Interface
- @parameter[1] : cb_event : Pointer to \ref ARM_ADC_SignalEvent_t
+ @param cb_event Pointer to \ref ARM_ADC_SignalEvent_t
  @return       : execution_status
 **/
 static int32_t ADC120_Initialize(ARM_ADC_SignalEvent_t cb_event)
@@ -1873,7 +1868,6 @@ static int32_t ADC120_Initialize(ARM_ADC_SignalEvent_t cb_event)
 /**
  @fn           : int32_t ADC120_Uninitialize(void)
  @brief        : Un-Initialize the ADC Interface
- @parameter    : NONE
  @return       : execution_status
 **/
 static int32_t ADC120_Uninitialize(void)
@@ -1884,7 +1878,6 @@ static int32_t ADC120_Uninitialize(void)
 /**
  @fn           : int32_t ADC120_Start(void)
  @brief        : start ADC driver
- @parameter    : NONE
  @return       : execution_status
 **/
 static int32_t ADC120_Start(void)
@@ -1895,7 +1888,6 @@ static int32_t ADC120_Start(void)
 /**
  @fn           : int32_t ADC120_Stop(void)
  @brief        : stop ADC driver
- @parameter    : NONE
  @return       : execution_status
 **/
 static int32_t ADC120_Stop(void)
@@ -1906,7 +1898,7 @@ static int32_t ADC120_Stop(void)
 /**
  @fn           : int32_t ADC120_PowerControl(ARM_POWER_STATE status)
  @brief        : Control ADC Interface power
- @parameter    : NONE
+ @param status
  @return       : execution_status
 **/
 static int32_t ADC120_PowerControl(ARM_POWER_STATE status)
@@ -1915,10 +1907,10 @@ static int32_t ADC120_PowerControl(ARM_POWER_STATE status)
 }
 
 /**
- @fn           : int32_t ADC121_Control(uint32_t Control, uint32_t arg)
+ @fn static int32_t ADC120_Control(uint32_t Control, uint32_t arg)
  @brief        : Control ADC Interface
- @parameter[1] : Control : control operation
- @parameter[2] : arg     : Argument for operation
+ @param Control control operation
+ @param arg Argument for operation
  @return       : execution_status
 **/
 static int32_t ADC120_Control(uint32_t Control, uint32_t arg)
@@ -1930,10 +1922,10 @@ static int32_t ADC120_Control(uint32_t Control, uint32_t arg)
  * @fn           : int32_t ADC120_StartN(void *buf_a, void *buf_b,
  *                                       uint32_t samples_per_buf)
  * @brief        : Arm ping-pong buffered continuous scan for ADC120.
- * @parameter[1] : buf_a           : uint32_t[] primary buffer
- * @parameter[2] : buf_b           : uint32_t[] secondary buffer;
+ * @param buf_a uint32_t[] primary buffer
+ * @param buf_b uint32_t[] secondary buffer;
  *                                   NULL for one-shot
- * @parameter[3] : samples_per_buf : whole multiple of unmasked channel count
+ * @param samples_per_buf whole multiple of unmasked channel count
  * @return       : execution_status
  */
 static int32_t ADC120_StartN(void *buf_a, void *buf_b, uint32_t samples_per_buf)
@@ -2030,7 +2022,6 @@ static void ADC121_DMACallback(uint32_t event, int8_t peri_num)
 /**
  @fn        : void ADC121_DONE0_IRQHandler(void)
  @brief     : DONE0 (AVG SAMPLE RDY) Interrupt Handler
- @parameter : NONE
  @return    : NONE
 **/
 void ADC121_DONE0_IRQHandler(void)
@@ -2074,7 +2065,6 @@ void ADC121_DONE0_IRQHandler(void)
 /**
  @fn        : void ADC121_DONE1_IRQHandler (void)
  @brief     : DONE1 (All sample taken) Interrupt Handler
- @parameter : NONE
  @return    : NONE
 **/
 void ADC121_DONE1_IRQHandler(void)
@@ -2099,7 +2089,6 @@ void ADC121_DONE1_IRQHandler(void)
 /**
  @fn        : void ADC121_CMPA_IRQHandler (void)
  @brief     : CMPA Interrupt Handler
- @parameter : NONE
  @return    : NONE
 **/
 void ADC121_CMPA_IRQHandler(void)
@@ -2131,9 +2120,8 @@ void ADC121_CMPA_IRQHandler(void)
 }
 
 /**
- @fn        : void ADC122_CMPB_IRQHandler (void)
+ @fn void ADC121_CMPB_IRQHandler(void)
  @brief     : CMPB Interrupt Handler
- @parameter : NONE
  @return    : NONE
 **/
 void ADC121_CMPB_IRQHandler(void)
@@ -2186,7 +2174,7 @@ static ARM_ADC_CAPABILITIES ADC121_GetCapabilities(void)
 /**
  @fn           : int32_t ADC121_Initialize(ARM_ADC_SignalEvent_t cb_event)
  @brief        : Initialize the ADC Interface
- @parameter[1] : cb_event : Pointer to \ref ARM_ADC_SignalEvent_t
+ @param cb_event Pointer to \ref ARM_ADC_SignalEvent_t
  @return       : execution_status
 **/
 static int32_t ADC121_Initialize(ARM_ADC_SignalEvent_t cb_event)
@@ -2197,7 +2185,6 @@ static int32_t ADC121_Initialize(ARM_ADC_SignalEvent_t cb_event)
 /**
  @fn           : int32_t ADC121_Uninitialize(void)
  @brief        : Un-Initialize the ADC Interface
- @parameter    : NONE
  @return       : execution_status
 **/
 static int32_t ADC121_Uninitialize(void)
@@ -2208,7 +2195,6 @@ static int32_t ADC121_Uninitialize(void)
 /**
  @fn           : int32_t ADC121_Start(void)
  @brief        : start ADC driver
- @parameter    : NONE
  @return       : execution_status
 **/
 static int32_t ADC121_Start(void)
@@ -2219,7 +2205,6 @@ static int32_t ADC121_Start(void)
 /**
  @fn           : int32_t ADC121_Stop(void)
  @brief        : stop ADC driver
- @parameter    : NONE
  @return       : execution_status
 **/
 static int32_t ADC121_Stop(void)
@@ -2230,7 +2215,7 @@ static int32_t ADC121_Stop(void)
 /**
  @fn           : int32_t ADC121_PowerControl(ARM_POWER_STATE status)
  @brief        : Control ADC Interface power
- @parameter    : NONE
+ @param status
  @return       : execution_status
 **/
 static int32_t ADC121_PowerControl(ARM_POWER_STATE status)
@@ -2241,8 +2226,8 @@ static int32_t ADC121_PowerControl(ARM_POWER_STATE status)
 /**
  @fn           : int32_t ADC121_Control(uint32_t Control, uint32_t arg)
  @brief        : Control ADC Interface
- @parameter[1] : Control : control operation
- @parameter[2] : arg     : Argument for operation
+ @param Control control operation
+ @param arg Argument for operation
  @return       : execution_status
 **/
 static int32_t ADC121_Control(uint32_t Control, uint32_t arg)
@@ -2254,10 +2239,10 @@ static int32_t ADC121_Control(uint32_t Control, uint32_t arg)
  * @fn           : int32_t ADC121_StartN(void *buf_a, void *buf_b,
  *                                       uint32_t samples_per_buf)
  * @brief        : Arm ping-pong buffered continuous scan for ADC121.
- * @parameter[1] : buf_a           : uint32_t[] primary buffer
- * @parameter[2] : buf_b           : uint32_t[] secondary buffer;
+ * @param buf_a uint32_t[] primary buffer
+ * @param buf_b uint32_t[] secondary buffer;
  *                                   NULL for one-shot
- * @parameter[3] : samples_per_buf : whole multiple of unmasked channel count
+ * @param samples_per_buf whole multiple of unmasked channel count
  * @return       : execution_status
  */
 static int32_t ADC121_StartN(void *buf_a, void *buf_b, uint32_t samples_per_buf)
@@ -2354,7 +2339,6 @@ static void ADC122_DMACallback(uint32_t event, int8_t peri_num)
 /**
  @fn        : void ADC122_DONE0_IRQHandler(void)
  @brief     : DONE0 (AVG SAMPLE RDY) Interrupt Handler
- @parameter : NONE
  @return    : NONE
 **/
 void ADC122_DONE0_IRQHandler(void)
@@ -2398,7 +2382,6 @@ void ADC122_DONE0_IRQHandler(void)
 /**
  @fn        : void ADC122_DONE1_IRQHandler (void)
  @brief     : DONE1 (All sample taken) Interrupt Handler
- @parameter : NONE
  @return    : NONE
 **/
 void ADC122_DONE1_IRQHandler(void)
@@ -2423,7 +2406,6 @@ void ADC122_DONE1_IRQHandler(void)
 /**
  @fn        : void ADC122_CMPA_IRQHandler (void)
  @brief     : CMPA Interrupt Handler
- @parameter : NONE
  @return    : NONE
 **/
 void ADC122_CMPA_IRQHandler(void)
@@ -2457,7 +2439,6 @@ void ADC122_CMPA_IRQHandler(void)
 /**
  @fn        : void ADC122_CMPB_IRQHandler (void)
  @brief     : CMPB Interrupt Handler
- @parameter : NONE
  @return    : NONE
 **/
 void ADC122_CMPB_IRQHandler(void)
@@ -2489,7 +2470,7 @@ void ADC122_CMPB_IRQHandler(void)
 }
 
 /**
- @fn       ARM_DRIVER_VERSION ADC1_GetVersion(void)
+ @fn static ARM_DRIVER_VERSION ADC122_GetVersion(void)
  @brief    Get ADC1 VERSION
  @return   DriverVersion
 **/
@@ -2510,7 +2491,7 @@ static ARM_ADC_CAPABILITIES ADC122_GetCapabilities(void)
 /**
  @fn           : int32_t ADC122_Initialize(ARM_ADC_SignalEvent_t cb_event)
  @brief        : Initialize the ADC Interface
- @parameter[1] : cb_event : Pointer to \ref ARM_ADC_SignalEvent_t
+ @param cb_event Pointer to \ref ARM_ADC_SignalEvent_t
  @return       : execution_status
 **/
 static int32_t ADC122_Initialize(ARM_ADC_SignalEvent_t cb_event)
@@ -2521,7 +2502,6 @@ static int32_t ADC122_Initialize(ARM_ADC_SignalEvent_t cb_event)
 /**
  @fn           : int32_t ADC122_Uninitialize(void)
  @brief        : Un-Initialize the ADC Interface
- @parameter    : NONE
  @return       : execution_status
 **/
 static int32_t ADC122_Uninitialize(void)
@@ -2532,7 +2512,6 @@ static int32_t ADC122_Uninitialize(void)
 /**
  @fn           : int32_t ADC122_Start(void)
  @brief        : start ADC driver
- @parameter    : NONE
  @return       : execution_status
 **/
 static int32_t ADC122_Start(void)
@@ -2543,7 +2522,6 @@ static int32_t ADC122_Start(void)
 /**
  @fn           : int32_t ADC122_Stop(void)
  @brief        : stop ADC driver
- @parameter    : NONE
  @return       : execution_status
 **/
 static int32_t ADC122_Stop(void)
@@ -2554,7 +2532,7 @@ static int32_t ADC122_Stop(void)
 /**
  @fn           : int32_t ADC122_PowerControl(ARM_POWER_STATE status)
  @brief        : Control ADC Interface power
- @parameter    : NONE
+ @param status
  @return       : execution_status
 **/
 static int32_t ADC122_PowerControl(ARM_POWER_STATE status)
@@ -2565,8 +2543,8 @@ static int32_t ADC122_PowerControl(ARM_POWER_STATE status)
 /**
  @fn           : int32_t ADC122_Control(uint32_t Control, uint32_t arg)
  @brief        : Control ADC Interface
- @parameter[1] : Control : control operation
- @parameter[2] : arg     : Argument for operation
+ @param Control control operation
+ @param arg Argument for operation
  @return       : execution_status
 **/
 static int32_t ADC122_Control(uint32_t Control, uint32_t arg)
@@ -2578,10 +2556,10 @@ static int32_t ADC122_Control(uint32_t Control, uint32_t arg)
  * @fn           : int32_t ADC122_StartN(void *buf_a, void *buf_b,
  *                                       uint32_t samples_per_buf)
  * @brief        : Arm ping-pong buffered continuous scan for ADC122.
- * @parameter[1] : buf_a           : uint32_t[] primary buffer
- * @parameter[2] : buf_b           : uint32_t[] secondary buffer;
+ * @param buf_a uint32_t[] primary buffer
+ * @param buf_b uint32_t[] secondary buffer;
  *                                   NULL for one-shot
- * @parameter[3] : samples_per_buf : whole multiple of unmasked channel count
+ * @param samples_per_buf whole multiple of unmasked channel count
  * @return       : execution_status
  */
 static int32_t ADC122_StartN(void *buf_a, void *buf_b, uint32_t samples_per_buf)
@@ -2676,7 +2654,7 @@ static void ADC24_DMACallback(uint32_t event, int8_t peri_num)
 /**
  @fn        : void ADC24_CMPB_IRQHandler (void)
  @brief     : DONE0 (AVG SAMPLE RDY) Interrupt Handler
- @parameter : NONE
+ @param : NONE
  @return    : NONE
 **/
 void ADC24_DONE0_IRQHandler(void)
@@ -2720,7 +2698,6 @@ void ADC24_DONE0_IRQHandler(void)
 /**
  @fn        : void ADC24_DONE1_IRQHandler (void)
  @brief     : DONE1 (All sample taken) Interrupt Handler
- @parameter : NONE
  @return    : NONE
 **/
 void ADC24_DONE1_IRQHandler(void)
@@ -2745,7 +2722,6 @@ void ADC24_DONE1_IRQHandler(void)
 /**
  @fn        : void ADC24_CMPA_IRQHandler (void)
  @brief     : CMPA Interrupt Handler
- @parameter : NONE
  @return    : NONE
 **/
 void ADC24_CMPA_IRQHandler(void)
@@ -2779,7 +2755,6 @@ void ADC24_CMPA_IRQHandler(void)
 /**
  @fn        : void ADC24_CMPB_IRQHandler (void)
  @brief     : CMPB Interrupt Handler
- @parameter : NONE
  @return    : NONE
 **/
 void ADC24_CMPB_IRQHandler(void)
@@ -2832,7 +2807,7 @@ static ARM_ADC_CAPABILITIES ADC24_GetCapabilities(void)
 /**
  @fn           : int32_t ADC24_Initialize(ARM_ADC_SignalEvent_t cb_event)
  @brief        : Initialize the ADC Interface
- @parameter[1] : cb_event : Pointer to \ref ARM_ADC_SignalEvent_t
+ @param cb_event Pointer to \ref ARM_ADC_SignalEvent_t
  @return       : execution_status
 **/
 static int32_t ADC24_Initialize(ARM_ADC_SignalEvent_t cb_event)
@@ -2843,7 +2818,6 @@ static int32_t ADC24_Initialize(ARM_ADC_SignalEvent_t cb_event)
 /**
  @fn           : int32_t ADC24_Uninitialize(void)
  @brief        : Un-Initialize the ADC Interface
- @parameter    : NONE
  @return       : execution_status
 **/
 static int32_t ADC24_Uninitialize(void)
@@ -2854,7 +2828,6 @@ static int32_t ADC24_Uninitialize(void)
 /**
  @fn           : int32_t ADC24_Start(void)
  @brief        : start ADC driver
- @parameter    : NONE
  @return       : execution_status
 **/
 static int32_t ADC24_Start(void)
@@ -2865,7 +2838,6 @@ static int32_t ADC24_Start(void)
 /**
  @fn           : int32_t ADC24_Stop(void)
  @brief        : stop ADC driver
- @parameter    : NONE
  @return       : execution_status
 **/
 static int32_t ADC24_Stop(void)
@@ -2876,7 +2848,7 @@ static int32_t ADC24_Stop(void)
 /**
  @fn           : int32_t ADC24_PowerControl(ARM_POWER_STATE status)
  @brief        : Control ADC Interface power
- @parameter    : NONE
+ @param status
  @return       : execution_status
 **/
 static int32_t ADC24_PowerControl(ARM_POWER_STATE status)
@@ -2887,8 +2859,8 @@ static int32_t ADC24_PowerControl(ARM_POWER_STATE status)
 /**
  @fn           : int32_t ADC24_Control(uint32_t Control, uint32_t arg)
  @brief        : Control ADC Interface
- @parameter[1] : Control : control operation
- @parameter[2] : arg     : Argument for operation
+ @param Control control operation
+ @param arg Argument for operation
  @return       : execution_status
 **/
 static int32_t ADC24_Control(uint32_t Control, uint32_t arg)
@@ -2900,10 +2872,10 @@ static int32_t ADC24_Control(uint32_t Control, uint32_t arg)
  * @fn           : int32_t ADC24_StartN(void *buf_a, void *buf_b,
  *                                      uint32_t samples_per_buf)
  * @brief        : Arm ping-pong buffered continuous scan for ADC24.
- * @parameter[1] : buf_a           : uint32_t[] primary buffer
- * @parameter[2] : buf_b           : uint32_t[] secondary buffer;
+ * @param buf_a uint32_t[] primary buffer
+ * @param buf_b uint32_t[] secondary buffer;
  *                                   NULL for one-shot
- * @parameter[3] : samples_per_buf : whole multiple of unmasked channel count
+ * @param samples_per_buf whole multiple of unmasked channel count
  * @return       : execution_status
  */
 static int32_t ADC24_StartN(void *buf_a, void *buf_b, uint32_t samples_per_buf)

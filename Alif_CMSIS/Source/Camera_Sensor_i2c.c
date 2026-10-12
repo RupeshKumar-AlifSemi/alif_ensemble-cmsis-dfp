@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     Camera_Sensor_i2c.c
  * @author   Tanay Rami
- * @email    tanay@alifsemi.com
+ * Email:    tanay@alifsemi.com
  * @version  V1.0.0
  * @date     11-July-2023
  * @brief    i2c driver for Camera Sensor Slave Device Communication.
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 
 /* System Includes */
@@ -241,7 +240,7 @@ int32_t camera_sensor_i2c_write(CAMERA_SENSOR_SLAVE_I2C_CONFIG *i2c, uint32_t re
      */
 
     /*
-     * @Note: Convert data from Little Endian to Big Endian
+     * @note: Convert data from Little Endian to Big Endian
      *         (only required if Camera Sensor slave device supports
      *          - 16-bit register addressing or
      *          - register size is >8-bit.)
@@ -277,7 +276,7 @@ int32_t camera_sensor_i2c_write(CAMERA_SENSOR_SLAVE_I2C_CONFIG *i2c, uint32_t re
 
     /* if Camera Sensor slave supports 8-bit register address type. */
     if (reg_addr_type == CAMERA_SENSOR_I2C_REG_ADDR_TYPE_8BIT) {
-        /* @Note: 8-bit Register Address Type is not yet tested
+        /* @note: 8-bit Register Address Type is not yet tested
          *        with any 8-bit supported Camera Sensor slave device.
          */
         tx_data[0] = addr_low;
@@ -408,7 +407,7 @@ int32_t camera_sensor_i2c_write_burst(CAMERA_SENSOR_SLAVE_I2C_CONFIG *i2c, uint3
      */
 
     /*
-     * @Note: Convert data from Little Endian to Big Endian
+     * @note: Convert data from Little Endian to Big Endian
      *         (only required if Camera Sensor slave device supports
      *          - 16-bit register addressing or
      *          - register size is >8-bit.)
@@ -444,7 +443,7 @@ int32_t camera_sensor_i2c_write_burst(CAMERA_SENSOR_SLAVE_I2C_CONFIG *i2c, uint3
 
     /* if Camera Sensor slave supports 8-bit register address type. */
     if (reg_addr_len == CAMERA_SENSOR_I2C_REG_ADDR_TYPE_8BIT) {
-        /* @Note: 8-bit Register Address Type is not yet tested
+        /* @note: 8-bit Register Address Type is not yet tested
          *        with any 8-bit supported Camera Sensor slave device.
          */
         tx_data[0] = addr_low;
@@ -596,7 +595,7 @@ int32_t camera_sensor_i2c_read(CAMERA_SENSOR_SLAVE_I2C_CONFIG *i2c, uint32_t reg
      */
 
     /*
-     * @Note: Convert data from Big Endian to Little Endian.
+     * @note: Convert data from Big Endian to Little Endian.
      *         (only required if Camera Sensor slave device supports
      *           - 16-bit register addressing or
      *           - register size is >8-bit.)
@@ -632,7 +631,7 @@ int32_t camera_sensor_i2c_read(CAMERA_SENSOR_SLAVE_I2C_CONFIG *i2c, uint32_t reg
 
     /* if Camera Sensor slave supports 8-bit register address type. */
     if (reg_addr_type == CAMERA_SENSOR_I2C_REG_ADDR_TYPE_8BIT) {
-        /* @Note: 8-bit Register Address Type is not yet tested
+        /* @note: 8-bit Register Address Type is not yet tested
          *        with any 8-bit supported Camera Sensor slave device.
          */
         tx_data[0] = addr_low;

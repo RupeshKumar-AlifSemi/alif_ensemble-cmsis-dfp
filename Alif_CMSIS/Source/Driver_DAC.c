@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     Driver_DAC.c
  * @author   Nisarga A M
- * @email    nisarga.am@alifsemi.com
+ * Email:    nisarga.am@alifsemi.com
  * @version  V1.0.0
  * @date     22-Feb-2022
  * @brief    DAC(Digital to Analog Converter) driver definitions.DAC0 connected
@@ -41,9 +41,8 @@ static const ARM_DAC_CAPABILITIES DriverCapabilities = {
 };
 
 /**
- @fn           void analog_config(void)
+ @fn static void Analog_Config(void)
  @brief        Analog configuration register includes Vbat and comparator
- @param[in]    none
  @return       none
  */
 static void Analog_Config(void)
@@ -58,7 +57,6 @@ static void Analog_Config(void)
 /**
  @fn           ARM_DRIVER_VERSION DAC_GetVersion(void)
  @brief        get DAC version
- @param        none
  @return       driver version
  */
 static ARM_DRIVER_VERSION DAC_GetVersion(void)
@@ -69,7 +67,6 @@ static ARM_DRIVER_VERSION DAC_GetVersion(void)
 /**
  @fn           ARM_RTC_CAPABILITIES DAC_GetCapabilities(void)
  @brief        get DAC Capabilites
- @param        none
  @return       driver Capabilites
  */
 static ARM_DAC_CAPABILITIES DAC_GetCapabilities(void)

@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file         Driver_CPI.c
  * @author       Tanay Rami and Chandra Bhushan Singh
- * @email        tanay@alifsemi.com and chandrabhushan.singh@alifsemi.com
+ * Email:        tanay@alifsemi.com and chandrabhushan.singh@alifsemi.com
  * @version      V1.0.0
  * @date         27-March-2023
  * @brief        CMSIS-Driver for Camera Controller
- * @bug          None.
- * @Note         None.
+ * @note         None.
  ******************************************************************************/
 
 /* System Includes */
@@ -437,10 +436,7 @@ static int32_t CPI_StopCapture(CPI_RESOURCES *CPI_RES)
 }
 
 /*
- * \fn         int32_t CPIx_Capture(CPI_RESOURCES *CPI_RES,
- *                                  CAMERA_SENSOR_DEVICE *camera_sensor,
- *                                  void *framebuffer_startaddr,
- *                                  CPI_MODE_SELECT mode
+ * \fn static int32_t CPIx_Capture(CPI_RESOURCES *CPI_RES, CAMERA_SENSOR_DEVICE *camera_sensor, void *framebuffer_startaddr, CPI_MODE_SELECT mode)
  * \brief      Start Camera Sensor and CPI (in Snapshot mode or video mode).
  *             In Snapshot mode, CPI will capture one frame then it gets stop.
  *             In Video mode, CPI will capture video data continuously.
@@ -600,10 +596,10 @@ Error_Stop_CSI:
 }
 
 /*
- * \fn        int32_t CPIx_Stop(CPI_RESOURCES *CPI_RES, CAMERA_SENSOR_DEVICE *cam_sensor)
+ * \fn static int32_t CPIx_Stop(CPI_RESOURCES *CPI_RES, CAMERA_SENSOR_DEVICE *camera_sensor)
  * \brief     Stop Camera Sensor and CPI.
  * \param[in] CPI_RES    Pointer to CPI resources structure
- * \param[in] cam_sensor Pointer to Camera Sensor Device resources structure
+ * \param[in] camera_sensor Pointer to Camera Sensor Device resources structure
  * \return    \ref execution_status
  */
 static int32_t CPIx_Stop(CPI_RESOURCES *CPI_RES, CAMERA_SENSOR_DEVICE *camera_sensor)
@@ -641,13 +637,10 @@ static int32_t CPIx_Stop(CPI_RESOURCES *CPI_RES, CAMERA_SENSOR_DEVICE *camera_se
 }
 
 /*
- * \fn         int32_t CPIx_Control(CPI_RESOURCES *CPI_RES,
- *                                  CAMERA_SENSOR_DEVICE *cam_sensor,
- *                                  uint32_t control,
- *                                  uint32_t arg)
+ * \fn static int32_t CPIx_Control(CPI_RESOURCES *CPI_RES, CAMERA_SENSOR_DEVICE *camera_sensor, uint32_t control, uint32_t arg)
  * \brief     Control CPI and Camera Sensor.
  * \param[in] CPI_RES    Pointer to CPI resources structure
- * \param[in] cam_sensor Pointer to Camera Sensor Device resources structure
+ * \param[in] camera_sensor Pointer to Camera Sensor Device resources structure
  * \param[in] control    Operation
  * \param[in] arg        Argument of operation
  * \return    \ref execution_status

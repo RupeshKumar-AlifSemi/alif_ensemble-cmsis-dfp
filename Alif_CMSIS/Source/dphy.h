@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     dphy.h
  * @author   Prasanna Ravi
- * @email    prasanna.ravi@alifsemi.com
+ * Email:    prasanna.ravi@alifsemi.com
  * @version  V1.0.0
  * @date     24-Feb-2022
  * @brief    Device Specific Header file for DPHY Driver.

@@ -11,11 +11,10 @@
 /*******************************************************************************
  * @file     Driver_MCI.c
  * @author   Deepak Kumar
- * @email    deepak@alifsemi.com
+ * Email:    deepak@alifsemi.com
  * @version  V1.0.0
  * @date     24-Jan-2025
  * @brief    MCI Driver
- * @bug      None.
  ******************************************************************************/
 #include "RTE_Components.h"
 #include "stdio.h"
@@ -79,7 +78,7 @@ static const ARM_MCI_CAPABILITIES DriverCapabilities = {
 };
 
 /**
-  \fn           sd_cb(uint32_t status)
+  \fn void sd_cb(uint16_t cmd_status, uint16_t xfer_status)
   \brief        SD interrupt callback
   \param[in]    uint32_t status
   \return       none
@@ -202,7 +201,7 @@ static ARM_MCI_CAPABILITIES ARM_MCI_GetCapabilities(void)
 /**
  @fn           : int32_t ARM_MCI_Initialize(ARM_MCI_SignalEvent_t cb_event)
  @brief        : Initialize the MCI Interface
- @parameter[1] : cb_event : Pointer to \ref ARM_MCI_SignalEvent_t
+ @param cb_event Pointer to \ref ARM_MCI_SignalEvent_t
  @return       : execution_status
 **/
 static int32_t ARM_MCI_Initialize(ARM_MCI_SignalEvent_t cb_event)
@@ -315,7 +314,6 @@ static int32_t ARM_MCI_Initialize(ARM_MCI_SignalEvent_t cb_event)
 /**
  @fn           : int32_t ARM_MCI_Uninitialize(void)
  @brief        : Un-Initialize the MCI Interface
- @parameter    : NONE
  @return       : execution_status
 **/
 static int32_t ARM_MCI_Uninitialize(void)
@@ -331,9 +329,9 @@ static int32_t ARM_MCI_Uninitialize(void)
 }
 
 /**
- @fn           : int32_t ARM_MCI_PowerControl(ARM_POWER_STATE status)
+ @fn static int32_t ARM_MCI_PowerControl(ARM_POWER_STATE state)
  @brief        : Control MCI Interface power
- @parameter    : NONE
+ @param state
  @return       : execution_status
 **/
 static int32_t ARM_MCI_PowerControl(ARM_POWER_STATE state)
@@ -356,9 +354,9 @@ static int32_t ARM_MCI_PowerControl(ARM_POWER_STATE state)
 }
 
 /**
- @fn           : int32_t ARM_MCI_CardPower(uint32_t volate)
+ @fn static int32_t ARM_MCI_CardPower(uint32_t voltage)
  @brief        : Control MCI Interface power
- @parameter    : input voltage
+ @param voltage voltage
  @return       : execution_status
 **/
 static int32_t ARM_MCI_CardPower(uint32_t voltage)
@@ -405,7 +403,6 @@ static int32_t ARM_MCI_CardPower(uint32_t voltage)
 /**
  @fn           : int32_t ARM_MCI_ReadCD(void)
  @brief        : Read Card detect
- @parameter    : None
  @return       : execution_status
 **/
 static int32_t ARM_MCI_ReadCD(void)
@@ -422,7 +419,6 @@ static int32_t ARM_MCI_ReadCD(void)
 /**
  @fn           : int32_t ARM_MCI_ReadWP(void)
  @brief        : Read Write Protect
- @parameter    : None
  @return       : execution_status
 **/
 static int32_t ARM_MCI_ReadWP(void)
@@ -434,7 +430,7 @@ static int32_t ARM_MCI_ReadWP(void)
  @fn           : int32_t ARM_MCI_SendCommand(uint32_t cmd, uint32_t arg, uint32_t flags, uint32_t
 *response)
  @brief        : Send Command to Card
- @parameter    : cmd, argument, flags and pointer to store response.
+ @param    : cmd, argument, flags and pointer to store response.
  @return       : execution_status
 **/
 static int32_t ARM_MCI_SendCommand(uint32_t cmd, uint32_t arg, uint32_t flags, uint32_t *response)
@@ -491,7 +487,7 @@ static int32_t ARM_MCI_SendCommand(uint32_t cmd, uint32_t arg, uint32_t flags, u
  @fn           : int32_t ARM_MCI_SetupTransfer(uint8_t  *data, uint32_t block_count, uint32_t
 block_size, uint32_t mode)
  @brief        : Prepare DMA for transfer
- @parameter    : read/write data buffer, block count, block size, and mode
+ @param    : read/write data buffer, block count, block size, and mode
  @return       : execution_status
 **/
 static int32_t ARM_MCI_SetupTransfer(uint8_t *data, uint32_t block_count, uint32_t block_size,
@@ -510,7 +506,6 @@ static int32_t ARM_MCI_SetupTransfer(uint8_t *data, uint32_t block_count, uint32
 /**
  @fn           : int32_t ARM_MCI_AbortTransfer(void)
  @brief        : Stop the on-going transfer
- @parameter    : None
  @return       : execution_status
 **/
 static int32_t ARM_MCI_AbortTransfer(void)
@@ -527,7 +522,7 @@ static int32_t ARM_MCI_AbortTransfer(void)
 /**
  @fn           : int32_t ARM_MCI_Control(uint32_t control, uint32_t arg)
  @brief        : Control the MCI Features
- @parameter    : Control and Value
+ @param    : Control and Value
  @return       : execution_status
 **/
 static int32_t ARM_MCI_Control(uint32_t control, uint32_t arg)
@@ -637,7 +632,6 @@ static int32_t ARM_MCI_Control(uint32_t control, uint32_t arg)
 /**
  @fn           : ARM_MCI_STATUS ARM_MCI_GetStatus(void)
  @brief        : Gets the driver status
- @parameter    : ARM_MCI_STATUS
  @return       : execution_status
 **/
 static ARM_MCI_STATUS ARM_MCI_GetStatus(void)
@@ -662,7 +656,7 @@ static ARM_MCI_STATUS ARM_MCI_GetStatus(void)
 /**
  @fn           : ARM_MCI_SignalEvent(uint32_t event)
  @brief        : Signal the events
- @parameter    : event
+ @param event
  @return       : None
 **/
 void ARM_MCI_SignalEvent(uint32_t event)

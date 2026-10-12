@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     DSI_DCS.h
  * @author   Prasanna Ravi
- * @email    prasanna.ravi@alifsemi.com
+ * Email:    prasanna.ravi@alifsemi.com
  * @version  V1.0.0
  * @date     01-July-2022
  * @brief    DCS Specific Header file for MIPI DSI Driver.
@@ -36,7 +36,7 @@ void DSI_DCS_Short_Write(uint8_t cmd, uint8_t data);
 void DSI_DCS_CMD_Short_Write(uint8_t cmd);
 
 /**
-  \fn          void DSI_DCS_Long_Write (uint8_t cmd, uint32_t data)
+  \fn void DSI_DCS_Long_Write(uint8_t *data, uint32_t len)
   \brief       Perform MIPI DSI DCS Short write.
   \param[in]   data pointer to data buffer.
   \param[in]   len data buffer length.

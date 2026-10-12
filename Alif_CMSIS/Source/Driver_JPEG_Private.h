@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     Driver_JPEG_Private.h
  * @author   Chandra Bhushan Singh
- * @email    chandrabhushan.singh@alifsemi.com
+ * Email:    chandrabhushan.singh@alifsemi.com
  * @version  V1.0.0
  * @date     14-April-2026
  * @brief    CMSIS Driver Private Header file.

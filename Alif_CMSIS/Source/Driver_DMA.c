@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     Driver_DMA.c
  * @author   Sudhir Sreedharan
- * @email    sudhir@alifsemi.com
+ * Email:    sudhir@alifsemi.com
  * @version  V1.0.0
  * @date     04-Nov-2020
  * @brief    CMSIS-Driver for DMA.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 /* Includes ------------------------------------------------------------------*/
 #include "Driver_DMA_Private.h"
@@ -159,7 +158,7 @@ static void DMA_InitDescDefaults(uint8_t channel_num, DMA_RESOURCES *DMA)
                                              uint8_t *ess)
   \brief       Get the endian swap size value
   \param[in]   swap_size  User provided swap size
-  \param[out]  Endian Swap size value
+  \param[out] ess Swap size value
   \return      /ref execution_status
 */
 static int32_t DMA_GetEndianSwapSize(ARM_DMA_ESS_Type swap_size, uint8_t *ess)
@@ -955,7 +954,7 @@ static int32_t DMA_PowerControl(ARM_POWER_STATE state, DMA_RESOURCES *DMA)
 }
 
 /**
-  \fn          void DMA_IRQHandler(void)
+  \fn static void DMA_IRQHandler(uint8_t event_idx, DMA_RESOURCES *DMA)
   \brief       common DMA IRQ handler
   \param[in]   event_idx  Event index
   \param[in]   DMA  DMA resource
@@ -980,7 +979,7 @@ static void DMA_IRQHandler(uint8_t event_idx, DMA_RESOURCES *DMA)
 }
 
 /**
-  \fn          void DMA_AbortIRQHandler(void)
+  \fn static void DMA_AbortIRQHandler(DMA_RESOURCES *DMA)
   \brief       Abort DMA handler
   \param[in]   DMA  DMA resource
   \return      None
@@ -1113,7 +1112,7 @@ static int32_t DMA0_Start(DMA_Handle_Type *handle, ARM_DMA_PARAMS *params)
 }
 
 /**
-  \fn          int32_t DMA_Stop(int32_t *handle)
+  \fn static int32_t DMA0_Stop(DMA_Handle_Type *handle)
   \brief       Stop DMA
   \param[in]   handle  Pointer to DMA handle
   \return      \ref execution_status

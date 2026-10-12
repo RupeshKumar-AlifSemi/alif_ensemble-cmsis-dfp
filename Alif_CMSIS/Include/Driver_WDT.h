@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     Driver_WDT.h
  * @author   Tanay Rami
- * @email    tanay@alifsemi.com
+ * Email:    tanay@alifsemi.com
  * @version  V1.0.0
  * @date     27-April-2021
  * @brief    Watchdog Timer(WDT) driver definitions.

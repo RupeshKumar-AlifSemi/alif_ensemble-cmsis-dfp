@@ -36,7 +36,6 @@ static const ARM_CRC_CAPABILITIES DriverCapabilities = {
 /**
  @fn           ARM_DRIVER_VERSION CRC_GetVersion(void)
  @brief        get CRC version
- @param        none
  @return       driver version
  */
 static ARM_DRIVER_VERSION CRC_GetVersion(void)
@@ -47,7 +46,6 @@ static ARM_DRIVER_VERSION CRC_GetVersion(void)
 /**
  @fn           ARM_CRC_CAPABILITIES CRC_GetCapabilities(void)
  @brief        get CRC Capabilites
- @param        none
  @return       driver Capabilites
  */
 static ARM_CRC_CAPABILITIES CRC_GetCapabilities(void)
@@ -250,7 +248,7 @@ __STATIC_INLINE int32_t CRC_DMA_Stop(DMA_PERIPHERAL_CONFIG *dma_periph)
   \brief       Callback function from DMA for CRC
   \param[in]   event     Event from DMA
   \param[in]   peri_num  Peripheral number
-  \param[in]   crc       Pointer to crc resources
+  \param[in] CRC Pointer to crc resources
 */
 static void CRC_DMACallback(uint32_t event, int8_t peri_num, CRC_RESOURCES *CRC)
 {
@@ -413,10 +411,9 @@ static int32_t CRC_Uninitialize(CRC_RESOURCES *CRC)
 }
 
 /**
- @fn           int32_t CRC_PowerControl (ARM_POWER_STATE state,
-                                          CRC_RESOURCES *CRC)
+ @fn static int32_t CRC_PowerControl(ARM_POWER_STATE status, CRC_RESOURCES *CRC)
  @brief        CMSIS-DRIVER CRC power control
- @param[in]    state : Power state
+ @param[in] status Power state
  @param[in]    CRC   : Pointer to CRC resources
  @return       ARM_DRIVER_ERROR_PARAMETER  : if CRC device is invalid
                ARM_DRIVER_OK               : if CRC successfully uninitialized or already not
@@ -563,7 +560,7 @@ static int32_t CRC_Control(uint32_t control, uint32_t arg, CRC_RESOURCES *CRC)
 }
 
 /**
-@fn         int32_t CRC_Seed (uint32_t value, CRC_RESOURCES *CRC)
+@fn static int32_t CRC_Seed(uint32_t seed_value, CRC_RESOURCES *CRC)
 @brief      CMSIS-DRIVER CRC Seed value
             Enable the Init bit [0th bit] of the control register to load the seed value
 @param[in]  seed_value : Seed value depending on whether the data is 8 bit or 16 or 32 bit
@@ -592,7 +589,7 @@ static int32_t CRC_Seed(uint32_t seed_value, CRC_RESOURCES *CRC)
 @brief      To add the polynomial value to polycustom register
             Enable the Init bit [0th bit] of the conrol register to load the
             polynomial value
-@param[in]  polynomial : Polynomial data for 8 bit or 16 or 32 bit
+@param[in] value Polynomial data for 8 bit or 16 or 32 bit
 @param[in]  CRC        : pointer to CRC resources
 @return     \ref execution_status
 */

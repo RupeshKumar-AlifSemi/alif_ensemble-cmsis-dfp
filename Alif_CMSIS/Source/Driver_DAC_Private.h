@@ -35,18 +35,13 @@ typedef struct _DAC_DRIVER_STATE {
     uint32_t reserved     : 29; /* Reserved           */
 } DAC_DRIVER_STATE;
 
-/**
- * struct DAC_RESOURCES: structure representing a DAC device
- * @regs     : Register address of the DAC
- * @flags    : DAC driver flags
- * @config   : DAC configuration information
- */
+/** @brief Resources for one DAC instance. */
 typedef struct _DAC_resources {
-    DAC_Type        *regs;            /* DAC register address                             */
-    DAC_DRIVER_STATE flags;           /* DAC Driver Flags                                 */
-    DAC_INSTANCE     instance;        /* DAC Driver instance                              */
-    bool             dac_twoscomp_in; /* Convert two's complement to unsigned binary data */
-    uint8_t          input_mux_val;   /* DAC input data source                            */
+    DAC_Type        *regs;            /**< DAC register address */
+    DAC_DRIVER_STATE flags;           /**< DAC driver flags */
+    DAC_INSTANCE     instance;        /**< DAC driver instance */
+    bool             dac_twoscomp_in; /**< Convert two's complement to unsigned binary data */
+    uint8_t          input_mux_val;   /**< DAC input data source */
 } DAC_RESOURCES;
 
 #ifdef __cplusplus

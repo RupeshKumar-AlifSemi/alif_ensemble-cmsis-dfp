@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     Driver_SPI_EX.h
  * @author   Manoj A Murudi
- * @email    manoj,murudi@alifsemi.com
+ * Email:    manoj,murudi@alifsemi.com
  * @version  V1.0.0
  * @date     13-Jan-2025
  * @brief    Extended Header for SPI Driver
- * @bug      None
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #ifndef Driver_SPI_EX_H_

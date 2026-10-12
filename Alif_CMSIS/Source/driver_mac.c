@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     driver_mac.c
  * @author   Silesh C V
- * @email    silesh@alifsemi.com
+ * Email:    silesh@alifsemi.com
  * @version  V1.1.0
  * @date     04-Feb-2026
  * @brief    CMSIS driver for ETH MAC.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #include <string.h>
@@ -106,7 +105,7 @@ static void init_rx_descs(MAC_DEV *dev)
 }
 
 /**
-  \fn          void init_tx_desc (MAC_DEV *dev)
+  \fn static void init_tx_descs(MAC_DEV *dev)
   \brief       Initialize Tx DMA descriptors.
   \param[in]   dev        Pointer to the MAC device instance
   \return      none.
@@ -212,7 +211,7 @@ static int32_t mac_hw_init(MAC_DEV *dev)
 /* Ethernet Driver functions */
 
 /**
-  \fn          ARM_DRIVER_VERSION GetVersion (void)
+  \fn static ARM_DRIVER_VERSION ETH_MAC_GetVersion(void)
   \brief       Get driver version.
   \return      \ref ARM_DRIVER_VERSION
 */
@@ -222,7 +221,7 @@ static ARM_DRIVER_VERSION ETH_MAC_GetVersion(void)
 }
 
 /**
-  \fn          ARM_ETH_MAC_CAPABILITIES GetCapabilities (void)
+  \fn static ARM_ETH_MAC_CAPABILITIES ETH_MAC_GetCapabilities(void)
   \brief       Get driver capabilities.
   \return      \ref ARM_ETH_MAC_CAPABILITIES
 */
@@ -384,8 +383,7 @@ static int32_t SetMacAddress(const ARM_ETH_MAC_ADDR *ptr_addr, MAC_DEV *dev)
 }
 
 /**
-  \fn          int32_t SetAddressFilter (const ARM_ETH_MAC_ADDR *ptr_addr,
-                                               uint32_t          num_addr)
+  \fn static int32_t SetAddressFilter(const ARM_ETH_MAC_ADDR *ptr_addr, uint32_t num_addr, MAC_DEV *dev)
   \brief       Configure Address Filter.
   \param[in]   ptr_addr  Pointer to addresses
   \param[in]   num_addr  Number of addresses to configure

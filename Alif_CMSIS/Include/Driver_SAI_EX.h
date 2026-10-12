@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     Driver_SAI_EX.h
  * @author   Sudhir Sreedharan
- * @email    sudhir@alifsemi.com
+ * Email:    sudhir@alifsemi.com
  * @version  V1.0.0
  * @date     30-Sep-2023
  * @brief    Extended Header for SAI Driver
- * @bug      None
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #ifndef Driver_SAI_EX_H_

@@ -11,12 +11,11 @@
 /******************************************************************************
  * @file     Driver_I2C_EX.h
  * @author   Shreehari H K
- * @email    shreehari.hk@alifsemi.com
+ * Email:    shreehari.hk@alifsemi.com
  * @version  V1.0.0
  * @date     23-Feb-2025
  * @brief    Extension of CMSIS Driver_I2C.h
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #ifndef DRIVER_I2C_EX_H_

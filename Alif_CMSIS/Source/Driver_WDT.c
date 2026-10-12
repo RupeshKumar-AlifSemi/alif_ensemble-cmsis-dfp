@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     Driver_WDT.c
  * @author   Tanay Rami
- * @email    tanay@alifsemi.com
+ * Email:    tanay@alifsemi.com
  * @version  V1.0.0
  * @date     27-April-2021
  * @brief    CMSIS-Driver for Watchdog
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 
 /* Includes --------------------------------------------------------------------------- */
@@ -223,14 +222,13 @@ static int32_t WDT_PowerControl(ARM_POWER_STATE state, WDT_RESOURCES *wdt)
 }
 
 /**
-  \fn           int32_t WDT_Initialize(uint32_t      timeout,
-                                       WDT_RESOURCES *wdt)
+  \fn static int32_t WDT_Initialize(uint32_t timeout_msec, WDT_RESOURCES *wdt)
   \brief        Initialize the watchdog device.
                 The init function leaves the watchdog in a clean state:
                   - initialized;
                   - stop;
                   - locked.
-  \param[in]    timeout  : Timeout in msec, must be > 0.
+  \param[in] timeout_msec Timeout in msec, must be > 0.
   \param[in]    wdt      : Pointer to watchdog device resources
   \return       \ref execution_status
 */

@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     Driver_I2S_Private.h
  * @author   Sudhir Sreedharan
- * @email    sudhir@alifsemi.com
+ * Email:    sudhir@alifsemi.com
  * @version  V3.0.0
  * @date     06-Jun-2023
  * @brief    I2S Private header file.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 #ifndef DRIVER_I2S_PRIVATE_H
 #define DRIVER_I2S_PRIVATE_H

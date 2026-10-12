@@ -10,12 +10,11 @@
 /*******************************************************************************
  * @file     dma_opcode.h
  * @author   Sudhir Sreedharan
- * @email    sudhir@alifsemi.com
+ * Email:    sudhir@alifsemi.com
  * @version  V1.0.0
  * @date     8-Aug-2023
  * @brief    DMA Opcode Generation Header File
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #ifndef DMA_OPCODE_H_

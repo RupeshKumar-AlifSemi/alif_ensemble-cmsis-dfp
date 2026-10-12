@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     Driver_IO_Private.h
  * @author   Girish BN, Manoj A Murudi
- * @email    girish.bn@alifsemi.com, manoj.murudi@alifsemi.com
+ * Email:    girish.bn@alifsemi.com, manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     29-March-2023
  * @brief    Alif Header file for GPIO.
- * @bug      None.
- * @Note	 None
+ * @note	 None
  ******************************************************************************/
 
 #ifndef DRIVER_IO_PRIVATE_H_

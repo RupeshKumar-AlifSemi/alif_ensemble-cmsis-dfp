@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     evtrtr.h
  * @author   Sudhir Sreedharan
- * @email    sudhir@alifsemi.com
+ * Email:    sudhir@alifsemi.com
  * @version  V1.0.0
  * @date     5-May-2023
  * @brief    System Control Device information for Event Router
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 #ifndef EVTRTR_H
 

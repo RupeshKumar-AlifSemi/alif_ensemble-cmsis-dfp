@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file         Driver_JPEG.c
  * @author       Chandra Bhushan Singh
- * @email        chandrabhushan.singh@alifsemi.com
+ * Email:        chandrabhushan.singh@alifsemi.com
  * @version      V1.0.0
  * @date         14-April-2026
  * @brief        CMSIS-Driver for JPEG Encoder
- * @bug          None.
- * @Note         None.
+ * @note         None.
  ******************************************************************************/
 
 /* System Includes */

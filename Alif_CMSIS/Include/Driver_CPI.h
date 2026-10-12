@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     Driver_CPI.h
  * @author   Tanay Rami
- * @email    tanay@alifsemi.com
+ * Email:    tanay@alifsemi.com
  * @version  V1.0.0
  * @date     03-May-2023
  * @brief    Camera Controller Driver definitions.

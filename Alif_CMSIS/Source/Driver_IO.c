@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     Driver_IO.c
  * @author   Girish BN, Manoj A Murudi
- * @email    girish.bn@alifsemi.com, manoj.murudi@alifsemi.com
+ * Email:    girish.bn@alifsemi.com, manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     29-March-2023
  * @brief    Alif Driver for GPIO.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #include "Driver_IO.h"
@@ -27,8 +26,8 @@
 #if defined(RTE_Drivers_IO)
 
 /**
-  \fn      int32_t GPIO_Initialize (GPIO_RESOURCES *GPIO, ARM_GPIO_SignalEvent_t cb_event, uint8_t
-  pin_no) \brief   Initialize the gpio pin \param   cb_event : Pointer to gpio Event \ref
+  \fn static int32_t GPIO_Initialize(GPIO_RESOURCES *GPIO, ARM_GPIO_SignalEvent_t cb_event, uint8_t pin_no)
+  \brief   Initialize the gpio pin \param   cb_event : Pointer to gpio Event \ref
   GPIO_SignalEvent \param   GPIO     : Pointer to gpio device resources \param   pin_no   : pin to
   be configured. \return  execution_status
 */
@@ -47,7 +46,7 @@ static int32_t GPIO_Initialize(GPIO_RESOURCES *GPIO, ARM_GPIO_SignalEvent_t cb_e
 }
 
 /**
- * @fn      int32_t GPIO_PowerControl(GPIO_RESOURCES *GPIO, uint8_t pin_no, ARM_POWER_STATE state).
+ * @fn static int32_t GPIO_PowerControl(GPIO_RESOURCES *GPIO, uint8_t pin_no, ARM_POWER_STATE state)
  * @brief   Handles the gpio power.
  * @note    none.
  * @param   GPIO   : Pointer to gpio resources structure.

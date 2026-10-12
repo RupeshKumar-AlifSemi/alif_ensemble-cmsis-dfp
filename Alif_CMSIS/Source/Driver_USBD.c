@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     Driver_USBD.c
  * @author   Mahesh Avula
- * @email    mahesh.avula@alifsemi.com
+ * Email:    mahesh.avula@alifsemi.com
  * @version  V1.0.0
  * @date     23-April-2025
  * @brief    USB Driver
- * @bug      None.
- * @Note     Keil MDK-Middleware pack required
+ * @note     Keil MDK-Middleware pack required
  ******************************************************************************/
 
 #include "usbd.h"
@@ -59,7 +58,7 @@ static USBD_DRV_info usbd_drv;
 /* Functions  */
 
 /**
- *\fn          ARM_DRIVER_VERSION USBD_GetVersion (void)
+ *\fn static ARM_DRIVER_VERSION ARM_USBD_GetVersion(void)
  *\brief       Get driver version.
  *\return      ARM_DRIVER_VERSION
  */
@@ -119,7 +118,7 @@ static int32_t ARM_USBD_EndpointTransferAbort(uint8_t ep_addr)
 /**
  *\fn          int32_t ARM_USBD_PowerControl(ARM_POWER_STATE state)
  *\brief       Control USB Device Interface Power.
- *\param[in]   Power state
+ *\param[in] state state
  *\return      execution_status
  */
 static int32_t ARM_USBD_PowerControl(ARM_POWER_STATE state)
@@ -157,9 +156,7 @@ static int32_t ARM_USBD_PowerControl(ARM_POWER_STATE state)
 }
 
 /**
- *\fn          ARM_USBD_Uninitialize
  *\brief       De-initialize USB Device Interface.
- *\param[in]   none
  *\return      execution_status
  */
 static int32_t ARM_USBD_Uninitialize(void)
@@ -175,7 +172,6 @@ static int32_t ARM_USBD_Uninitialize(void)
 /**
  *\fn          int32_t ARM_USBD_DeviceConnect(void)
  *\brief       Connect USB Device.
- *\param[in]   none
  *\return      execution_status
  */
 static int32_t ARM_USBD_DeviceConnect(void)
@@ -186,7 +182,6 @@ static int32_t ARM_USBD_DeviceConnect(void)
 /**
  *\fn          int32_t ARM_USBD_DeviceDisconnect(void)
  *\brief       Disconnect USB Device.
- *\param[in]   none
  *\return      execution_status
  */
 
@@ -204,7 +199,6 @@ static int32_t ARM_USBD_DeviceDisconnect(void)
 /**
  *\fn          ARM_USBD_STATE ARM_USBD_DeviceGetState(void)
  *\brief       Get current USB Device State.
- *\param[in]   none
  *\return      ARM_USBD_STATE
  */
 static ARM_USBD_STATE ARM_USBD_DeviceGetState(void)
@@ -220,7 +214,6 @@ static ARM_USBD_STATE ARM_USBD_DeviceGetState(void)
 /**
  *\fn          int32_t ARM_USBD_DeviceRemoteWakeup(void)
  *\brief       Trigger USB Remote Wakeup.
- *\param[in]   none
  *\return      execution_status
  */
 static int32_t ARM_USBD_DeviceRemoteWakeup(void)
@@ -399,7 +392,6 @@ static uint32_t ARM_USBD_EndpointTransferGetResult(uint8_t ep_addr)
 /**
  *\fn          uint16_t ARM_USBD_GetFrameNumber(void)
  *\brief       Get current USB Frame Number.
- *\param[in]   none
  *\return      Frame Number
  */
 static uint16_t ARM_USBD_GetFrameNumber(void)
@@ -419,12 +411,12 @@ static void ARM_USBD_SignalDeviceEvent(uint32_t event)
 }
 
 /**
- *\fn          void ARM_USBD_SignalEndpointEvent (uint8_t ep_addr, uint32_t event)
+ *\fn static void ARM_USBD_SignalEndpointEvent(uint8_t ep_addr, uint32_t ep_event)
  *\brief       Signal USB Endpoint Event.
  *\param[in]   ep_addr  Endpoint Address
                 - ep_addr.0..3: Address
                 - ep_addr.7:    Direction
- *\param[in]   event USBD_ep_events
+ *\param[in] ep_event USBD_ep_events
  *\return      none
  */
 

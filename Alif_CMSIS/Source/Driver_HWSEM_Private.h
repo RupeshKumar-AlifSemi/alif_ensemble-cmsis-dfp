@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     Driver_HWSEM_Private.h
  * @author   Khushboo Singh
- * @email    khushboo.singh@alifsemi.com
+ * Email:    khushboo.singh@alifsemi.com
  * @version  V1.0.0
  * @date     16-June-2022
  * @brief    Device Specific Header file for hardware semaphore driver.

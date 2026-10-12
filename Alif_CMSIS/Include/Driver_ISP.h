@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     Driver_ISP.h
  * @author   Yogender Kumar Arya
- * @email    yogender.kumar@alifsemi.com
+ * Email:    yogender.kumar@alifsemi.com
  * @version  V1.0.0
  * @date     06-September-2025
  * @brief    Camera Controller Driver definitions.

@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     Driver_SPI_Private.h
  * @author   Girish BN, Manoj A Murudi
- * @email    girish.bn@alifsemi.com, manoj.murudi@alifsemi.com
+ * Email:    girish.bn@alifsemi.com, manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     20-04-2023
  * @brief    Header file for SPI.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #ifndef DRIVER_SPI_PRIVATE_H

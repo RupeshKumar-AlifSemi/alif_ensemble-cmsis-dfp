@@ -10,7 +10,7 @@
 /*******************************************************************************
  * @file     Driver_RTC.c
  * @author   Tanay Rami, Manoj A Murudi
- * @email    tanay@alifsemi.com, manoj.murudi@alifsemi.com
+ * Email:    tanay@alifsemi.com, manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     23-March-2023
  * @brief    CMSIS-Driver for RTC
@@ -40,7 +40,6 @@ static const ARM_RTC_CAPABILITIES DriverCapabilities = {
 /**
   \fn        ARM_DRIVER_VERSION RTC_GetVersion(void)
   \brief     get rtc version
-  \param     none
   \return    driver version
 */
 static ARM_DRIVER_VERSION RTC_GetVersion(void)
@@ -51,7 +50,6 @@ static ARM_DRIVER_VERSION RTC_GetVersion(void)
 /**
   \fn       ARM_RTC_CAPABILITIES RTC_GetCapabilities(void)
   \brief    get rtc capabilites
-  \param    none
   \return   driver capabilites
 */
 static ARM_RTC_CAPABILITIES RTC_GetCapabilities(void)
@@ -66,8 +64,8 @@ static ARM_RTC_CAPABILITIES RTC_GetCapabilities(void)
               - Program the default prescaler value.
               - Enable the counter and prescaler,
               - Keep interrupt generation disabled until an alarm is set.
-  \param[in]  cb_event  : Pointer to LPRTC Event \ref LPRTC_SignalEvent
-  \param[in]  LPRTC_RES : Pointer to lprtc device resources
+  \param[in] LPRTC_RES Pointer to LPRTC Event \ref LPRTC_SignalEvent
+  \param[in] cb_event Pointer to lprtc device resources
   \return     execution_status
 */
 static int32_t LPRTC_Initialize(LPRTC_RESOURCES *LPRTC_RES, ARM_RTC_SignalEvent_t cb_event)
@@ -92,8 +90,8 @@ static int32_t LPRTC_Initialize(LPRTC_RESOURCES *LPRTC_RES, ARM_RTC_SignalEvent_
 /**
   \fn           int32_t LPRTC_PowerControl (LPRTC_RESOURCES *LPRTC_RES, ARM_POWER_STATE state)
   \brief        LPRTC power control
-  \param[in]    state : Power state
-  \param[in]    LPRTC_RES : Pointer to lprtc device resources
+  \param[in] LPRTC_RES Power state
+  \param[in] state Pointer to lprtc device resources
   \return       none
 */
 static int32_t LPRTC_PowerControl(LPRTC_RESOURCES *LPRTC_RES, ARM_POWER_STATE state)
@@ -198,9 +196,9 @@ static int32_t LPRTC_Uninitialize(LPRTC_RESOURCES *LPRTC_RES)
   \fn           int32_t LPRTC_Control (LPRTC_RESOURCES *LPRTC_RES, uint32_t control, uint32_t arg)
   \brief        CMSIS-Driver lprtc control.
                 Control LPRTC Interface.
-  \param[in]    control : Operation
-  \param[in]    arg     : Argument of operation (optional)
-  \param[in]    LPRTC_RES   : Pointer to lprtc device resources
+  \param[in] LPRTC_RES Operation
+  \param[in] control Argument of operation (optional)
+  \param[in] arg Pointer to lprtc device resources
   \return       execution status
 */
 static int32_t LPRTC_Control(LPRTC_RESOURCES *LPRTC_RES, uint32_t control, uint32_t arg)
@@ -266,9 +264,9 @@ static int32_t LPRTC_Control(LPRTC_RESOURCES *LPRTC_RES, uint32_t control, uint3
 /**
   \fn         int32_t LPRTC_ReadCounter (LPRTC_RESOURCES *LPRTC_RES, uint32_t *val)
   \brief      Read the current counter value
-  \param[in]  val       : Pointer to the address where current lprtc counter value
+  \param[in] LPRTC_RES Pointer to the address where current lprtc counter value
                           needs to be copied to
-  \param[in]  LPRTC_RES : Pointer to lprtc device resources
+  \param[in] val Pointer to lprtc device resources
   \return     execution status
 */
 static int32_t LPRTC_ReadCounter(LPRTC_RESOURCES *LPRTC_RES, uint32_t *val)
@@ -286,8 +284,8 @@ static int32_t LPRTC_ReadCounter(LPRTC_RESOURCES *LPRTC_RES, uint32_t *val)
 /**
   \fn           int32_t LPRTC_LoadCounter (LPRTC_RESOURCES *LPRTC_RES, uint32_t loadvalue)
   \brief        Load new counter value
-  \param[in]    loadvalue : Variable which contains new counter value
-  \param[in]    LPRTC_RES : Pointer to lprtc device resources
+  \param[in] LPRTC_RES Variable which contains new counter value
+  \param[in] loadvalue Pointer to lprtc device resources
   \return       execution status
 */
 static int32_t LPRTC_LoadCounter(LPRTC_RESOURCES *LPRTC_RES, uint32_t loadvalue)

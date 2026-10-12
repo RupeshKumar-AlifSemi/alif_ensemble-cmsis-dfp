@@ -9,14 +9,13 @@
  */
 
 /******************************************************************************
- * @file     DPHY_CSI.c
+ * @file     DPHY_CSI2.c
  * @author   Prasanna Ravi and Chandra Bhushan Singh
- * @email    prasanna.ravi@alifsemi.com and chandrabhushan.singh@alifsemi.com
+ * Email:    prasanna.ravi@alifsemi.com and chandrabhushan.singh@alifsemi.com
  * @version  V1.0.0
  * @date     14-May-2024
  * @brief    Driver for MIPI DPHY CSI2.
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 #include <stdint.h>
 #include "Driver_Common.h"
@@ -510,11 +509,7 @@ static int32_t DPHY_TX_RX_SlaveSetup(uint32_t clock_frequency, uint8_t n_lanes)
 }
 
 /**
- * \fn          int32_t CSI2_DPHY_Initialize (uint32_t frequency, uint8_t n_lanes)
  * \brief       Initialize MIPI CSI2 DPHY Interface.
- * \param[in]   frequency to configure DPHY PLL.
- * \param[in]   n_lanes number of lanes.
- * \return      \ref execution_status
  */
 int32_t CSI2_DPHY_Initialize(uint32_t frequency, uint8_t n_lanes)
 {

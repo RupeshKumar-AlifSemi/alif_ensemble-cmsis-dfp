@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     Driver_SPI.c
  * @author   Girish BN, Manoj A Murudi
- * @email    girish.bn@alifsemi.com, manoj.murudi@alifsemi.com
+ * Email:    girish.bn@alifsemi.com, manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     20-04-2023
  * @brief    CMSIS-Driver for SPI.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #include "Driver_SPI.h"
@@ -49,7 +48,6 @@ static const ARM_SPI_CAPABILITIES DriverCapabilities = {
  * @fn      ARM_DRIVER_VERSION ARM_SPI_GetVersion(void)
  * @brief   get spi version
  * @note    none
- * @param   none
  * @retval  driver version
  */
 __STATIC_INLINE ARM_DRIVER_VERSION ARM_SPI_GetVersion(void)
@@ -61,7 +59,6 @@ __STATIC_INLINE ARM_DRIVER_VERSION ARM_SPI_GetVersion(void)
  * @fn      ARM_SPI_CAPABILITIES ARM_SPI_GetCapabilities(void)
  * @brief   get spi capabilities
  * @note    none
- * @param   none
  * @retval  driver capabilities
  */
 __STATIC_INLINE ARM_SPI_CAPABILITIES ARM_SPI_GetCapabilities(void)
@@ -94,8 +91,8 @@ static inline int32_t SPI_DMA_Initialize(DMA_PERIPHERAL_CONFIG *dma_periph)
   \fn          int32_t SPI_DMA_PowerControl(DMA_PERIPHERAL_CONFIG *dma_periph,
                                             ARM_POWER_STATE state)
   \brief       PowerControl DMA for SPI
-  \param[in]   state  Power state
-  \param[in]   dma_periph     Pointer to DMA resources
+  \param[in] dma_periph Power state
+  \param[in] state Pointer to DMA resources
   \return      \ref execution_status
 */
 static inline int32_t SPI_DMA_PowerControl(DMA_PERIPHERAL_CONFIG *dma_periph, ARM_POWER_STATE state)
@@ -257,7 +254,7 @@ static inline int32_t SPI_DMA_GetStatus(DMA_PERIPHERAL_CONFIG *dma_periph, uint3
 
 #if SPI_MICROWIRE_FRF_ENABLE
 /**
- * @fn      int32_t ARM_SPI_MicroWire_Config(SPI_RESOURCES *SPI).
+ * @fn static int32_t ARM_SPI_MicroWire_Config(SPI_RESOURCES *SPI)
  * @brief   Config the Microwire for communication.
  * @note    none.
  * @param   SPI : Pointer to spi resources structure.
@@ -296,7 +293,7 @@ static int32_t ARM_SPI_MicroWire_Config(SPI_RESOURCES *SPI)
 #endif
 
 /**
- * @fn      int32_t ARM_SPI_Initialize(SPI_RESOURCES *SPI, ARM_SPI_SignalEvent_t cb_event).
+ * @fn static int32_t ARM_SPI_Initialize(SPI_RESOURCES *SPI, ARM_SPI_SignalEvent_t cb_event)
  * @brief   Initialize the Spi for communication.
  * @note    none.
  * @param   SPI : Pointer to spi resources structure.
@@ -368,7 +365,7 @@ static int32_t ARM_SPI_Initialize(SPI_RESOURCES *SPI, ARM_SPI_SignalEvent_t cb_e
 }
 
 /**
- * @fn      int32_t ARM_SPI_Uninitialize(SPI_RESOURCES *SPI).
+ * @fn static int32_t ARM_SPI_Uninitialize(SPI_RESOURCES *SPI)
  * @brief   Un-Initialize the Spi.
  * @note    none.
  * @param   SPI : Pointer to spi resources structure.
@@ -409,7 +406,7 @@ static int32_t ARM_SPI_Uninitialize(SPI_RESOURCES *SPI)
 }
 
 /**
- * @fn      int32_t ARM_SPI_PowerControl(SPI_RESOURCES *SPI, ARM_POWER_STATE state).
+ * @fn static int32_t ARM_SPI_PowerControl(SPI_RESOURCES *SPI, ARM_POWER_STATE state)
  * @brief   Handles the spi power.
  * @note    none.
  * @param   SPI : Pointer to spi resources structure.
@@ -556,7 +553,7 @@ static int32_t ARM_SPI_PowerControl(SPI_RESOURCES *SPI, ARM_POWER_STATE state)
 }
 
 /**
- * @fn      int32_t ARM_SPI_Send(SPI_RESOURCES *SPI, const void *data, uint32_t num).
+ * @fn static int32_t ARM_SPI_Send(SPI_RESOURCES *SPI, const void *data, uint32_t num)
  * @brief   Used to send through spi.
  * @note    none.
  * @param   SPI : Pointer to spi resources structure.
@@ -694,7 +691,7 @@ static int32_t ARM_SPI_Send(SPI_RESOURCES *SPI, const void *data, uint32_t num)
 }
 
 /**
- * @fn      int32_t ARM_SPI_Receive(SPI_RESOURCES *SPI, void *data, uint32_t num).
+ * @fn static int32_t ARM_SPI_Receive(SPI_RESOURCES *SPI, void *data, uint32_t num)
  * @brief   Used to receive data through spi.
  * @note    none.
  * @param   SPI : Pointer to spi resources structure.
@@ -836,8 +833,7 @@ static int32_t ARM_SPI_Receive(SPI_RESOURCES *SPI, void *data, uint32_t num)
 }
 
 /**
- * @fn      int32_t ARM_SPI_Transfer(SPI_RESOURCES *SPI, const void *data_out, void *data_in,
- * uint32_t num).
+ * @fn static int32_t ARM_SPI_Transfer(SPI_RESOURCES *SPI, const void *data_out, void *data_in, uint32_t num)
  * @brief   Used to Transfer and Receive data through spi.
  * @note    none.
  * @param   SPI : Pointer to spi resources structure.
@@ -1012,7 +1008,7 @@ static int32_t ARM_SPI_Transfer(SPI_RESOURCES *SPI, const void *data_out, void *
 }
 
 /**
- * @fn      int32_t ARM_SPI_GetDataCount(SPI_RESOURCES *SPI).
+ * @fn static uint32_t ARM_SPI_GetDataCount(SPI_RESOURCES *SPI)
  * @brief   Used to get the data count on spi data transferring modes.
  * @note    none.
  * @param   SPI : Pointer to spi resources structure.
@@ -1046,7 +1042,7 @@ static uint32_t ARM_SPI_GetDataCount(SPI_RESOURCES *SPI)
 }
 
 /**
- * @fn      int32_t ARM_SPI_Control(SPI_RESOURCES *SPI, uint32_t control, uint32_t arg).
+ * @fn static int32_t ARM_SPI_Control(SPI_RESOURCES *SPI, uint32_t control, uint32_t arg)
  * @brief   Used to configure spi.
  * @note    none.
  * @param   SPI : Pointer to spi resources structure.
@@ -1449,7 +1445,7 @@ static int32_t ARM_SPI_Control(SPI_RESOURCES *SPI, uint32_t control, uint32_t ar
 }
 
 /**
- * @fn      void SPI_IRQ_Handler(SPI_RESOURCES *SPI, spi_transfer_t *transfer).
+ * @fn static void SPI_IRQ_Handler(SPI_RESOURCES *SPI)
  * @brief   SPI IRQ handler.
  * @note    none.
  * @param   SPI : Pointer to spi resources structure.

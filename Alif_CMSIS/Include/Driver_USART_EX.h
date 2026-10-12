@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     Driver_USART_EX.h
  * @author   Nisarga A M
- * @email    nisarga.am@alifsemi.com
+ * Email:    nisarga.am@alifsemi.com
  * @version  V1.0.0
  * @date     15-Jan-2025
  * @brief    Extended Header for USART Driver
- * @bug      None
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #ifndef DRIVER_USART_EX_H_

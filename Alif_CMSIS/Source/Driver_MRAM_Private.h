@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     Driver_MRAM_Private.h
  * @author   Tanay Rami
- * @email    tanay@alifsemi.com
+ * Email:    tanay@alifsemi.com
  * @version  V1.0.0
  * @date     01-June-2023
  * @brief    Device Specific Header file for MRAM (On-chip NVM (Non-Volatile Memory))

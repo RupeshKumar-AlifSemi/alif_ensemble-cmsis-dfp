@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     Driver_MIPI_DSI.c
  * @author   Prasanna Ravi
- * @email    prasanna.ravi@alifsemi.com
+ * Email:    prasanna.ravi@alifsemi.com
  * @version  V1.0.0
  * @date     28-Sep-2023
  * @brief    CMSIS-Driver for MIPI DSI.
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 
 #include "Driver_MIPI_DSI.h"
@@ -84,7 +83,7 @@ static ARM_DRIVER_VERSION ARM_MIPI_DSI_GetVersion(void)
 }
 
 /**
-  \fn          ARM_MIPI_DSI_CAPABILITIES MIPI_DSI_GetCapabilities (void)
+  \fn static ARM_MIPI_DSI_CAPABILITIES ARM_MIPI_DSI_GetCapabilities(void)
   \brief       Get MIPI DSI driver capabilities
   \return      \ref ARM_MIPI_DPHY_CAPABILITIES
 */
@@ -413,10 +412,12 @@ static int32_t DSI_Control(ARM_MIPI_DSI_CONTROL control, uint32_t arg,
 }
 
 /**
-  \fn          int32_t  DSI_StartCommandMode (DISPLAY_PANEL_DEVICE *display_panel, DSI_RESOURCES
-  *dsi) \brief       Configure DSI to start Command mode. \param[in]   display_panel Pointer to
-  display panel resources. \param[in]   dsi  Pointer to DSI resources. \return      \ref
-  execution_status.
+  \fn          static int32_t DSI_StartCommandMode(DISPLAY_PANEL_DEVICE *display_panel,
+                                                   DSI_RESOURCES *dsi)
+  \brief       Configure DSI to start command mode.
+  \param[in]   display_panel  Pointer to display panel resources
+  \param[in]   dsi            Pointer to DSI resources
+  \return      \ref execution_status
 */
 static int32_t DSI_StartCommandMode(DISPLAY_PANEL_DEVICE *display_panel, DSI_RESOURCES *dsi)
 {
@@ -628,7 +629,7 @@ void DSI_DCS_CMD_Short_Write(uint8_t cmd)
 }
 
 /**
-  \fn          void DSI_DCS_Long_Write (uint8_t cmd, uint32_t data)
+  \fn void DSI_DCS_Long_Write(uint8_t *data, uint32_t len)
   \brief       Perform MIPI DSI DCS Short write.
   \param[in]   data pointer to data buffer.
   \param[in]   len data buffer length.

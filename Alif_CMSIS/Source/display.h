@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     display.h
  * @author   Girish BN and Prasanna Ravi and Chandra Bhushan Singh
- * @email    girish.bn@alifsemi.com and chandrabhushan.singh@alifsemi.com
+ * Email:    girish.bn@alifsemi.com and chandrabhushan.singh@alifsemi.com
  * @version  V1.0.0
  * @date     28-Sep-2023
  * @brief    display driver header.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 #ifndef __DISPLAY_H__
 #define __DISPLAY_H__

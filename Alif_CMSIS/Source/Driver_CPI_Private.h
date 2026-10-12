@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     Driver_CPI_Private.h
  * @author   Chandra Bhushan Singh
- * @email    chandrabhushan.singh@alifsemi.com
+ * Email:    chandrabhushan.singh@alifsemi.com
  * @version  V1.0.0
  * @date     27-March-2023
  * @brief    CMSIS Driver Private Header file.

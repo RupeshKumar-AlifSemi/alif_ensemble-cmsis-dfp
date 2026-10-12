@@ -62,7 +62,7 @@
 /*******************************************************************************
  * @file     Driver_OSPI.h
  * @author   Khushboo Singh, Manoj A Murudi
- * @email    khushboo.singh@alifsemi.com, manoj.murudi@alifsemi.com
+ * Email:    khushboo.singh@alifsemi.com, manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     21-Oct-2022
  * @brief    OSPI Driver header file derived from CMSIS Driver_SPI.h

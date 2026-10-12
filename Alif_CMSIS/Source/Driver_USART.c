@@ -97,7 +97,6 @@ static const ARM_USART_CAPABILITIES DriverCapabilities_WO_RTS_CTS = {
  * @fn      ARM_DRIVER_VERSION ARM_USART_GetVersion(void)
  * @brief   get uart version
  * @note    none
- * @param   none
  * @retval  driver version
  */
 static ARM_DRIVER_VERSION ARM_USART_GetVersion(void)
@@ -109,7 +108,6 @@ static ARM_DRIVER_VERSION ARM_USART_GetVersion(void)
  * @fn      ARM_USART_CAPABILITIES ARM_USART_GetCapabilities(void)
  * @brief   get uart capabilites
  * @note    none
- * @param   none
  * @retval  driver capabilites
  */
 static ARM_USART_CAPABILITIES ARM_USART_GetCapabilities(void)
@@ -123,7 +121,6 @@ static ARM_USART_CAPABILITIES ARM_USART_GetCapabilities(void)
  *          As per PinMux Only UART0-UART3(not UART4-UART7) instances has RTS/CTS functionality.
  *          UART4-UART7 instances has RS485 functionality.
  * @note    none
- * @param   none
  * @retval  driver capabilites without RTS-CTS.
  */
 static ARM_USART_CAPABILITIES ARM_USART_GetCapabilities_WO_RTS_CTS(void)
@@ -298,8 +295,7 @@ static inline int32_t USART_DMA_Usermcode(DMA_PERIPHERAL_CONFIG *dma_periph, uin
 }
 
 /**
-  \fn          int32_t UART_DMA_GetStatus(DMA_PERIPHERAL_CONFIG *dma_periph
-                                         uint32_t *count)
+  \fn __STATIC_INLINE int32_t UART_DMA_GetStatus(DMA_PERIPHERAL_CONFIG *dma_periph, uint32_t *count)
   \brief       Status of UART DMA transfer
   \param[in]   dma_periph   Pointer to DMA resources
   \param[in]   count        Current transfer count

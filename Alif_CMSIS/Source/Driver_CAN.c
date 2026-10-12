@@ -11,12 +11,11 @@
 /******************************************************************************
  * @file     Driver_CAN.c
  * @author   Shreehari H K
- * @email    shreehari.hk@alifsemi.com
+ * Email:    shreehari.hk@alifsemi.com
  * @version  V1.0.0
  * @date     05-July-2023
  * @brief    CMSIS Driver for CANFD.
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 
 #include <string.h>
@@ -134,7 +133,6 @@ static const ARM_CAN_CAPABILITIES DriverCapabilities = {
  * @fn      ARM_DRIVER_VERSION ARM_CAN_GetVersion(void)
  * @brief   Gets CAN driver version.
  * @note    none
- * @param   none
  * @return  CAN driver Version
  */
 __STATIC_INLINE ARM_DRIVER_VERSION ARM_CAN_GetVersion(void)
@@ -166,7 +164,6 @@ __STATIC_INLINE ARM_CAN_OBJ_CAPABILITIES ARM_CAN_ObjectGetCapabilities(uint32_t 
  * @fn      ARM_CAN_CAPABILITIES ARM_CAN_GetCapabilities(void)
  * @brief   Gets CAN driver capabilities.
  * @note    none
- * @param   none
  * @return  \ref CAN driver capabilities
  */
 __STATIC_INLINE ARM_CAN_CAPABILITIES ARM_CAN_GetCapabilities(void)
@@ -421,8 +418,7 @@ static int32_t ARM_CAN_Uninitialize(CANFD_RESOURCES *CANFD)
 }
 
 /**
- * @fn      int32_t ARM_CAN_PowerControl(CANFD_RESOURCES *SPI,
- *                                       ARM_POWER_STATE state).
+ * @fn static int32_t ARM_CAN_PowerControl(CANFD_RESOURCES *CANFD, ARM_POWER_STATE state)
  * @brief   Handles the power control for canfd.
  * @note    none.
  * @param   CANFD : Pointer to canfd resources structure.
@@ -1411,7 +1407,6 @@ static ARM_CAN_STATUS ARM_CAN0_GetStatus(void)
  * @fn      void CANFD0_IRQHandler(void)
  * @brief   Handles CANFD0 interrupt request
  * @note    none
- * @param   none
  * @return  none
  */
 void CANFD0_IRQHandler(void)
@@ -1528,7 +1523,6 @@ static ARM_CAN_STATUS ARM_CAN1_GetStatus(void)
  * @fn      void CANFD1_IRQHandler(void)
  * @brief   Handles CANFD1 interrupt request
  * @note    none
- * @param   none
  * @return  none
  */
 void CANFD1_IRQHandler(void)

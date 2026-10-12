@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     DMA_Common.h
  * @author   Sudhir Sreedharan
- * @email    sudhir@alifsemi.com
+ * Email:    sudhir@alifsemi.com
  * @version  V1.0.0
  * @date     05-Aug-2022
  * @brief    Common DMA definitions.

@@ -33,23 +33,15 @@ typedef volatile struct _CMP_DRIVER_STATE {
     uint32_t reserved   : 30; /* Reserved              */
 } CMP_DRIVER_STATE;
 
-/**
- * struct CMP_RESOURCES: structure representing a Analog comparator device
- * @regs           : Register address of the Comparator
- * @drv_instance   : Driver instance
- * @state          : Comparator driver state
- * @irq_num        : Comparator interrupt number
- * @config         : Comparator configuration information
- * @irq_priority   : Comparator interrupt Priority
- */
+/** @brief Resources for one analog comparator instance. */
 typedef struct _CMP_RESOURCES {
-    ARM_Comparator_SignalEvent_t cb_event;     /* Comparator application event callback */
-    CMP_Type                    *regs;         /* Comparator register base address      */
-    CMP_INSTANCE                 drv_instance; /* Driver instance                       */
-    CMP_DRIVER_STATE             state;        /* Comparator Driver state               */
-    IRQn_Type                    irq_num;      /* Comparator interrupt number           */
-    uint32_t                     config;       /* Comparator configuration information  */
-    uint32_t                     irq_priority; /* Comparator interrupt Priority         */
+    ARM_Comparator_SignalEvent_t cb_event;     /**< Comparator application event callback */
+    CMP_Type                    *regs;         /**< Comparator register base address */
+    CMP_INSTANCE                 drv_instance; /**< Driver instance */
+    CMP_DRIVER_STATE             state;        /**< Comparator driver state */
+    IRQn_Type                    irq_num;      /**< Comparator interrupt number */
+    uint32_t                     config;       /**< Comparator configuration */
+    uint32_t                     irq_priority; /**< Comparator interrupt priority */
 } CMP_RESOURCES;
 
 #endif /* DRIVER_CMP_PRIVATE_H_ */

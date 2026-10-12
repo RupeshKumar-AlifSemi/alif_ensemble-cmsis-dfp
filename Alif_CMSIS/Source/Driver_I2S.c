@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     Driver_I2S.c
  * @author   Sudhir Sreedharan
- * @email    sudhir@alifsemi.com
+ * Email:    sudhir@alifsemi.com
  * @version  V3.0.0
  * @date     06-Jun-2023
  * @brief    CMSIS-Driver for I2S
- * @bug      None
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 /* Includes ------------------------------------------------------------------*/
@@ -350,8 +349,7 @@ __STATIC_INLINE int32_t I2S_DMA_Stop(DMA_PERIPHERAL_CONFIG *dma_periph)
 }
 
 /**
-  \fn          int32_t I2S_DMA_GetStatus(DMA_PERIPHERAL_CONFIG *dma_periph
-                                         uint32_t *count)
+  \fn __STATIC_INLINE int32_t I2S_DMA_GetStatus(DMA_PERIPHERAL_CONFIG *dma_periph, uint32_t *count)
   \brief       Status of I2S DMA transfer
   \param[in]   dma_periph   Pointer to DMA resources
   \param[in]   count        Current transfer count
@@ -851,7 +849,7 @@ static int32_t I2S_Receive(void *data, uint32_t num, I2S_RESOURCES *I2S_RES)
   \fn          uint32_t I2S_GetTxCount(I2S_RESOURCES *I2S_RES)
   \brief       Get the total transmitted items
   \param[in]   I2S_RES  Pointer to I2S resources
-  \return      \ret number of data items transmitted
+  \return      \return number of data items transmitted
 */
 static uint32_t I2S_GetTxCount(I2S_RESOURCES *I2S_RES)
 {
@@ -872,7 +870,7 @@ static uint32_t I2S_GetTxCount(I2S_RESOURCES *I2S_RES)
   \fn          uint32_t I2S_GetRxCount(I2S_RESOURCES *I2S_RES)
   \brief       Get total items received
   \param[in]   I2S_RES   Pointer to I2S resources
-  \return      \ret  number of data items received
+  \return      \return  number of data items received
 */
 static uint32_t I2S_GetRxCount(I2S_RESOURCES *I2S_RES)
 {

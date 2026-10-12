@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     Driver_CDC_Private.h
  * @author   Prasanna Ravi
- * @email    prasanna.ravi@alifsemi.com
+ * Email:    prasanna.ravi@alifsemi.com
  * @version  V1.0.0
  * @date     28-Sep-2023
  * @brief    CDC driver Specific Header file.

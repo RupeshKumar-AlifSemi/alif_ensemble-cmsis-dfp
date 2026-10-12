@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     Driver_CMP.h
  * @author   Nisarga A M
- * @email    nisarga.am@alifsemi.com
+ * Email:    nisarga.am@alifsemi.com
  * @version  V1.0.0
  * @date     20-June-2022
  * @brief    Analog Comparator driver definitions.
@@ -61,9 +61,9 @@ extern "C" {
   @brief         Get CMP driver capabilities
   @return        @ref CMP_CAPABILITIES
 
-  @func          int32_t CMP_Initialize (ARM_CMP_SignalEvent_t cb_event)
+  @fn          int32_t CMP_Initialize (ARM_CMP_SignalEvent_t cb_event)
   @brief         Initialize CMP interface
-  @parameter[1]  cb_event : Pointer Comparator Event \ref ARM_CMP_Signal_Event
+  @param  cb_event : Pointer Comparator Event \ref ARM_CMP_Signal_Event
   @return        \ref execution_status
 
   @fn            int32_t CMP_Uninitialize (void)

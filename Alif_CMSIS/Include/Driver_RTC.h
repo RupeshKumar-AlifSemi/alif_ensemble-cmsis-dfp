@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     Driver_RTC.h
  * @author   Tanay Rami
- * @email    tanay@alifsemi.com
+ * Email:    tanay@alifsemi.com
  * @version  V1.0.0
  * @date     18-Feb-2021
  * @brief    RTC(Real Time Clock) driver definitions.

@@ -11,7 +11,7 @@
 /******************************************************************************
  * @file     Driver_OSPI_Private.h
  * @author   Silesh C V, Manoj A Murudi
- * @email    silesh@alifsemi.com, manoj.murudi@alifsemi.com
+ * Email:    silesh@alifsemi.com, manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     19-06-2023
  * @brief    Private header file for OSPI.

@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     Driver_MIPI_CSI2.c
  * @author   Prasanna Ravi and Chandra Bhushan Singh
- * @email    prasanna.ravi@alifsemi.com and chandrabhushan.singh@alifsemi.com
+ * Email:    prasanna.ravi@alifsemi.com and chandrabhushan.singh@alifsemi.com
  * @version  V1.0.0
  * @date     15-April-2023
  * @brief    CMSIS-Driver for MIPI CSI2.
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 
 #include <math.h>
@@ -470,9 +469,9 @@ static int32_t CSI2_PowerControl(ARM_POWER_STATE state, CSI_RESOURCES *CSI2)
 
 /**
 
-  \fn          int32_t CSI2_ConfigureHost (uint32_t int_event, CSI_RESOURCES *CSI2)
+  \fn static int32_t CSI2_ConfigureHost(uint32_t intr_event, CSI_RESOURCES *CSI2)
   \brief       Configure CSI2 Host Interface.
-  \param[in]   int_event interrupt event to be enabled.
+  \param[in] intr_event interrupt event to be enabled.
   \param[in]   CSI2  Pointer to CSI resources
   \return      \ref execution_status
 */

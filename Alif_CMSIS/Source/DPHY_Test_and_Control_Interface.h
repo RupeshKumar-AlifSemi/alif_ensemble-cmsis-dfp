@@ -11,12 +11,11 @@
 /******************************************************************************
  * @file     DPHY_Test_and_Control_Interface.h
  * @author   Prasanna Ravi and Chandra Bhushan Singh
- * @email    prasanna.ravi@alifsemi.com and chandrabhushan.singh@alifsemi.com
+ * Email:    prasanna.ravi@alifsemi.com and chandrabhushan.singh@alifsemi.com
  * @version  V1.0.0
  * @date     14-May-2024
  * @brief    Driver for MIPI DPHY test and control interface.
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 
 #ifndef DPHY_TEST_AND_CONTROL_INTERFACE_H_

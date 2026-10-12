@@ -11,12 +11,11 @@
 /******************************************************************************
  * @file     Driver_CAN_EX.h
  * @author   Shreehari H K
- * @email    shreehari.hk@alifsemi.com
+ * Email:    shreehari.hk@alifsemi.com
  * @version  V1.0.0
  * @date     29-Jan-2024
  * @brief    Extension of CMSIS Driver_CAN.h
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 #ifndef DRIVER_CAN_EX_H_
 #define DRIVER_CAN_EX_H_

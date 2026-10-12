@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     Driver_PDM.h
  * @author   Nisarga A M
- * @email    nisarga.am@alifsemi.com
+ * Email:    nisarga.am@alifsemi.com
  * @version  V1.0.0
  * @date     15-Jan-2023
  * @brief    CMSIS-Driver for PDM.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #ifndef DRIVER_PDM_H_

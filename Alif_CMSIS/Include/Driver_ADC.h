@@ -10,7 +10,7 @@
 /****************************************************************************
  * @file     Driver_ADC.h
  * @author   Prabhakar Kumar
- * @email    prabhakar.kumar@alifsemi.com
+ * Email:    prabhakar.kumar@alifsemi.com
  * @version  V1.0.0
  * @date     22-feb-2022
  * @brief    ADC (Analog to digital conversion) Driver Definition.
@@ -106,111 +106,83 @@ extern "C" {
 #define ARM_ADC_EXTERNAL_TRIGGER_SRC_4 (1UL << 4) /* ARM ADC EXTERNAL TRIGGER SOURCE 4 */
 #define ARM_ADC_EXTERNAL_TRIGGER_SRC_5 (1UL << 5) /* ARM ADC EXTERNAL TRIGGER SOURCE 5 */
 
-// Function documentation
 /**
-    @func         : ARM_DRIVER_VERSION GetVersion (void)
-    @brief        : Get ADC driver version.
-    @return       : \ref ARM_DRIVER_VERSION
-    @func         : ARM_ADC_CAPABILITIES GetCapabilities (void)
-    @brief        : Get ADC driver capabilities
-    @return       : \ref ADC_CAPABILITIES
+  \fn          ARM_DRIVER_VERSION ARM_ADC_GetVersion (void)
+  \brief       Get the ADC driver version.
+  \return      \ref ARM_DRIVER_VERSION
 
-    @func         : int32_t Initialize (ARM_ADC_SignalEvent_t cb_event)
-    @brief        : Initialize ADC INterface
-    @parameter[1] : cb_event    : Pointer to ADC Event \ref ARM_ADC_Signal_Event
-    @return       : Execution status
+  \fn          ARM_ADC_CAPABILITIES ARM_ADC_GetCapabilities (void)
+  \brief       Get the ADC driver capabilities.
+  \return      \ref ARM_ADC_CAPABILITIES
 
-    @func         : int32_t Uninitialize (void)
-    @brief        : De-initialize the ADC interface
-    @return       : Execution Status
+  \fn          int32_t ARM_ADC_Initialize (ARM_ADC_SignalEvent_t cb_event)
+  \brief       Initialize the ADC interface.
+  \param[in]   cb_event  Pointer to the ADC event callback \ref ARM_ADC_SignalEvent
+  \return      \ref execution_status
 
-    @func         : int32_t start (uint32_t *data, uint32_t num)
-    @brief        : Start the ADC and start collecting data
-    @parameter[1] : data    : pointer to unsigned int
-    @parameter[2] : num     : store the amount data
-    @return       : Execution status
+  \fn          int32_t ARM_ADC_Uninitialize (void)
+  \brief       De-initialize the ADC interface.
+  \return      \ref execution_status
 
-    @func         : int32_t stop (void)
-    @brief        : Stop the ADC interface
-    @PARAMETER    : NONE
-    @Return       : Execution Status
+  \fn          int32_t ARM_ADC_Start (void)
+  \brief       Start ADC conversions.
+  \return      \ref execution_status
 
-    @func         : intt32_t PowerControl(ARM_Power_status state)
-    @brief        : Control ADC interface power
-    @parameter[1] : state    :power state
-    @return       : execution status
+  \fn          int32_t ARM_ADC_Stop (void)
+  \brief       Stop the ADC interface.
+  \return      \ref execution_status
 
-    @func         : int32_t control(uint32_t control, uint32_t arg)
-    @brief        : control ADC_interface
-    @parameter[1] : control    :operation
-    @parameter[2] : arg        :Argument of operation (optional)
-    @return       : Execution status
+  \fn          int32_t ARM_ADC_PowerControl (ARM_POWER_STATE state)
+  \brief       Control ADC interface power.
+  \param[in]   state  Power state
+  \return      \ref execution_status
 
-    @func         : int32_t StartN (void *buf_a, void *buf_b,
-                                    uint32_t samples_per_buf)
-    @brief        : Arm ping-pong buffers for continuous-mode
-                    scan. Driver fills buf_a, fires
-                    ARM_ADC_EVENT_CONTINUOUS_CONV_BUF_A with the sample
-                    count in `value`, then fills buf_b and fires
-                    ARM_ADC_EVENT_CONTINUOUS_CONV_BUF_B, and so on. The
-                    sequencer never stops between halves.
-                    If buf_b is NULL the call is one-shot: buf_a is
-                    filled once, the BUF_A event fires.
-                    StartN must be called again to re-arm.
-                    On Stop() during a running capture, the driver fires
-                    ARM_ADC_EVENT_CONTINUOUS_CONV_STOPPED once with
-                    `value` = number of samples written into the partly-
-                    filled active buffer.
-                    Not supported in single-shot conversion mode.
-    @parameter[1] : buf_a           : pointer to uint32_t[]. Buffers hold
-                                      raw ADC_SAMPLE_REG_ values including
-                                      any hardware-averaging accumulation,
-                                      so uint32_t is used to fit both
-                                      ADC12 and ADC24 instances. Required.
-    @parameter[2] : buf_b           : same type as buf_a; NULL for one-shot.
-    @parameter[3] : samples_per_buf : sample capacity of each buffer; must
-                                      be a whole multiple of the number of
-                                      unmasked channels.
-    @return       : Execution status
+  \fn          int32_t ARM_ADC_Control (uint32_t control, uint32_t arg)
+  \brief       Control the ADC interface.
+  \param[in]   control  Operation code
+  \param[in]   arg      Optional argument for the operation
+  \return      \ref execution_status
 
-    @func         : uint32_t GetSampleCount (void)
-    @brief        : Return the number of samples written into the currently-
-                    filling StartN buffer.
-    @return       : samples-written count
+  \fn          int32_t ARM_ADC_StartN (void *buf_a, void *buf_b, uint32_t samples_per_buf)
+  \brief       Arm ping-pong buffers for a continuous channel scan.
+               The driver fills buf_a, signals ARM_ADC_EVENT_CONTINUOUS_CONV_BUF_A
+               with the sample count in the callback value, then fills buf_b and
+               signals ARM_ADC_EVENT_CONTINUOUS_CONV_BUF_B. If buf_b is NULL the
+               capture is one-shot. Not supported in single-shot conversion mode.
+               Stop during a running capture signals ARM_ADC_EVENT_CONTINUOUS_CONV_STOPPED
+               with the number of samples written into the partial buffer.
+  \param[in]   buf_a            Pointer to a uint32_t sample buffer. Required.
+  \param[in]   buf_b            Second buffer, or NULL for one-shot capture.
+  \param[in]   samples_per_buf  Capacity of each buffer. Must be a whole multiple
+                                of the number of unmasked channels.
+  \return      \ref execution_status
+
+  \fn          uint32_t ARM_ADC_GetSampleCount (void)
+  \brief       Return the number of samples written into the StartN buffer
+               that is currently being filled.
+  \return      samples written
 */
 
 typedef void (*ARM_ADC_SignalEvent_t)(uint32_t event, uint8_t channel,
-                                      uint32_t value); /*Pointer to \ref ADC_SignalEvent : Signal
-                                                          ADC Event*/
+                                      uint32_t value); /**< Pointer to \ref ARM_ADC_SignalEvent */
 
 typedef struct _ARM_ADC_CAPABILITIES {
     uint32_t Resolution: 1;  /* Resolution 12 or 20 bits*/
     uint32_t Reserved  : 31; /* Reserved                */
 } ARM_ADC_CAPABILITIES;
 
-/* Access Structure Of ADC */
+/** @brief Access structure of the ADC driver. */
 typedef struct ARM_DRIVER_ADC {
-    ARM_DRIVER_VERSION (*GetVersion)
-    (void); /* pointer pointing to \ref ADC_get_verion                        */
-    ARM_ADC_CAPABILITIES (*GetCapabilities)
-    (void); /* Pointer  to ADC_get_capabilities                               */
-    int32_t (*Initialize)(ARM_ADC_SignalEvent_t cb_event); /* Pointer pointing to \ref ADC_intialize
-                                                            */
-    int32_t (*Uninitialize)(void); /* Pointer pointing to \ref ADC_Unintialize */
-    int32_t (*Start)(void); /* Pointer to \ref ADC_Start                                      */
-    int32_t (*Stop)(void);  /* pointer to \ref ADC_Stop                                       */
-    int32_t (*PowerControl)(ARM_POWER_STATE state); /* Pointer to \ref ADC_PowerControl : Control
-                                                       ADC Interface Power */
-    int32_t (*Control)(uint32_t Control,
-                       uint32_t arg); /* Pointer to \ref ADC_Control : Control ADC Interface */
-    int32_t (*StartN)(void    *buf_a,
-                      void    *buf_b,
-                      uint32_t samples_per_buf); /* Pointer to \ref ADC_StartN : arm ping-pong
-                                                  * buffers for continuous channel scan
-                                                  */
-    uint32_t (*GetSampleCount)(void); /* Pointer to \ref ADC_GetSampleCount : samples written
-                                       * into the current StartN buffer
-                                       */
+    ARM_DRIVER_VERSION (*GetVersion)(void);  /**< Pointer to \ref ARM_ADC_GetVersion */
+    ARM_ADC_CAPABILITIES (*GetCapabilities)(void);  /**< Pointer to \ref ARM_ADC_GetCapabilities */
+    int32_t (*Initialize)(ARM_ADC_SignalEvent_t cb_event);  /**< Pointer to \ref ARM_ADC_Initialize */
+    int32_t (*Uninitialize)(void);  /**< Pointer to \ref ARM_ADC_Uninitialize */
+    int32_t (*Start)(void);  /**< Pointer to \ref ARM_ADC_Start */
+    int32_t (*Stop)(void);  /**< Pointer to \ref ARM_ADC_Stop */
+    int32_t (*PowerControl)(ARM_POWER_STATE state);  /**< Pointer to \ref ARM_ADC_PowerControl */
+    int32_t (*Control)(uint32_t Control, uint32_t arg);  /**< Pointer to \ref ARM_ADC_Control */
+    int32_t (*StartN)(void *buf_a, void *buf_b, uint32_t samples_per_buf);  /**< Pointer to \ref ARM_ADC_StartN */
+    uint32_t (*GetSampleCount)(void);  /**< Pointer to \ref ARM_ADC_GetSampleCount */
 } const ARM_DRIVER_ADC;
 
 #ifdef _cplusplus

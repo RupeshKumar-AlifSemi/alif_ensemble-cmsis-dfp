@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     Driver_HWSEM.c
  * @author   Khushboo Singh
- * @email    khushboo.singh@alifsemi.com
+ * Email:    khushboo.singh@alifsemi.com
  * @version  V1.0.0
  * @date     16-June-2022
  * @brief    ARM CMSIS-Driver for Hardware Semaphore.
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 
 /* Driver specific include */
@@ -201,7 +200,7 @@ static int32_t GetCount(HWSEM_RESOURCES *hwsem)
 }
 
 /**
-  \fn          void HWSEM_IRQHandler(HWSEM_RESOURCES *hwsem)
+  \fn static void ARM_HWSEM_IRQHandler(HWSEM_RESOURCES *hwsem)
   \brief       HWSEM instance specific part of Hw Semaphore Interrupt handler.
   \param[in]   hwsem    :   Pointer to the HWSEM device instance
  */

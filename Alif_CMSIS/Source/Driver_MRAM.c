@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     Driver_MRAM.c
  * @author   Tanay Rami
- * @email    tanay@alifsemi.com
+ * Email:    tanay@alifsemi.com
  * @version  V1.0.0
  * @date     01-June-2023
  * @brief    ARM CMSIS-Driver for MRAM(On-Chip NVM(Non-Volatile Memory)).
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 
 /* System Includes */

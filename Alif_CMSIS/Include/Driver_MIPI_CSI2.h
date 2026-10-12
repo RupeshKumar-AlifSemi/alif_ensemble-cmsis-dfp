@@ -10,7 +10,7 @@
 /*******************************************************************************
  * @file     Driver_MIPI_CSI2.h
  * @author   Prasanna Ravi
- * @email    prasanna.ravi@alifsemi.com
+ * Email:    prasanna.ravi@alifsemi.com
  * @version  V1.0.0
  * @date     24-March-2022
  * @brief    Driver Specific Header file for MIPI CSI2 Driver.

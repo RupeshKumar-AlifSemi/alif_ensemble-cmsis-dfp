@@ -37,7 +37,6 @@ static const ARM_I2C_CAPABILITIES DriverCapabilities = {
 /**
  * @brief   get lpi2c version
  * @note    none
- * @param   none
  * @retval  driver version
  */
 ARM_DRIVER_VERSION ARM_I2C_GetVersion(void)
@@ -48,7 +47,6 @@ ARM_DRIVER_VERSION ARM_I2C_GetVersion(void)
 /**
  * @brief   get lpi2c capabilites
  * @note    none
- * @param   none
  * @retval  driver capabilites
  */
 static ARM_I2C_CAPABILITIES ARM_I2C_GetCapabilities(void)
@@ -77,10 +75,10 @@ static int32_t ARM_LPI2C_Initialize(ARM_I2C_SignalEvent_t cb_event, LPI2C_RESOUR
 }
 
 /**
- * @func   : int32_t ARM_LPI2C_Uninitialize(LPI2C_RESOURCES *LPI2C_RES)
+ * @fn   : int32_t ARM_LPI2C_Uninitialize(LPI2C_RESOURCES *LPI2C_RES)
  * @brief  : lpi2c uninitialize
  * @note   : it will use uninitialize the lpi2c driver.
- * @param  : LPI2C_RES         : Pointer to lpi2c resources structure
+ * @param LPI2C_RES Pointer to lpi2c resources structure
  * @retval : ARM_DRIVER_OK : successfully initialized
  */
 static int32_t ARM_LPI2C_Uninitialize(LPI2C_RESOURCES *LPI2C_RES)
@@ -104,10 +102,10 @@ static int32_t ARM_LPI2C_Uninitialize(LPI2C_RESOURCES *LPI2C_RES)
 }
 
 /**
- * @func    : int32_t ARM_LPI2C_PowerControl (ARM_POWER_STATE state, LPI2C_RESOURCES *LPI2C_RES)
+ * @fn    : int32_t ARM_LPI2C_PowerControl (ARM_POWER_STATE state, LPI2C_RESOURCES *LPI2C_RES)
  * @brief   : Power the driver and enable the NVIC
- * @param   : state : Power state
- * @param   : LPI2C_RES   : Pointer to lpi2c resources structure
+ * @param state Power state
+ * @param LPI2C_RES Pointer to lpi2c resources structure
  * @return  : ARM_DRIVER_OK
  */
 static int32_t ARM_LPI2C_PowerControl(ARM_POWER_STATE state, LPI2C_RESOURCES *LPI2C_RES)
@@ -158,14 +156,14 @@ static int32_t ARM_LPI2C_PowerControl(ARM_POWER_STATE state, LPI2C_RESOURCES *LP
 }
 
 /**
- * @func   : int32_t ARM_LPI2C_SlaveTransmit(LPI2C_RESOURCES *LPI2C_RES,
+ * @fn   : int32_t ARM_LPI2C_SlaveTransmit(LPI2C_RESOURCES *LPI2C_RES,
                                         const uint8_t *data,
                                               uint32_t num)
  * @brief  : lpi2c slave transmit
  *         : Start sending data to i2c master.
- * @param  : data : Pointer to buffer with data to send to i2c master
- * @param  : num  : Number of data items to send
- * @param  : LPI2C_RES  : Pointer to lpi2c resources structure
+ * @param LPI2C_RES Pointer to buffer with data to send to i2c master
+ * @param data Number of data items to send
+ * @param num Pointer to lpi2c resources structure
  * @retval : ARM_DRIVER_ERROR_PARAMETER  : error in parameter
  * @retval : ARM_DRIVER_ERROR            : error in driver
  * @retval : ARM_DRIVER_OK               : success in interrupt case
@@ -214,7 +212,7 @@ static int32_t ARM_LPI2C_SlaveTransmit(LPI2C_RESOURCES *LPI2C_RES, const uint8_t
 }
 
 /**
- * @func   : int32_t ARM_LPI2C_SlaveTransmit(LPI2C_RESOURCES *LPI2C_RES,
+ * @fn   : int32_t ARM_LPI2C_SlaveTransmit(LPI2C_RESOURCES *LPI2C_RES,
                                        const uint8_t *data,
                                              uint32_t num)
  * @brief  : lpi2c slave receive
@@ -261,7 +259,7 @@ static int32_t ARM_LPI2C_SlaveReceive(LPI2C_RESOURCES *LPI2C_RES, uint8_t *data,
  * @brief  : CMSIS-Driver lpi2c get transfer data count
  * @note   : it can be either transmit or receive data count which perform last
  *           (useful only in interrupt mode)
- * @param  : LPI2C_RES   : Pointer to lpi2c resources structure
+ * @param LPI2C_RES Pointer to lpi2c resources structure
  * @retval : transfer data count
  */
 static int32_t ARM_LPI2C_GetDataCount(const LPI2C_RESOURCES *LPI2C_RES)
@@ -280,7 +278,7 @@ static int32_t ARM_LPI2C_GetDataCount(const LPI2C_RESOURCES *LPI2C_RES)
 /**
  * @brief  : CMSIS-Driver lpi2c get status
  * @note   : none
- * @param  : LPI2C_RES : Pointer to lpi2c resources structure
+ * @param LPI2C_RES Pointer to lpi2c resources structure
  * @retval : ARM_i2c_STATUS
  */
 static ARM_I2C_STATUS ARM_LPI2C_GetStatus(const LPI2C_RESOURCES *LPI2C_RES)

@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     Driver_CDC200.c
  * @author   Girish BN and Prasanna Ravi
- * @email    girish.bn@alifsemi.com and prasanna.ravi@alifsemi.com
+ * Email:    girish.bn@alifsemi.com and prasanna.ravi@alifsemi.com
  * @version  V1.0.0
  * @date     28-Sep-2023
  * @brief    Display controller CDC200 driver source file.
- * @bug      None.
- * @Note     None.
+ * @note     None.
  ******************************************************************************/
 
 #include "Driver_CDC200.h"

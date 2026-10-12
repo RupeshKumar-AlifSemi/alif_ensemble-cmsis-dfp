@@ -9,14 +9,13 @@
  */
 
 /******************************************************************************
- * @file     Driver_PDM.h
+ * @file     Driver_PDM.c
  * @author   Nisarga A M
- * @email    nisarga.am@alifsemi.com
+ * Email:    nisarga.am@alifsemi.com
  * @version  V1.0.0
  * @date     12-Jan-2023
  * @brief    CMSIS-Driver for PDM.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 /* Project Includes */
@@ -41,7 +40,6 @@ static const ARM_PDM_CAPABILITIES DriverCapabilities = {
 /**
  @fn           ARM_DRIVER_VERSION PDM_GetVersion(void)
  @brief        get PDM version
- @param        none
  @return       driver version
  */
 static ARM_DRIVER_VERSION PDM_GetVersion(void)
@@ -52,7 +50,6 @@ static ARM_DRIVER_VERSION PDM_GetVersion(void)
 /**
  @fn           ARM_PDM_CAPABILITIES PDM_GetCapabilities(void)
  @brief        get PDM Capabilites
- @param        none
  @return       driver Capabilites
  */
 static ARM_PDM_CAPABILITIES PDM_GetCapabilities(void)
@@ -546,9 +543,9 @@ void PDM_WARNING_IRQ_handler(PDM_RESOURCES *PDM_RES)
  * @fn         void PDMx_DMACallback(uint32_t event, int8_t peri_num, PDM_RESOURCES *PDM_RES)
  * @brief      DMA Callback function for PDM.
  * @note       none.
- * @param[in]  PDM_RES : Pointer to pdm resources structure.
- * @param[in]  event : Event from DMA
- * @param[in]  peri_num : peripheral request number
+ * @param[in] event Pointer to pdm resources structure.
+ * @param[in] peri_num Event from DMA
+ * @param[in] PDM_RES peripheral request number
  * @retval     none
  */
 static void PDMx_DMACallback(uint32_t event, int8_t peri_num, PDM_RESOURCES *PDM_RES)
@@ -657,8 +654,8 @@ static int32_t PDMx_Uninitialize(PDM_RESOURCES *PDM_RES)
 /**
  @fn          int32_t PDMx_Channel_Config(PDM_CH_CONFIG *cnfg, PDM_RESOURCES *PDM_RES)
  @brief       PDM channel configurations
- @param[in]   PDM_RES : Pointer to PDM resources
- @param[in]   cngf : Pointer to PDM_CH_CONFIG
+ @param[in] cnfg Pointer to PDM resources
+ @param[in] PDM_RES Pointer to PDM_CH_CONFIG
  @return      ARM_DRIVER_OK : if function return successfully
  */
 static int32_t PDMx_Channel_Config(PDM_CH_CONFIG *cnfg, PDM_RESOURCES *PDM_RES)

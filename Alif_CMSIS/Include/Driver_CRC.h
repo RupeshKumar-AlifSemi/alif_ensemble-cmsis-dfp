@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     Driver_CRC.h
  * @author   Nisarga A M
- * @email    nisarga.am@alifsemi.com
+ * Email:    nisarga.am@alifsemi.com
  * @version  V1.0.0
  * @date     18-April-2022
  * @brief    CRC(Cyclic Redundancy Check) driver definitions.

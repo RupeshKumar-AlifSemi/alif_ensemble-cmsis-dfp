@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     Driver_RTC_Private.h
  * @author   Tanay Rami, Manoj A Murudi
- * @email    tanay@alifsemi.com, manoj.murudi@alifsemi.com
+ * Email:    tanay@alifsemi.com, manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     23-March-2023
  * @brief    Device Specific Header file for RTC Driver.

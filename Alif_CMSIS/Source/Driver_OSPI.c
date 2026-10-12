@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     Driver_OSPI.c
  * @author   Khushboo Singh, Manoj A Murudi
- * @email    khushboo.singh@alifsemi.com, manoj.murudi@alifsemi.com
+ * Email:    khushboo.singh@alifsemi.com, manoj.murudi@alifsemi.com
  * @version  V1.0.0
  * @date     21-Oct-2022
  * @brief    CMSIS-Driver for OSPI derived from CMSIS SPI driver.
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 
 #include "Driver_OSPI_Private.h"
@@ -51,7 +50,6 @@ static const ARM_OSPI_CAPABILITIES DriverCapabilities = {
  * @fn      ARM_DRIVER_VERSION ARM_OSPI_GetVersion(void)
  * @brief   get ospi version
  * @note    none
- * @param   none
  * @retval  driver version
  */
 static ARM_DRIVER_VERSION ARM_OSPI_GetVersion(void)
@@ -63,7 +61,6 @@ static ARM_DRIVER_VERSION ARM_OSPI_GetVersion(void)
  * @fn      ARM_OSPI_CAPABILITIES ARM_OSPI_GetCapabilities(void)
  * @brief   get ospi capabilities
  * @note    none
- * @param   none
  * @retval  driver capabilities
  */
 static ARM_OSPI_CAPABILITIES ARM_OSPI_GetCapabilities(void)
@@ -168,9 +165,12 @@ __STATIC_INLINE int32_t OSPI_DMA_Initialize(DMA_PERIPHERAL_CONFIG *dma_periph)
 }
 
 /**
-  \fn          int32_t OSPI_DMA_PowerControl(ARM_POWER_STATE state, DMA_PERIPHERAL_CONFIG
-  *dma_periph) \brief       PowerControl DMA for OSPI \param[in]   state  Power state \param[in]
-  dma_periph     Pointer to DMA resources \return      \ref execution_status
+  \fn          __STATIC_INLINE int32_t OSPI_DMA_PowerControl(ARM_POWER_STATE state,
+                                                            DMA_PERIPHERAL_CONFIG *dma_periph)
+  \brief       Control DMA power for OSPI.
+  \param[in]   state       Power state
+  \param[in]   dma_periph  Pointer to DMA resources
+  \return      \ref execution_status
 */
 __STATIC_INLINE int32_t OSPI_DMA_PowerControl(ARM_POWER_STATE        state,
                                               DMA_PERIPHERAL_CONFIG *dma_periph)
@@ -291,7 +291,7 @@ __STATIC_INLINE int32_t OSPI_DMA_Stop(DMA_PERIPHERAL_CONFIG *dma_periph)
 #endif
 
 /**
- * @fn      int32_t ARM_OSPI_Initialize(OSPI_RESOURCES *OSPI, ARM_OSPI_SignalEvent_t cb_event).
+ * @fn static int32_t ARM_OSPI_Initialize(OSPI_RESOURCES *OSPI, ARM_OSPI_SignalEvent_t cb_event)
  * @brief   Initialize the Spi for communication.
  * @note    none.
  * @param   OSPI : Pointer to spi resources structure.
@@ -354,7 +354,7 @@ static int32_t ARM_OSPI_Initialize(OSPI_RESOURCES *OSPI, ARM_OSPI_SignalEvent_t 
 }
 
 /**
- * @fn      int32_t ARM_OSPI_Uninitialize(OSPI_RESOURCES *OSPI).
+ * @fn static int32_t ARM_OSPI_Uninitialize(OSPI_RESOURCES *OSPI)
  * @brief   Un-Initialize the Spi.
  * @note    none.
  * @param   OSPI : Pointer to spi resources structure.
@@ -389,7 +389,7 @@ static int32_t ARM_OSPI_Uninitialize(OSPI_RESOURCES *OSPI)
 }
 
 /**
- * @fn      int32_t ARM_OSPI_PowerControl(OSPI_RESOURCES *OSPI, ARM_POWER_STATE state).
+ * @fn static int32_t ARM_OSPI_PowerControl(OSPI_RESOURCES *OSPI, ARM_POWER_STATE state)
  * @brief   Handles the spi power.
  * @note    none.
  * @param   OSPI : Pointer to spi resources structure.
@@ -515,7 +515,7 @@ static int32_t ARM_OSPI_PowerControl(OSPI_RESOURCES *OSPI, ARM_POWER_STATE state
 }
 
 /**
- * @fn      int32_t ARM_OSPI_Send(OSPI_RESOURCES *OSPI, const void *data, uint32_t num).
+ * @fn static int32_t ARM_OSPI_Send(OSPI_RESOURCES *OSPI, const void *data, uint32_t num)
  * @brief   Used to send through spi.
  * @note    none.
  * @param   OSPI : Pointer to spi resources structure.
@@ -589,7 +589,7 @@ static int32_t ARM_OSPI_Send(OSPI_RESOURCES *OSPI, const void *data, uint32_t nu
 }
 
 /**
- * @fn      int32_t ARM_OSPI_Receive(OSPI_RESOURCES *OSPI, void *data, uint32_t num).
+ * @fn static int32_t ARM_OSPI_Receive(OSPI_RESOURCES *OSPI, void *data, uint32_t num)
  * @brief   Used to receive data through spi.
  * @note    none.
  * @param   OSPI : Pointer to spi resources structure.
@@ -629,8 +629,7 @@ static int32_t ARM_OSPI_Receive(OSPI_RESOURCES *OSPI, void *data, uint32_t num)
 }
 
 /**
- * @fn      int32_t ARM_OSPI_Transfer(OSPI_RESOURCES *OSPI, const void *data_out, void *data_in,
- * uint32_t num).
+ * @fn static int32_t ARM_OSPI_Transfer(OSPI_RESOURCES *OSPI, const void *data_out, void *data_in, uint32_t num)
  * @brief   Used to Transfer and Receive data through spi.
  * @note    none.
  * @param   OSPI : Pointer to spi resources structure.
@@ -751,7 +750,7 @@ static int32_t ARM_OSPI_Transfer(OSPI_RESOURCES *OSPI, const void *data_out, voi
 }
 
 /**
- * @fn      int32_t ARM_OSPI_GetDataCount(OSPI_RESOURCES *OSPI).
+ * @fn static uint32_t ARM_OSPI_GetDataCount(OSPI_RESOURCES *OSPI)
  * @brief   Used to get the data count on spi transfer.
  * @note    none.
  * @param   OSPI : Pointer to spi resources structure.
@@ -767,7 +766,7 @@ static uint32_t ARM_OSPI_GetDataCount(OSPI_RESOURCES *OSPI)
 }
 
 /**
- * @fn      int32_t OSPI_Set_Speed(OSPI_RESOURCES *OSPI, uint32_t arg).
+ * @fn static int32_t OSPI_Set_Speed(OSPI_RESOURCES *OSPI, uint32_t arg)
  * @brief   Set OSPI bus speed for spi transfer. Adjusts the signal delays accordingly.
  * @note    none.
  * @param   OSPI : Pointer to the OSPI resource structure.
@@ -821,7 +820,7 @@ static int32_t OSPI_Set_Speed(OSPI_RESOURCES *OSPI, uint32_t arg)
 }
 
 /**
- * @fn      int32_t ARM_OSPI_Control(OSPI_RESOURCES *OSPI, uint32_t control, uint32_t arg).
+ * @fn static int32_t ARM_OSPI_Control(OSPI_RESOURCES *OSPI, uint32_t control, uint32_t arg)
  * @brief   Used to configure spi.
  * @note    none.
  * @param   OSPI : Pointer to spi resources structure.
