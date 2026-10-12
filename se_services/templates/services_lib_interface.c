@@ -50,7 +50,7 @@ debug_print_function_t drv_debug_print_fn;
  ******************************************************************************/
 
 /**
- * @fn int32_t SERVICES_wait_ms(uint32_t)
+ * @fn int32_t SERVICES_wait_ms(uint32_t wait_time_ms)
  * @brief Public interface for SERVICES delay function
  * @param wait_time_ms
  * @note  User must supply this implementation for their platform. This is a
@@ -94,7 +94,7 @@ int SERVICES_print(const char *fmt, ...)
 }
 
 /**
- * @fn    SERVICES_Setup(MHU_send_message_t send_message)
+ * @fn void SERVICES_Setup(MHU_send_message_t send_message, uint32_t timeout)
  * @brief Public interface to initialize the SERVICES library
  *
  * @param send_message

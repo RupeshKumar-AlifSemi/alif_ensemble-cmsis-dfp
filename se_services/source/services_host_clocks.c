@@ -443,7 +443,7 @@ uint32_t SERVICES_pll_clkpll_is_locked(uint32_t services_handle, bool *is_locked
 }
 
 /**
- * @fn uint32_t SERVICES_clocks_setting_get(uint32_t, clock_setting_t, uint32_t*, uint32_t*)
+ * @fn uint32_t SERVICES_clocks_setting_get(uint32_t services_handle, clock_setting_t setting_type, uint32_t *value, uint32_t *error_code)
  * @brief                   Get a clock setting from the 'clock_setting_t' enumeration
  * @param services_handle
  * @param setting_type

@@ -452,7 +452,7 @@ static int format_and_print(char *dest, uint8_t *src, int num_bytes)
  */
 
 /**
- * @fn    static uint32_t test_services_pinmux(uint32_t services_handle)
+ * @fn static uint32_t test_services_pinmux(char *p_test_name, uint32_t services_handle)
  * @param p_test_name
  * @param services_handle
  * @return
@@ -480,7 +480,7 @@ static uint32_t test_services_pinmux(char *p_test_name, uint32_t services_handle
 }
 
 /**
- * @fn    static uint32_t test_services_padcontrol(uint32_t services_handle)
+ * @fn static uint32_t test_services_padcontrol(char *p_test_name, uint32_t services_handle)
  * @param p_test_name
  * @param services_handle
  * @return
@@ -508,7 +508,7 @@ static uint32_t test_services_padcontrol(char *p_test_name, uint32_t services_ha
 }
 
 /**
- * @fn    static uint32_t test_services_crypto_trng64(uint32_t services_handle)
+ * @fn static uint32_t test_services_crypto_trng64(char *p_test_name, uint32_t services_handle)
  * @param services_handle
  * @return
  */
@@ -534,7 +534,7 @@ static uint32_t test_services_crypto_trng64(char *p_test_name, uint32_t services
 }
 
 /**
- * @fn      static uint32_t test_services_crypto_trng64(uint32_t services_handle)
+ * @fn static uint32_t test_services_crypto_trng32(char *p_test_name, uint32_t services_handle)
  * @param services_handle
  * @return
  */
@@ -563,7 +563,7 @@ static uint32_t test_services_crypto_trng32(char *p_test_name, uint32_t services
  * Crypto Services
  */
 /**
- * @fn    static uint32_t test_services_crypto_lcs(uint32_t services_handle)
+ * @fn static uint32_t test_services_crypto_lcs(char *p_test_name, uint32_t services_handle)
  * @param services_handle
  * @return
  */

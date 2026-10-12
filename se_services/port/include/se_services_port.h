@@ -11,12 +11,11 @@
 /*******************************************************************************
  * @file     se_services_port.h
  * @author   Sudhir Sreedharan
- * @email    sudhir@alifsemi.com
+ * Email:    sudhir@alifsemi.com
  * @version  V1.0.0
  * @date     01-Aug-2023
  * @brief    SE Service Porting Header file
- * @bug      None.
- * @Note     None
+ * @note     None
  ******************************************************************************/
 #ifndef SE_SERVICES_PORT_H_
 #define SE_SERVICES_PORT_H_

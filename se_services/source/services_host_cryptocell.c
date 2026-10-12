@@ -656,8 +656,7 @@ uint32_t SERVICES_cryptocell_mbedtls_poly1305_crypt(uint32_t services_handle, ui
 }
 
 /**
- * @fn uint32_t SERVICES_cryptocell_mbedtls_cmac_init_setkey(uint32_t, uint32_t*, uint32_t,
- * uint32_t, uint32_t)
+ * @fn uint32_t SERVICES_cryptocell_mbedtls_cmac_init_setkey(uint32_t services_handle, uint32_t *error_code, uint32_t ctx, uint32_t key, uint32_t keybits)
  * @brief
  * @param services_handle
  * @param error_code
@@ -687,8 +686,7 @@ uint32_t SERVICES_cryptocell_mbedtls_cmac_init_setkey(uint32_t  services_handle,
 }
 
 /**
- * @fn uint32_t SERVICES_cryptocell_mbedtls_cmac_update(uint32_t, uint32_t*, uint32_t, uint32_t,
- * uint32_t)
+ * @fn uint32_t SERVICES_cryptocell_mbedtls_cmac_update(uint32_t services_handle, uint32_t *error_code, uint32_t ctx, uint32_t input, uint32_t length)
  * @brief
  * @param services_handle
  * @param error_code
@@ -716,7 +714,7 @@ uint32_t SERVICES_cryptocell_mbedtls_cmac_update(uint32_t services_handle, uint3
 }
 
 /**
- * @fn uint32_t SERVICES_cryptocell_mbedtls_cmac_finish(uint32_t, uint32_t*, uint32_t, uint32_t)
+ * @fn uint32_t SERVICES_cryptocell_mbedtls_cmac_finish(uint32_t services_handle, uint32_t *error_code, uint32_t ctx, uint32_t output)
  * @brief
  * @param services_handle
  * @param error_code
@@ -742,7 +740,7 @@ uint32_t SERVICES_cryptocell_mbedtls_cmac_finish(uint32_t services_handle, uint3
 }
 
 /**
- * @fn uint32_t SERVICES_cryptocell_mbedtls_cmac_reset(uint32_t, uint32_t*, uint32_t)
+ * @fn uint32_t SERVICES_cryptocell_mbedtls_cmac_reset(uint32_t services_handle, uint32_t *error_code, uint32_t ctx)
  * @brief
  * @param services_handle
  * @param error_code

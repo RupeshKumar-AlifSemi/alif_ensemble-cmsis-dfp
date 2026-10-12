@@ -51,7 +51,7 @@ static const uint8_t s_alif_oid[] = {0x78, 0x59, 0x94};
 void TEST_print(uint32_t services_handle, char *fmt, ...);
 
 /**
- * @fn      uint32_t SERVICES_system_get_toc_version(uint32_t * toc_version)
+ * @fn uint32_t SERVICES_system_get_toc_version(uint32_t services_handle, uint32_t *toc_version, uint32_t *error_code)
  * @brief   Retrieves the SES SW Version number
  *
  * Number is encoded as Major Minor and Patch
@@ -79,7 +79,7 @@ uint32_t SERVICES_system_get_toc_version(uint32_t services_handle, uint32_t *toc
 }
 
 /**
- * @fn      uint32_t SERVICES_system_get_toc_number(uint32_t toc_version)
+ * @fn uint32_t SERVICES_system_get_toc_number(uint32_t services_handle, uint32_t *toc_number, uint32_t *error_code)
  * @brief   get the TOC number
  *
  * Returns the number of Table of contents entries in MRAM
@@ -232,9 +232,7 @@ uint32_t SERVICES_system_get_toc_data(uint32_t services_handle, SERVICES_toc_dat
 }
 
 /**
- * @fn    uint32_t SERVICES_system_get_device_part_number(
- *                                uint32_t services_handle,
-                                  uint32_t *device_part_number)
+ * @fn uint32_t SERVICES_system_get_device_part_number(uint32_t services_handle, uint32_t *device_part_number, uint32_t *error_code)
  * @brief Returns the SoC device identifier.
  *
  * device_part_number as integer e.g., 0x0000B200
@@ -261,8 +259,7 @@ uint32_t SERVICES_system_get_device_part_number(uint32_t  services_handle,
 }
 
 /**
- * @fn    uint32_t SERVICES_system_set_services_debug (uint32_t services_handle,
- *                                                     uint32_t * error_code)
+ * @fn uint32_t SERVICES_system_set_services_debug(uint32_t services_handle, bool debug_enable, uint32_t *error_code)
  * @brief Set debug capability dynamically from SE-UART
  *
  * @param services_handle
@@ -293,7 +290,7 @@ uint32_t SERVICES_system_set_services_debug(uint32_t services_handle, bool debug
 /**
  * @brief obtain the OTP data
  * @param services_handle
- * @param toc_info
+ * @param device_info
  * @param error_code
  * @return
  * @ingroup services-host-system
@@ -321,7 +318,7 @@ uint32_t SERVICES_system_get_otp_data (uint32_t services_handle,
 #endif
 
 /**
- * @fn uint32_t SERVICES_system_get_device_data(uint32_t, SERVICES_version_data_t*, uint32_t*)
+ * @fn uint32_t SERVICES_system_get_device_data(uint32_t services_handle, SERVICES_version_data_t *device_info, uint32_t *error_code)
  * @brief  Get device data information
  *
  * Retrieves the Device information.
@@ -596,9 +593,7 @@ uint32_t SERVICES_system_get_device_id64(uint32_t services_handle, uint8_t *devi
 }
 
 /**
- * @fn uint32_t SERVICES_system_get_ecc_public_key(uint32_t,
- *                                                 uint8_t *ecc_pubkey_buffer,
- *                                                 uint32_t*)
+ * @fn uint32_t SERVICES_system_get_ecc_public_key(uint32_t services_handle, uint8_t *ecc_pubkey_buffer, uint32_t *error_code)
  * @brief  Get device's public ECC key
  *
  * @param services_handle

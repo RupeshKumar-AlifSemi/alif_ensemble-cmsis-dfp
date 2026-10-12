@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     clock_runtime.c
  * @author   Sudhir Sreedharan
- * @email    sudhir@alifsemi.com
+ * Email:    sudhir@alifsemi.com
  * @version  V1.0.0
  * @date     29-Nov-2023
  * @brief    Wrapper to update the system clocks Information

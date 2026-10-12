@@ -39,8 +39,7 @@ static volatile bool s_new_msg_received          = false;
  * @brief Function to initialize the services library
  * @param init_params Initialization parameters
  * @ingroup services-host-handler
- * @fn void SERVICES_initialize(services_lib_t*)
- * @ingroup services-host-handler
+ * @fn void SERVICES_initialize(services_lib_t *init_params)
  */
 void SERVICES_initialize(services_lib_t *init_params)
 {
@@ -106,7 +105,7 @@ uint32_t SERVICES_register_channel(uint32_t mhu_id, uint32_t channel_number)
 }
 
 /**
- * @fn uint32_t services_get_mhu_id(uint32_t)
+ * @fn static uint32_t services_get_mhu_id(uint32_t services_handle)
  * @brief *
  * @param services_handle
  * @return
@@ -117,7 +116,7 @@ static uint32_t services_get_mhu_id(uint32_t services_handle)
 }
 
 /**
- * @fn uint32_t services_get_channel_number(uint32_t)
+ * @fn static uint32_t services_get_channel_number(uint32_t services_handle)
  * @brief
  * @param services_handle
  * @return

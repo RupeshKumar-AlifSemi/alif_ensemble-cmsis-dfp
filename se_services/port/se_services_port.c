@@ -11,7 +11,7 @@
 /*******************************************************************************
  * @file     se_services_port.c
  * @author   Sudhir Sreedharan
- * @email    sudhir@alifsemi.com
+ * Email:    sudhir@alifsemi.com
  * @version  V1.0.0
  * @date     01-Aug-2023
  * @brief    Implemented the porting layer for the SE Service Library functions

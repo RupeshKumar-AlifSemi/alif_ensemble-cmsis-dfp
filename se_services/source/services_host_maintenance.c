@@ -46,7 +46,7 @@
 
 /**
  * @brief   Heart beat service call
- * @fn uint32_t SERVICES_heartbeat(uint32_t)
+ * @fn uint32_t SERVICES_heartbeat(uint32_t services_handle)
  * @param services_handle
  * @return  Errorcode
  * @note    No payload required.

@@ -34,7 +34,7 @@
 static char s_print_buf[256] = {0};
 
 /**
- * @fn void fill_print_buf(uint8_t*, uint32_t)
+ * @fn static void fill_print_buf(uint8_t *buf, uint32_t length)
  * @brief
  * @param buf
  * @param length
@@ -1316,7 +1316,7 @@ static void test_performance(uint32_t services_handle)
 }
 
 /**
- * @fn void test_crypto(uint32_t)
+ * @fn void test_crypto(uint32_t services_handle)
  * @brief
  * @param services_handle
  */

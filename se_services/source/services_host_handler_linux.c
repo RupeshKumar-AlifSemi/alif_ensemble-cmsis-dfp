@@ -1,5 +1,5 @@
 /**
- * @file services_host_handler.c
+ * @file     services_host_handler_linux.c
  * @brief Services handler file
  *
  * Copyright (C) 2022 Alif Semiconductor - All Rights Reserved.
@@ -144,7 +144,7 @@ uint32_t SERVICES_register_channel(uint32_t mhu_id, uint32_t channel_number)
 }
 
 /**
- * @fn void SERVICES_unregister_channel(uint32_t, uint32_t)
+ * @fn void SERVICES_unregister_channel(uint32_t mhu_id, uint32_t channel_number)
  * @brief   Unregister a MHU communication channel with the Services library
  * @param mhu_id
  * @param channel_number
@@ -166,7 +166,7 @@ void SERVICES_unregister_channel(uint32_t mhu_id, uint32_t channel_number)
 }
 
 /**
- * @fn uint32_t SERVICES_send_request(uint32_t, uint16_t, uint32_t)
+ * @fn uint32_t SERVICES_send_request(uint32_t services_handle, uint16_t service_id, uint32_t service_timeout)
  * @brief Send services request to MHU
  * @param services_handle
  * @param service_id

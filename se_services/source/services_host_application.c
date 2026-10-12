@@ -47,8 +47,7 @@
  ******************************************************************************/
 
 /**
- * @fn    uint32_t SERVICES_uart_write(uint32_t services_handle,
- *                                     const uint8_t *uart_data)
+ * @fn uint32_t SERVICES_uart_write(uint32_t services_handle, size_t buffer_size, const uint8_t *uart_data)
  * @brief write to UART
  * @param services_handle
  * @param uart_data
@@ -136,8 +135,8 @@ uint32_t SERVICES_application_ospi_write_key(uint32_t services_handle, uint32_t 
 /**
  * @brief Verify an image signed by an Arm certificate cgain
  * @param services_handle
- * @param image address
- * @param certificate chain address
+ * @param image_address address
+ * @param cert_chain_address chain address
  * @param error_code
  * @return
  */
