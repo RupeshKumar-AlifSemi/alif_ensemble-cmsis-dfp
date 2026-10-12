@@ -31,6 +31,8 @@
   \param[in]   len   : Length of message
   \return      none
 */
+/** @addtogroup driver_can
+ *  @{ */
 static void canfd_copy_tx_buf(volatile uint32_t *dest, const uint32_t *src, const uint8_t len)
 {
     uint8_t  iter     = 0U;
@@ -444,3 +446,4 @@ uint32_t canfd_irq_handler(CANFD_Type *canfd)
     }
     return event;
 }
+/** @} */

@@ -22,6 +22,8 @@ extern "C" {
 /* UART register bit definitions --------------------------- */
 
 /* IER: interrupt enable register */
+/** @addtogroup driver_usart
+ *  @{ */
 #define UART_IER_ENABLE_RECEIVED_DATA_AVAILABLE   (0x01)
 #define UART_IER_ENABLE_TRANSMIT_HOLD_REG_EMPTY   (0x02)
 #define UART_IER_ENABLE_RECEIVER_LINE_STATUS      (0x04)
@@ -966,6 +968,7 @@ void uart_irq_handler(UART_Type *uart, UART_TRANSFER *transfer);
 }
 #endif
 
+/** @} */
 #endif /* UART_H_ */
 
 /************************ (C) COPYRIGHT ALIF SEMICONDUCTOR *****END OF FILE****/

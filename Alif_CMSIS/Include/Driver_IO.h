@@ -22,6 +22,8 @@
 
 #include "Driver_Common.h"
 
+/** @addtogroup driver_gpio
+ *  @{ */
 #define _ARM_Driver_GPIO_(n)               Driver_GPIO##n
 #define ARM_Driver_GPIO_(n)                _ARM_Driver_GPIO_(n)
 
@@ -161,4 +163,5 @@ typedef struct _ARM_DRIVER_GPIO {
                                                 Un-initialize the GPIO Pin configuration >*/
 } ARM_DRIVER_GPIO;
 
+/** @} */
 #endif /* __DRIVER_IO_H__ */

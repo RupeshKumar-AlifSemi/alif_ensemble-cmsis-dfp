@@ -24,6 +24,8 @@ extern "C" {
 
 #include <stdint.h>
 
+/** @addtogroup driver_ospi
+ *  @{ */
 typedef struct {
     volatile uint32_t ctrlr0;     /* SPI Control Register 0  (0x0) */
     volatile uint32_t ctrlr1;     /* SPI Control Register 1  (0x4) */
@@ -215,4 +217,5 @@ typedef struct {
 }
 #endif
 
+/** @} */
 #endif /* OSPI_PRIVATE_H */

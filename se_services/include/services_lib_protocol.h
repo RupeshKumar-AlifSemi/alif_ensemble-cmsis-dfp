@@ -2,21 +2,7 @@
  * @file services_lib_protocol.h
  *
  * @brief Private header file for services library
- *
- * @par
- * @defgroup services-host-boot        BOOT
- * @defgroup services-host-clocks      CLOCKS
- * @defgroup services-host-crypto      CRYPTO
- * @defgroup services-host-error       ERROR
- * @defgroup services-host-extsys0     EXTSYS0
- * @defgroup services-host-handler     HANDLER
- * @defgroup services-host-maintenance MAINTENANCE
- * @defgroup services-host-system      SYSTEM
- * @defgroup services-host-update      UPDATE
- * @defgroup services-host-power       POWER
- * @defgroup services-host-aipm        AIPM
- * @defgroup services-host-padcontrol  PADCONTROL
- * @defgroup services-host-pinmux      PINMUX
+ * @ingroup host_services
  *
  * @page Secure Enclave SERVICES
  * Application SERVICES C library and examples

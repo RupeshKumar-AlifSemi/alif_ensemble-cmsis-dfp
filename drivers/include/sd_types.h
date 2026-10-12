@@ -31,6 +31,8 @@ extern "C" {
 /**
  * @brief  Host controller driver status enum definition
  */
+/** @addtogroup driver_mci
+ *  @{ */
 typedef enum _SDHC_STATUS {
     SDHC_STATUS_OK,
     SDHC_STATUS_ERR,
@@ -338,4 +340,5 @@ typedef struct _sd_handle_t {
 }
 #endif
 
+/** @} */
 #endif /* _SD_TYPES_H_ */

@@ -23,6 +23,8 @@
 /**
   \brief       Handle interrupts for the I2S Tx.
 */
+/** @addtogroup driver_i2s
+ *  @{ */
 void i2s_tx_irq_handler(I2S_Type *i2s, i2s_transfer_t *transfer)
 {
     uint32_t       isr           = i2s->I2S_ISR0;
@@ -368,3 +370,4 @@ void i2s_receive_blocking(I2S_Type *i2s, i2s_transfer_t *transfer)
     /*send complete event */
     transfer->status |= I2S_TRANSFER_STATUS_RX_COMPLETE;
 }
+/** @} */

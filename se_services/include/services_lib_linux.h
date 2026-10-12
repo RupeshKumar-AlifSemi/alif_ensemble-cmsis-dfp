@@ -2,7 +2,7 @@
  * @file services_lib_linux.h
  *
  * @brief Services library public API header file
- * @defgroup host_services host_services
+ * @ingroup host_services
  * @par
  *
  * COPYRIGHT NOTICE: (c) 2022 Alif Group. All rights reserved.

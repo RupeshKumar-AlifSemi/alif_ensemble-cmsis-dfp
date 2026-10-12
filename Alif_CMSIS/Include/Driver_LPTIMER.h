@@ -23,6 +23,8 @@
 
 #include "Driver_Common.h"
 
+/** @addtogroup driver_lptimer
+ *  @{ */
 typedef void (*ARM_LPTIMER_SignalEvent_t)(uint8_t event); /**< Initialization LPTIMER call back
                                                              function declaration >*/
 
@@ -94,4 +96,5 @@ typedef struct _ARM_DRIVER_LPTIMER {
                                                  Uninitialized the LPTIMER Interface>*/
 } ARM_DRIVER_LPTIMER;
 
+/** @} */
 #endif /*< __DRIVER_LPTIMER_H__>*/

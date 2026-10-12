@@ -22,6 +22,8 @@
 /**
   \brief       CPI software reset
 */
+/** @addtogroup driver_cpi
+ *  @{ */
 void cpi_software_reset(CPI_Type *cpi)
 {
     cpi->CAM_CTRL  = 0;
@@ -114,3 +116,4 @@ void cpi_set_config(CPI_Type *cpi, cpi_cfg_info_t *info)
         cpi->CAM_CSI_CMCFG |= info->csi_ipi_color_mode;
     }
 }
+/** @} */

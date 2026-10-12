@@ -19,6 +19,8 @@
  ******************************************************************************/
 #ifndef SYS_CTRL_USB_H
 
+/** @addtogroup driver_usbd
+ *  @{ */
 #define SYS_CTRL_USB_H
 
 /* Includes ------------------------------------------------------------------*/
@@ -89,4 +91,5 @@ static inline void disable_usb_periph_clk(void)
 #ifdef __cplusplus
 }
 #endif
+/** @} */
 #endif /* SYS_CTRL_USB_H */

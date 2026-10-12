@@ -29,6 +29,8 @@ extern "C" {
 
 /****** I2C Extended Control Codes *****/
 
+/** @addtogroup driver_i2c
+ *  @{ */
 #define ARM_I2C_MODE_WRITE_READ                                                                    \
     (0x05UL)  ///< Set Write-Read Combined mode; arg:(enable | target reg addr size in bytes)
 #define ARM_I2C_HS_MASTER_ADDR                                                                     \
@@ -61,4 +63,5 @@ extern "C" {
 }
 #endif
 
+/** @} */
 #endif /* DRIVER_I2C_EX_H_ */

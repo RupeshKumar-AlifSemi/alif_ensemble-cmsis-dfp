@@ -19,6 +19,8 @@ extern "C" {
 #include "soc.h"
 
 /* common helpers */
+/** @addtogroup driver_i3c
+ *  @{ */
 #define BIT(nr)                            (1UL << (nr))
 #define TOTAL_BITS(x)                      (sizeof(x) * 8)
 
@@ -1562,6 +1564,7 @@ void i3c_slave_irq_handler(I3C_Type *i3c, i3c_xfer_t *xfer);
 }
 #endif
 
+/** @} */
 #endif /* I3C_H_ */
 
 /************************ (C) COPYRIGHT ALIF SEMICONDUCTOR *****END OF FILE****/

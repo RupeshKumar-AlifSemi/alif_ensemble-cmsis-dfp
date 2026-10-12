@@ -21,6 +21,8 @@
 
 #include "Driver_Common.h"
 
+/** @addtogroup driver_mipi_dsi
+ *  @{ */
 #define ARM_MIPI_DSI_API_VERSION ARM_DRIVER_VERSION_MAJOR_MINOR(1, 0) /* API version */
 
 /**
@@ -129,4 +131,5 @@ typedef struct {
     int32_t (*Stop)(void);              ///< Pointer to \ref ARM_MIPI_DSI_Stop: Shutdown DSI.
 } ARM_DRIVER_MIPI_DSI;
 
+/** @} */
 #endif /* DRIVER_MIPI_DSI_H_ */

@@ -11,7 +11,7 @@
 /**
  * @file mhu_driver.c
  * @brief MHU driver
- * @ingroup services
+ * @ingroup driver_mhu
  * @par
  */
 #include "mhu_driver.h"
@@ -22,6 +22,8 @@
  * @param data_in
  * @param data_out
  */
+/** @addtogroup driver_mhu
+ *  @{ */
 void MHU_driver_initialize(mhu_driver_in_t *data_in, mhu_driver_out_t *data_out)
 {
     MHU_sender_initialize(data_in->sender_base_address_list,
@@ -35,3 +37,4 @@ void MHU_driver_initialize(mhu_driver_in_t *data_in, mhu_driver_out_t *data_out)
     data_out->sender_irq_handler   = MHU_send_message_irq_handler;
     data_out->receiver_irq_handler = MHU_receive_message_irq_handler;
 }
+/** @} */

@@ -16,6 +16,8 @@ extern "C" {
 
 #include "Driver_Common.h"
 
+/** @addtogroup driver_dma
+ *  @{ */
 #define ARM_DMA_API_VERSION ARM_DRIVER_VERSION_MAJOR_MINOR(4, 0) /* API version */
 
 #define _ARM_Driver_DMA_(n) Driver_DMA##n
@@ -206,4 +208,5 @@ typedef struct _ARM_DRIVER_DMA {
 }
 #endif
 
+/** @} */
 #endif /* DRIVER_DMA_H_ */

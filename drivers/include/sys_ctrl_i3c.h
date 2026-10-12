@@ -20,6 +20,8 @@
  * enum I3C_INSTANCE
  * I3C instances
  */
+/** @addtogroup driver_i3c
+ *  @{ */
 typedef enum _I3C_INSTANCE {
     I3C_INSTANCE_0,   /**< I3C instance - 0       */
     I3C_INSTANCE_LP_0 /**< I3C instance - LP - 0  */
@@ -112,4 +114,5 @@ static inline uint32_t get_i3c_core_clock(const I3C_INSTANCE inst)
     }
 }
 
+/** @} */
 #endif /* SYS_CTRL_I3C_H */

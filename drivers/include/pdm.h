@@ -18,6 +18,8 @@
 /**
  * @brief PDM_PDM_CHANNEL_CFG [PDM_CHANNEL_CFG] ([0..7])
  */
+/** @addtogroup driver_pdm
+ *  @{ */
 typedef struct {
     volatile uint32_t PDM_CH_FIR_COEF_0;  /*!< (@ 0x00000000) Channel (n) FIR Filter Coefficient 0
                                              Register              */
@@ -506,4 +508,5 @@ void pdm_audio_detect_irq_handler(PDM_Type *pdm, pdm_transfer_t *transfer);
 */
 void pdm_warning_irq_handler(PDM_Type *pdm, pdm_transfer_t *transfer);
 
+/** @} */
 #endif /* PDM_H_ */

@@ -32,6 +32,8 @@
 #error "OSPI is not enabled in the RTE_Device.h"
 #endif
 
+/** @addtogroup driver_ospi
+ *  @{ */
 #define ARM_OSPI_DRV_VERSION ARM_DRIVER_VERSION_MAJOR_MINOR(1, 2) /* driver version */
 
 /* Driver Version */
@@ -1317,4 +1319,5 @@ ARM_DRIVER_OSPI        Driver_OSPI1 = {
 };
 #endif /* RTE_OSPI1 */
 
+/** @} */
 #endif /* defined(RTE_Drivers_OSPI) */

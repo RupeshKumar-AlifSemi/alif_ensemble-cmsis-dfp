@@ -19,6 +19,8 @@
 
 #if defined(RTE_Drivers_USART)
 
+/** @addtogroup driver_usart
+ *  @{ */
 #if !(RTE_UART0 || RTE_UART1 || RTE_UART2 || RTE_UART3 || RTE_UART4 || RTE_UART5 || RTE_UART6 ||   \
       RTE_UART7 || RTE_LPUART)
 #error "UART is not enabled in the RTE_Device.h"
@@ -3146,4 +3148,5 @@ ARM_DRIVER_USART        Driver_USARTLP = {
 #endif /* RTE_LPUART */
 
 /************************ (C) COPYRIGHT ALIF SEMICONDUCTOR *****END OF FILE****/
+/** @} */
 #endif /* defined(RTE_Drivers_USART) */

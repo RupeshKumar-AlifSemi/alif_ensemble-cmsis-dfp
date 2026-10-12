@@ -37,6 +37,8 @@
  * @param   cb_event : Pointer to user callback function.
  * @retval  \ref execution_status
  */
+/** @addtogroup driver_lptimer
+ *  @{ */
 static int32_t ARM_LPTIMER_Initialize(LPTIMER_RESOURCES *LPTIMER_RES, uint8_t channel,
                                       ARM_LPTIMER_SignalEvent_t cb_event)
 {
@@ -414,4 +416,5 @@ ARM_DRIVER_LPTIMER        Driver_LPTIMER0 = {
 
 /************************ (C) COPYRIGHT ALIF SEMICONDUCTOR *****END OF FILE****/
 
+/** @} */
 #endif /* RTE_Drivers_LPTIMER */

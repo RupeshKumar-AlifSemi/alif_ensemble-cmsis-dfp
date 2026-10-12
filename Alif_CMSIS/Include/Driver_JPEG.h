@@ -26,6 +26,8 @@ extern "C" {
 
 #include "Driver_Common.h"
 
+/** @addtogroup driver_jpeg
+ *  @{ */
 #define ARM_JPEG_API_VERSION   ARM_DRIVER_VERSION_MAJOR_MINOR(1, 0)
 
 /* Pixel formats — value of ARM_JPEG_FORMAT.pixel_format.
@@ -248,4 +250,5 @@ typedef struct _ARM_DRIVER_JPEG {
 }
 #endif
 
+/** @} */
 #endif /* DRIVER_JPEG_H_ */

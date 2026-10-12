@@ -26,6 +26,8 @@ extern "C" {
 #endif
 
 /** @brief ISP operation mode. */
+/** @addtogroup driver_isp
+ *  @{ */
 enum isp_op_mode {
     ISP_OP_AUTO   = 0,
     ISP_OP_MANUAL = 1,
@@ -542,4 +544,5 @@ struct isp_output_info {
 }
 #endif
 
+/** @} */
 #endif /* ISP_CTRL_PARAMS_H_ */

@@ -19,6 +19,8 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+/** @addtogroup driver_mhu
+ *  @{ */
 #define MHU_NUMBER_OF_CHANNELS_MAX 124
 #define MHU_DEBUG_PRINT_ENABLE     0
 
@@ -75,4 +77,5 @@ typedef struct {
 void MHU_driver_initialize(mhu_driver_in_t *data_in, mhu_driver_out_t *data_out);
 void MHU_initialize(void);
 
+/** @} */
 #endif /* __MHU_H__ */

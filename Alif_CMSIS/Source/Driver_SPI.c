@@ -30,6 +30,8 @@
     #error "SPI is not enabled in the RTE_Device.h"
 #endif
 
+/** @addtogroup driver_spi
+ *  @{ */
 #define ARM_SPI_DRV_VERSION ARM_DRIVER_VERSION_MAJOR_MINOR(1, 2) /* driver version */
 
 /* Driver Version */
@@ -2317,4 +2319,5 @@ ARM_DRIVER_SPI        Driver_SPILP = {
 };
 #endif /* RTE_LPSPI */
 
+/** @} */
 #endif /* defined(RTE_Drivers_SPI) */

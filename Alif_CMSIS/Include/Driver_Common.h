@@ -38,6 +38,8 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+/** @addtogroup drivers
+ *  @{ */
 #define ARM_DRIVER_VERSION_MAJOR_MINOR(major, minor) (((major) << 8) | (minor))
 
 /**
@@ -66,4 +68,5 @@ typedef enum _ARM_POWER_STATE {
     ARM_POWER_FULL  ///< Power on: full operation at maximum performance
 } ARM_POWER_STATE;
 
+/** @} */
 #endif /* DRIVER_COMMON_H_ */

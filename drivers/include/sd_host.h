@@ -31,6 +31,8 @@ extern "C" {
 #include "sd_types.h"
 
 /* Forward declaration */
+/** @addtogroup driver_mci
+ *  @{ */
 struct _sd_handle_t;
 
 #define SDMMC_HC_VERSION_REG    (SDMMC_BASE + 0xFEU)
@@ -300,4 +302,5 @@ void        sdhc_set_led(sd_handle_t *pHsd, bool enable);
 
 #endif
 
+/** @} */
 #endif /* __SD_HOST_H__ */

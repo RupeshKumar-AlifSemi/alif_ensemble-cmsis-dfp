@@ -36,6 +36,8 @@ extern "C" {
 #endif
 
 /****** CAMERA_SENSOR used for registering camera sensor *****/
+/** @addtogroup driver_camera
+ *  @{ */
 #define CAMERA_SENSOR(sensor)                                                                      \
     CAMERA_SENSOR_DEVICE * Get_Camera_Sensor(void)                                                 \
     {                                                                                              \
@@ -141,6 +143,7 @@ CAMERA_SENSOR_DEVICE *Get_LPCamera_Sensor(void);
 }
 #endif
 
+/** @} */
 #endif /* CAMERA_SENSOR_H_ */
 
 /************************ (C) COPYRIGHT ALIF SEMICONDUCTOR *****END OF FILE****/

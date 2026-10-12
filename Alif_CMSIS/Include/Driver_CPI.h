@@ -26,6 +26,8 @@ extern "C" {
 
 #include "Driver_Common.h"
 
+/** @addtogroup driver_cpi
+ *  @{ */
 #define ARM_CPI_API_VERSION         ARM_DRIVER_VERSION_MAJOR_MINOR(1, 0) /* API version */
 
 /****** CPI Control Codes *****/
@@ -152,6 +154,7 @@ typedef struct _ARM_DRIVER_CPI {
 }
 #endif
 
+/** @} */
 #endif /* DRIVER_CPI_H_ */
 
 /************************ (C) COPYRIGHT ALIF SEMICONDUCTOR *****END OF FILE****/

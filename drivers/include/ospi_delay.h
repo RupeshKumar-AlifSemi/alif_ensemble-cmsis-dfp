@@ -17,6 +17,8 @@ extern "C" {
 
 #include <stdint.h>
 
+/** @addtogroup driver_ospi
+ *  @{ */
 #define OSPI_DELAY_INVALID_IDX (0xFFFFFFFFU)
 /* OSPI delay configuration: 16 individual per-line delay taps for each of the
  * TXD, RXD and SSI output-enable (OE_N) paths, plus the two RXDS strobe delays
@@ -44,4 +46,5 @@ typedef struct ospi_delay_cfg {
 #ifdef __cplusplus
 }
 #endif
+/** @} */
 #endif /* OSPI_DELAY_H_ */

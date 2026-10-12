@@ -27,6 +27,8 @@
 #include "jpeg_hantro_vc9000e_sw.h"
 
 /* Driver Version */
+/** @addtogroup driver_jpeg
+ *  @{ */
 #define ARM_JPEG_DRV_VERSION ARM_DRIVER_VERSION_MAJOR_MINOR(1, 0)
 
 static const ARM_DRIVER_VERSION DriverVersion = {ARM_JPEG_API_VERSION, ARM_JPEG_DRV_VERSION};
@@ -472,3 +474,4 @@ ARM_DRIVER_JPEG Driver_JPEG = {
 };
 #endif
 /************************ (C) COPYRIGHT ALIF SEMICONDUCTOR *****END OF FILE****/
+/** @} */

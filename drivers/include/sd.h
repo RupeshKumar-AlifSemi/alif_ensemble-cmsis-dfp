@@ -30,6 +30,8 @@ extern "C" {
 /* SD Protocol Constants                                                    */
 /* ======================================================================== */
 
+/** @addtogroup driver_mci
+ *  @{ */
 #define SDMMC_RESET_DELAY_US      1000U
 #define SDMMC_EXT_CSD_SIZE        512U
 #define SDMMC_DATA_TIMEOUT        0xFFFU
@@ -292,4 +294,5 @@ void sd_cb(uint16_t cmd_complete, uint16_t xfer_complete);
 }
 #endif
 
+/** @} */
 #endif

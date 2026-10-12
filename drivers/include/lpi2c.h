@@ -15,6 +15,8 @@
 #include <stdbool.h>
 
 /* lpi2c register set */
+/** @addtogroup driver_lpi2c
+ *  @{ */
 typedef struct {
     volatile uint32_t LPI2C_DATA; /*!< (@ 0x00000000) Data read/write register               */
     volatile uint32_t reserved1[3];
@@ -72,4 +74,5 @@ void lpi2c_send(LPI2C_TYPE *lpi2c, LPI2C_XFER_INFO_T *transfer, const uint32_t d
  */
 void lpi2c_irq_handler(LPI2C_TYPE *lpi2c, LPI2C_XFER_INFO_T *transfer);
 
+/** @} */
 #endif /* LPI2C_H_ */

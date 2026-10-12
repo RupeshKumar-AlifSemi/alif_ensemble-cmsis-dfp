@@ -31,6 +31,8 @@ extern "C" {
  * enum OSPI_INSTANCE.
  * OSPI instances.
  */
+/** @addtogroup driver_ospi
+ *  @{ */
 typedef enum _OSPI_INSTANCE {
     OSPI_INSTANCE_0,
     OSPI_INSTANCE_1,
@@ -124,4 +126,5 @@ static inline uint32_t ospi_get_core_clock(void)
 #ifdef __cplusplus
 }
 #endif
+/** @} */
 #endif /* SYS_CTRL_OSPI_H_ */

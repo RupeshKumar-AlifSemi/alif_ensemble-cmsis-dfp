@@ -26,6 +26,8 @@ extern "C" {
 
 #include "soc.h"
 
+/** @addtogroup driver_utimer
+ *  @{ */
 #define HE_CLK_ENA_LPUTIMER_CKEN (1U << 17) /* Enable LP-UITMER clock */
 
 /**
@@ -51,4 +53,5 @@ static inline void disable_lputimer_clk(void)
 #ifdef __cplusplus
 }
 #endif
+/** @} */
 #endif /* SYS_CTRL_UTIMER_H_ */

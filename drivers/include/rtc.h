@@ -28,6 +28,8 @@ extern "C" {
 #include <soc.h>
 
 /* CCR register fields */
+/** @addtogroup driver_rtc
+ *  @{ */
 #define CCR_LPRTC_PSCLR_EN (1U << 4U) /* Enable prescaler  */
 #define CCR_LPRTC_WEN      (1U << 3U) /* Wrap enable       */
 #define CCR_LPRTC_EN       (1U << 2U) /* Enable counter    */
@@ -258,6 +260,7 @@ static inline uint32_t lprtc_get_count(LPRTC_Type *lprtc)
 }
 #endif
 
+/** @} */
 #endif /* RTC_H_ */
 
 /************************ (C) COPYRIGHT ALIF SEMICONDUCTOR *****END OF FILE****/

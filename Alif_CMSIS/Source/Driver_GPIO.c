@@ -61,6 +61,8 @@
   72 ..  79: P9_0..7  (GPIO9)
  120 .. 121: P15_0..1 (LPGPIO) */
 
+/** @addtogroup driver_gpio
+ *  @{ */
 #define GPIO_MAX_PINS 8U
 #if (SOC_FEAT_LPGPIO_HAS_PIN2_7)
 #define LPGPIO_MAX_PINS 8U
@@ -991,4 +993,5 @@ ARM_DRIVER_GPIO Driver_GPIO = {
     GPIO_GetInput
 };
 
+/** @} */
 #endif /* RTE_Drivers_GPIO */

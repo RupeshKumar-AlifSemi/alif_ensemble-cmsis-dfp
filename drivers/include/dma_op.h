@@ -26,6 +26,8 @@
 extern "C" {
 #endif
 
+/** @addtogroup driver_dma
+ *  @{ */
 typedef enum _DMA_CHANNEL_FLAG {
     DMA_CHANNEL_FLAG_USE_USER_MCODE = (1 << 0), /*!< Use user provided mcode for channel */
     DMA_CHANNEL_FLAG_I2S_MONO_MODE  = (1 << 1), /*!< DMA channel in I2S mono mode */
@@ -137,4 +139,5 @@ bool dma_generate_opcode(dma_config_info_t *dma_cfg, uint8_t channel_num);
 }
 #endif
 
+/** @} */
 #endif /* DMA_OP_H_ */

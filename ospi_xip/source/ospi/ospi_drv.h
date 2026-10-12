@@ -27,6 +27,8 @@ extern "C" {
 #include "ospi_private.h"
 #include "sys_ctrl_ospi.h"
 
+/** @addtogroup driver_ospi
+ *  @{ */
 typedef struct {
     ssi_regs_t *regs;           ///< Pointer to OSPI0 or OSPI1 base address
     aes_regs_t *aes_regs;       ///< Pointer to AES0 or AES1 decryption module & XIP enable line
@@ -60,4 +62,5 @@ bool ospi_xip_enabled(ospi_flash_cfg_t *ospi_cfg);
 }
 #endif
 
+/** @} */
 #endif /* OSPI_DRV_H */

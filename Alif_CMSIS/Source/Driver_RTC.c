@@ -25,6 +25,8 @@
 #error "RTC is not enabled in the RTE_Device.h"
 #endif
 
+/** @addtogroup driver_rtc
+ *  @{ */
 #define ARM_RTC_DRV_VERSION ARM_DRIVER_VERSION_MAJOR_MINOR(1, 0) /* driver version */
 
 /* Driver Version */
@@ -466,4 +468,5 @@ ARM_DRIVER_RTC        Driver_RTC1 = {
 
 /************************ (C) COPYRIGHT ALIF SEMICONDUCTOR *****END OF FILE****/
 
+/** @} */
 #endif /* defined(RTE_Drivers_RTC) */

@@ -27,6 +27,8 @@
 extern "C" {
 #endif
 
+/** @addtogroup driver_cdc
+ *  @{ */
 #define ARM_CDC200_API_VERSION          ARM_DRIVER_VERSION_MAJOR_MINOR(1, 0) /* API version */
 
 /****** CDC200 Background color blue *****/
@@ -233,4 +235,5 @@ typedef struct _ARM_DRIVER_CDC200 {
 }
 #endif
 
+/** @} */
 #endif /* DRIVER_CDC200_H_ */

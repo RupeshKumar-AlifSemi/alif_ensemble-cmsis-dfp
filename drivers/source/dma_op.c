@@ -26,6 +26,8 @@
                                         uint8_t            channel_num)
   \brief       Prepare the DMA opcode for the channel
 */
+/** @addtogroup driver_dma
+ *  @{ */
 bool dma_generate_opcode(dma_config_info_t *dma_cfg, uint8_t channel_num)
 {
     dma_thread_info_t  *thread_info  = &dma_cfg->channel_thread[channel_num];
@@ -320,3 +322,4 @@ bool dma_generate_opcode(dma_config_info_t *dma_cfg, uint8_t channel_num)
 
     return true;
 }
+/** @} */

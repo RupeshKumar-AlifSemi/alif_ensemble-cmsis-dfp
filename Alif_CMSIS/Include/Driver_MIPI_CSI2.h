@@ -21,6 +21,8 @@
 
 #include "Driver_Common.h"
 
+/** @addtogroup driver_mipi_csi2
+ *  @{ */
 #define ARM_MIPI_CSI2_API_VERSION    ARM_DRIVER_VERSION_MAJOR_MINOR(1, 0) /* API version */
 
 /**
@@ -122,4 +124,5 @@ typedef struct {
     int32_t (*StopIPI)(void);  ///< Pointer to \ref MIPI_CSI2_StartIPI : Disable CSI2 IPI Interface.
 } ARM_DRIVER_MIPI_CSI2;
 
+/** @} */
 #endif /* DRIVER_MIPI_CSI2_H_ */

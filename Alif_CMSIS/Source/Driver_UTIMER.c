@@ -40,6 +40,8 @@
  * @param   channel    : Pointer to user callback function.
  * @retval  none
  */
+/** @addtogroup driver_utimer
+ *  @{ */
 static void UTIMER_Interrupt_Enable(UTIMER_RESOURCES *UTIMER_RES, uint8_t channel)
 {
     switch (UTIMER_RES->ch_info[channel].channel_counter_dir_backup) {
@@ -2238,4 +2240,5 @@ ARM_DRIVER_UTIMER        Driver_UTIMERLP = {
     ARM_LPUTIMER_Uninitialize
 };
 #endif /* RTE_LPUTIMER */
+/** @} */
 #endif /* defined(RTE_Drivers_UTIMER) */

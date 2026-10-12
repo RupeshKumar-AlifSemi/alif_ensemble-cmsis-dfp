@@ -13,6 +13,8 @@
 /**
   @brief       IRQ handler for the error interrupt
 */
+/** @addtogroup driver_pdm
+ *  @{ */
 void pdm_error_detect_irq_handler(PDM_Type *pdm)
 {
     pdm->PDM_IRQ_ENABLE &= ~(PDM_FIFO_OVERFLOW_IRQ);
@@ -202,3 +204,4 @@ void pdm_receive_blocking(PDM_Type *pdm, pdm_transfer_t *transfer)
     /* Set the capture complete event in the transfer status. */
     transfer->status |= PDM_CAPTURE_STATUS_COMPLETE;
 }
+/** @} */

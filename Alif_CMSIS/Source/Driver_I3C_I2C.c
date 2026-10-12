@@ -31,6 +31,8 @@
 #error "I2CI3C is not enabled in the RTE_Device.h"
 #endif
 
+/** @addtogroup driver_i3c
+ *  @{ */
 #define ARM_I3C_I2C_DRV_VERSION ARM_DRIVER_VERSION_MAJOR_MINOR(1, 0) /* driver version */
 
 /* Driver Version */
@@ -362,4 +364,5 @@ ARM_DRIVER_I2C        Driver_I2CI3C = {
 };
 
 #endif /* RTE_I2CI3C */
+/** @} */
 #endif /* RTE_Drivers_I2C_I3C */

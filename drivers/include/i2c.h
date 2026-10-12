@@ -21,6 +21,8 @@ extern "C" {
 #include "sys_utils.h"
 
 /*!< FIFO Depth for Tx & Rx  */
+/** @addtogroup driver_i2c
+ *  @{ */
 #define I2C_FIFO_DEPTH                       32
 
 #define I2C_SLAVE_10BIT_ADDR_MODE            (1 << 3)  /* 10 bit address mode for slave mode */
@@ -868,4 +870,5 @@ void i2c_slave_rx_isr(I2C_Type *i2c, i2c_transfer_info_t *transfer);
 }
 #endif
 
+/** @} */
 #endif /* I2C_H_ */

@@ -28,6 +28,8 @@ extern "C" {
 #include <stddef.h>
 #include <soc.h>
 
+/** @addtogroup driver_ospi
+ *  @{ */
 #define OSPI_TX_FIFO_DEPTH                   256U
 #define OSPI_RX_FIFO_DEPTH                   256U
 
@@ -727,4 +729,5 @@ void ospi_irq_handler(OSPI_Type *ospi, ospi_transfer_t *transfer);
 }
 #endif
 
+/** @} */
 #endif /* OSPI_H */

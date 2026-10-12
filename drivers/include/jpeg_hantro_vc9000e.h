@@ -33,6 +33,8 @@ extern "C" {
  * slice/line/segment interrupt enable, and interrupt type selection.
  */
 /* JPEG_SWREG1 SW_ENC_IRQ bit[0] */
+/** @addtogroup driver_jpeg
+ *  @{ */
 #define JPEG_SWREG1_IRQ                         (1U << 0)
 
 /* JPEG_SWREG1 SW_ENC_IRQ_DIS bit[1] */
@@ -570,4 +572,5 @@ void jpeg_irq_handler(JPEG_Type *jpeg, jpeg_encode_info_t *enc_info);
 }
 #endif
 
+/** @} */
 #endif /* JPEG_HANTRO_VC9000E_H_ */

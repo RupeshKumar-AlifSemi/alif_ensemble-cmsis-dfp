@@ -24,6 +24,8 @@
 /**
   \brief       Allocate a channel if available
 */
+/** @addtogroup driver_dma
+ *  @{ */
 int8_t dma_allocate_channel(dma_config_info_t *dma_cfg)
 {
     dma_thread_info_t  *channel_thread = &dma_cfg->channel_thread[0];
@@ -134,3 +136,4 @@ dma_ccr_t dma_get_channel_ctrl_info(dma_config_info_t *dma_cfg, uint8_t channel_
 
     return dma_ccr;
 }
+/** @} */

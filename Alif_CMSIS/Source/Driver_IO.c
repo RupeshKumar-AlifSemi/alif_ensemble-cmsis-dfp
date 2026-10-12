@@ -31,6 +31,8 @@
   GPIO_SignalEvent \param   GPIO     : Pointer to gpio device resources \param   pin_no   : pin to
   be configured. \return  execution_status
 */
+/** @addtogroup driver_gpio
+ *  @{ */
 static int32_t GPIO_Initialize(GPIO_RESOURCES *GPIO, ARM_GPIO_SignalEvent_t cb_event,
                                uint8_t pin_no)
 {
@@ -2543,6 +2545,7 @@ ARM_DRIVER_GPIO        Driver_GPIOLP = {
 extern ARM_DRIVER_GPIO __attribute__((alias("Driver_GPIOLP"))) Driver_GPIO15;
 #endif /* RTE_LPGPIO */
 
+/** @} */
 #endif /* defined(RTE_Drivers_IO) */
 
 /************************ (C) COPYRIGHT ALIF SEMICONDUCTOR *****END OF FILE****/

@@ -29,6 +29,8 @@ extern "C" {
 #endif
 
 /*!< Number of bytes for 16/32bit resolution*/
+/** @addtogroup driver_i2s
+ *  @{ */
 #define I2S_16BIT_BUF_TYPE_BYTES   2
 #define I2S_32BIT_BUF_TYPE_BYTES   4
 
@@ -690,4 +692,5 @@ void i2s_receive_blocking(I2S_Type *i2s, i2s_transfer_t *transfer);
 }
 #endif
 
+/** @} */
 #endif /* I2S_H_ */

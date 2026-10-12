@@ -19,6 +19,8 @@
  ******************************************************************************/
 #ifndef SYS_CTRL_DMA_H
 
+/** @addtogroup driver_dma
+ *  @{ */
 #define SYS_CTRL_DMA_H
 
 /* Includes ------------------------------------------------------------------*/
@@ -206,4 +208,5 @@ static inline void lpspi_select_dma2_group(uint8_t group)
 #ifdef __cplusplus
 }
 #endif
+/** @} */
 #endif /* SYS_CTRL_DMA_H */

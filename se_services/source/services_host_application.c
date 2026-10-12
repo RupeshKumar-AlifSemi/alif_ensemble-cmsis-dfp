@@ -27,7 +27,7 @@
 #include "services_lib_ids.h"
 
 /**
- * @ingroup services
+ * @ingroup host_services
  */
 
 /*******************************************************************************

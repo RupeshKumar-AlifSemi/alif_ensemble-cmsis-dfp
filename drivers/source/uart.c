@@ -11,6 +11,8 @@
 #include "uart.h"
 
 /* convert baudrate to divisor */
+/** @addtogroup driver_usart
+ *  @{ */
 #define UART_CONVERT_BAUD_TO_DIVISOR(peripheral_freq, baud) ((peripheral_freq) / ((baud) * 16))
 
 /**
@@ -505,3 +507,4 @@ void uart_irq_handler(UART_Type *uart, UART_TRANSFER *transfer)
 
     return;
 }
+/** @} */

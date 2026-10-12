@@ -28,6 +28,8 @@
 #error "I2S is not enabled in the RTE_Device.h"
 #endif
 
+/** @addtogroup driver_i2s
+ *  @{ */
 #define ARM_SAI_DRV_VERSION ARM_DRIVER_VERSION_MAJOR_MINOR(3, 3) /*!< I2S Driver Version */
 
 static const ARM_DRIVER_VERSION DriverVersion        = {ARM_SAI_API_VERSION, ARM_SAI_DRV_VERSION};
@@ -2412,4 +2414,5 @@ ARM_DRIVER_SAI        Driver_SAILP = {
     LPI2S_GetStatus
 };
 #endif  // RTE_LPI2S
+/** @} */
 #endif  /* defined(RTE_Drivers_SAI) */

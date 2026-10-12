@@ -34,6 +34,8 @@ extern "C" {
 /**
 \brief DMA Transfer Direction
 */
+/** @addtogroup driver_dma
+ *  @{ */
 typedef enum _DMA_TRANSFER {
     DMA_TRANSFER_MEM_TO_MEM,
     DMA_TRANSFER_MEM_TO_DEV,
@@ -341,4 +343,5 @@ dma_ccr_t dma_get_channel_ctrl_info(dma_config_info_t *dma_cfg, uint8_t channel_
 }
 #endif
 
+/** @} */
 #endif /* DMA_CTRL_H_ */

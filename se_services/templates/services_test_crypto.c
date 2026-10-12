@@ -10,7 +10,7 @@
 /**
  * @file  services_test_crypto.c
  * @brief Crypto Services test harness
- * @ingroup services
+ * @ingroup host_services
  * @par
  */
 

@@ -28,6 +28,8 @@ extern "C" {
 #endif
 
 /* MCI API version */
+/** @addtogroup driver_mci
+ *  @{ */
 #define ARM_MCI_API_VERSION ARM_DRIVER_VERSION_MAJOR_MINOR(1, 0)
 
 /* MCI driver version */
@@ -228,4 +230,5 @@ typedef struct _ARM_DRIVER_MCI {
 }
 #endif
 
+/** @} */
 #endif /* DRIVER_MCI_H_ */

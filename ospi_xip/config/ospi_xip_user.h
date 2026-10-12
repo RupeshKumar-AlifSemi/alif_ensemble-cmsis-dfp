@@ -39,6 +39,8 @@ extern "C" {
 //      <1=>  OSPI1
 //   <i> OSPI instance selection
 
+/** @addtogroup driver_ospi
+ *  @{ */
 #define OSPI_XIP_INSTANCE              1
 
 /**
@@ -214,4 +216,5 @@ extern "C" {
 }
 #endif
 
+/** @} */
 #endif /* OSPI_XIP_USER_H_ */

@@ -26,6 +26,8 @@ extern "C" {
 
 #include "soc.h"
 
+/** @addtogroup driver_mipi_csi2
+ *  @{ */
 #define PERIPH_CLK_ENA_CSI_CKEN     (1U << 24) /* Enable clock supply for CSI */
 
 #define CSI_PIXCLK_CTRL_CKEN        (0x1U << 0) /* CSI Pixel clock enables */
@@ -111,4 +113,5 @@ static inline void clear_csi_pixel_clk(void)
 }
 #endif
 
+/** @} */
 #endif /* SYS_CTRL_CSI_H_ */

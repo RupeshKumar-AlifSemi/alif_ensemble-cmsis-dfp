@@ -27,6 +27,8 @@ extern "C" {
 /* Includes --------------------------------------------------------------------------- */
 #include "Driver_Common.h"
 
+/** @addtogroup driver_wdt
+ *  @{ */
 #define ARM_WDT_API_VERSION ARM_DRIVER_VERSION_MAJOR_MINOR(1, 0) /* API version */
 
 /*----- Watchdog Control Codes -----*/
@@ -117,6 +119,7 @@ typedef struct _ARM_DRIVER_WDT {
 }
 #endif
 
+/** @} */
 #endif /* DRIVER_WDT_H_ */
 
 /************************ (C) COPYRIGHT ALIF SEMICONDUCTOR *****END OF FILE****/

@@ -26,6 +26,8 @@
 #include "soc.h"
 #include "soc_features.h"
 
+/** @addtogroup driver_can
+ *  @{ */
 #define CANFD_CLK_SRC_38P4MHZ_CLK 38400000U                       /* 38.4 MHz */
 #define CANFD_CLK_SRC_160MHZ_CLK  160000000U                      /* 160 MHz  */
 #define CANFD_MAX_CLK_SPEED       (CANFD_CLK_SRC_160MHZ_CLK / 2U) /* 80 MHz   */
@@ -180,4 +182,5 @@ static inline bool canfd_in_fd_mode(const CANFD_INSTANCE instance)
     return false;
 }
 
+/** @} */
 #endif /* SYS_CTRL_CANFD_H_ */

@@ -14,6 +14,8 @@
 /**
  * \brief       Handle DONE0 (avg sample ready)interrupts for the ADC instance.
  */
+/** @addtogroup driver_adc
+ *  @{ */
 void adc_done0_irq_handler(ADC_Type *adc, conv_info_t *conversion)
 {
     volatile uint32_t *sample_reg_ptr = &adc->ADC_SAMPLE_REG_[0];
@@ -116,3 +118,4 @@ void adc_cmpb_irq_handler(ADC_Type *adc, conv_info_t *conversion)
     }
 }
 /************************ (C) COPYRIGHT ALIF SEMICONDUCTOR *****END OF FILE****/
+/** @} */

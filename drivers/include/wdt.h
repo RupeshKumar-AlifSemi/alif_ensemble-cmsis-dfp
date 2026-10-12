@@ -18,6 +18,8 @@ extern "C" {
 #include <stdint.h>
 #include <stdbool.h>
 
+/** @addtogroup driver_wdt
+ *  @{ */
 typedef struct { /*!< (@ 0x40100000) WDT_HP_CTRL Structure                                      */
     volatile uint32_t       WDT_WDOGLOAD;    /*!< (@ 0x00000000) Watchdog Load Register    */
     const volatile uint32_t WDT_WDOGVALUE;   /*!< (@ 0x00000004) Watchdog Value Register   */
@@ -137,4 +139,5 @@ static inline uint32_t wdt_get_remaining_ticks(WDT_CTRL_Type *wdt)
 }
 #endif
 
+/** @} */
 #endif /* WDT__H_ */

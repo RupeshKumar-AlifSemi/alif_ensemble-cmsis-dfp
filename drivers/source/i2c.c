@@ -18,6 +18,8 @@
  * @param   speed_mode : Speed
  * @retval  none
  */
+/** @addtogroup driver_i2c
+ *  @{ */
 static void i2c_set_scl_cnt(I2C_Type *i2c, uint32_t clk_khz, uint8_t speed_mode)
 {
     uint32_t          scl_hcnt = 0U;       /* value for SCL_HCNT */
@@ -888,3 +890,4 @@ void i2c_slave_rx_isr(I2C_Type *i2c, i2c_transfer_info_t *transfer)
 }
 
 /************************ (C) COPYRIGHT ALIF SEMICONDUCTOR *****END OF FILE****/
+/** @} */

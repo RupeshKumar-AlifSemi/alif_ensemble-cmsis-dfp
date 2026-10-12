@@ -31,6 +31,8 @@
 #error "MIPI DSI is not enabled in the RTE_Device.h"
 #endif
 
+/** @addtogroup driver_mipi_dsi
+ *  @{ */
 #define ARM_MIPI_DSI_DRV_VERSION ARM_DRIVER_VERSION_MAJOR_MINOR(1, 0) /*driver version*/
 
 /* High speed transition timing range */
@@ -742,4 +744,5 @@ ARM_DRIVER_MIPI_DSI Driver_MIPI_DSI = {
     ARM_MIPI_DSI_Stop
 };
 
+/** @} */
 #endif /* defined(RTE_Drivers_MIPI_DSI) */

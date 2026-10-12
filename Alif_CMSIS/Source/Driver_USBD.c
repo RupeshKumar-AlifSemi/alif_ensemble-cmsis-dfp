@@ -22,6 +22,8 @@
 #include "Driver_USBD.h"
 #include "sys_ctrl_usb.h"
 
+/** @addtogroup driver_usbd
+ *  @{ */
 #define EP_NUM(ep_addr)      (ep_addr & ARM_USB_ENDPOINT_NUMBER_MASK)
 #define EP_DIR(ep_addr)      (ep_addr & ARM_USB_ENDPOINT_DIRECTION_MASK) ? USB_DIR_IN : USB_DIR_OUT;
 
@@ -448,3 +450,4 @@ ARM_DRIVER_USBD        Driver_USBD0 = {
     ARM_USBD_EndpointTransferAbort,
     ARM_USBD_GetFrameNumber
 };
+/** @} */

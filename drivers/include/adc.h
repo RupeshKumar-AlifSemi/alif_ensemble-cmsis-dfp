@@ -16,6 +16,8 @@
 #include "soc.h"
 
 /****ADC Register macros****/
+/** @addtogroup driver_adc
+ *  @{ */
 #define ADC_START_CONTINUOUS_CONV          (1U << 6)  /* start continuous conversion           */
 #define ADC_START_ENABLE                   (1U << 7)  /* Enable ENA for single shot conversion */
 #define ADC_START_SINGLE_SHOT_CONV         (1U << 0)  /* start single shot conversion          */
@@ -487,4 +489,5 @@ void adc_cmpa_irq_handler(ADC_Type *adc, conv_info_t *conversion);
  */
 void adc_cmpb_irq_handler(ADC_Type *adc, conv_info_t *conversion);
 
+/** @} */
 #endif /* ADC_H_ */

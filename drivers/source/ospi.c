@@ -23,6 +23,8 @@
 /**
   \brief       Set the OSPI mode for the OSPI instance.
 */
+/** @addtogroup driver_ospi
+ *  @{ */
 void ospi_set_mode(OSPI_Type *ospi, SPI_MODE mode)
 {
     uint32_t val;
@@ -836,3 +838,4 @@ uint32_t ospi_get_baudr(uint32_t sclk, uint32_t ospi_core_clock)
 
     return baudr;
 }
+/** @} */

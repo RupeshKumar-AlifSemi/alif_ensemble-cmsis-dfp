@@ -23,6 +23,8 @@
 /**
   \brief       Set the SPI mode for the SPI instance.
 */
+/** @addtogroup driver_spi
+ *  @{ */
 void spi_set_mode(SPI_Type *spi, SPI_MODE mode)
 {
     uint32_t val;
@@ -1173,3 +1175,4 @@ void spi_mw_irq_handler(SPI_Type *spi, spi_transfer_t *transfer)
         }
     }
 }
+/** @} */

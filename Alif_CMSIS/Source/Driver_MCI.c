@@ -31,6 +31,8 @@
 
 #if defined(RTE_Drivers_MCI)
 
+/** @addtogroup driver_mci
+ *  @{ */
 #define ARM_MCI_DRV_VERSION ARM_DRIVER_VERSION_MAJOR_MINOR(1, 0) /* driver version */
 
 /* Driver Version */
@@ -682,4 +684,5 @@ ARM_DRIVER_MCI        Driver_MCI0 = {
     ARM_MCI_GetStatus
 };
 
+/** @} */
 #endif  // RTE_DRIVER_MCI

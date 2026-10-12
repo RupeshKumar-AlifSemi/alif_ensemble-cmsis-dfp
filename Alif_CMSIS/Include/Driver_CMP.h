@@ -26,6 +26,8 @@
 extern "C" {
 #endif
 
+/** @addtogroup driver_cmp
+ *  @{ */
 #define ARM_CMP_API_VERSION ARM_DRIVER_VERSION_MAJOR_MINOR(1, 0) /* API version */
 
 #define _ARM_Driver_CMP(n)  Driver_CMP##n
@@ -130,4 +132,5 @@ typedef struct ARM_DRIVER_COMPARATOR {
 }
 #endif
 
+/** @} */
 #endif /* DRIVER_CMP_H_ */

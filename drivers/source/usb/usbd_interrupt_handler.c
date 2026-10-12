@@ -25,6 +25,8 @@
 
 #include "usbd.h"
 
+/** @addtogroup driver_usbd
+ *  @{ */
 extern USB_DRIVER usb_drv;
 
 /**
@@ -1041,3 +1043,4 @@ uint32_t usbd_set_device_address(USB_DRIVER *drv, uint8_t addr)
 
     return USB_SUCCESS;
 }
+/** @} */

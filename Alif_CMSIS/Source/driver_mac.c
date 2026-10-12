@@ -27,6 +27,8 @@
   #define EMAC_CHECKSUM_OFFLOAD 1
 #endif
 
+/** @addtogroup driver_ethernet
+ *  @{ */
 static MAC_DEV MAC0 = {
     .regs         = (volatile MAC_REGS *) ETH_BASE,
     .irq          = ETH_SBD_IRQ_IRQn,
@@ -1141,3 +1143,4 @@ ARM_DRIVER_ETH_MAC Driver_ETH_MAC0 = {
     ETH_MAC0_PHY_Read,
     ETH_MAC0_PHY_Write
 };
+/** @} */

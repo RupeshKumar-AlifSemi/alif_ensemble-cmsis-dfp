@@ -25,6 +25,8 @@ extern "C" {
 
 #include "soc.h"
 
+/** @addtogroup driver_mipi_dsi
+ *  @{ */
 #define PERIPH_CLK_ENA_DSI_CKEN (1U << 28) /* Enable clock supply for DSI */
 
 /**
@@ -50,4 +52,5 @@ static inline void disable_dsi_periph_clk(void)
 #ifdef __cplusplus
 }
 #endif
+/** @} */
 #endif /* SYS_CTRL_DSI_H_ */

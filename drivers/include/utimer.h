@@ -30,6 +30,8 @@ extern "C" {
 #include "soc.h"
 
 /*****************  Bit definition for TIMER_RegInfo:cntr_start_src_0 register  ******************/
+/** @addtogroup driver_utimer
+ *  @{ */
 #define CNTR_SRC0_TRIG0_RISING              ((uint32_t) 0x00000001)
 #define CNTR_SRC0_TRIG0_FALLING             ((uint32_t) 0x00000002)
 #define CNTR_SRC0_TRIG1_RISING              ((uint32_t) 0x00000004)
@@ -641,6 +643,7 @@ void utimer_config_trigger(UTIMER_Type *utimer, uint8_t channel,
 }
 #endif
 
+/** @} */
 #endif /* UTIMER_H_ */
 
 /************************ (C) COPYRIGHT ALIF SEMICONDUCTOR *****END OF FILE****/

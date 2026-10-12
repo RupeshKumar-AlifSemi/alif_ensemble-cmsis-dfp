@@ -1,0 +1,256 @@
+/**
+ * @defgroup host_services SE-Services
+ *
+ * Secure Enclave services used by host software.
+ */
+
+/**
+ * @defgroup services-host-boot BOOT
+ * @ingroup host_services
+ */
+
+/**
+ * @defgroup services-host-clocks CLOCKS
+ * @ingroup host_services
+ */
+
+/**
+ * @defgroup services-host-crypto CRYPTO
+ * @ingroup host_services
+ */
+
+/**
+ * @defgroup services-host-error ERROR
+ * @ingroup host_services
+ */
+
+/**
+ * @defgroup services-host-extsys0 EXTSYS0
+ * @ingroup host_services
+ */
+
+/**
+ * @defgroup services-host-handler HANDLER
+ * @ingroup host_services
+ */
+
+/**
+ * @defgroup services-host-maintenance MAINTENANCE
+ * @ingroup host_services
+ */
+
+/**
+ * @defgroup services-host-system SYSTEM
+ * @ingroup host_services
+ */
+
+/**
+ * @defgroup services-host-update UPDATE
+ * @ingroup host_services
+ */
+
+/**
+ * @defgroup services-host-power POWER
+ * @ingroup host_services
+ */
+
+/**
+ * @defgroup services-host-aipm AIPM
+ * @ingroup host_services
+ */
+
+/**
+ * @defgroup services-host-padcontrol PADCONTROL
+ * @ingroup host_services
+ */
+
+/**
+ * @defgroup services-host-pinmux PINMUX
+ * @ingroup host_services
+ */
+
+/**
+ * @defgroup drivers Drivers
+ *
+ * Peripheral drivers. Each driver is its own module.
+ */
+
+/**
+ * @defgroup driver_adc ADC
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_aes AES
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_analog Analog
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_camera Camera Sensor
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_can CAN
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_cdc CDC
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_cmp CMP
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_cpi CPI
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_crc CRC
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_dac DAC
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_dma DMA
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_ethernet Ethernet
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_evtrtr Event Router
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_gpio GPIO
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_hwsem HWSEM
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_i2c I2C
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_i2s I2S
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_i3c I3C
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_isp ISP
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_jpeg JPEG
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_lpi2c LPI2C
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_lptimer LPTIMER
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_mci MCI
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_mhu MHU
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_mipi_csi2 MIPI CSI2
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_mipi_dsi MIPI DSI
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_mram MRAM
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_ospi OSPI
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_pdm PDM
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_pinconf Pin Configuration
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_rtc RTC
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_spi SPI
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_usart USART
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_usbd USB Device
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_utimer UTIMER
+ * @ingroup drivers
+ */
+
+/**
+ * @defgroup driver_wdt WDT
+ * @ingroup drivers
+ */

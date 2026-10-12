@@ -38,6 +38,8 @@
 #error "CAMERA is not enabled in the RTE_Device.h"
 #endif
 
+/** @addtogroup driver_cpi
+ *  @{ */
 #if (RTE_MIPI_CSI2)
 #include "Driver_MIPI_CSI2.h"
 extern ARM_DRIVER_MIPI_CSI2 Driver_MIPI_CSI2;
@@ -1116,4 +1118,5 @@ ARM_DRIVER_CPI        Driver_LPCPI = {
 #endif /* End of RTE_LPCPI */
 
 /************************ (C) COPYRIGHT ALIF SEMICONDUCTOR *****END OF FILE****/
+/** @} */
 #endif /* RTE_Drivers_CPI */

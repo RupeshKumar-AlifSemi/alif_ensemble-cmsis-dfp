@@ -17,6 +17,8 @@ extern "C" {
 
 #include "ospi_xip_user.h"
 
+/** @addtogroup driver_ospi
+ *  @{ */
 #if OSPI_XIP_ENABLE_AES_DECRYPTION
 #define AES_128_KEY_SIZE 16
 /* The 128 bit AES key to be used for decrypting the image in the flash */
@@ -42,4 +44,5 @@ static const uint8_t ospi_aes_user_key[AES_128_KEY_SIZE] = {0x00,
 }
 #endif
 
+/** @} */
 #endif /* OSPI_XIP_AES_KEY_H_ */

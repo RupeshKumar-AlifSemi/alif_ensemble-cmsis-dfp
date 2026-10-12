@@ -60,6 +60,8 @@
 
 #include "isp_param.h"
 
+/** @addtogroup driver_isp
+ *  @{ */
 extern void VSI_ISP_IrqProcessFrameEnd(ISP_PORT IspPort);
 
 extern ISP_AWB_FUNC_S vsiAwbAlgo;
@@ -1669,4 +1671,5 @@ ARM_DRIVER_ISP        Driver_ISP = {
 };
 #endif
 /************************ (C) COPYRIGHT ALIF SEMICONDUCTOR *****END OF FILE****/
+/** @} */
 #endif /* RTE_Drivers_ISP */

@@ -30,6 +30,8 @@ extern "C" {
 /* Register fields and masks */
 
 /* DMA DSR: Status of Manager thread */
+/** @addtogroup driver_dma
+ *  @{ */
 #define DMA_DSR_DMA_STATUS_Pos      0U
 #define DMA_DSR_DMA_STATUS_Msk      (0xFUL << DMA_DSR_DMA_STATUS_Pos)
 #define DMA_DSR_WAKEUP_EVENT_Pos    4U
@@ -308,4 +310,5 @@ static inline void dma_execute(DMA_Type *dma, uint32_t dbginst0, uint32_t dbgins
 }
 #endif
 
+/** @} */
 #endif /* DMA_H_ */

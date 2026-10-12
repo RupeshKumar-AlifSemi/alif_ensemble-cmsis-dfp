@@ -26,6 +26,8 @@
 
 #if defined(RTE_Drivers_DMA)
 
+/** @addtogroup driver_dma
+ *  @{ */
 #if ((RTE_DMA1) || (RTE_DMA2))
 #define RTE_DMALOCAL 1
 #endif
@@ -1890,4 +1892,5 @@ ARM_DRIVER_DMA        Driver_DMALOCAL = {
 };
 #endif
 
+/** @} */
 #endif /* defined(RTE_Drivers_DMA) */

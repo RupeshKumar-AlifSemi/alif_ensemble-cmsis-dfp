@@ -26,6 +26,8 @@ extern "C" {
   \return      Current master id. Will be same as the parameter master_id if the request was
   successful.
 */
+/** @addtogroup driver_hwsem
+ *  @{ */
 static inline uint32_t hwsem_request(HWSEM_Type *hwsem, uint32_t master_id)
 {
     /* Write the master_id to the request register */
@@ -72,4 +74,5 @@ static inline void hwsem_reset(HWSEM_Type *hwsem)
 #ifdef __cplusplus
 }
 #endif
+/** @} */
 #endif /* HWSEM_H_ */

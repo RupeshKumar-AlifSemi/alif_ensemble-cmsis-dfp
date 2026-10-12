@@ -28,6 +28,8 @@ extern "C" {
 
 /* Forward declarations for ISP configuration structures */
 /* Use struct tags to avoid redefinition conflicts with ISP library headers */
+/** @addtogroup driver_isp
+ *  @{ */
 struct vsiISP_CALIB_DATA_S;
 struct vsiISP_PORT_ATTR_S;
 struct vsiISP_CHN_ATTR_S;
@@ -211,6 +213,7 @@ typedef struct _ARM_DRIVER_ISP {
 }
 #endif
 
+/** @} */
 #endif /* DRIVER_ISP_H_ */
 
 /************************ (C) COPYRIGHT ALIF SEMICONDUCTOR *****END OF FILE****/

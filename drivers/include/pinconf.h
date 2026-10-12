@@ -27,6 +27,8 @@ extern "C" {
 #include <stdint.h>
 #include "soc_features.h"
 
+/** @addtogroup driver_pinconf
+ *  @{ */
 #define _PORT_(n)                            PORT_##n
 #define PORT_(n)                             _PORT_(n)
 
@@ -120,4 +122,5 @@ int32_t pinconf_get(uint8_t port, uint8_t pin, uint8_t *alt_func, uint8_t *pad_c
 #ifdef __cplusplus
 }
 #endif /* __cplusplus */
+/** @} */
 #endif /* _PINCONF_H_ */

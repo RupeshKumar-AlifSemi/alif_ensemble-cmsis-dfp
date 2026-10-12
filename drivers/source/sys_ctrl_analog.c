@@ -12,8 +12,11 @@
 
 #include "sys_ctrl_analog.h"
 
+/** @addtogroup driver_analog
+ *  @{ */
 uint32_t analog_ldo_ref_cnt;
 uint32_t adc_vref_cnt;
 uint32_t dac6_vref_cnt;
 uint32_t dac12_vref_cnt;
 uint32_t cmp_clk_ref_cnt;
+/** @} */

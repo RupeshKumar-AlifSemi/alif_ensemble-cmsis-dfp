@@ -26,6 +26,8 @@ extern "C" {
 
 #include "Driver_Common.h"
 
+/** @addtogroup driver_crc
+ *  @{ */
 #define ARM_CRC_API_VERSION        ARM_DRIVER_VERSION_MAJOR_MINOR(1, 0) /* API version */
 
 #define ARM_CRC_COMPUTE_EVENT_DONE (1 << 0) /* ARM CRC COMPUTE EVENT DONE */
@@ -151,4 +153,5 @@ typedef struct ARM_Driver_CRC {
 }
 #endif
 
+/** @} */
 #endif /* DRIVER_CRC_H_ */

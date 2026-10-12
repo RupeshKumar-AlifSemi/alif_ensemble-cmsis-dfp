@@ -20,6 +20,8 @@ extern "C" {
 /**
 \brief MRAM(On-Chip NVM) Sector Size: 16-Byte(128-bit)
 */
+/** @addtogroup driver_mram
+ *  @{ */
 #define MRAM_SECTOR_SIZE     (0x10)
 #define MRAM_ADDR_ALIGN_MASK (uint32_t)(0xFFFFFFF0)
 
@@ -46,6 +48,7 @@ void mram_write_128bit(uint8_t *p_dst, const uint8_t *p_src);
 }
 #endif
 
+/** @} */
 #endif /* MRAM_H_ */
 
 /************************ (C) COPYRIGHT ALIF SEMICONDUCTOR *****END OF FILE****/

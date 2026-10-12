@@ -22,6 +22,8 @@
 /**
   \brief       Get CSI lane stopstate status.
 */
+/** @addtogroup driver_mipi_csi2
+ *  @{ */
 CSI_LANE_STOPSTATE csi_get_lane_stopstate_status(CSI_Type *csi, CSI_LANE lane)
 {
     CSI_LANE_STOPSTATE ret = 0;
@@ -151,3 +153,4 @@ void csi_set_vertical_timing(CSI_Type *csi, uint16_t vsa_lines, uint16_t vbp_lin
     csi->CSI_IPI_VACTIVE_LINES &= ~CSI_IPI_VACTIVE_LINE_Msk;
     csi->CSI_IPI_VACTIVE_LINES  = vactive_lines;
 }
+/** @} */

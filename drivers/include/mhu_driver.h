@@ -13,7 +13,6 @@
  * @file mhu_driver.h
  * @brief Header file for MHU driver module
  * @par
- * @defgroup host_services Host Services
  */
 
 #ifndef __MHU_DRIVER_H__
@@ -36,6 +35,8 @@
  */
 
 // Response configuration (RESP_CFG)
+/** @addtogroup driver_mhu
+ *  @{ */
 #define MHU_NR_RESP    0x1
 
 // Access request (ACCESS_REQUEST)
@@ -313,4 +314,5 @@ void MHU_receiver_initialize(uint32_t receiver_frame_base_address_list[],
                              uint32_t receiver_frame_count, MHU_rx_msg_callback_t callback);
 void MHU_receive_message_irq_handler(uint32_t receiver_id);
 
+/** @} */
 #endif /* __MHU_DRIVER_H__ */

@@ -36,6 +36,8 @@ extern "C" {
  * enum OSPI_SPI_FRF.
  * OSPI spi frame formats.
  */
+/** @addtogroup driver_ospi
+ *  @{ */
 typedef enum _OSPI_SPI_FRF {
     OSPI_SPI_FRF_STANDARD,
     OSPI_SPI_FRF_DUAL,
@@ -109,4 +111,5 @@ int ospi_psram_xip_init(ospi_psram_xip_config *config);
 #ifdef __cplusplus
 }
 #endif
+/** @} */
 #endif /* OSPI_PSRAM_XIP_H */

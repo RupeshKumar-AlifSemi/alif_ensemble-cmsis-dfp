@@ -34,6 +34,8 @@ extern "C" {
  * select.
  */
 /* CAM_CTRL Start Capture bit[0] */
+/** @addtogroup driver_cpi
+ *  @{ */
 #define CAM_CTRL_START              (1U << 0)
 
 /* CAM_CTRL Capture Status bit[2] */
@@ -615,4 +617,5 @@ void cpi_set_config(CPI_Type *cpi, cpi_cfg_info_t *info);
 }
 #endif
 
+/** @} */
 #endif /* CPI_H_ */

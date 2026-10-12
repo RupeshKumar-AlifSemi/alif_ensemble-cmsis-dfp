@@ -22,6 +22,8 @@
  ******************************************************************************/
 
 // Read from registers
+/** @addtogroup drivers
+ *  @{ */
 #define READ_REGISTER_U8(Address)            (*((uint8_t volatile *) (Address)))
 #define READ_REGISTER_U16(Address)           (*((uint16_t volatile *) (Address)))
 #define READ_REGISTER_U32(Address)           (*((uint32_t volatile *) (Address)))
@@ -55,4 +57,5 @@
     WRITE_REGISTER_U32(Address,                                                                    \
                        (READ_REGISTER_U32(Address) & ~(uint32_t) (AndData)) | (uint32_t) (OrData))
 
+/** @} */
 #endif /* DRIVERS_COMMON_H */

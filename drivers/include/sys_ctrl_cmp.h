@@ -18,6 +18,8 @@ extern "C" {
 #include "soc.h"
 #include "sys_utils.h"
 
+/** @addtogroup driver_cmp
+ *  @{ */
 #if SOC_FEAT_HSCMP_REG_ALIASING
 #define CMP0_ENABLE  (1U << 28) /* To enable the CMP0  */
 #define CMP1_ENABLE  (1U << 28) /* To enable the CMP1  */
@@ -344,4 +346,5 @@ static inline uint8_t cmp_window_enable_value(void)
     return SOC_FEAT_HSCMP_WINDOW_ENABLE_VAL;
 }
 
+/** @} */
 #endif /* SYS_CTRL_CMP_H_ */

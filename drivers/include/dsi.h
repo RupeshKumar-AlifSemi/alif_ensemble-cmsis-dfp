@@ -28,6 +28,8 @@ extern "C" {
 #include "soc.h"
 
 /*PWR_UP register bits parameters*/
+/** @addtogroup driver_mipi_dsi
+ *  @{ */
 #define DSI_SHUTDOWNZ                   0U
 #define DSI_SHUTDOWNZ_MASK              (0x1U << DSI_SHUTDOWNZ)
 
@@ -1326,4 +1328,5 @@ DSI_LANE_STOPSTATE dsi_get_lane_stopstate_status(DSI_Type *dsi, DSI_LANE lane);
 #ifdef __cplusplus
 }
 #endif
+/** @} */
 #endif /* DSI_H_ */

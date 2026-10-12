@@ -14,6 +14,8 @@
 /**
   \brief       Read data from source(MRAM) to destination.
 */
+/** @addtogroup driver_mram
+ *  @{ */
 void mram_read(void *p_dst, const void *p_src, uint32_t cnt)
 {
     /* directly copy data from MRAM(source),
@@ -51,3 +53,4 @@ void mram_write_128bit(uint8_t *p_dst, const uint8_t *p_src)
         ((volatile uint64_t *) p_dst)[1] = ((volatile uint64_t *) p_src)[1];
     }
 }
+/** @} */

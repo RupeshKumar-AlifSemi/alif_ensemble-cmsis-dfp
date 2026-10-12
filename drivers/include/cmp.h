@@ -18,6 +18,8 @@ extern "C" {
 #include <stdint.h>
 #include "soc.h"
 
+/** @addtogroup driver_cmp
+ *  @{ */
 #define CMP_FILTER_CONTROL_ENABLE (1U << 0) /* To enable the filter control                 */
 
 #define CMP_PRESCALER_MAX_VALUE   (0x3FU) /* Maximum value of prescaler control           */
@@ -170,4 +172,5 @@ void cmp_irq_handler(CMP_Type *cmp, const uint8_t int_mask);
 }
 #endif
 
+/** @} */
 #endif /* CMP_H_ */

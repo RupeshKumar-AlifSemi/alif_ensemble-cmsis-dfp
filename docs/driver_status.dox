@@ -1,5 +1,6 @@
 /**
  * @defgroup execution_status Status Error Codes
+ * @ingroup drivers
  * @{
  *
  * Status codes returned by CMSIS-Driver functions. The macros are defined in

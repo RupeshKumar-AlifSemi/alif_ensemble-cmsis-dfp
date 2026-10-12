@@ -20,6 +20,8 @@
 #include <pinconf.h>
 #include "soc.h"
 
+/** @addtogroup driver_pinconf
+ *  @{ */
 #define PINMUX_ALTERNATE_FUNCTION_MASK 7U
 #define PADCTRL_SHIFT                  16U
 #define LPGPIO_PADCTRL_SHIFT           0U
@@ -128,3 +130,4 @@ int32_t pinconf_get(const uint8_t port, const uint8_t pin, uint8_t *alt_func, ui
 
     return 0;
 }
+/** @} */

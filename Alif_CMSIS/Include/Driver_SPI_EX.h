@@ -28,6 +28,8 @@ extern "C" {
 #include "Driver_SPI.h"
 
 /****** SPI Extended Control Codes *****/
+/** @addtogroup driver_spi
+ *  @{ */
 #define ARM_SPI_USE_CUSTOM_DMA_MCODE_TX                                                            \
     (0x20UL << ARM_SPI_CONTROL_Pos)  ///< Use User defined DMA microcode arg provides address
 #define ARM_SPI_USE_CUSTOM_DMA_MCODE_RX                                                            \
@@ -37,4 +39,5 @@ extern "C" {
 }
 #endif
 
+/** @} */
 #endif /* Driver_SPI_EX_H_ */

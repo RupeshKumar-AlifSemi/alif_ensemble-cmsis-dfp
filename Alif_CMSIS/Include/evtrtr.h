@@ -19,6 +19,8 @@
  ******************************************************************************/
 #ifndef EVTRTR_H
 
+/** @addtogroup driver_evtrtr
+ *  @{ */
 #define EVTRTR_H
 
 /* Includes ------------------------------------------------------------------*/
@@ -271,4 +273,5 @@ static inline void evtrtr_disable_dma_handshake(const uint8_t instance, uint8_t 
 #ifdef __cplusplus
 }
 #endif
+/** @} */
 #endif /* EVTRTR_H */

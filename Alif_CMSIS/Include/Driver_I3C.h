@@ -16,6 +16,8 @@ extern "C" {
 
 #include "Driver_Common.h"
 
+/** @addtogroup driver_i3c
+ *  @{ */
 #define ARM_I3C_API_VERSION     ARM_DRIVER_VERSION_MAJOR_MINOR(8, 1) /* API version */
 
 /****** I3C Control Codes *****/
@@ -426,4 +428,5 @@ typedef struct _ARM_DRIVER_I3C {
 }
 #endif
 
+/** @} */
 #endif /* DRIVER_I3C_H_ */

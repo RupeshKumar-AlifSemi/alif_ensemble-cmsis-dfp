@@ -27,6 +27,8 @@ extern "C" {
   \brief     This function initializes the Flash and OSPI and enters the XIP mode.
   \return    The status of operation (Success or Failed)
 */
+/** @addtogroup driver_ospi
+ *  @{ */
 int setup_flash_xip(void);
 
 /**
@@ -40,4 +42,5 @@ bool flash_xip_enabled(void);
 }
 #endif
 
+/** @} */
 #endif /* SETUP_FLASH_XIP_H */

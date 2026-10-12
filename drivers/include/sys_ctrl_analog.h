@@ -18,6 +18,8 @@
 extern "C" {
 #endif
 
+/** @addtogroup driver_analog
+ *  @{ */
 #define CMP_CTRL_CMP0_CLKEN (1U << 0U) /* Enable CMP0 clock */
 
 #define VBAT_ANA_REG2_VAL   0x00C00000 /* Enable analog peripheral LDO and precision bandgap */
@@ -243,4 +245,5 @@ static inline void disable_analog_periph_clk(void)
 }
 #endif
 
+/** @} */
 #endif /* SYS_CTRL_ANALOG_H */

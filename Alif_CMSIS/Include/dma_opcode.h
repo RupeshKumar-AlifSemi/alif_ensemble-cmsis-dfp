@@ -28,6 +28,8 @@
 extern "C" {
 #endif
 
+/** @addtogroup driver_dma
+ *  @{ */
 #define DMA_MAX_BACKWARD_JUMP 256 /*!< Max Loop backward jump offset */
 #define DMA_MAX_LP_CNT        256 /*!< Max Loop count                */
 
@@ -636,4 +638,5 @@ static inline bool dma_construct_wmb(dma_opcode_buf *op_buf)
 }
 #endif
 
+/** @} */
 #endif /* DMA_OPCODE_H_ */

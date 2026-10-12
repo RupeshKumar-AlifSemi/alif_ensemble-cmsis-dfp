@@ -26,6 +26,8 @@ extern "C" {
 #endif
 
 /****** SAI Control Codes *****/
+/** @addtogroup driver_i2s
+ *  @{ */
 #define ARM_SAI_USE_CUSTOM_DMA_MCODE_TX                                                            \
     (0xA0UL)  ///< Use User defined DMA microcode arg1 provides address
 #define ARM_SAI_USE_CUSTOM_DMA_MCODE_RX                                                            \
@@ -35,4 +37,5 @@ extern "C" {
 }
 #endif
 
+/** @} */
 #endif /* Driver_SAI_EX_H_ */

@@ -26,6 +26,8 @@ extern "C" {
 
 #include "soc.h"
 
+/** @addtogroup driver_spi
+ *  @{ */
 #define HE_CLK_ENA_SPI_CKEN (1U << 16) /* Enable LPSPI clock */
 
 #if SOC_FEAT_LPSPI_HAS_MASTER_SLAVE
@@ -164,4 +166,5 @@ static inline void lpspi_config_slave(void)
 #ifdef __cplusplus
 }
 #endif
+/** @} */
 #endif /* SYS_CTRL_SPI_H_ */

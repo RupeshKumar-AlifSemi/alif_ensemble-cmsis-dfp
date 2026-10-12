@@ -21,6 +21,8 @@
 #endif
 
 /* Driver version */
+/** @addtogroup driver_i2c
+ *  @{ */
 #define ARM_I2C_DRV_VERSION ARM_DRIVER_VERSION_MAJOR_MINOR(1, 12)
 
 /* Driver Version */
@@ -2756,3 +2758,4 @@ ARM_DRIVER_I2C        Driver_I2CLP1 = {
 };
 #endif /* RTE_LPI2C1 */
 /************************ (C) COPYRIGHT ALIF SEMICONDUCTOR *****END OF FILE****/
+/** @} */

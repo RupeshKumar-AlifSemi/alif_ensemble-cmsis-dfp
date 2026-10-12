@@ -22,6 +22,8 @@
 #error "Comparator is not configured in RTE_device.h!"
 #endif
 
+/** @addtogroup driver_cmp
+ *  @{ */
 #define ARM_CMP_DRV_VERSION ARM_DRIVER_VERSION_MAJOR_MINOR(1, 0) /*  Driver version */
 
 /*Driver version*/
@@ -904,4 +906,5 @@ ARM_DRIVER_CMP        Driver_LPCMP = {
 };
 
 #endif
+/** @} */
 #endif /* defined(RTE_Drivers_CMP) */

@@ -23,6 +23,8 @@
 #include "Driver_CAN.h"
 
 /****** CAN Control Function Operation codes *****/
+/** @addtogroup driver_can
+ *  @{ */
 #define ARM_CAN_SET_SPECIFICATION                                                                  \
     (5UL << ARM_CAN_CONTROL_Pos)  ///< Set Spec: ISO/Non-ISO. Default: ISO
 #define ARM_CAN_SET_RBUF_OVERFLOW_MODE                                                             \
@@ -96,4 +98,5 @@
 #define ARM_CAN_EVENT_ARBITRATION_LOST           (1UL << 4)  ///< Arbitration lost during msg transmission
 #define ARM_CAN_EVENT_PRIMARY_TBUF_SEND_COMPLETE (1UL << 5)  ///< Primary Tx buffer send complete
 
+/** @} */
 #endif /* DRIVER_CAN_EX_H_ */

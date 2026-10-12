@@ -27,6 +27,8 @@
 #error "I3C is not enabled in the RTE_Device.h"
 #endif
 
+/** @addtogroup driver_i3c
+ *  @{ */
 #define ARM_I3C_DRV_VERSION ARM_DRIVER_VERSION_MAJOR_MINOR(8, 2) /* driver version */
 
 #if I3C_DMA_ENABLE
@@ -3107,4 +3109,5 @@ ARM_DRIVER_I3C        Driver_I3CLP = {
 #endif /* RTE_LPI3C */
 
 /************************ (C) COPYRIGHT ALIF SEMICONDUCTOR *****END OF FILE****/
+/** @} */
 #endif /* defined(RTE_Drivers_I3C) */

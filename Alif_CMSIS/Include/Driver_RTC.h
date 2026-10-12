@@ -27,6 +27,8 @@ extern "C" {
 /* Includes --------------------------------------------------------------------------- */
 #include "Driver_Common.h"
 
+/** @addtogroup driver_rtc
+ *  @{ */
 #define ARM_RTC_API_VERSION         ARM_DRIVER_VERSION_MAJOR_MINOR(1, 0) /* API version */
 
 /*----- RTC Control Codes -----*/
@@ -112,6 +114,7 @@ typedef struct _ARM_DRIVER_RTC {
 }
 #endif
 
+/** @} */
 #endif /* DRIVER_RTC_H_ */
 
 /************************ (C) COPYRIGHT ALIF SEMICONDUCTOR *****END OF FILE****/

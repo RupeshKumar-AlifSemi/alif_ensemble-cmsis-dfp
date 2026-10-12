@@ -31,6 +31,8 @@
  *\param[in] buf_len length
  *\return       On success 0, failure case returns error.
  */
+/** @addtogroup driver_usbd
+ *  @{ */
 int32_t usbd_bulk_send(USB_DRIVER *drv, uint8_t ep_num, uint8_t dir, uint8_t *bufferptr,
                        uint32_t buf_len)
 {
@@ -182,3 +184,4 @@ int32_t usbd_bulk_recv(USB_DRIVER *drv, uint8_t ep_num, uint8_t dir, uint8_t *bu
 
     return ret;
 }
+/** @} */

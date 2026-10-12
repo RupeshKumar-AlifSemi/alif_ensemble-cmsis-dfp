@@ -27,6 +27,8 @@ extern "C" {
 #include "sys_utils.h"
 
 /* CLKCTL_PER_MST DPHY_PLL_CTRL0 field definitions */
+/** @addtogroup driver_mipi_dsi
+ *  @{ */
 #define DPHY_PLL_CTRL0_FORCE_LOCK              (1U << 0) /* Force lock to device */
 #define DPHY_PLL_CTRL0_SHADOW_CONTROL          (1U << 4) /* Selection of PLL configuration mechanism */
 #define DPHY_PLL_CTRL0_UPDATEPLL               (1U << 8) /* Control for PLL operation frequency updated */
@@ -629,4 +631,5 @@ static inline void disable_dphy_pll_bypass_clock(void)
 #ifdef __cplusplus
 }
 #endif
+/** @} */
 #endif /* SYS_CTRL_DPHY_H_ */

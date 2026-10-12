@@ -24,6 +24,8 @@
 #include "sys_ctrl_sd.h"
 #include "string.h"
 
+/** @addtogroup driver_mci
+ *  @{ */
 extern sd_handle_t  Hsd;
 static uint64_t adma_desc_tbl[32] __attribute__((section("sd_dma_buf")))
 __attribute__((aligned(512)));
@@ -994,3 +996,4 @@ int sdhc_card_present(struct _sd_handle_t *pHsd, int (*card_det_cb)(void))
     uint32_t pstate = pHsd->regs->SDMMC_PSTATE_REG;
     return (pstate & SDHC_CARD_INSRT_Msk) ? 1 : 0;
 }
+/** @} */

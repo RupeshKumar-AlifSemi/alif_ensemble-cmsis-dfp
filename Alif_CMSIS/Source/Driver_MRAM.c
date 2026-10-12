@@ -32,6 +32,8 @@
 #error "MRAM is not enabled in the RTE_Device.h"
 #endif
 
+/** @addtogroup driver_mram
+ *  @{ */
 #define ARM_MRAM_DRV_VERSION ARM_DRIVER_VERSION_MAJOR_MINOR(1, 0) /* driver version */
 
 /* MRAM Device Resources. */
@@ -340,4 +342,5 @@ ARM_DRIVER_MRAM        Driver_MRAM = {
 
 /************************ (C) COPYRIGHT ALIF SEMICONDUCTOR *****END OF FILE****/
 
+/** @} */
 #endif /* defined(RTE_Drivers_MRAM) */

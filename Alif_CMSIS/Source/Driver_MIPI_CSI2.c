@@ -41,6 +41,8 @@
 #error "MIPI CSI2 is not enabled in the RTE_Device.h"
 #endif
 
+/** @addtogroup driver_mipi_csi2
+ *  @{ */
 #define ARM_MIPI_CSI2_DRV_VERSION ARM_DRIVER_VERSION_MAJOR_MINOR(1, 0)
 
 /*Driver version*/
@@ -826,4 +828,5 @@ ARM_DRIVER_MIPI_CSI2        Driver_MIPI_CSI2 = {
 #endif /* RTE_MIPI_CSI2 */
 
 /************************ (C) COPYRIGHT ALIF SEMICONDUCTOR *****END OF FILE****/
+/** @} */
 #endif /* RTE_Drivers_MIPI_CSI2 */

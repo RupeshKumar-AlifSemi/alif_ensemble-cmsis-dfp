@@ -26,6 +26,8 @@ extern "C" {
 
 #include "soc.h"
 
+/** @addtogroup driver_mci
+ *  @{ */
 #define PERIPH_CLK_ENA_SDC_CKEN (1U << 16) /* Enable clock supply for SDMMC */
 
 /**
@@ -52,4 +54,5 @@ static inline void disable_sd_periph_clk(void)
 }
 #endif
 
+/** @} */
 #endif

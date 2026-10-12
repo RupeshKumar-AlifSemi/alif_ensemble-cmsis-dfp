@@ -35,6 +35,8 @@ extern "C" {
 #endif
 //#define DEBUG
 /* Define the macros    */
+/** @addtogroup driver_usbd
+ *  @{ */
 #define USB_SUCCESS                        0
 #define USB_INIT_ERROR                     -1
 #define USB_CORE_INVALID                   -2
@@ -710,4 +712,5 @@ void    usbd_disconnect(USB_DRIVER *drv);
 
 #endif
 
+/** @} */
 #endif

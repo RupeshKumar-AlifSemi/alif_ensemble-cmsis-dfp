@@ -19,6 +19,8 @@
  ******************************************************************************/
 #ifndef SYS_CTRL_I2S_H
 
+/** @addtogroup driver_i2s
+ *  @{ */
 #define SYS_CTRL_I2S_H
 
 /* Includes ------------------------------------------------------------------*/
@@ -396,4 +398,5 @@ static inline int32_t set_i2s_sampling_rate(I2S_INSTANCE instance, uint32_t sclk
 #ifdef __cplusplus
 }
 #endif
+/** @} */
 #endif /* SYS_CTRL_I2S_H */

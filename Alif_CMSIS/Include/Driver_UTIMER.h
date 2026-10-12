@@ -22,6 +22,8 @@
 
 #include "Driver_Common.h"
 
+/** @addtogroup driver_utimer
+ *  @{ */
 #define _ARM_Driver_UTIMER_(n) Driver_UTIMER##n
 #define ARM_Driver_UTIMER_(n)  _ARM_Driver_UTIMER_(n)
 
@@ -305,4 +307,5 @@ typedef struct _ARM_DRIVER_UTIMER {
     int32_t  (*Uninitialize)   (uint8_t channel);
 } ARM_DRIVER_UTIMER;
 
+/** @} */
 #endif /*< __DRIVER_UTIMER_H__>*/

@@ -18,6 +18,8 @@ extern "C" {
 #endif
 
 /* DAC  Control register */
+/** @addtogroup driver_dac
+ *  @{ */
 #define DAC_EN                (1U << 0) /* Enable DAC                                               */
 #define DAC_RESET_B           (1U << 27) /* 0=Reset,this will reset the DAC                          */
 #define DAC_HP_MODE_EN        (1U << 18) /* To enable the dac output buffer                          */
@@ -184,4 +186,5 @@ static inline bool dac_input_mux_enabled(DAC_Type *dac)
     return (dac->DAC_REG1 & DAC_IN_BYP_MUX) ? true : false;
 }
 
+/** @} */
 #endif /* DAC_H */

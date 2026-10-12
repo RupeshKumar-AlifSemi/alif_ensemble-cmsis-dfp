@@ -30,6 +30,8 @@ extern "C" {
 #include <stddef.h>
 #include "soc.h"
 
+/** @addtogroup driver_spi
+ *  @{ */
 #define SPI_TX_FIFO_DEPTH                    16U
 #define SPI_RX_FIFO_DEPTH                    16U
 
@@ -905,4 +907,5 @@ void spi_mw_irq_handler(SPI_Type *spi, spi_transfer_t *transfer);
 }
 #endif
 
+/** @} */
 #endif /* SPI_H_ */

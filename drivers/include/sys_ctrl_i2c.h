@@ -24,6 +24,8 @@
 #include <stdint.h>
 #include "sys_clocks.h"
 
+/** @addtogroup driver_i2c
+ *  @{ */
 #define HE_CLK_ENA_I2C_CKEN (1 << 13) /* Clock enable bit for LPI2C1 */
 
 /**
@@ -75,4 +77,5 @@ static inline uint32_t get_i2c_core_clock(void)
     return GetSystemAPBClock();
 }
 
+/** @} */
 #endif /* SYS_CTRL_I2C_H */

@@ -28,6 +28,8 @@
 extern "C" {
 #endif
 
+/** @addtogroup driver_dma
+ *  @{ */
 #if RTE_DMA0
 extern ARM_DRIVER_DMA ARM_Driver_DMA_(0);
 #endif
@@ -62,4 +64,5 @@ typedef struct _DMA_PERIPHERAL_CONFIG {
 }
 #endif
 
+/** @} */
 #endif /* DMA_COMMON_H_ */

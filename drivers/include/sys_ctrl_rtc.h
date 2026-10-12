@@ -27,6 +27,8 @@ extern "C" {
 #include "soc.h"
 #include "sys_utils.h"
 
+/** @addtogroup driver_rtc
+ *  @{ */
 #define RTC_CLK_ENABLE (1U << 0U) /* Enable RTC clock */
 
 /**
@@ -81,4 +83,5 @@ static inline void disable_lprtc_clk(LPRTC_INSTANCE inst)
 #ifdef __cplusplus
 }
 #endif
+/** @} */
 #endif /* SYS_CTRL_RTC_H_ */

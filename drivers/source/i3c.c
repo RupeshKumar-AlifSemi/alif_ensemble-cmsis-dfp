@@ -23,6 +23,8 @@
   \param[in]    nbytes  : Number of bytes needs to be write
   \return       none
 */
+/** @addtogroup driver_i3c
+ *  @{ */
 static void i3c_wr_tx_fifo(I3C_Type *i3c, const uint8_t *bytes, uint32_t nbytes)
 {
     uint32_t len_in_words = nbytes / 4;
@@ -1729,3 +1731,4 @@ void i3c_slave_irq_handler(I3C_Type *i3c, i3c_xfer_t *xfer)
 }
 
 /************************ (C) COPYRIGHT ALIF SEMICONDUCTOR *****END OF FILE****/
+/** @} */

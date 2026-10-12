@@ -21,6 +21,8 @@ extern "C" {
 #include "soc.h"
 
 /* 8bit and 32bit Data input Reg offset */
+/** @addtogroup driver_crc
+ *  @{ */
 #define CRC_DATA_IN_8BIT_REG_OFFSET  0x20
 #define CRC_DATA_IN_32BIT_REG_OFFSET 0x60
 
@@ -451,4 +453,5 @@ void crc_calculate_32bit_unaligned_sw(CRC_Type *crc, crc_transfer_t *transfer);
 }
 #endif
 
+/** @} */
 #endif /* CRC_H_ */

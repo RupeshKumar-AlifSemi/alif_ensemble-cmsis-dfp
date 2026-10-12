@@ -14,6 +14,8 @@
 #include <stdint.h>
 #include "soc.h"
 
+/** @addtogroup driver_usart
+ *  @{ */
 static inline void enable_lpuart_clock(void)
 {
     AON->RTSS_HE_LPUART_CKEN = (1 << 0);
@@ -68,4 +70,5 @@ static inline void select_uart_clock_syst_pclk(uint32_t instance)
     CLKCTL_PER_SLV->UART_CTRL |= ((1 << instance) << 8);
 }
 
+/** @} */
 #endif /* SYS_CTRL_UART_H_ */

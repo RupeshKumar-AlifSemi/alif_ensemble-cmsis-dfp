@@ -865,7 +865,7 @@ WARN_LOGFILE           =
 # Note: If this tag is empty the current directory is searched.
 
 INPUT                  = Alif_CMSIS Boards components Device drivers ospi_xip se_services \
-                         docs/Overview.md docs/driver_status.dox 
+                         docs/Overview.md docs/driver_status.dox docs/modules.dox 
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses

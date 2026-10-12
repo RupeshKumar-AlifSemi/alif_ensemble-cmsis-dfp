@@ -24,6 +24,8 @@
 
 #if defined(RTE_Drivers_HWSEM)
 
+/** @addtogroup driver_hwsem
+ *  @{ */
 #define ARM_HWSEM_DRV_VERSION ARM_DRIVER_VERSION_MAJOR_MINOR(1, 0) /* Driver version */
 
 /* Driver Version */
@@ -1205,4 +1207,5 @@ ARM_DRIVER_HWSEM DRIVER_HWSEM15 = {
 };
 
 #endif
+/** @} */
 #endif /* RTE_Drivers_HWSEM */

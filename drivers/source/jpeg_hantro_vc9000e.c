@@ -26,6 +26,8 @@
  *               present.
  *               false JPEG hardware ID or version does not match.
  */
+/** @addtogroup driver_jpeg
+ *  @{ */
 bool jpeg_init(JPEG_Type *jpeg)
 {
 	if (jpeg->JPEG_SWREG0 != JPEG_HW_ID) {
@@ -175,3 +177,4 @@ void jpeg_irq_handler(JPEG_Type *jpeg, jpeg_encode_info_t *enc_info)
         (void)JPEG->JPEG_SWREG1;
     }
 }
+/** @} */

@@ -24,6 +24,8 @@
 extern "C" {
 #endif
 
+/** @addtogroup driver_adc
+ *  @{ */
 #define ARM_ADC_API_VERSION              ARM_DRIVER_VERSION_MAJOR_MINOR(2, 0) /*API VERSION*/
 
 #define _ARM_Driver_ADC12(n)             Driver_ADC12##n
@@ -188,6 +190,7 @@ typedef struct ARM_DRIVER_ADC {
 #ifdef _cplusplus
 }
 #endif
+/** @} */
 #endif /* DRIVER_ADC_H_ */
 
 /************************ (C) COPYRIGHT ALIF SEMICONDUCTOR *****END OF FILE****/

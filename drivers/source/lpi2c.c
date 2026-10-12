@@ -15,6 +15,8 @@
  *                           const uint32_t delay)
  * @brief  : writing to the register for transmit data
  */
+/** @addtogroup driver_lpi2c
+ *  @{ */
 void lpi2c_send(LPI2C_TYPE *lpi2c, LPI2C_XFER_INFO_T *transfer, const uint32_t delay)
 {
     uint32_t len = transfer->tx_total_num;
@@ -60,3 +62,4 @@ void lpi2c_irq_handler(LPI2C_TYPE *lpi2c, LPI2C_XFER_INFO_T *transfer)
         }
     }
 }
+/** @} */

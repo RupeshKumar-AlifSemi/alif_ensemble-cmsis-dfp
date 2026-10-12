@@ -28,6 +28,8 @@ extern "C" {
 #include "RTE_Device.h"
 
 /* CLKCTL_PER_SLV GPIO_CTRLn field definitions */
+/** @addtogroup driver_gpio
+ *  @{ */
 #define GPIO_CTRL_DB_CKEN (1U << 12U) /* GPIO Debounce clock enable */
 #if SOC_FEAT_GPIO_HAS_CLOCK_ENABLE
 #define GPIO_CTRL_CKEN (1U << 16U) /* GPIO clock enable */
@@ -161,4 +163,5 @@ static inline void set_gpio_debounce_clkdiv(uint16_t clk_div, GPIO_INSTANCE inst
 #ifdef __cplusplus
 }
 #endif
+/** @} */
 #endif /* SYS_CTRL_GPIO_H_ */

@@ -28,6 +28,8 @@
   \param[in] ospi_cfg : OSPI configuration structure
   \return    none
 */
+/** @addtogroup driver_ospi
+ *  @{ */
 static void ospi_xip_disable(ospi_flash_cfg_t *ospi_cfg)
 {
     ospi_cfg->aes_regs->aes_control &= ~AES_CONTROL_XIP_EN;
@@ -313,3 +315,4 @@ void ospi_init(ospi_flash_cfg_t *ospi_cfg, OSPI_INSTANCE drv_instance)
     spi_set_clk(ospi_cfg, (GetSystemAXIClock() / ospi_cfg->ospi_clock));
     spi_enable(ospi_cfg);
 }
+/** @} */

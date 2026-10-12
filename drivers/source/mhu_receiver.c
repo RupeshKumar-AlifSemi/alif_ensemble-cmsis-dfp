@@ -36,6 +36,8 @@
  *  C O D E
  ******************************************************************************/
 
+/** @addtogroup driver_mhu
+ *  @{ */
 static uint32_t              s_receiver_frame_base_address_list[MHU_NUMBER_MAX];
 static uint32_t              s_receiver_frame_count;
 static MHU_rx_msg_callback_t s_callback;
@@ -181,3 +183,4 @@ void MHU_receiver_initialize(uint32_t receiver_frame_base_address_list[],
 
     MHU_receiver_interrupt_initialize(receiver_frame_count);
 }
+/** @} */

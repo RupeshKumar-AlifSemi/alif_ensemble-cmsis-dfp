@@ -25,6 +25,8 @@ extern "C" {
 
 #include "soc.h"
 
+/** @addtogroup driver_cpi
+ *  @{ */
 #define PERIPH_CLK_ENA_CPI_CKEN           (1U << 0) /* Enable clock supply for CPI */
 
 /* CLKCTL_PER_MST CAMERA_PIXCLK_CTRL field definitions */
@@ -162,4 +164,5 @@ static inline void clear_lpcpi_pixel_clk(void)
 }
 #endif
 
+/** @} */
 #endif /* SYS_CTRL_CPI_H_ */

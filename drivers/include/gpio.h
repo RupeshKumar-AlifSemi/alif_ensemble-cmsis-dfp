@@ -33,6 +33,8 @@ extern "C" {
  * enum GPIO_PIN_DIR.
  * gpio pin direction.
  */
+/** @addtogroup driver_gpio
+ *  @{ */
 typedef enum _GPIO_PIN_DIR {
     GPIO_PIN_DIR_INPUT,  /**<GPIO PIN direction to input>*/
     GPIO_PIN_DIR_OUTPUT, /**<GPIO PIN direction to output>*/
@@ -405,6 +407,7 @@ static inline void gpio_set_software_mode(GPIO_Type *gpio, uint8_t pin_no)
 }
 #endif
 
+/** @} */
 #endif /* GPIO_H_ */
 
 /************************ (C) COPYRIGHT ALIF SEMICONDUCTOR *****END OF FILE****/

@@ -13,6 +13,8 @@
 /**
  @brief        Reflect the CRC 32 bit output
  */
+/** @addtogroup driver_crc
+ *  @{ */
 uint32_t crc_bit_reflect(uint32_t input)
 {
     uint32_t res = 0;
@@ -165,3 +167,4 @@ void crc_calculate_32bit_unaligned_sw(CRC_Type *crc, crc_transfer_t *transfer)
         }
     }
 }
+/** @} */

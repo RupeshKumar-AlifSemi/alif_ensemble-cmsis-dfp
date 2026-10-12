@@ -25,6 +25,8 @@
 #include "soc.h"
 
 /* CANFD register structure */
+/** @addtogroup driver_can
+ *  @{ */
 typedef struct _CANFD_CNT_Type {
     volatile uint32_t CANFD_CNTR_CTRL; /*!< (@ 0x00000000) Counter control register */
     volatile uint32_t CANFD_CNTR_LOW;  /*!< (@ 0x00000004) Counter Low register  */
@@ -1118,4 +1120,5 @@ void canfd_clear_interrupt(CANFD_Type *canfd, const uint32_t event);
 */
 uint32_t canfd_irq_handler(CANFD_Type *canfd);
 
+/** @} */
 #endif /* CANFD_H_ */

@@ -29,6 +29,8 @@
 #error "DAC is not enabled in the RTE_device.h"
 #endif
 
+/** @addtogroup driver_dac
+ *  @{ */
 #define ARM_DAC_DRV_VERSION ARM_DRIVER_VERSION_MAJOR_MINOR(1, 0) /*  Driver version */
 
 /*Driver version*/
@@ -443,4 +445,5 @@ ARM_DRIVER_DAC        Driver_DAC1 = {
 };
 
 #endif /* RTE_DAC1 */
+/** @} */
 #endif /* RTE_Drivers_DAC */

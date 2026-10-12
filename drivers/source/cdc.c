@@ -21,6 +21,8 @@
 /**
  * @brief   Configure the CDC with given information.
  */
+/** @addtogroup driver_cdc
+ *  @{ */
 void cdc_set_cfg(CDC_Type *const cdc, const cdc_cfg_info_t *const info)
 {
     /* The number of horizontal sync pixels and the number of vertical sync
@@ -281,3 +283,4 @@ void cdc_set_layer_blending(CDC_Type *const cdc, const CDC_LAYER layer,
     /* Trigger shadow register update */
     cdc_layer->CDC_L_REL_CTRL |= (1UL << sh_rld);
 }
+/** @} */

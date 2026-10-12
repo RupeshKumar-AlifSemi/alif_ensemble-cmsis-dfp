@@ -22,6 +22,8 @@
 /**
   \brief       Perform dsi dcs Short write.
 */
+/** @addtogroup driver_mipi_dsi
+ *  @{ */
 void dsi_dcs_short_write(DSI_Type *dsi, uint8_t cmd, uint8_t data, uint8_t vc_id)
 {
     dsi->DSI_GEN_HDR = (DSI_DCS_SHORT_WRITE_DATA_TYPE << DSI_GEN_DT) | (vc_id << DSI_GEN_VC) |
@@ -91,3 +93,4 @@ DSI_LANE_STOPSTATE dsi_get_lane_stopstate_status(DSI_Type *dsi, DSI_LANE lane)
 
     return ret;
 }
+/** @} */

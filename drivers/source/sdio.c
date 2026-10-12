@@ -23,6 +23,8 @@
 #include "sd.h"
 #include "sdio.h"
 
+/** @addtogroup driver_mci
+ *  @{ */
 extern sd_handle_t Hsd;
 
 /**
@@ -289,3 +291,4 @@ SD_DRV_STATUS sdio_write_cccr(uint8_t cccr)
     }
     return SD_DRV_STATUS_OK;
 }
+/** @} */

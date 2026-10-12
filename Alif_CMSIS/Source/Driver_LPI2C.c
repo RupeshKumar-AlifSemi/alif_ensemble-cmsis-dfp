@@ -12,6 +12,8 @@
 #include "Driver_LPI2C_Private.h"
 #include "sys_utils.h"
 
+/** @addtogroup driver_lpi2c
+ *  @{ */
 #define ARM_I2C_DRV_VERISON ARM_DRIVER_VERSION_MAJOR_MINOR(0, 1) /*DRIVER VERSION*/
 
 #if defined(RTE_Drivers_LPI2C)
@@ -394,3 +396,4 @@ ARM_DRIVER_I2C        Driver_LPI2C0 = {
 
 #endif /*(RTE_LPI2C0)*/
 #endif /* RTE_Drivers_LPI2C0 */
+/** @} */

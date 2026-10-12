@@ -24,6 +24,8 @@
 #include "sys_ctrl_usb.h"
 #include "sys_clocks.h"
 
+/** @addtogroup driver_usbd
+ *  @{ */
 static USBD_EVENT_BUFFER    evt_buf;
 static uint8_t              event_buff[USB_EVENT_BUFFER_SIZE]       ATTR_SECTION("usb_dma_buf");
 static uint8_t              scratch_pad[USB_SCRATCHPAD_BUF_SIZE]    ATTR_SECTION("usb_dma_buf");
@@ -782,3 +784,4 @@ int32_t usbd_initialize(USB_DRIVER *drv)
 
     return ret;
 }
+/** @} */

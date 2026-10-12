@@ -27,6 +27,8 @@ extern "C" {
 #include "soc.h"
 
 /* VBAT TIMER_CLKSEL field definitions */
+/** @addtogroup driver_lptimer
+ *  @{ */
 #define TIMER_CLKSEL_Pos (0U) /* TIMER_CLKSEL bit position */
 #define TIMER_CLKSEL_Msk (3U << TIMER_CLKSEL_Pos)
 
@@ -65,4 +67,5 @@ static inline void select_lptimer_clk(LPTIMER_CLK_SRC clk, uint8_t channel)
 #ifdef __cplusplus
 }
 #endif
+/** @} */
 #endif /* SYS_CTRL_LPTIMER_H_ */

@@ -10,7 +10,7 @@
 /**
  * @file  services_test.c
  * @brief Services library test harness
- * @ingroup services
+ * @ingroup host_services
  * @par
  */
 

@@ -26,6 +26,8 @@
 #include "RTE_Device.h"
 #include "display.h"
 
+/** @addtogroup driver_cdc
+ *  @{ */
 #define ARM_CDC200_DRV_VERSION ARM_DRIVER_VERSION_MAJOR_MINOR(1, 0) /*driver version*/
 
 #if defined(RTE_Drivers_CDC200)
@@ -748,3 +750,4 @@ ARM_DRIVER_CDC200 Driver_CDC200 = {
 };
 #endif /* RTE_CDC200 */
 #endif /* RTE_Drivers_CDC200 */
+/** @} */

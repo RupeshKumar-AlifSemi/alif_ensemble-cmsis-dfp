@@ -20,6 +20,8 @@
 #include "ospi_drv.h"
 #include "ospi_xip_user.h"
 
+/** @addtogroup driver_ospi
+ *  @{ */
 static ospi_flash_cfg_t ospi_flash_config;
 
 /**
@@ -201,3 +203,4 @@ int setup_flash_xip(void)
 
     return 0;
 }
+/** @} */

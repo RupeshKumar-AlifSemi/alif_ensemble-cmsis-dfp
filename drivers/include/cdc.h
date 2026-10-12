@@ -34,6 +34,8 @@ extern "C" {
  *        and serves to correctly calculate the address of the last word of data for
  *        that line internally.
  */
+/** @addtogroup driver_cdc
+ *  @{ */
 #define BUS_WIDTH                               7U
 
 /**
@@ -440,4 +442,5 @@ void cdc_set_layer_blending(CDC_Type *const cdc, const CDC_LAYER layer,
 #ifdef __cplusplus
 }
 #endif
+/** @} */
 #endif /* CDC_H_ */

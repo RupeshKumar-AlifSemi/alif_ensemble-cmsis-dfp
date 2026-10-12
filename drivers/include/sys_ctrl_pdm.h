@@ -27,6 +27,8 @@ extern "C" {
 
 #include "soc.h"
 
+/** @addtogroup driver_pdm
+ *  @{ */
 #define EXPMST0_CTRL_PDM_CKEN (1U << 8) /* PDM Clock Enable   */
 #define HE_CLK_ENA_PDM_CKEN   (1U << 8) /* Enable LPPDM clock */
 
@@ -73,4 +75,5 @@ static inline void disable_lppdm_periph_clk(void)
 #ifdef __cplusplus
 }
 #endif
+/** @} */
 #endif /* SYS_CTRL_PDM_H_ */

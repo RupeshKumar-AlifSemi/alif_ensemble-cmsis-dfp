@@ -27,6 +27,8 @@
 extern "C" {
 #endif
 
+/** @addtogroup driver_hwsem
+ *  @{ */
 #define ARM_HWSEM_API_VERSION    ARM_DRIVER_VERSION_MAJOR_MINOR(1, 0) /* API version */
 
 #define _ARM_Driver_HWSEM_(n)    DRIVER_HWSEM##n
@@ -140,4 +142,5 @@ typedef struct _ARM_DRIVER_HWSEM {
 #ifdef __cplusplus
 }
 #endif
+/** @} */
 #endif /* DRIVER_HWSEM_H_ */

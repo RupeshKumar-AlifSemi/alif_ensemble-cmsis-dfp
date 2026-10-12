@@ -18,6 +18,8 @@
 #error "CRC is not enabled in the RTE_device.h"
 #endif
 
+/** @addtogroup driver_crc
+ *  @{ */
 #define ARM_CRC_DRV_VERSION ARM_DRIVER_VERSION_MAJOR_MINOR(1, 0) /*  Driver version */
 
 /*Driver version*/
@@ -959,4 +961,5 @@ ARM_DRIVER_CRC        Driver_CRC1 = {
 };
 
 #endif /* RTE_CRC1 */
+/** @} */
 #endif /* RTE_Drivers_CRC */

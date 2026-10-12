@@ -18,6 +18,8 @@
 extern "C" {
 #endif
 
+/** @addtogroup driver_adc
+ *  @{ */
 #if SOC_FEAT_ADC_REG_ALIASING
 /* PMU_PERIPH field definitions */
 #define PMU_PERIPH_ADC1_PGA_EN           (1U << 0)
@@ -583,4 +585,5 @@ static inline void disable_adc_pga_gain(uint8_t instance)
 }
 #endif
 
+/** @} */
 #endif /* SYS_CTRL_ADC_H_ */

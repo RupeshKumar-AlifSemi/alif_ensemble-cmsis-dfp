@@ -28,6 +28,8 @@ extern "C" {
 #include "soc.h"
 
 /* CLKCTL_PER_SLV DAC field definitions */
+/** @addtogroup driver_dac
+ *  @{ */
 #define DAC_CTRL_DAC0_CKEN (1U << 0U) /* DAC0 clock enable */
 #define DAC_CTRL_DAC1_CKEN (1U << 4U) /* DAC1 clock enable */
 
@@ -74,4 +76,5 @@ static inline void disable_dac_periph_clk(DAC_INSTANCE instance)
 }
 #endif
 
+/** @} */
 #endif /* SYS_CTRL_DAC_H_ */

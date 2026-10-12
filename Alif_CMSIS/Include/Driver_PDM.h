@@ -27,6 +27,8 @@
 extern "C" {
 #endif
 
+/** @addtogroup driver_pdm
+ *  @{ */
 #define ARM_PDM_API_VERSION                 ARM_DRIVER_VERSION_MAJOR_MINOR(1, 0) /* API version */
 
 #define ARM_PDM_MODE                        0x00UL
@@ -146,4 +148,5 @@ typedef struct ARM_DRIVER_PDM {
 }
 #endif
 
+/** @} */
 #endif /* DRIVER_PDM_H_ */

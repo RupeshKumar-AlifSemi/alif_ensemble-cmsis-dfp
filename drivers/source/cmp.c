@@ -13,6 +13,8 @@
 /**
   @brief       Clear the interrupt status
 */
+/** @addtogroup driver_cmp
+ *  @{ */
 void cmp_irq_handler(CMP_Type *cmp, const uint8_t int_mask)
 {
     uint8_t int_status = (cmp->CMP_INTERRUPT_STATUS & (int_mask));
@@ -29,3 +31,4 @@ void cmp_irq_handler(CMP_Type *cmp, const uint8_t int_mask)
         cmp->CMP_INTERRUPT_STATUS = CMP_FILTER_EVENTS_CLEAR_ALL;
     }
 }
+/** @} */

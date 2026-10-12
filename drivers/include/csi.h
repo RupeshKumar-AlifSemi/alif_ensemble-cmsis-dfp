@@ -28,6 +28,8 @@ extern "C" {
 #endif
 
 /* CSI2 Parameters */
+/** @addtogroup driver_mipi_csi2
+ *  @{ */
 #define CSI_IPI_FIFO_DEPTH                    1024
 #define CSI2_HOST_IPI_DWIDTH                  64
 #define CSI2_HSD_MIN                          1
@@ -1086,4 +1088,5 @@ void csi_set_vertical_timing(CSI_Type *csi, uint16_t vsa_lines, uint16_t vbp_lin
 #ifdef __cplusplus
 }
 #endif
+/** @} */
 #endif /* CSI_H_ */

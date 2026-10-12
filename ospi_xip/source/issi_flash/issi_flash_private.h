@@ -21,6 +21,8 @@
 extern "C" {
 #endif
 
+/** @addtogroup driver_ospi
+ *  @{ */
 #define DEVICE_ID_ISSI_FLASH_IS25WX256       0x9D
 
 /* defines the Length of Address to be transmitted by Host controller */
@@ -79,4 +81,5 @@ extern "C" {
 }
 #endif
 
+/** @} */
 #endif /* ISSI_FLASH_PRIVATE_H */

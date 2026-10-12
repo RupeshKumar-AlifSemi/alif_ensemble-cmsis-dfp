@@ -77,6 +77,8 @@ extern "C" {
 
 #include "Driver_Common.h"
 
+/** @addtogroup driver_ospi
+ *  @{ */
 #define ARM_OSPI_API_VERSION   ARM_DRIVER_VERSION_MAJOR_MINOR(1, 0) /* API version */
 
 #define _ARM_Driver_OSPI_(n)   Driver_OSPI##n
@@ -367,4 +369,5 @@ typedef struct _ARM_DRIVER_OSPI {
 #ifdef __cplusplus
 }
 #endif
+/** @} */
 #endif /* DRIVER_OSPI_H_ */

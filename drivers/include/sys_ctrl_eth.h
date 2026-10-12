@@ -16,6 +16,8 @@ extern "C" {
 
 #include <soc.h>
 
+/** @addtogroup driver_ethernet
+ *  @{ */
 #define PERIPH_CLK_ENA_ETH_CKEN (1U << 12) /* Enable clock supply for ETH */
 
 /**
@@ -42,4 +44,5 @@ static inline void disable_eth_periph_clk(void)
 }
 #endif
 
+/** @} */
 #endif /* SYS_CTRL_ETH_H_ */

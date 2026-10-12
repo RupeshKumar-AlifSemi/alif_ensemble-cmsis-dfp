@@ -41,6 +41,8 @@
   \param[in]   config  Pointer to PSRAM configuration
   \return      0 on success, -1 on configuration error
  */
+/** @addtogroup driver_ospi
+ *  @{ */
 static int ospi_set_speed(OSPI_Type *ospi, AES_Type *aes, const ospi_psram_xip_config *config)
 {
     uint32_t baud;
@@ -207,3 +209,4 @@ int ospi_psram_xip_init(ospi_psram_xip_config *config)
 
     return 0;
 }
+/** @} */

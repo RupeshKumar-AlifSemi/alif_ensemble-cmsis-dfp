@@ -30,6 +30,8 @@
 extern "C" {
 #endif
 
+/** @addtogroup driver_aes
+ *  @{ */
 #define AES_CONTROL_DECRYPT_EN  (1U << 0)
 #define AES_CONTROL_RESET_LOGIC (1U << 1)
 #define AES_CONTROL_XIP_EN      (1U << 4)
@@ -206,4 +208,5 @@ static inline void aes_control_address(AES_Type *aes, aes_addr_ctrl *addr_cfg)
 #ifdef __cplusplus
 }
 #endif
+/** @} */
 #endif /* SYS_CTRL_AES_H */

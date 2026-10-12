@@ -27,6 +27,8 @@
 #include "sys_utils.h"
 
 /* Global SD Handle */
+/** @addtogroup driver_mci
+ *  @{ */
 sd_handle_t Hsd __attribute__((section("sd_dma_buf")));
 
 /* Global SD Driver Callback definitions */
@@ -1456,3 +1458,4 @@ retry:
 
     return SD_DRV_STATUS_OK;
 }
+/** @} */

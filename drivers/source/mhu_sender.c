@@ -11,13 +11,15 @@
 /**
  * @file mhu_sender.c
  * @brief MHU sender driver
- * @ingroup host_services
+ * @ingroup driver_mhu
  * @par
  */
 #include "stddef.h"
 #include "drivers_common.h"
 #include "mhu_driver.h"
 
+/** @addtogroup driver_mhu
+ *  @{ */
 #define MHU_RECEIVER_TIMEOUT_MAX 1000000
 
 static MHU_sender_callback           s_nr2r_callback;
@@ -272,3 +274,4 @@ void MHU_sender_initialize(uint32_t sender_frame_base_address_list[], uint32_t s
         set_irq_enable(sender_reg_base, mask_enable, true);
     }
 }
+/** @} */

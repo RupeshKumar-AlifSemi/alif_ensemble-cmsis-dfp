@@ -24,6 +24,8 @@
 
 #if defined(RTE_Drivers_CANFD)
 
+/** @addtogroup driver_can
+ *  @{ */
 #if !((RTE_CANFD0) || (RTE_CANFD1))
 #error "CANFD is not enabled in RTE_Device.h"
 #else
@@ -1549,4 +1551,5 @@ ARM_DRIVER_CAN Driver_CANFD1 = {
     ARM_CAN1_GetStatus
 };
 #endif  // RTE_CANFD1
+/** @} */
 #endif  /* RTE_Drivers_CANFD */

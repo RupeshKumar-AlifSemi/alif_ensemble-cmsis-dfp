@@ -28,6 +28,8 @@ extern "C" {
 #endif
 
 /* SDIO commands                         type  argument     response */
+/** @addtogroup driver_mci
+ *  @{ */
 #define SDIO_SEND_OP_COND           5U  /* bcr  [23:0] OCR         R4  */
 #define SDIO_RW_DIRECT              52U /* ac   [31:0] See below   R5  */
 #define SDIO_RW_EXTENDED            53U /* adtc [31:0] See below   R5  */
@@ -233,4 +235,5 @@ SD_DRV_STATUS sdio_rw_extended(sd_handle_t *pHsd, uint32_t rwFlag, uint32_t fn,
 }
 #endif
 
+/** @} */
 #endif

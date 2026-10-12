@@ -33,6 +33,8 @@
  *\return       On success 0, failure case returns error.
  **/
 
+/** @addtogroup driver_usbd
+ *  @{ */
 int32_t usbd_endpoint_create(USB_DRIVER *drv, uint8_t ep_type, uint8_t ep_num, uint8_t dir,
                              uint16_t ep_max_packet_size, uint8_t ep_interval)
 {
@@ -369,3 +371,4 @@ int32_t usbd_ep_transfer_abort(USB_DRIVER *drv, uint8_t ep_num, uint8_t dir)
     ret = usbd_stop_transfer(drv, ep_num, dir, force_rm);
     return ret;
 }
+/** @} */

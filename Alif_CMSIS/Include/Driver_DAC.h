@@ -26,6 +26,8 @@ extern "C" {
 
 #include "Driver_Common.h"
 
+/** @addtogroup driver_dac
+ *  @{ */
 #define _ARM_Driver_DAC_(n)         Driver_DAC##n
 #define ARM_Driver_DAC_(n)          _ARM_Driver_DAC_(n)
 
@@ -143,4 +145,5 @@ typedef struct ARM_Driver_DAC {
 }
 #endif
 
+/** @} */
 #endif /* DRIVER_DAC_H_ */

@@ -26,6 +26,8 @@ extern "C" {
 
 #include "soc.h"
 
+/** @addtogroup driver_cdc
+ *  @{ */
 #define PERIPH_CLK_ENA_DPI_CKEN        (1U << 1) /* Enable clock supply for DPI controller (CDC) */
 
 /* CLKCTL_PER_MST CDC200_PIXCLK_CTRL field definitions */
@@ -103,4 +105,5 @@ static inline void disable_cdc_pixel_clk(void)
 #ifdef __cplusplus
 }
 #endif
+/** @} */
 #endif /* SYS_CTRL_CDC_H_ */

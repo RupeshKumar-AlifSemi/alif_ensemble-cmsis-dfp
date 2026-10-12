@@ -23,6 +23,8 @@
 /**
   \brief       configure counter type for the UTIMER instance.
 */
+/** @addtogroup driver_utimer
+ *  @{ */
 void utimer_config_direction(UTIMER_Type *utimer, uint8_t channel, UTIMER_COUNTER_DIR dir,
                              utimer_channel_config *ch_config)
 {
@@ -596,3 +598,4 @@ void utimer_config_trigger(UTIMER_Type *utimer, uint8_t channel,
         utimer->UTIMER_CHANNEL_CFG[channel].UTIMER_CNTR_PAUSE_SRC |= config_control->trigger_type;
     }
 }
+/** @} */

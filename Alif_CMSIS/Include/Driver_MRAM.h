@@ -27,6 +27,8 @@ extern "C" {
 
 #include "Driver_Common.h"
 
+/** @addtogroup driver_mram
+ *  @{ */
 #define ARM_MRAM_API_VERSION ARM_DRIVER_VERSION_MAJOR_MINOR(1, 0) /* API version */
 
 // Function documentation
@@ -122,4 +124,5 @@ typedef struct _ARM_DRIVER_MRAM {
 }
 #endif
 
+/** @} */
 #endif /* DRIVER_MRAM_H_ */

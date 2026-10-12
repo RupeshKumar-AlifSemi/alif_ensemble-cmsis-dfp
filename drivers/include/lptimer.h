@@ -29,6 +29,8 @@ extern "C" {
 #include "soc.h"
 
 /* LPTIMER Control Register bit Definition */
+/** @addtogroup driver_lptimer
+ *  @{ */
 #define LPTIMER_CONTROL_REG_TIMER_ENABLE_BIT         0x01U
 #define LPTIMER_CONTROL_REG_TIMER_MODE_BIT           0x02U
 #define LPTIMER_CONTROL_REG_TIMER_INTERRUPT_MASK_BIT 0x04U
@@ -192,6 +194,7 @@ static inline void lptimer_disable_pwm(LPTIMER_Type *lptimer, uint8_t channel)
 }
 #endif
 
+/** @} */
 #endif /* LPTIMER_H_ */
 
 /************************ (C) COPYRIGHT ALIF SEMICONDUCTOR *****END OF FILE****/
