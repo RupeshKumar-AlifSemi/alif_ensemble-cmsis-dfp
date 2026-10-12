@@ -1,0 +1,18 @@
+/**
+ * @defgroup execution_status Status Error Codes
+ * @{
+ *
+ * Status codes returned by CMSIS-Driver functions. The macros are defined in
+ * Driver_Common.h. Negative values are errors, and driver-specific error codes
+ * start at ARM_DRIVER_ERROR_SPECIFIC.
+ *
+ * - ARM_DRIVER_OK (0): operation succeeded
+ * - ARM_DRIVER_ERROR (-1): unspecified error
+ * - ARM_DRIVER_ERROR_BUSY (-2): driver is busy
+ * - ARM_DRIVER_ERROR_TIMEOUT (-3): timeout occurred
+ * - ARM_DRIVER_ERROR_UNSUPPORTED (-4): operation not supported
+ * - ARM_DRIVER_ERROR_PARAMETER (-5): parameter error
+ * - ARM_DRIVER_ERROR_SPECIFIC (-6): start of driver-specific errors
+ *
+ * @}
+ */
